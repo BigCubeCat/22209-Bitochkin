@@ -1,7 +1,7 @@
-cmake_minimum_required(3.6)
+cmake_minimum_required(VERSION 3.5)
 project(counter)
 
-set(SOURCE_LIB counter.cpp)
+set(SOURCE_LIB counter.cpp counter.h row.h row.cpp)
 
-add_library(foo ${SOURCE_LIB})
+add_library(counter ${SOURCE_LIB})
 

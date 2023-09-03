@@ -1,4 +1,4 @@
-cmake_minimum_required(3.6)
+cmake_minimum_required(VERSION 3.5)
 
 project(lab0)
 
@@ -6,9 +6,9 @@ set(SOURCE_EXE src/main.cpp)
 
 include_directories(src/counter)
 
-add_executable(lab0 ${SOURCE_EXE})	# Создает исполняемый файл с именем main
+add_executable(lab0 ${SOURCE_EXE})
 
-add_subdirectory(src/counter)				# Добавление подпроекта, указывается имя дирректории
+add_subdirectory(src/counter)
 
-target_link_libraries(lab0 src/counter)
+target_link_libraries(lab0 counter)
 

@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "row.h"
+
 const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'";
 
 class Counter {
@@ -12,6 +14,7 @@ public:
   std::string inputFile;
   std::string outputFile;
   std::map<std::string, int> statistic;
+  std::vector<Row> table;
   int countWords = 0;
 
   Counter(std::string inFile, std::string outFile);
@@ -20,6 +23,7 @@ public:
 private:
   std::map<std::string, bool> foundWords;
   void parseFile();
+  void createTable();
   std::vector<std::string> splitWords(std::string words);
 };
 
