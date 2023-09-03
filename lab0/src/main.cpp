@@ -7,7 +7,6 @@ const std::string USAGE =
     "output_file.csv\nWrite to .CSV file word frequency statistics";
 
 int main(int argc, char *argv[]) {
-  std::cout << argc << std::endl;
   if (argc != 3) {
     std::cout << USAGE << std::endl;
     return 1;

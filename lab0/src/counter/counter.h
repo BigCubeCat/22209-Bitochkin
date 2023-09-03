@@ -7,7 +7,7 @@
 
 #include "row.h"
 
-const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'";
+const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'\n\t";
 
 class Counter {
 public:
@@ -25,6 +25,7 @@ private:
   void parseFile();
   void createTable();
   std::vector<std::string> splitWords(std::string words);
+  std::string generateFileContent();
 };
 
 bool isSplitChar(char c);

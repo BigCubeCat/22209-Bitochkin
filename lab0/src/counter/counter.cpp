@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <string>
 #include <vector>
 
 bool isSplitChar(char c) {
@@ -49,20 +50,18 @@ void Counter::parseFile() {
   while (file.peek() != EOF) {
     getline(file, words, ' ');
     for (auto word : splitWords(words)) {
-      std::cout << word << std::endl;
       countWords++;
       if (foundWords[word]) {
-        statistic[word]++;
+        statistic[word] += 1;
       } else {
         foundWords[word] = true;
-        statistic[word] = 0;
+        statistic[word] = 1;
       }
     }
   }
 }
 
 void Counter::createTable() {
-  std::cout << "here\n";
   for (std::map<std::string, int>::iterator it = statistic.begin();
        it != statistic.end(); ++it) {
     table.push_back(Row{it->first, it->second, it->second * 100 / countWords});
@@ -70,4 +69,19 @@ void Counter::createTable() {
   std::sort(table.begin(), table.end(), compareRows);
 }
 
-void Counter::saveCSV() {}
+std::string Counter::generateFileContent() {
+  std::string content = "Word;count;frequency\n";
+
+  for (auto row : table) {
+    content += row.word + ";" + std::to_string(row.count) + ";" +
+               std::to_string(row.frequency) + "\n";
+  }
+  return content;
+}
+
+void Counter::saveCSV() {
+  std::ofstream outFile;
+  outFile.open(outputFile);
+  outFile << generateFileContent();
+  outFile.close();
+}
