@@ -1,6 +1,0 @@
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/CMakeFiles/lab0.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/CMakeFiles/edit_cache.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/CMakeFiles/rebuild_cache.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/src/counter/CMakeFiles/counter.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/src/counter/CMakeFiles/edit_cache.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab0/build/src/counter/CMakeFiles/rebuild_cache.dir
