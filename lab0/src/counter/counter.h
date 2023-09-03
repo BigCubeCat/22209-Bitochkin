@@ -10,7 +10,7 @@
 const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'\n\t";
 
 class Counter {
-  public:
+   public:
     std::string inputFile;
     std::string outputFile;
     std::map<std::string, int> statistic;
@@ -20,7 +20,7 @@ class Counter {
     Counter(std::string inFile, std::string outFile);
     void saveCSV();
 
-  private:
+   private:
     std::map<std::string, bool> foundWords;
     void parseFile();
     void createTable();

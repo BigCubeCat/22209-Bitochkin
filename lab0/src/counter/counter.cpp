@@ -1,5 +1,5 @@
 #include "./counter.h"
-#include "./row.h"
+
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -62,10 +62,9 @@ void Counter::parseFile() {
 }
 
 void Counter::createTable() {
-    for (std::map<std::string, int>::iterator it = statistic.begin();
-         it != statistic.end(); ++it) {
+    for (auto & it : statistic) {
         table.push_back(
-            Row{it->first, it->second, it->second * 100 / countWords});
+            Row{it.first, it.second, it.second * 100 / countWords});
     }
     std::sort(table.begin(), table.end(), compareRows);
 }

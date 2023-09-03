@@ -1,6 +1,7 @@
-#include "counter/counter.h"
 #include <iostream>
 #include <string>
+
+#include "counter/counter.h"
 
 const std::string USAGE =
     "Usage for word counter\n./word_counter input_file.txt "
