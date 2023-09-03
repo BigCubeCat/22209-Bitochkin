@@ -1,0 +1,6 @@
+# ninja log v5
+920	960	1693724970900193515	src/counter/libcounter.a	1b3c101154875abb
+1	312	1693724970250196345	src/counter/CMakeFiles/counter.dir/row.cpp.o	4d280915d0a909d5
+1	920	1693724970860193689	src/counter/CMakeFiles/counter.dir/counter.cpp.o	d19a0a23c7cbbf43
+960	1051	1693724970990193123	lab0	9b13a1148909e0ba
+0	544	1693724970483528663	CMakeFiles/lab0.dir/src/main.cpp.o	106c89c36627e75d
