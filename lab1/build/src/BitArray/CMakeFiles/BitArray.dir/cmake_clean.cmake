@@ -1,0 +1,13 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/BitArray.dir/BitArray.cpp.o"
+  "CMakeFiles/BitArray.dir/BitArray.cpp.o.d"
+  "CMakeFiles/BitArray.dir/utils.cpp.o"
+  "CMakeFiles/BitArray.dir/utils.cpp.o.d"
+  "libBitArray.a"
+  "libBitArray.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/BitArray.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

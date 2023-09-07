@@ -4,16 +4,11 @@
 using namespace std;
 
 int main() {
-    auto ba = new BitArray(33);
-    ba->set(5, true);
-    ba->set(6, true);
-    ba->set(7, true);
+    auto ba = new BitArray(32, 5);
     cout << ba->to_string() << endl;
 
-    ba->set(6, false);
-    cout << ba->to_string() << endl;
+    ba->push_back(1);
 
-    ba->set();
     cout << ba->to_string() << endl;
 
     return 0;

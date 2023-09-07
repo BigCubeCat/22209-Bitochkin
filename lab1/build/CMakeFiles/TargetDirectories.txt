@@ -1,0 +1,6 @@
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/CMakeFiles/lab1.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/CMakeFiles/rebuild_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/src/BitArray/CMakeFiles/BitArray.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/src/BitArray/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab1/build/src/BitArray/CMakeFiles/rebuild_cache.dir

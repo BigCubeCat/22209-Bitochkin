@@ -12,6 +12,8 @@ private:
     int dataSize;
     std::vector<int> data;
 
+    int updateCountOnes();
+
 public:
     BitArray();
 

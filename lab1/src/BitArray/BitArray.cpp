@@ -23,7 +23,15 @@ BitArray::BitArray(int num_bits, unsigned long value) {
         dataSize = length / BIT_IN_INT + 1;
     }
     for (int i = 0; i < dataSize; ++i) {
-        data.push_back(0);
+        int num = 0;
+        for (int j = 0; j < BIT_IN_INT; ++j) {
+            if (value % 2 == 1) {
+                countOnes++;
+                num |= (1 << j);
+            }
+            value /= 2;
+        }
+        data.push_back(num);
     }
 }
 
@@ -85,8 +93,70 @@ BitArray &BitArray::set(int n, bool val) {
 
 BitArray &BitArray::set() {
     for (int i = 0; i < data.size(); ++i) {
-        data[i] = INT_MAX;
+        data[i] = ~INT_MIN;
     }
     return *this;
+}
+
+void BitArray::push_back(bool bit) {
+    length++;
+    if (length % BIT_IN_INT == 1) {
+        dataSize += 1;
+        data.push_back(bit ? 1 : 0);
+        countOnes += 1;
+        return;
+    }
+    if (bit) {
+        countOnes += 1;
+        data[dataSize - 1] |= (1 << ((length - 1) % BIT_IN_INT));
+    }
+    countOnes += bit ? 1 : 0;
+}
+
+void BitArray::clear() {
+    length = 0;
+    data.clear();
+    dataSize = 0;
+    countOnes = 0;
+}
+
+void BitArray::resize(int num_bits, bool value) {
+    if (num_bits > length) {
+        for (int i = 0; i < length - num_bits; ++i) {
+            this->push_back(value);
+        }
+    } else {
+        dataSize = length / BIT_IN_INT + (length % BIT_IN_INT) ? 1 : 0;
+        length = num_bits;
+        data.resize(dataSize);
+    }
+    updateCountOnes();
+}
+
+int BitArray::updateCountOnes() {
+    countOnes = 0;
+    for (int i = 0; i < length; ++i) {
+        if ((data[length / BIT_IN_INT] >> i) & 1) {
+            countOnes += 1;
+        }
+    }
+}
+
+BitArray &BitArray::reset() {
+    for (int i = 0; i < dataSize; ++i) {
+        data[i] = 0;
+    }
+    countOnes = 0;
+}
+
+BitArray &BitArray::reset(int n) {
+    data[length / n] = data[length / n]  & ~(1 << n);
+}
+
+void BitArray::swap(BitArray &b) {
+    std::swap(b.length, length);
+    std::swap(b.dataSize, dataSize);
+    std::swap(b.countOnes, countOnes);
+    data.swap(b.data);
 }
 
