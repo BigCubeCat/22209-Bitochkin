@@ -11,8 +11,7 @@ private:
     int countOnes;
     int dataSize;
     std::vector<int> data;
-
-    int updateCountOnes();
+    void updateCountOnes();
 
 public:
     BitArray();
@@ -25,7 +24,6 @@ public:
 
     void swap(BitArray &b);
 
-    BitArray &operator=(const BitArray &b);
 
     void resize(int num_bits, bool value = false);
 
@@ -33,19 +31,6 @@ public:
 
     void push_back(bool bit);
 
-    BitArray &operator&=(const BitArray &b);
-
-    BitArray &operator|=(const BitArray &b);
-
-    BitArray &operator^=(const BitArray &b);
-
-    BitArray &operator<<=(int n);
-
-    BitArray &operator>>=(int n);
-
-    BitArray operator<<(int n) const;
-
-    BitArray operator>>(int n) const;
 
     BitArray &set(int n, bool val = true);
 
@@ -70,4 +55,33 @@ public:
     bool empty() const;
 
     std::string to_string() const;
+
+    BitArray &operator=(const BitArray &b);
+
+
+    BitArray &operator&=(const BitArray &b);
+
+    BitArray &operator|=(const BitArray &b);
+
+    BitArray &operator^=(const BitArray &b);
+
+    BitArray &operator<<=(int n);
+
+    BitArray &operator>>=(int n);
+
+    BitArray operator<<(int n) const;
+
+    BitArray operator>>(int n) const;
+
 };
+
+
+bool operator==(const BitArray &a, const BitArray &b);
+
+bool operator!=(const BitArray &a, const BitArray &b);
+
+BitArray operator&(const BitArray &b1, const BitArray &b2);
+
+BitArray operator|(const BitArray &b1, const BitArray &b2);
+
+BitArray operator^(const BitArray &b1, const BitArray &b2);

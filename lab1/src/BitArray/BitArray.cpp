@@ -133,7 +133,7 @@ void BitArray::resize(int num_bits, bool value) {
     updateCountOnes();
 }
 
-int BitArray::updateCountOnes() {
+void BitArray::updateCountOnes() {
     countOnes = 0;
     for (int i = 0; i < length; ++i) {
         if ((data[length / BIT_IN_INT] >> i) & 1) {
@@ -147,10 +147,12 @@ BitArray &BitArray::reset() {
         data[i] = 0;
     }
     countOnes = 0;
+    return *this;
 }
 
 BitArray &BitArray::reset(int n) {
     data[length / n] = data[length / n]  & ~(1 << n);
+    return *this;
 }
 
 void BitArray::swap(BitArray &b) {
@@ -158,5 +160,59 @@ void BitArray::swap(BitArray &b) {
     std::swap(b.dataSize, dataSize);
     std::swap(b.countOnes, countOnes);
     data.swap(b.data);
+}
+
+BitArray &BitArray::operator=(const BitArray &b) {
+    length = b.length;
+    dataSize = b.dataSize;
+    data = b.data;
+    countOnes = b.countOnes;
+}
+
+BitArray &BitArray::operator&=(const BitArray &b) {
+    for (int i = 0; i < std::min(dataSize, b.dataSize); ++i) {
+        data[i] &= b.data[i];
+    }
+    return *this;
+}
+
+BitArray &BitArray::operator^=(const BitArray &b) {
+    if (length < b.length) {
+        resize(b.length);
+    }
+    for (int i = 0; i < dataSize, b.dataSize; ++i) {
+        data[i] ^= b.data[i];
+    }
+    return *this;
+}
+
+BitArray &BitArray::operator|=(const BitArray &b) {
+    // TODO resize
+    if (length < b.length) {
+        resize(b.length);
+    }
+    for (int i = 0; i < std::max(dataSize, b.dataSize); ++i) {
+        data[i] &= b.data[i];
+    }
+    return *this;
+}
+
+bool operator==(const BitArray &a, const BitArray &b) {
+    if (a.size() != b.size()) {
+        return false;
+    }
+    if (a.count() !=  b.count()) {
+        return false;
+    }
+    for (int i = 0; i < a.size(); ++i) {
+        if (a[i] != b[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool operator!=(const BitArray &a, const BitArray &b) {
+    return !(a == b);
 }
 
