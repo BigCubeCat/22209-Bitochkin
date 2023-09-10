@@ -28,5 +28,3 @@ class Counter {
     void createTable();
     static std::vector<std::string> splitWords(std::string words);
 };
-
-bool isSplitChar(char c);
