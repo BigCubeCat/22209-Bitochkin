@@ -80,8 +80,10 @@ void Counter::saveCSV() {
     outFile.open(outputFile);
     outFile << "Word;count;frequency %\n";
     for (const auto& row : table) {
+        auto freq = std::to_string(row.frequency);
+        std::replace( freq.begin(), freq.end(), '.', ',');
         outFile << row.word + ";" + std::to_string(row.count) + ";" +
-                       std::to_string(row.frequency) + "\n";
+                       row.frequency) + "\n";
     }
     outFile.close();
 }
