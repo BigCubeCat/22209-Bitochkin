@@ -1,8 +1,8 @@
 #include "./row.h"
 
-bool compareRows(Row first, Row second) {
-    if (first.count == second.count) {
-        return first.word > second.word;
+bool Row::operator<(Row& other) {
+    if (count == other.count) {
+        return word > other.word;
     }
-    return first.count > second.count;
+    return count > other.count;
 }

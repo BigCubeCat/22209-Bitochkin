@@ -5,7 +5,7 @@
 struct Row {
     std::string word;
     int count;
-    int frequency;
-};
+    float frequency;
 
-bool compareRows(Row first, Row second);
+    bool operator<(Row& other);
+};

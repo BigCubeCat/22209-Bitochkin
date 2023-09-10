@@ -6,23 +6,8 @@
 #include <string>
 #include <vector>
 
-/*
- * bool isSplitChar(char c)
- * @param {char} c - symbol to check
- * @returns {bool} true, if symbol are forbidden
- */
-bool isSplitChar(char c) {
-    for (auto splitChar : SPLIT_CHARS) {
-        if (c == splitChar) {
-            return true;
-        }
-    }
-    return false;
-}
-
-Counter::Counter(std::string inFile, std::string outFile) {
-    inputFile = inFile;
-    outputFile = outFile;
+Counter::Counter(std::string inFile, std::string outFile)
+    : inputFile(inFile), outputFile(outFile) {
     parseFile();
     createTable();
 }
@@ -36,7 +21,7 @@ std::vector<std::string> Counter::splitWords(std::string words) {
     std::vector<std::string> results;
     std::string currentWord = "";
     for (auto c : words) {
-        if (isSplitChar(c)) {
+        if (SPLIT_CHARS.find(c) != std::string::npos) {
             if (currentWord.length() > 0) {
                 results.push_back(currentWord);
                 currentWord = "";
@@ -62,16 +47,13 @@ void Counter::parseFile() {
     std::fstream file;
     file.open(inputFile, std::ios::in);
 
-    while (file.peek() != EOF) {
-        getline(file, words, ' ');
-        for (auto word : splitWords(words)) {
-            countWords++;
-            if (foundWords[word]) {
-                statistic[word] += 1;
-            } else {
-                foundWords[word] = true;
-                statistic[word] = 1;
+    while (std::getline(file, words, ' ')) {
+        for (const auto& word : splitWords(words)) {
+            const std::pair<std::string, int> pair{word, 1};
+            if (auto [it, inserted] = statistic.insert(pair); !inserted) {
+                it->second += 1;
             }
+            countWords++;
         }
     }
 }
@@ -81,25 +63,12 @@ void Counter::parseFile() {
  * reads statistic after "parseFile()" and generate table data
  */
 void Counter::createTable() {
-    for (auto & it : statistic) {
-        table.push_back(
-            Row{it.first, it.second, it.second * 100 / countWords});
+    table.reserve(statistic.size());
+    for (const auto& it : statistic) {
+        table.push_back(Row{it.first, it.second,
+                            (float)it.second * 100 / (float)countWords});
     }
-    std::sort(table.begin(), table.end(), compareRows);
-}
-
-/*
- * generateFileContent()
- * reads table and return csv text content
- */
-std::string Counter::generateFileContent() {
-    std::string content = "Word;count;frequency\n";
-
-    for (auto row : table) {
-        content += row.word + ";" + std::to_string(row.count) + ";" +
-                   std::to_string(row.frequency) + "\n";
-    }
-    return content;
+    std::sort(table.begin(), table.end());
 }
 
 /*
@@ -109,6 +78,10 @@ std::string Counter::generateFileContent() {
 void Counter::saveCSV() {
     std::ofstream outFile;
     outFile.open(outputFile);
-    outFile << generateFileContent();
+    outFile << "Word;count;frequency %\n";
+    for (const auto& row : table) {
+        outFile << row.word + ";" + std::to_string(row.count) + ";" +
+                       std::to_string(row.frequency) + "\n";
+    }
     outFile.close();
 }
