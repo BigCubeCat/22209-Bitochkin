@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
         std::cout << USAGE << std::endl;
         return 1;
     }
-    auto *counter = new Counter(argv[1], argv[2]);
-    counter->saveCSV();
+    Counter counter = Counter(argv[1], argv[2]);
+    counter.saveCSV();
     return 0;
 }
