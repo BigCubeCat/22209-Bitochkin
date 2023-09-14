@@ -176,7 +176,7 @@ BitArray &BitArray::reset() {
 }
 
 BitArray &BitArray::reset(size_t n) {
-    data[length / n] = data[length / n] & ~(1 << n);
+    set(n, false);
     return *this;
 }
 
@@ -192,10 +192,12 @@ BitArray &BitArray::operator=(const BitArray &b) {
     dataSize = b.dataSize;
     data = b.data;
     countOnes = b.countOnes;
+    return *this;
 }
 
 BitArray &BitArray::operator&=(const BitArray &b) {
     this->resize(std::max(dataSize, b.dataSize));
+    length = std::max(length, b.length);
     for (size_t i = 0; i < dataSize; ++i) {
         data[i] &= b.data[i];
     }
@@ -204,16 +206,18 @@ BitArray &BitArray::operator&=(const BitArray &b) {
 
 BitArray &BitArray::operator^=(const BitArray &b) {
     this->resize(std::max(dataSize, b.dataSize));
-    for (size_t i = 0; i < dataSize; ++i) {
-        data[i] ^= b.data[i];
+    length = std::max(length, b.length);
+    for (size_t i = 0; i < length; ++i) {
+        set(i, (*this)[i] != b[i]);
     }
     return *this;
 }
 
 BitArray &BitArray::operator|=(const BitArray &b) {
     this->resize(std::max(dataSize, b.dataSize));
-    for (size_t i = 0; i < dataSize; ++i) {
-        data[i] |= b.data[i];
+    length = std::max(length, b.length);
+    for (size_t i = 0; i < length; ++i) {
+        set(i, (*this)[i] or b[i]);
     }
     return *this;
 }
@@ -221,7 +225,6 @@ BitArray &BitArray::operator|=(const BitArray &b) {
 BitArray &BitArray::operator<<=(size_t n) {
     for (size_t i = 0; i < n; ++i) {
         push_back(false);
-        std::cout << to_string() << std::endl;
     }
     return *this;
 }
@@ -237,12 +240,7 @@ BitArray &BitArray::operator>>=(size_t n) {
     data.resize(dataSize);
     for (size_t i = 0; i < length; ++i) {
         set(i, oldData[i / UCHAR_WIDTH] >> (i % UCHAR_WIDTH) & 1);
-        std::cout << i << " "
-                  << (oldData[i / UCHAR_WIDTH] >> (i % UCHAR_WIDTH) & 1)
-                  << '\n';
-        1;
     }
-    std::cout << "new value = " << to_string() << std::endl;
     return *this;
 }
 
@@ -276,8 +274,9 @@ bool operator==(const BitArray &a, const BitArray &b) {
 bool operator!=(const BitArray &a, const BitArray &b) {
     return !(a == b);
 }
+
 BitArray operator&(const BitArray &b1, const BitArray &b2) {
-    auto result = BitArray((size_t)std::max(b1.size(), b2.size()), 0);
+    auto result = BitArray((size_t) std::max(b1.size(), b2.size()), 0);
     for (size_t i = 0; i < result.size(); ++i) {
         result.set(i, b1[i] && b2[i]);
     }
@@ -285,7 +284,7 @@ BitArray operator&(const BitArray &b1, const BitArray &b2) {
 }
 
 BitArray operator|(const BitArray &b1, const BitArray &b2) {
-    auto result = BitArray((size_t)std::max(b1.size(), b2.size()), 0);
+    auto result = BitArray((size_t) std::max(b1.size(), b2.size()), 0);
     for (size_t i = 0; i < result.size(); ++i) {
         result.set(i, b1[i] || b2[i]);
     }
@@ -293,7 +292,7 @@ BitArray operator|(const BitArray &b1, const BitArray &b2) {
 }
 
 BitArray operator^(const BitArray &b1, const BitArray &b2) {
-    auto result = BitArray((size_t)std::max(b1.size(), b2.size()), 0);
+    auto result = BitArray((size_t) std::max(b1.size(), b2.size()), 0);
     for (size_t i = 0; i < result.size(); ++i) {
         result.set(i, b1[i] != b2[i]);
     }
