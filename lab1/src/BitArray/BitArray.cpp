@@ -94,11 +94,12 @@ bool BitArray::empty() const {
 
 std::string BitArray::to_string() const {
     std::string result;
-    size_t lastSize = length % UCHAR_WIDTH;
-    size_t lastIndex = data.size() - 1;
-    for (size_t i = 0; i < data.size(); i++) {
-        result +=
-            binaryString(data[i], (i == lastIndex) ? lastSize : UCHAR_WIDTH);
+    for (size_t i = 0; i < length; ++i) {
+        if ((*this)[i]) {
+            result += '1';
+        } else {
+            result += '0';
+        }
     }
     return result;
 }
@@ -120,12 +121,8 @@ BitArray &BitArray::set() {
 }
 
 void BitArray::push_back(bool bit) {
-    std::cout << "push back\n";
     length++;
-    std::cout << bit << " what\n";
-    std::cout << length << " len\n";
     if (length % UCHAR_WIDTH == 1) {
-        std::cout << "len % UCHAR_WIDTH\n";
         dataSize += 1;
         data.push_back(bit ? 1 : 0);
         countOnes += 1;
@@ -133,11 +130,8 @@ void BitArray::push_back(bool bit) {
     }
     if (bit) {
         countOnes += 1;
-        std::cout  << "here\n";
         countOnes += 1;
-        std::cout  << "here\n";
         data[dataSize - 1] |= (1 << ((length - 1) % UCHAR_WIDTH));
-        std::cout  << "here\n";
     }
 }
 
@@ -224,17 +218,29 @@ BitArray &BitArray::operator|=(const BitArray &b) {
 BitArray &BitArray::operator<<=(size_t n) {
     for (size_t i = 0; i < n; ++i) {
         push_back(false);
-        std::cout << "now = " << to_string() << std::endl;
+        std::cout << to_string() << std::endl;
     }
-    std::cout << "now = " << to_string() << std::endl;
+    return *this;
 }
 
 BitArray &BitArray::operator>>=(size_t n) {
     std::vector<TYPE> oldData(data);
-    size_t counter = 0;
-    for (size_t i = n; i < length; ++i) {
-        set(i - n, oldData[i / UCHAR_WIDTH] >> (i % UCHAR_WIDTH) & 1);
+    length -= n;
+    if (length % UCHAR_WIDTH == 0) {
+        dataSize = length / UCHAR_WIDTH;
+    } else {
+        dataSize = length / UCHAR_WIDTH + 1;
     }
+    data.resize(dataSize);
+    for (size_t i = 0; i < length; ++i) {
+        set(i, oldData[i / UCHAR_WIDTH] >> (i % UCHAR_WIDTH) & 1);
+        std::cout << i << " "
+                  << (oldData[i / UCHAR_WIDTH] >> (i % UCHAR_WIDTH) & 1)
+                  << '\n';
+        1;
+    }
+    std::cout << "new value = " << to_string() << std::endl;
+    return *this;
 }
 
 BitArray BitArray::operator<<(size_t n) const {
@@ -244,7 +250,9 @@ BitArray BitArray::operator<<(size_t n) const {
 }
 
 BitArray BitArray::operator>>(size_t n) const {
-    return BitArray();
+    BitArray newBitArray = BitArray(*this);
+    newBitArray >>= n;
+    return newBitArray;
 }
 
 bool operator==(const BitArray &a, const BitArray &b) {
