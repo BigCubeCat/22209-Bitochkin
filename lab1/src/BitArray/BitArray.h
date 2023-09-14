@@ -3,14 +3,14 @@
 #include <iostream>
 #include <vector>
 
-#define BIT_IN_INT 32
+#define TYPE unsigned char
 
 class BitArray {
 private:
-    int length;
-    int countOnes;
-    int dataSize;
-    std::vector<int> data;
+    size_t length;
+    size_t countOnes;
+    size_t dataSize;
+    std::vector<TYPE> data;
     void updateCountOnes();
 
 public:
@@ -18,25 +18,26 @@ public:
 
     ~BitArray();
 
-    explicit BitArray(int num_bits, unsigned long value = 0);
+    explicit BitArray(size_t num_bits, unsigned long value = 0);
+    explicit BitArray(std::string str);
 
     BitArray(const BitArray &b);
 
     void swap(BitArray &b);
 
 
-    void resize(int num_bits, bool value = false);
+    void resize(size_t num_bits, bool value = false);
 
     void clear();
 
     void push_back(bool bit);
 
 
-    BitArray &set(int n, bool val = true);
+    BitArray &set(size_t n, bool val = true);
 
     BitArray &set();
 
-    BitArray &reset(int n);
+    BitArray &reset(size_t n);
 
     BitArray &reset();
 
@@ -46,11 +47,11 @@ public:
 
     BitArray operator~() const;
 
-    int count() const;
+    size_t count() const;
 
-    bool operator[](int i) const;
+    bool operator[](size_t i) const;
 
-    int size() const;
+    size_t size() const;
 
     bool empty() const;
 
@@ -65,13 +66,13 @@ public:
 
     BitArray &operator^=(const BitArray &b);
 
-    BitArray &operator<<=(int n);
+    BitArray &operator<<=(size_t n);
 
-    BitArray &operator>>=(int n);
+    BitArray &operator>>=(size_t n);
 
-    BitArray operator<<(int n) const;
+    BitArray operator<<(size_t n) const;
 
-    BitArray operator>>(int n) const;
+    BitArray operator>>(size_t n) const;
 
 };
 

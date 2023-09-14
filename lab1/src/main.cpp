@@ -4,12 +4,13 @@
 using namespace std;
 
 int main() {
-    auto ba = new BitArray(32, 5);
-    cout << ba->to_string() << endl;
-
-    ba->push_back(1);
-
-    cout << ba->to_string() << endl;
+    BitArray a = BitArray("1010");
+    a.push_back(false);
+    cout << a.to_string() << endl;
+    a.push_back(false);
+    a.push_back(false);
+    a.push_back(false);
+    cout << "b = " << a.to_string() << " " << a.size() << endl;
 
     return 0;
 }
