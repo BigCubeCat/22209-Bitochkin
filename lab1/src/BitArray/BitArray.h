@@ -7,9 +7,9 @@
 
 class BitArray {
 private:
-    size_t length;
-    size_t countOnes;
-    size_t dataSize;
+    size_t length = 0;
+    size_t countOnes = 0;
+    size_t dataSize = 0;
     std::vector<TYPE> data;
     void updateCountOnes();
 
@@ -24,7 +24,6 @@ public:
     BitArray(const BitArray &b);
 
     void swap(BitArray &b);
-
 
     void resize(size_t num_bits, bool value = false);
 

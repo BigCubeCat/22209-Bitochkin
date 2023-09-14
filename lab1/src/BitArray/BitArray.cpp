@@ -26,6 +26,9 @@ BitArray::BitArray(std::string str) : length(str.size()) {
     data.resize(dataSize);
     for (size_t i = 0; i < length; ++i) {
         set(i, str[i] == '1');
+        if (str[i] == '1') {
+            countOnes++;
+        }
     }
 }
 
