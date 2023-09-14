@@ -1,13 +1,10 @@
-cmake_minimum_required(VERSION 3.5)
-
+cmake_minimum_required(VERSION 3.10)
 project(lab1)
 
-set(SOURCE_EXE src/main.cpp)
+set(CMAKE_CXX_STANDARD 17)
 
-include_directories(src/BitArray)
+include_directories(src)
 
-add_executable(lab1 ${SOURCE_EXE})
-
-add_subdirectory(src/BitArray)
-
-target_link_libraries(lab1 BitArray)
+add_subdirectory(src)
+add_subdirectory(tests)
+add_subdirectory(googletest)
