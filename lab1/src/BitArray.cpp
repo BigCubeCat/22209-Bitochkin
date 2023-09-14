@@ -8,6 +8,10 @@ BitArray::~BitArray() {
     clear();
 }
 
+/*
+ * BitArray()
+ * default constructor
+ */
 BitArray::BitArray() {
     countOnes = 0;
     length = 64;
@@ -17,6 +21,11 @@ BitArray::BitArray() {
     }
 }
 
+/*
+ * BitArray(std::string str)
+ * Initialize BitArray from string definition.
+ * See BitArray::to_string()
+ */
 BitArray::BitArray(std::string str) : length(str.size()) {
     if (length % UCHAR_WIDTH == 0) {
         dataSize = length / UCHAR_WIDTH;
@@ -32,6 +41,10 @@ BitArray::BitArray(std::string str) : length(str.size()) {
     }
 }
 
+/*
+ * BitArray(size_t num_bits, unsigned long value)
+ * Initialize BitArray with length and default value (0 by default)
+ */
 BitArray::BitArray(size_t num_bits, unsigned long value) : length(num_bits) {
     if (length % UCHAR_WIDTH == 0) {
         dataSize = length / UCHAR_WIDTH;
@@ -51,6 +64,10 @@ BitArray::BitArray(size_t num_bits, unsigned long value) : length(num_bits) {
     }
 }
 
+/*
+ * BitArray(const BitArray &b);
+ * Initialize BitArray from old BitArray
+ */
 BitArray::BitArray(const BitArray &b) {
     length = b.length;
     countOnes = b.countOnes;
@@ -58,14 +75,26 @@ BitArray::BitArray(const BitArray &b) {
     data = b.data;
 }
 
+/*
+ * BitArray::any()
+ * @return true, if count true > 0
+ */
 bool BitArray::any() const {
     return countOnes > 0;
 }
 
+/*
+ * BitArray::none()
+ * @return true, if count true is 0
+ */
 bool BitArray::none() const {
     return countOnes == 0;
 }
 
+/*
+ * BitArray::operator~()
+ * Inverts all values in BitArray
+ */
 BitArray BitArray::operator~() const {
     std::string string = to_string();
     for (size_t i = 0; i < string.size(); ++i) {
@@ -74,10 +103,18 @@ BitArray BitArray::operator~() const {
     return BitArray(string);
 }
 
+/*
+ * BitArray::count()
+ * @return count of true values
+ */
 size_t BitArray::count() const {
     return countOnes;
 }
 
+/*
+ * BitArray::operator[](size_t i)
+ * @return value by index
+ */
 bool BitArray::operator[](size_t i) const {
     if (i >= length) {
         return false;
@@ -87,14 +124,26 @@ bool BitArray::operator[](size_t i) const {
     return (number >> bitIndex) & 1;
 }
 
+/*
+ * BitArray::size()
+ * @return length of BitArray
+ */
 size_t BitArray::size() const {
     return length;
 }
 
+/*
+ * BitArray::empty()
+ * @return true, if length == 0
+ */
 bool BitArray::empty() const {
     return length == 0;
 }
 
+/*
+ * BitArray::to_string()
+ * @return string with 0 and 1
+ */
 std::string BitArray::to_string() const {
     std::string result;
     for (size_t i = 0; i < length; ++i) {
@@ -107,6 +156,10 @@ std::string BitArray::to_string() const {
     return result;
 }
 
+/*
+ * &BitArray::set(size_t n, bool val)
+ * set value by index
+ */
 BitArray &BitArray::set(size_t n, bool val) {
     size_t numberIndex = n / UCHAR_WIDTH;
     data[numberIndex] = data[numberIndex] | (1 << n);
@@ -116,6 +169,10 @@ BitArray &BitArray::set(size_t n, bool val) {
     return *this;
 }
 
+/*
+ * &BitArray::set()
+ * set all values true
+ */
 BitArray &BitArray::set() {
     for (size_t i = 0; i < length; ++i) {
         set(i, true);
@@ -123,6 +180,10 @@ BitArray &BitArray::set() {
     return *this;
 }
 
+/*
+ * BitArray::push_back(bool bit)
+ * Add new value to end of BitArray
+ */
 void BitArray::push_back(bool bit) {
     length++;
     if (length % UCHAR_WIDTH == 1) {
@@ -138,6 +199,10 @@ void BitArray::push_back(bool bit) {
     }
 }
 
+/*
+ * BitArray::clear()
+ * Makes BitArray empty
+ */
 void BitArray::clear() {
     length = 0;
     data.clear();
@@ -145,6 +210,11 @@ void BitArray::clear() {
     countOnes = 0;
 }
 
+/*
+ * BitArray::resize(size_t num_bits, bool value)
+ * Change size of BitArray.
+ * If new size greater, set {value} by default
+ */
 void BitArray::resize(size_t num_bits, bool value) {
     if (num_bits > length) {
         for (size_t i = 0; i < length - num_bits; ++i) {
@@ -158,6 +228,10 @@ void BitArray::resize(size_t num_bits, bool value) {
     updateCountOnes();
 }
 
+/*
+ * BitArray::updateCountOnes()
+ * Recalculate count true values
+ */
 void BitArray::updateCountOnes() {
     countOnes = 0;
     for (size_t i = 0; i < length; ++i) {
@@ -167,6 +241,10 @@ void BitArray::updateCountOnes() {
     }
 }
 
+/*
+ * &BitArray::reset()
+ * set all values false
+ */
 BitArray &BitArray::reset() {
     for (size_t i = 0; i < dataSize; ++i) {
         data[i] = 0;
@@ -175,6 +253,10 @@ BitArray &BitArray::reset() {
     return *this;
 }
 
+/*
+ * &BitArray::reset(size_t n)
+ * set single value {false}
+ */
 BitArray &BitArray::reset(size_t n) {
     set(n, false);
     return *this;
