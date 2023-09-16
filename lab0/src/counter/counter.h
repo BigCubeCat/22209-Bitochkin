@@ -7,13 +7,9 @@
 
 #include "row.h"
 
-namespace {
-const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'\n\t[];<>_~`";
-}
-
 class Counter {
    public:
-    Counter(std::string inFile, std::string outFile);
+    Counter(const std::string &inFile, const std::string &outFile);
     void saveCSV();
 
    private:
@@ -26,5 +22,4 @@ class Counter {
     std::map<std::string, bool> foundWords;
     void parseFile();
     void createTable();
-    static std::vector<std::string> splitWords(std::string words);
 };

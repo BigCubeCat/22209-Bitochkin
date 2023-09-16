@@ -6,18 +6,14 @@
 #include <string>
 #include <vector>
 
-Counter::Counter(std::string inFile, std::string outFile)
-    : inputFile(inFile), outputFile(outFile) {
-    parseFile();
-    createTable();
-}
-
+namespace {
+const std::string SPLIT_CHARS = ",./:\\-+=()*&^%$#@!?<>\"\'\n\t[];<>_~`";
 /*
  * splitWords(words)
  * @param{words} words, joined by forbidden symbols
  * @returns vector of clean words
  */
-std::vector<std::string> Counter::splitWords(std::string words) {
+std::vector<std::string> splitWords(const std::string& words) {
     std::vector<std::string> results;
     std::string currentWord = "";
     for (auto c : words) {
@@ -36,6 +32,13 @@ std::vector<std::string> Counter::splitWords(std::string words) {
     }
     return results;
 }
+}  // namespace
+
+Counter::Counter(const std::string& inFile, const std::string& outFile)
+    : inputFile(inFile), outputFile(outFile) {
+    parseFile();
+    createTable();
+}
 
 /*
  * parseFile()
@@ -49,8 +52,7 @@ void Counter::parseFile() {
 
     while (std::getline(file, words, ' ')) {
         for (const auto& word : splitWords(words)) {
-            const std::pair<std::string, int> pair{word, 1};
-            if (auto [it, inserted] = statistic.insert(pair); !inserted) {
+            if (auto [it, inserted] = statistic.insert({word, 1}); !inserted) {
                 it->second += 1;
             }
             countWords++;
@@ -64,9 +66,10 @@ void Counter::parseFile() {
  */
 void Counter::createTable() {
     table.reserve(statistic.size());
-    for (const auto& it : statistic) {
-        table.push_back(Row{it.first, it.second,
-                            (float)it.second * 100 / (float)countWords});
+    for (const auto& [word, count] : statistic) {
+        table.push_back(Row{word, count,
+                            static_cast<float>(count) * 100.f /
+                                static_cast<float>(countWords)});
     }
     std::sort(table.begin(), table.end());
 }
@@ -82,8 +85,7 @@ void Counter::saveCSV() {
     for (const auto& row : table) {
         auto freq = std::to_string(row.frequency);
         std::replace(freq.begin(), freq.end(), '.', ',');
-        outFile << row.word + ";" + std::to_string(row.count) + ";" +
-                       std::to_string(row.frequency) + "\n";
+        outFile << row.word + ";" + std::to_string(row.count) + ";" + freq;
+        outFile << "\n";
     }
-    outFile.close();
 }
