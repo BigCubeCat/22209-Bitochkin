@@ -1,0 +1,23 @@
+# ninja log v5
+53	138	1694941721997517935	Conf/libConfLib.a	d0e7cab02c430b53
+1	36	1694941721890854826	Conf/ConfLib_autogen/timestamp	6503d7fc5785bd6a
+1	25	1694942505415510601	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/timestamp	186757515837f0da
+39	58	1694941710807890502	CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o	3d6686892818e9ba
+40	1881	1694941712631163222	CMakeFiles/untitled.dir/main.cpp.o	b5d537b886c80d79
+36	52	1694941721914187382	Conf/CMakeFiles/ConfLib.dir/Conf.cpp.o	38aefc617de42b55
+1	25	1694942505415510601	CmdManager/CmdManagerLib_autogen/timestamp	186757515837f0da
+369	408	1694942505798851292	CmdManager/libCmdManagerLib.a	559a35f3d75a18e4
+409	432	1694942505825518470	untitled_autogen/timestamp	854d599d376535a
+0	166	1694944793266057178	build.ninja	38ab96ac76d632aa
+25	369	1694942505762183921	CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManager.cpp.o	b8bdec9387eadbc8
+1	36	1694941721890854826	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Conf/ConfLib_autogen/mocs_compilation.cpp	6503d7fc5785bd6a
+1	25	1694942505415510601	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp	186757515837f0da
+36	53	1694941721914187382	Conf/CMakeFiles/ConfLib.dir/ConfLib_autogen/mocs_compilation.cpp.o	6ba815745b2b1919
+1	36	1694941721890854826	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Conf/ConfLib_autogen/timestamp	6503d7fc5785bd6a
+409	432	1694942505825518470	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/untitled_autogen/mocs_compilation.cpp	854d599d376535a
+409	432	1694942505825518470	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/untitled_autogen/timestamp	854d599d376535a
+1	25	1694942505415510601	CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp	186757515837f0da
+36	53	1694942483468400998	CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen/mocs_compilation.cpp.o	867553059be9accd
+432	761	1694942506152191393	untitled	545d87efbc859618
+1	36	1694941721890854826	Conf/ConfLib_autogen/mocs_compilation.cpp	6503d7fc5785bd6a
+409	432	1694942505825518470	untitled_autogen/mocs_compilation.cpp	854d599d376535a
