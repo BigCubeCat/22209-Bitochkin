@@ -1,16 +1,14 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
-
-#define TYPE unsigned char
+#include <string>
 
 class BitArray {
 private:
     size_t length = 0;
     size_t countOnes = 0;
     size_t dataSize = 0;
-    std::vector<TYPE> data;
+    std::vector<unsigned char> data;
     void updateCountOnes();
 
 public:
@@ -19,7 +17,7 @@ public:
     ~BitArray();
 
     explicit BitArray(size_t num_bits, unsigned long value = 0);
-    explicit BitArray(std::string str);
+    explicit BitArray(const std::string &str);
 
     BitArray(const BitArray &b);
 
