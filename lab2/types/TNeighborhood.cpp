@@ -1,12 +1,16 @@
 #include "TNeighborhood.h"
 
+#include <string>
+
 std::string TNeighborhood::string() {
     std::string name = (title == M) ? "Мура" : "Фон-Неймана";
-    std::string deg = std::stoi(degree);
-    return "Соседство " + name + " " + deg + " степени";
+    std::string d = std::to_string(degree);
+    return "Соседство " + name + " " + d + " степени";
 }
 
 TNeighborhood::TNeighborhood(ENeighborhood neigh, int deg) : title(neigh), degree(deg) {
+    countPoints = (deg * 2 + 1);
+    countPoints *= countPoints;
     for (int i = -deg; i <= deg; ++i) {
         for (int j = -deg; j <= deg; ++j) {
             if (i == 0 && j == 0) continue;

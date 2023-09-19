@@ -49,7 +49,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 22,
 				"parent" : 0
 			},
 			{
@@ -285,6 +285,10 @@
 			"id" : "TypesLib::@7f98f3510d0ca4b0fd06"
 		},
 		{
+			"backtrace" : 2,
+			"id" : "GameArenaLib::@b187ce07c3dcd2038dae"
+		},
+		{
 			"id" : "untitled_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -313,6 +317,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "types/libTypesLib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "Life/GameArena/libGameArenaLib.a",
 				"role" : "libraries"
 			},
 			{

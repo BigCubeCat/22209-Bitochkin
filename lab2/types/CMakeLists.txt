@@ -1,5 +1,5 @@
 project(TypesLib)
 
-add_library(TypesLib Rules.h Rules.cpp
+add_library(TypesLib TRules.h TRules.cpp
         TNeighborhood.h
         TNeighborhood.cpp)

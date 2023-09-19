@@ -11,12 +11,11 @@ enum ENeighborhood {
 
 struct TNeighborhood {
     ENeighborhood title;
-    std::basic_string<char> degree = 1;
+    int countPoints = 0;
+    int degree = 1;
     std::vector<std::pair<int, int>> points;
     explicit TNeighborhood(ENeighborhood neigh, int deg=1);
     std::string string();
-    void genVonNeighman();
-    void genMoore();
 };
 
 

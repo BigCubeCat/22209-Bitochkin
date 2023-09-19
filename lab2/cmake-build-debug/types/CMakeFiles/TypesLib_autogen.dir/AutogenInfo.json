@@ -14,15 +14,15 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/Rules.h",
-			"MU",
-			"EWIEGA46WW/moc_Rules.cpp",
-			null
-		],
-		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/TNeighborhood.h",
 			"MU",
 			"EWIEGA46WW/moc_TNeighborhood.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/TRules.h",
+			"MU",
+			"EWIEGA46WW/moc_TRules.cpp",
 			null
 		]
 	],
@@ -79,12 +79,12 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/Rules.cpp",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/TNeighborhood.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/TNeighborhood.cpp",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/TRules.cpp",
 			"MU",
 			null
 		]

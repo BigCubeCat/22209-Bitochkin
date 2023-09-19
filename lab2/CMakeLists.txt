@@ -17,6 +17,7 @@ add_executable(untitled main.cpp)
 
 add_subdirectory(CmdManager)
 add_subdirectory(types)
+add_subdirectory(Life/GameArena)
 
 target_link_libraries(untitled
         Qt::Core
@@ -24,5 +25,6 @@ target_link_libraries(untitled
         Qt::Widgets
         CmdManagerLib
         TypesLib
+        GameArenaLib
 )
 

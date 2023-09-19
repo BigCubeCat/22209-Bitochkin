@@ -1,5 +1,5 @@
-#ifndef UNTITLED_RULES_H
-#define UNTITLED_RULES_H
+#ifndef UNTITLED_TRULES_H
+#define UNTITLED_TRULES_H
 
 #include <iostream>
 #include <vector>
@@ -14,4 +14,4 @@ struct TRules {
     ~TRules();
 };
 
-#endif //UNTITLED_RULES_H
+#endif //UNTITLED_TRULES_H

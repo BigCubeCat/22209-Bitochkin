@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -20,9 +21,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						6,
-						7,
-						8
+						9,
+						10,
+						11
 					]
 				},
 				{
@@ -54,6 +55,23 @@
 					"source" : "types",
 					"targetIndexes" : 
 					[
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "Life/GameArena",
+					"jsonFile" : "directory-Life.GameArena-Debug-55a41da1171ce8cf9f66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "Life/GameArena",
+					"targetIndexes" : 
+					[
 						3,
 						4,
 						5
@@ -67,7 +85,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"directoryIndexes" : 
 					[
@@ -76,9 +95,9 @@
 					"name" : "untitled",
 					"targetIndexes" : 
 					[
-						6,
-						7,
-						8
+						9,
+						10,
+						11
 					]
 				},
 				{
@@ -101,6 +120,20 @@
 						2
 					],
 					"name" : "TypesLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "GameArenaLib",
 					"parentIndex" : 0,
 					"targetIndexes" : 
 					[
@@ -134,9 +167,30 @@
 					"projectIndex" : 1
 				},
 				{
+					"directoryIndex" : 3,
+					"id" : "GameArenaLib::@b187ce07c3dcd2038dae",
+					"jsonFile" : "target-GameArenaLib-Debug-41ed5ee3c87320e7c664.json",
+					"name" : "GameArenaLib",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "GameArenaLib_autogen::@b187ce07c3dcd2038dae",
+					"jsonFile" : "target-GameArenaLib_autogen-Debug-e72bcea52ab75ce563e6.json",
+					"name" : "GameArenaLib_autogen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "GameArenaLib_autogen_timestamp_deps::@b187ce07c3dcd2038dae",
+					"jsonFile" : "target-GameArenaLib_autogen_timestamp_deps-Debug-4062dfc0031b8d3ceae4.json",
+					"name" : "GameArenaLib_autogen_timestamp_deps",
+					"projectIndex" : 3
+				},
+				{
 					"directoryIndex" : 2,
 					"id" : "TypesLib::@7f98f3510d0ca4b0fd06",
-					"jsonFile" : "target-TypesLib-Debug-4c669e01150788682d61.json",
+					"jsonFile" : "target-TypesLib-Debug-08d2fdd6a5c9ee66c6f3.json",
 					"name" : "TypesLib",
 					"projectIndex" : 2
 				},
@@ -157,7 +211,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "untitled::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-untitled-Debug-bd653eb0cc3fdadc5529.json",
+					"jsonFile" : "target-untitled-Debug-422d00e5231bea342e33.json",
 					"name" : "untitled",
 					"projectIndex" : 0
 				},
@@ -171,7 +225,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "untitled_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-untitled_autogen_timestamp_deps-Debug-9428eaff9a08a06ce1b4.json",
+					"jsonFile" : "target-untitled_autogen_timestamp_deps-Debug-526baef3de78ea2df649.json",
 					"name" : "untitled_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}

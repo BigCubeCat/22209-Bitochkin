@@ -19,7 +19,6 @@ private:
 public:
     CmdManager(int argc, char *argv[]);
     void readFromFile(std::string fileName);
-    std::string getName();
 };
 
 #endif

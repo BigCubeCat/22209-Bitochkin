@@ -1567,6 +1567,9 @@
 		},
 		{
 			"path" : "types/CMakeLists.txt"
+		},
+		{
+			"path" : "Life/GameArena/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

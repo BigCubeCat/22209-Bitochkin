@@ -13,3 +13,8 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/CMakeFiles/rebuild_cache.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/CMakeFiles/TypesLib_autogen_timestamp_deps.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/CMakeFiles/TypesLib_autogen.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/GameArenaLib.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/rebuild_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/GameArenaLib_autogen_timestamp_deps.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/GameArenaLib_autogen.dir

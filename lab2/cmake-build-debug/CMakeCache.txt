@@ -281,6 +281,15 @@ ConfLib_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 ConfLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Conf
 
+//Value Computed by CMake
+GameArenaLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena
+
+//Value Computed by CMake
+GameArenaLib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+GameArenaLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena
+
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
@@ -533,7 +542,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
