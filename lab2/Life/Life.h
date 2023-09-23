@@ -9,10 +9,6 @@
 
 class Life {
 private:
-    TNeighborhood neighborhood;
-    TRules rules;
-
-    std::vector<std::vector<char>> oldArena;
     std::vector<std::vector<char>> newArena;
 
     size_t width;
@@ -22,12 +18,16 @@ private:
     std::map<size_t, char> saveMap;
 
 public:
+    std::vector<std::vector<char>> oldArena;
+    TNeighborhood neighborhood;
+    TRules rules;
+
+    explicit Life();
     explicit Life(TNeighborhood n, const TRules &r, size_t w, size_t h);
 
     void nextGen();
 
     size_t getWidth() const;
-
     size_t getHeight() const;
 
     char operator[] (size_t index);

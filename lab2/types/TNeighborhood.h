@@ -14,7 +14,7 @@ struct TNeighborhood {
     int degree = 1;
     std::vector<std::pair<int, int>> points;
 
-    explicit TNeighborhood(ENeighborhood neigh, int deg=1);
+    explicit TNeighborhood(ENeighborhood neigh = M, int deg=1);
     std::string string();
 };
 

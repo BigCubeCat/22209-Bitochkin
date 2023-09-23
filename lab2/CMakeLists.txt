@@ -17,6 +17,8 @@ add_executable(untitled main.cpp)
 
 add_subdirectory(types)
 add_subdirectory(Life)
+add_subdirectory(App)
+add_subdirectory(UI/Canvas)
 
 target_link_libraries(untitled
         Qt::Core
@@ -24,5 +26,7 @@ target_link_libraries(untitled
         Qt::Widgets
         TypesLib
         LifeLib
+        CanvasLib
+        AppLib
 )
 

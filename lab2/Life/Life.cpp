@@ -1,7 +1,5 @@
 #include "Life.h"
 
-#include <utility>
-
 Life::Life(TNeighborhood n, const TRules &r, size_t w, size_t h) :
         width(w), height(h), rules(r), neighborhood(std::move(n)) {
     oldArena.resize(height);
@@ -12,6 +10,11 @@ Life::Life(TNeighborhood n, const TRules &r, size_t w, size_t h) :
         oldArena[i] = oldRow;
         newArena[i] = newRow;
     }
+}
+
+Life::Life()
+        : width(128), height(128),
+          neighborhood(TNeighborhood(M)), rules(TRules("B3/S2,3")) {
 }
 
 void Life::nextGen() {
@@ -50,5 +53,6 @@ size_t Life::calcNeighbors(size_t row, size_t col) {
     }
     return result;
 }
+
 
 

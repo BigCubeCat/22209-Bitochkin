@@ -9,8 +9,8 @@
 		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2",
-	"DEP_FILE" : "",
-	"DEP_FILE_RULE_NAME" : "",
+	"DEP_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/TypesLib_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "TypesLib_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[

@@ -47,7 +47,7 @@ cmake_ninja_workdir = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/l
 #############################################
 # Order-only phony target for untitled
 
-build cmake_object_order_depends_target_untitled: phony || cmake_object_order_depends_target_CmdManagerLib cmake_object_order_depends_target_GameArenaLib cmake_object_order_depends_target_TypesLib untitled_autogen untitled_autogen/mocs_compilation.cpp untitled_autogen/timestamp untitled_autogen_timestamp_deps
+build cmake_object_order_depends_target_untitled: phony || cmake_object_order_depends_target_AppLib cmake_object_order_depends_target_CanvasLib cmake_object_order_depends_target_LifeLib cmake_object_order_depends_target_TypesLib untitled_autogen untitled_autogen/mocs_compilation.cpp untitled_autogen/timestamp untitled_autogen_timestamp_deps
 
 build CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o: CXX_COMPILER__untitled_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/untitled_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_untitled
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
@@ -73,9 +73,9 @@ build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_unscanned_Debug
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o CMakeFiles/untitled.dir/main.cpp.o | CmdManager/libCmdManagerLib.a types/libTypesLib.a Life/GameArena/libGameArenaLib.a /usr/lib/libQt6Widgets.so.6.5.2 /usr/lib/libQt6Gui.so.6.5.2 /usr/lib/libQt6Core.so.6.5.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so || CmdManager/libCmdManagerLib.a Life/GameArena/libGameArenaLib.a types/libTypesLib.a untitled_autogen untitled_autogen_timestamp_deps
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o CMakeFiles/untitled.dir/main.cpp.o | types/libTypesLib.a Life/libLifeLib.a UI/Canvas/libCanvasLib.a App/libAppLib.a types/libTypesLib.a Life/libLifeLib.a UI/Canvas/libCanvasLib.a /usr/lib/libQt6Widgets.so.6.5.2 /usr/lib/libQt6Gui.so.6.5.2 /usr/lib/libQt6Core.so.6.5.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so || App/libAppLib.a Life/libLifeLib.a UI/Canvas/libCanvasLib.a types/libTypesLib.a untitled_autogen untitled_autogen_timestamp_deps
   FLAGS = -g
-  LINK_LIBRARIES = CmdManager/libCmdManagerLib.a  types/libTypesLib.a  Life/GameArena/libGameArenaLib.a  /usr/lib/libQt6Widgets.so.6.5.2  /usr/lib/libQt6Gui.so.6.5.2  /usr/lib/libQt6Core.so.6.5.2  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so
+  LINK_LIBRARIES = types/libTypesLib.a  Life/libLifeLib.a  UI/Canvas/libCanvasLib.a  App/libAppLib.a  types/libTypesLib.a  Life/libLifeLib.a  UI/Canvas/libCanvasLib.a  /usr/lib/libQt6Widgets.so.6.5.2  /usr/lib/libQt6Gui.so.6.5.2  /usr/lib/libQt6Core.so.6.5.2  /usr/lib/libGLX.so  /usr/lib/libOpenGL.so
   OBJECT_DIR = CMakeFiles/untitled.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -110,7 +110,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Utility command for untitled_autogen_timestamp_deps
 
-build untitled_autogen_timestamp_deps: phony CMakeFiles/untitled_autogen_timestamp_deps CmdManager/libCmdManagerLib.a Life/GameArena/libGameArenaLib.a types/libTypesLib.a
+build untitled_autogen_timestamp_deps: phony CMakeFiles/untitled_autogen_timestamp_deps App/libAppLib.a Life/libLifeLib.a UI/Canvas/libCanvasLib.a types/libTypesLib.a
 
 
 #############################################
@@ -122,7 +122,7 @@ build untitled_autogen: phony CMakeFiles/untitled_autogen untitled_autogen/times
 #############################################
 # Custom command for untitled_autogen/timestamp
 
-build untitled_autogen/timestamp untitled_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}untitled_autogen/timestamp ${cmake_ninja_workdir}untitled_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || CmdManager/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen_timestamp_deps CmdManager/libCmdManagerLib.a Life/GameArena/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen_timestamp_deps Life/GameArena/libGameArenaLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a untitled_autogen_timestamp_deps
+build untitled_autogen/timestamp untitled_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}untitled_autogen/timestamp ${cmake_ninja_workdir}untitled_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || App/AppLib_autogen App/AppLib_autogen_timestamp_deps App/libAppLib.a Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a untitled_autogen_timestamp_deps
   COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/untitled_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/untitled_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/untitled_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/9e85e7a0db7a85c6bedf9c20fc73ab2e16a12c1af069f8ec52fd960349b8f01b.d
   DESC = Automatic MOC and UIC for target untitled
   depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/9e85e7a0db7a85c6bedf9c20fc73ab2e16a12c1af069f8ec52fd960349b8f01b.d
@@ -132,115 +132,13 @@ build untitled_autogen/timestamp untitled_autogen/mocs_compilation.cpp | ${cmake
 #############################################
 # Phony custom command for CMakeFiles/untitled_autogen_timestamp_deps
 
-build CMakeFiles/untitled_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/untitled_autogen_timestamp_deps: phony /usr/lib/qt6/moc /usr/lib/qt6/uic CmdManager/libCmdManagerLib.a types/libTypesLib.a Life/GameArena/libGameArenaLib.a || CmdManager/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen_timestamp_deps CmdManager/libCmdManagerLib.a Life/GameArena/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen_timestamp_deps Life/GameArena/libGameArenaLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a
+build CMakeFiles/untitled_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/untitled_autogen_timestamp_deps: phony /usr/lib/qt6/moc types/libTypesLib.a /usr/lib/qt6/uic Life/libLifeLib.a App/libAppLib.a UI/Canvas/libCanvasLib.a || App/AppLib_autogen App/AppLib_autogen_timestamp_deps App/libAppLib.a Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a
 
 
 #############################################
 # Phony custom command for CMakeFiles/untitled_autogen
 
-build CMakeFiles/untitled_autogen | ${cmake_ninja_workdir}CMakeFiles/untitled_autogen: phony untitled_autogen/timestamp || CmdManager/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen_timestamp_deps CmdManager/libCmdManagerLib.a Life/GameArena/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen_timestamp_deps Life/GameArena/libGameArenaLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a untitled_autogen_timestamp_deps
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for STATIC_LIBRARY target CmdManagerLib
-
-
-#############################################
-# Order-only phony target for CmdManagerLib
-
-build cmake_object_order_depends_target_CmdManagerLib: phony || CmdManager/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp CmdManager/CmdManagerLib_autogen/timestamp CmdManager/CmdManagerLib_autogen_timestamp_deps
-
-build CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__CmdManagerLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_CmdManagerLib
-  DEP_FILE = CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen/mocs_compilation.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/include
-  OBJECT_DIR = CmdManager/CMakeFiles/CmdManagerLib.dir
-  OBJECT_FILE_DIR = CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen
-
-build CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManager.cpp.o: CXX_COMPILER__CmdManagerLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CmdManager/CmdManager.cpp || cmake_object_order_depends_target_CmdManagerLib
-  DEP_FILE = CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManager.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/include
-  OBJECT_DIR = CmdManager/CMakeFiles/CmdManagerLib.dir
-  OBJECT_FILE_DIR = CmdManager/CMakeFiles/CmdManagerLib.dir
-
-
-# =============================================================================
-# Link build statements for STATIC_LIBRARY target CmdManagerLib
-
-
-#############################################
-# Link the static library CmdManager/libCmdManagerLib.a
-
-build CmdManager/libCmdManagerLib.a: CXX_STATIC_LIBRARY_LINKER__CmdManagerLib_Debug CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen/mocs_compilation.cpp.o CmdManager/CMakeFiles/CmdManagerLib.dir/CmdManager.cpp.o || CmdManager/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen_timestamp_deps
-  LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = CmdManager/CMakeFiles/CmdManagerLib.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = CmdManager/libCmdManagerLib.a
-  TARGET_PDB = CmdManagerLib.a.dbg
-
-
-#############################################
-# Utility command for edit_cache
-
-build CmdManager/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
-  DESC = Running CMake cache editor...
-  pool = console
-  restat = 1
-
-build CmdManager/edit_cache: phony CmdManager/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build CmdManager/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build CmdManager/rebuild_cache: phony CmdManager/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for CmdManagerLib_autogen_timestamp_deps
-
-build CmdManager/CmdManagerLib_autogen_timestamp_deps: phony CmdManager/CMakeFiles/CmdManagerLib_autogen_timestamp_deps
-
-
-#############################################
-# Utility command for CmdManagerLib_autogen
-
-build CmdManager/CmdManagerLib_autogen: phony CmdManager/CMakeFiles/CmdManagerLib_autogen CmdManager/CmdManagerLib_autogen/timestamp CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp CmdManager/CmdManagerLib_autogen_timestamp_deps
-
-
-#############################################
-# Custom command for CmdManager/CmdManagerLib_autogen/timestamp
-
-build CmdManager/CmdManagerLib_autogen/timestamp CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}CmdManager/CmdManagerLib_autogen/timestamp ${cmake_ninja_workdir}CmdManager/CmdManagerLib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || CmdManager/CmdManagerLib_autogen_timestamp_deps
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CMakeFiles/CmdManagerLib_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CmdManager /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager/CmdManagerLib_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/ba8008daa1b9cc7e6ca909bd8c75f693b4c1f50ce5ebe02abfff00c707e5e05c.d
-  DESC = Automatic MOC and UIC for target CmdManagerLib
-  depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/ba8008daa1b9cc7e6ca909bd8c75f693b4c1f50ce5ebe02abfff00c707e5e05c.d
-  restat = 1
-
-
-#############################################
-# Phony custom command for CmdManager/CMakeFiles/CmdManagerLib_autogen_timestamp_deps
-
-build CmdManager/CMakeFiles/CmdManagerLib_autogen_timestamp_deps | ${cmake_ninja_workdir}CmdManager/CMakeFiles/CmdManagerLib_autogen_timestamp_deps: phony /usr/lib/qt6/moc /usr/lib/qt6/uic
-
-
-#############################################
-# Phony custom command for CmdManager/CMakeFiles/CmdManagerLib_autogen
-
-build CmdManager/CMakeFiles/CmdManagerLib_autogen | ${cmake_ninja_workdir}CmdManager/CMakeFiles/CmdManagerLib_autogen: phony CmdManager/CmdManagerLib_autogen/timestamp || CmdManager/CmdManagerLib_autogen_timestamp_deps
+build CMakeFiles/untitled_autogen | ${cmake_ninja_workdir}CMakeFiles/untitled_autogen: phony untitled_autogen/timestamp || App/AppLib_autogen App/AppLib_autogen_timestamp_deps App/libAppLib.a Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a untitled_autogen_timestamp_deps
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -357,116 +255,330 @@ build types/CMakeFiles/TypesLib_autogen | ${cmake_ninja_workdir}types/CMakeFiles
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target GameArenaLib
+# Object build statements for STATIC_LIBRARY target LifeLib
 
 
 #############################################
-# Order-only phony target for GameArenaLib
+# Order-only phony target for LifeLib
 
-build cmake_object_order_depends_target_GameArenaLib: phony || Life/GameArena/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen/mocs_compilation.cpp Life/GameArena/GameArenaLib_autogen/timestamp Life/GameArena/GameArenaLib_autogen_timestamp_deps
+build cmake_object_order_depends_target_LifeLib: phony || Life/LifeLib_autogen Life/LifeLib_autogen/mocs_compilation.cpp Life/LifeLib_autogen/timestamp Life/LifeLib_autogen_timestamp_deps
 
-build Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArenaLib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__GameArenaLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/GameArenaLib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_GameArenaLib
-  DEP_FILE = Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArenaLib_autogen/mocs_compilation.cpp.o.d
+build Life/CMakeFiles/LifeLib.dir/LifeLib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__LifeLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_LifeLib
+  DEP_FILE = Life/CMakeFiles/LifeLib.dir/LifeLib_autogen/mocs_compilation.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena/../../types -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/GameArenaLib_autogen/include
-  OBJECT_DIR = Life/GameArena/CMakeFiles/GameArenaLib.dir
-  OBJECT_FILE_DIR = Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArenaLib_autogen
+  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/include
+  OBJECT_DIR = Life/CMakeFiles/LifeLib.dir
+  OBJECT_FILE_DIR = Life/CMakeFiles/LifeLib.dir/LifeLib_autogen
 
-build Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArena.cpp.o: CXX_COMPILER__GameArenaLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena/GameArena.cpp || cmake_object_order_depends_target_GameArenaLib
-  DEP_FILE = Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArena.cpp.o.d
+build Life/CMakeFiles/LifeLib.dir/Life.cpp.o: CXX_COMPILER__LifeLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/Life.cpp || cmake_object_order_depends_target_LifeLib
+  DEP_FILE = Life/CMakeFiles/LifeLib.dir/Life.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena/../../types -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/GameArenaLib_autogen/include
-  OBJECT_DIR = Life/GameArena/CMakeFiles/GameArenaLib.dir
-  OBJECT_FILE_DIR = Life/GameArena/CMakeFiles/GameArenaLib.dir
+  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/include
+  OBJECT_DIR = Life/CMakeFiles/LifeLib.dir
+  OBJECT_FILE_DIR = Life/CMakeFiles/LifeLib.dir
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target GameArenaLib
+# Link build statements for STATIC_LIBRARY target LifeLib
 
 
 #############################################
-# Link the static library Life/GameArena/libGameArenaLib.a
+# Link the static library Life/libLifeLib.a
 
-build Life/GameArena/libGameArenaLib.a: CXX_STATIC_LIBRARY_LINKER__GameArenaLib_Debug Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArenaLib_autogen/mocs_compilation.cpp.o Life/GameArena/CMakeFiles/GameArenaLib.dir/GameArena.cpp.o || Life/GameArena/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen_timestamp_deps
+build Life/libLifeLib.a: CXX_STATIC_LIBRARY_LINKER__LifeLib_Debug Life/CMakeFiles/LifeLib.dir/LifeLib_autogen/mocs_compilation.cpp.o Life/CMakeFiles/LifeLib.dir/Life.cpp.o || Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = Life/GameArena/CMakeFiles/GameArenaLib.dir
+  OBJECT_DIR = Life/CMakeFiles/LifeLib.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Life/GameArena/libGameArenaLib.a
-  TARGET_PDB = GameArenaLib.a.dbg
+  TARGET_FILE = Life/libLifeLib.a
+  TARGET_PDB = LifeLib.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build Life/GameArena/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+build Life/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build Life/GameArena/edit_cache: phony Life/GameArena/CMakeFiles/edit_cache.util
+build Life/edit_cache: phony Life/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build Life/GameArena/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+build Life/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Life/GameArena/rebuild_cache: phony Life/GameArena/CMakeFiles/rebuild_cache.util
+build Life/rebuild_cache: phony Life/CMakeFiles/rebuild_cache.util
 
 
 #############################################
-# Utility command for GameArenaLib_autogen_timestamp_deps
+# Utility command for LifeLib_autogen_timestamp_deps
 
-build Life/GameArena/GameArenaLib_autogen_timestamp_deps: phony Life/GameArena/CMakeFiles/GameArenaLib_autogen_timestamp_deps
-
-
-#############################################
-# Utility command for GameArenaLib_autogen
-
-build Life/GameArena/GameArenaLib_autogen: phony Life/GameArena/CMakeFiles/GameArenaLib_autogen Life/GameArena/GameArenaLib_autogen/timestamp Life/GameArena/GameArenaLib_autogen/mocs_compilation.cpp Life/GameArena/GameArenaLib_autogen_timestamp_deps
+build Life/LifeLib_autogen_timestamp_deps: phony Life/CMakeFiles/LifeLib_autogen_timestamp_deps
 
 
 #############################################
-# Custom command for Life/GameArena/GameArenaLib_autogen/timestamp
+# Utility command for LifeLib_autogen
 
-build Life/GameArena/GameArenaLib_autogen/timestamp Life/GameArena/GameArenaLib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}Life/GameArena/GameArenaLib_autogen/timestamp ${cmake_ninja_workdir}Life/GameArena/GameArenaLib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || Life/GameArena/GameArenaLib_autogen_timestamp_deps
-  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/CMakeFiles/GameArenaLib_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/GameArenaLib_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena/GameArenaLib_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/f22682ed739bfb4d6a363b77a1bcb46bf6b25172987d06563ca7651c2906d530.d
-  DESC = Automatic MOC and UIC for target GameArenaLib
-  depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/f22682ed739bfb4d6a363b77a1bcb46bf6b25172987d06563ca7651c2906d530.d
+build Life/LifeLib_autogen: phony Life/CMakeFiles/LifeLib_autogen Life/LifeLib_autogen/timestamp Life/LifeLib_autogen/mocs_compilation.cpp Life/LifeLib_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for Life/LifeLib_autogen/timestamp
+
+build Life/LifeLib_autogen/timestamp Life/LifeLib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}Life/LifeLib_autogen/timestamp ${cmake_ninja_workdir}Life/LifeLib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || Life/LifeLib_autogen_timestamp_deps
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/CMakeFiles/LifeLib_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/749618690453777e555272ab5a6acd9d1bd3ee74e76b2eb9a1b8d2ca430cbff7.d
+  DESC = Automatic MOC and UIC for target LifeLib
+  depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/749618690453777e555272ab5a6acd9d1bd3ee74e76b2eb9a1b8d2ca430cbff7.d
   restat = 1
 
 
 #############################################
-# Phony custom command for Life/GameArena/CMakeFiles/GameArenaLib_autogen_timestamp_deps
+# Phony custom command for Life/CMakeFiles/LifeLib_autogen_timestamp_deps
 
-build Life/GameArena/CMakeFiles/GameArenaLib_autogen_timestamp_deps | ${cmake_ninja_workdir}Life/GameArena/CMakeFiles/GameArenaLib_autogen_timestamp_deps: phony /usr/lib/qt6/moc /usr/lib/qt6/uic
+build Life/CMakeFiles/LifeLib_autogen_timestamp_deps | ${cmake_ninja_workdir}Life/CMakeFiles/LifeLib_autogen_timestamp_deps: phony /usr/lib/qt6/moc /usr/lib/qt6/uic
 
 
 #############################################
-# Phony custom command for Life/GameArena/CMakeFiles/GameArenaLib_autogen
+# Phony custom command for Life/CMakeFiles/LifeLib_autogen
 
-build Life/GameArena/CMakeFiles/GameArenaLib_autogen | ${cmake_ninja_workdir}Life/GameArena/CMakeFiles/GameArenaLib_autogen: phony Life/GameArena/GameArenaLib_autogen/timestamp || Life/GameArena/GameArenaLib_autogen_timestamp_deps
+build Life/CMakeFiles/LifeLib_autogen | ${cmake_ninja_workdir}Life/CMakeFiles/LifeLib_autogen: phony Life/LifeLib_autogen/timestamp || Life/LifeLib_autogen_timestamp_deps
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target AppLib
+
+
+#############################################
+# Order-only phony target for AppLib
+
+build cmake_object_order_depends_target_AppLib: phony || App/AppLib_autogen App/AppLib_autogen/mocs_compilation.cpp App/AppLib_autogen/timestamp App/AppLib_autogen_timestamp_deps cmake_object_order_depends_target_CanvasLib cmake_object_order_depends_target_LifeLib cmake_object_order_depends_target_TypesLib
+
+build App/CMakeFiles/AppLib.dir/AppLib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__AppLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_AppLib
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = App/CMakeFiles/AppLib.dir/AppLib_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -mno-direct-extern-access
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../types -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../Life -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/Canvas -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets
+  OBJECT_DIR = App/CMakeFiles/AppLib.dir
+  OBJECT_FILE_DIR = App/CMakeFiles/AppLib.dir/AppLib_autogen
+
+build App/CMakeFiles/AppLib.dir/App.cpp.o: CXX_COMPILER__AppLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/App.cpp || cmake_object_order_depends_target_AppLib
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = App/CMakeFiles/AppLib.dir/App.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -mno-direct-extern-access
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../types -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../Life -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/Canvas -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets
+  OBJECT_DIR = App/CMakeFiles/AppLib.dir
+  OBJECT_FILE_DIR = App/CMakeFiles/AppLib.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target AppLib
+
+
+#############################################
+# Link the static library App/libAppLib.a
+
+build App/libAppLib.a: CXX_STATIC_LIBRARY_LINKER__AppLib_Debug App/CMakeFiles/AppLib.dir/AppLib_autogen/mocs_compilation.cpp.o App/CMakeFiles/AppLib.dir/App.cpp.o || App/AppLib_autogen App/AppLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/libCanvasLib.a types/libTypesLib.a /usr/lib/libQt6Widgets.so.6.5.2 /usr/lib/libQt6Gui.so.6.5.2 /usr/lib/libQt6Core.so.6.5.2
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = App/CMakeFiles/AppLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = App/libAppLib.a
+  TARGET_PDB = AppLib.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build App/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build App/edit_cache: phony App/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build App/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build App/rebuild_cache: phony App/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for AppLib_autogen_timestamp_deps
+
+build App/AppLib_autogen_timestamp_deps: phony App/CMakeFiles/AppLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/libCanvasLib.a types/libTypesLib.a
+
+
+#############################################
+# Utility command for AppLib_autogen
+
+build App/AppLib_autogen: phony App/CMakeFiles/AppLib_autogen App/AppLib_autogen/timestamp App/AppLib_autogen/mocs_compilation.cpp App/AppLib_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for App/AppLib_autogen/timestamp
+
+build App/AppLib_autogen/timestamp App/AppLib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}App/AppLib_autogen/timestamp ${cmake_ninja_workdir}App/AppLib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || App/AppLib_autogen_timestamp_deps Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/CMakeFiles/AppLib_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/46420845ca497427e0a5a111ca841fbf6fc7ef60c47aefa20997a488d9791f73.d
+  DESC = Automatic MOC and UIC for target AppLib
+  depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/46420845ca497427e0a5a111ca841fbf6fc7ef60c47aefa20997a488d9791f73.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for App/CMakeFiles/AppLib_autogen_timestamp_deps
+
+build App/CMakeFiles/AppLib_autogen_timestamp_deps | ${cmake_ninja_workdir}App/CMakeFiles/AppLib_autogen_timestamp_deps: phony /usr/lib/qt6/moc types/libTypesLib.a /usr/lib/qt6/uic Life/libLifeLib.a UI/Canvas/libCanvasLib.a || Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a
+
+
+#############################################
+# Phony custom command for App/CMakeFiles/AppLib_autogen
+
+build App/CMakeFiles/AppLib_autogen | ${cmake_ninja_workdir}App/CMakeFiles/AppLib_autogen: phony App/AppLib_autogen/timestamp || App/AppLib_autogen_timestamp_deps Life/LifeLib_autogen Life/LifeLib_autogen_timestamp_deps Life/libLifeLib.a UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps UI/Canvas/libCanvasLib.a types/TypesLib_autogen types/TypesLib_autogen_timestamp_deps types/libTypesLib.a
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target CanvasLib
+
+
+#############################################
+# Order-only phony target for CanvasLib
+
+build cmake_object_order_depends_target_CanvasLib: phony || UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp UI/Canvas/CanvasLib_autogen/timestamp UI/Canvas/CanvasLib_autogen_timestamp_deps
+
+build UI/Canvas/CMakeFiles/CanvasLib.dir/CanvasLib_autogen/mocs_compilation.cpp.o: CXX_COMPILER__CanvasLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_CanvasLib
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = UI/Canvas/CMakeFiles/CanvasLib.dir/CanvasLib_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -mno-direct-extern-access
+  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets
+  OBJECT_DIR = UI/Canvas/CMakeFiles/CanvasLib.dir
+  OBJECT_FILE_DIR = UI/Canvas/CMakeFiles/CanvasLib.dir/CanvasLib_autogen
+
+build UI/Canvas/CMakeFiles/CanvasLib.dir/Canvas.cpp.o: CXX_COMPILER__CanvasLib_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/Canvas.cpp || cmake_object_order_depends_target_CanvasLib
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = UI/Canvas/CMakeFiles/CanvasLib.dir/Canvas.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -mno-direct-extern-access
+  INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/include -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtGui -isystem /usr/include/qt6/QtWidgets
+  OBJECT_DIR = UI/Canvas/CMakeFiles/CanvasLib.dir
+  OBJECT_FILE_DIR = UI/Canvas/CMakeFiles/CanvasLib.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target CanvasLib
+
+
+#############################################
+# Link the static library UI/Canvas/libCanvasLib.a
+
+build UI/Canvas/libCanvasLib.a: CXX_STATIC_LIBRARY_LINKER__CanvasLib_Debug UI/Canvas/CMakeFiles/CanvasLib.dir/CanvasLib_autogen/mocs_compilation.cpp.o UI/Canvas/CMakeFiles/CanvasLib.dir/Canvas.cpp.o || UI/Canvas/CanvasLib_autogen UI/Canvas/CanvasLib_autogen_timestamp_deps /usr/lib/libQt6Widgets.so.6.5.2 /usr/lib/libQt6Gui.so.6.5.2 /usr/lib/libQt6Core.so.6.5.2
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = UI/Canvas/CMakeFiles/CanvasLib.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = UI/Canvas/libCanvasLib.a
+  TARGET_PDB = CanvasLib.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build UI/Canvas/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build UI/Canvas/edit_cache: phony UI/Canvas/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build UI/Canvas/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build UI/Canvas/rebuild_cache: phony UI/Canvas/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for CanvasLib_autogen_timestamp_deps
+
+build UI/Canvas/CanvasLib_autogen_timestamp_deps: phony UI/Canvas/CMakeFiles/CanvasLib_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for CanvasLib_autogen
+
+build UI/Canvas/CanvasLib_autogen: phony UI/Canvas/CMakeFiles/CanvasLib_autogen UI/Canvas/CanvasLib_autogen/timestamp UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp UI/Canvas/CanvasLib_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for UI/Canvas/CanvasLib_autogen/timestamp
+
+build UI/Canvas/CanvasLib_autogen/timestamp UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}UI/Canvas/CanvasLib_autogen/timestamp ${cmake_ninja_workdir}UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/moc /usr/lib/qt6/uic || UI/Canvas/CanvasLib_autogen_timestamp_deps
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas && /usr/bin/cmake -E cmake_autogen /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CMakeFiles/CanvasLib_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/deps /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/21e5afdc5f6bda9791dc04910af491853f4d6fd8e3baeae4709b28b055fb94a2.d
+  DESC = Automatic MOC and UIC for target CanvasLib
+  depfile = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles/d/21e5afdc5f6bda9791dc04910af491853f4d6fd8e3baeae4709b28b055fb94a2.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for UI/Canvas/CMakeFiles/CanvasLib_autogen_timestamp_deps
+
+build UI/Canvas/CMakeFiles/CanvasLib_autogen_timestamp_deps | ${cmake_ninja_workdir}UI/Canvas/CMakeFiles/CanvasLib_autogen_timestamp_deps: phony /usr/lib/qt6/moc /usr/lib/qt6/uic
+
+
+#############################################
+# Phony custom command for UI/Canvas/CMakeFiles/CanvasLib_autogen
+
+build UI/Canvas/CMakeFiles/CanvasLib_autogen | ${cmake_ninja_workdir}UI/Canvas/CMakeFiles/CanvasLib_autogen: phony UI/Canvas/CanvasLib_autogen/timestamp || UI/Canvas/CanvasLib_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
 
-build CmdManagerLib: phony CmdManager/libCmdManagerLib.a
+build AppLib: phony App/libAppLib.a
 
-build CmdManagerLib_autogen: phony CmdManager/CmdManagerLib_autogen
+build AppLib_autogen: phony App/AppLib_autogen
 
-build CmdManagerLib_autogen_timestamp_deps: phony CmdManager/CmdManagerLib_autogen_timestamp_deps
+build AppLib_autogen_timestamp_deps: phony App/AppLib_autogen_timestamp_deps
 
-build GameArenaLib: phony Life/GameArena/libGameArenaLib.a
+build CanvasLib: phony UI/Canvas/libCanvasLib.a
 
-build GameArenaLib_autogen: phony Life/GameArena/GameArenaLib_autogen
+build CanvasLib_autogen: phony UI/Canvas/CanvasLib_autogen
 
-build GameArenaLib_autogen_timestamp_deps: phony Life/GameArena/GameArenaLib_autogen_timestamp_deps
+build CanvasLib_autogen_timestamp_deps: phony UI/Canvas/CanvasLib_autogen_timestamp_deps
+
+build LifeLib: phony Life/libLifeLib.a
+
+build LifeLib_autogen: phony Life/LifeLib_autogen
+
+build LifeLib_autogen_timestamp_deps: phony Life/LifeLib_autogen_timestamp_deps
 
 build TypesLib: phony types/libTypesLib.a
 
@@ -474,9 +586,11 @@ build TypesLib_autogen: phony types/TypesLib_autogen
 
 build TypesLib_autogen_timestamp_deps: phony types/TypesLib_autogen_timestamp_deps
 
-build libCmdManagerLib.a: phony CmdManager/libCmdManagerLib.a
+build libAppLib.a: phony App/libAppLib.a
 
-build libGameArenaLib.a: phony Life/GameArena/libGameArenaLib.a
+build libCanvasLib.a: phony UI/Canvas/libCanvasLib.a
+
+build libLifeLib.a: phony Life/libLifeLib.a
 
 build libTypesLib.a: phony types/libTypesLib.a
 
@@ -488,21 +602,28 @@ build libTypesLib.a: phony types/libTypesLib.a
 #############################################
 # Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug
 
-build all: phony untitled CmdManager/all types/all Life/GameArena/all
+build all: phony untitled types/all Life/all App/all UI/Canvas/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CmdManager
+# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App
 
-build CmdManager/all: phony CmdManager/libCmdManagerLib.a
+build App/all: phony App/libAppLib.a
 
 # =============================================================================
 
 #############################################
-# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/GameArena
+# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life
 
-build Life/GameArena/all: phony Life/GameArena/libGameArenaLib.a
+build Life/all: phony Life/libLifeLib.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas
+
+build UI/Canvas/all: phony UI/Canvas/libCanvasLib.a
 
 # =============================================================================
 
@@ -518,14 +639,14 @@ build types/all: phony types/libTypesLib.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CmdManager/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt /usr/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/cmake/Qt6/Qt6Config.cmake /usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/cmake/Qt6/Qt6Targets.cmake /usr/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/cmake/Qt6/QtFeature.cmake /usr/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/cmake/Qt6Core/QtInstallPaths.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FeatureSummary.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/MacroAddFileDependencies.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt /usr/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/cmake/Qt6/Qt6Config.cmake /usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/cmake/Qt6/Qt6Targets.cmake /usr/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/cmake/Qt6/QtFeature.cmake /usr/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/cmake/Qt6Core/QtInstallPaths.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FeatureSummary.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/MacroAddFileDependencies.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CmdManager/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/GameArena/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt /usr/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/cmake/Qt6/Qt6Config.cmake /usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/cmake/Qt6/Qt6Targets.cmake /usr/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/cmake/Qt6/QtFeature.cmake /usr/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/cmake/Qt6Core/QtInstallPaths.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FeatureSummary.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/MacroAddFileDependencies.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake: phony
+build /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt /usr/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/cmake/Qt6/Qt6Config.cmake /usr/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/cmake/Qt6/Qt6Targets.cmake /usr/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/cmake/Qt6/QtFeature.cmake /usr/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/cmake/Qt6Core/QtInstallPaths.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSEmulatorIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSKmsGbmIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEglFSX11IntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevKeyboardPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevMousePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTabletPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QGtk3ThemePluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QIbusPlatformInputContextPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLibInputPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QPdfPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTsLibPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVkKhrDisplayIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbEglIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXcbIntegrationPluginTargets.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginConfig.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Gui/Qt6QXdgDesktopPortalThemePluginTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/FeatureSummary.cmake /usr/share/cmake/Modules/FindOpenGL.cmake /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPkgConfig.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/FindVulkan.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake/Modules/Internal/CheckFlagCommonConfig.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/MacroAddFileDependencies.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake: phony
 
 
 #############################################
