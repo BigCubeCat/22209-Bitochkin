@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGameArenaLib.a CMakeFiles/GameArenaLib.dir/GameArenaLib_autogen/mocs_compilation.cpp.o CMakeFiles/GameArenaLib.dir/GameArena.cpp.o
+/usr/bin/ranlib libGameArenaLib.a

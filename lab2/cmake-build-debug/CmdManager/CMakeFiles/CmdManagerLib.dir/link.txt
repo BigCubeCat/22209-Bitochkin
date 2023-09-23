@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCmdManagerLib.a CMakeFiles/CmdManagerLib.dir/CmdManagerLib_autogen/mocs_compilation.cpp.o CMakeFiles/CmdManagerLib.dir/CmdManager.cpp.o
+/usr/bin/ranlib libCmdManagerLib.a

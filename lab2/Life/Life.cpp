@@ -1,5 +1,54 @@
-//
-// Created by bigcubecat on 17.09.23.
-//
-
 #include "Life.h"
+
+#include <utility>
+
+Life::Life(TNeighborhood n, const TRules &r, size_t w, size_t h) :
+        width(w), height(h), rules(r), neighborhood(std::move(n)) {
+    oldArena.resize(height);
+    newArena.resize(height);
+    for (size_t i = 0; i < height; ++i) {
+        std::vector<char> oldRow(width, 0);
+        std::vector<char> newRow(width, 0);
+        oldArena[i] = oldRow;
+        newArena[i] = newRow;
+    }
+}
+
+void Life::nextGen() {
+    for (size_t row = 0; row < height; ++row) {
+        for (size_t col = 0; col < width; ++col) {
+            newArena[row][col] = newValue(row, col);
+        }
+    }
+    newArena.swap(oldArena);
+}
+
+size_t Life::getWidth() const {
+    return width;
+}
+
+size_t Life::getHeight() const {
+    return height;
+}
+
+char Life::newValue(size_t row, size_t col) {
+    auto countNeighbors = calcNeighbors(row, col);
+    if (oldArena[row][col]) {
+        return birthMap[countNeighbors];
+    }
+    return saveMap[countNeighbors];
+}
+
+size_t Life::calcNeighbors(size_t row, size_t col) {
+    size_t result = 0;
+    for (const auto &coords: neighborhood.points) {
+        result += oldArena[
+                (height + row + coords.first) % height
+        ][
+                (width + col + coords.second) % width
+        ];
+    }
+    return result;
+}
+
+

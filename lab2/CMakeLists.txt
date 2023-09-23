@@ -15,16 +15,14 @@ find_package(Qt6 COMPONENTS
 
 add_executable(untitled main.cpp)
 
-add_subdirectory(CmdManager)
 add_subdirectory(types)
-add_subdirectory(Life/GameArena)
+add_subdirectory(Life)
 
 target_link_libraries(untitled
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        CmdManagerLib
         TypesLib
-        GameArenaLib
+        LifeLib
 )
 
