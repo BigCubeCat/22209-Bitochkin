@@ -1,12 +1,12 @@
 {
-	"BUILD_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen",
+	"BUILD_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen",
 	"CMAKE_BINARY_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/CMakeLists.txt",
+		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/CMakeLists.txt",
 		"/usr/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/usr/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/usr/lib/cmake/Qt6/Qt6Config.cmake",
@@ -31,20 +31,20 @@
 		"/usr/lib/cmake/Qt6/Qt6Dependencies.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2",
-	"DEP_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/deps",
-	"DEP_FILE_RULE_NAME" : "AppLib_autogen/timestamp",
+	"DEP_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "NeighborhoodSelectLib_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/App.h",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.h",
 			"MU",
-			"EWIEGA46WW/moc_App.cpp",
+			"EWIEGA46WW/moc_NeighborhoodSelect.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -55,10 +55,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types",
-		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life",
-		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas",
-		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect",
+		"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/types",
 		"/usr/include/qt6/QtCore",
 		"/usr/include/qt6",
 		"/usr/lib/qt6/mkspecs/linux-g++",
@@ -90,21 +87,21 @@
 		"-c",
 		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/CMakeFiles/AppLib_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 5,
-	"SETTINGS_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/CMakeFiles/AppLib_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/App.cpp",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp",
 			"MU",
 			null
 		]

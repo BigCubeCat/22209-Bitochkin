@@ -19,6 +19,7 @@ add_subdirectory(types)
 add_subdirectory(Life)
 add_subdirectory(App)
 add_subdirectory(UI/Canvas)
+add_subdirectory(UI/NeighborhoodSelect)
 
 target_link_libraries(untitled
         Qt::Core
@@ -28,5 +29,6 @@ target_link_libraries(untitled
         LifeLib
         CanvasLib
         AppLib
+        NeighborhoodSelectLib
 )
 

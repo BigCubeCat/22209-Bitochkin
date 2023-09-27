@@ -33,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 18,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
@@ -52,6 +52,12 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 17,
 				"parent" : 0
 			}
 		]
@@ -97,6 +103,10 @@
 				{
 					"backtrace" : 5,
 					"path" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/Canvas"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect"
 				},
 				{
 					"backtrace" : 0,
@@ -159,6 +169,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "CanvasLib::@a07724a1429f34ecf965"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "NeighborhoodSelectLib::@a4f6eea8b5adeb8d515c"
 		},
 		{
 			"id" : "AppLib_autogen_timestamp_deps::@4cec9bfdf5c218c89c51"

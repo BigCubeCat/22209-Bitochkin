@@ -23,3 +23,8 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CMakeFiles/rebuild_cache.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CMakeFiles/CanvasLib_autogen_timestamp_deps.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CMakeFiles/CanvasLib_autogen.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/rebuild_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen_timestamp_deps.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir
