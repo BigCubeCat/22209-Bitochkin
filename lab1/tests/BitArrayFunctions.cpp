@@ -26,6 +26,12 @@ TEST(BitArrayTests, push_backTest0) {
     EXPECT_EQ("00000001", ba.to_string());
 }
 
+TEST(BitArrayTests, push_backTest2) {
+    auto ba = BitArray("111");
+    ba.push_back(false);
+    EXPECT_EQ(3, ba.count());
+}
+
 TEST(BitArrayTests, push_backTest1) {
     auto ba = BitArray("");
     ba.push_back(false);

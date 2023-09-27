@@ -5,7 +5,7 @@
 
 #include "utils.h"
 
-BitArray::~BitArray() {}
+BitArray::~BitArray() = default;
 
 /*
  * BitArray()
@@ -89,9 +89,9 @@ bool BitArray::none() const {
  * Inverts all values in BitArray
  */
 BitArray BitArray::operator~() const {
-    auto result = BitArray(*this);
-    for (size_t i = 0; i < result.length; ++i) {
-        result.set(i, !result[i]);
+    auto result = BitArray(length, 0);
+    for (size_t i = 0; i < data.size(); ++i) {
+        result.data[i] = ~data[i];
     }
     result.updateCountOnes();
     return result;
@@ -190,11 +190,11 @@ void BitArray::push_back(bool bit) {
     if (length % UCHAR_WIDTH == 1) {
         dataSize += 1;
         data.push_back(bit ? 1 : 0);
-        countOnes += 1;
+        countOnes += bit ? 1 : 0;
         return;
     }
     if (bit) {
-        countOnes += 1;
+        countOnes++;
         data[dataSize - 1] |= (1 << ((length - 1) % UCHAR_WIDTH));
     }
 }
@@ -218,7 +218,7 @@ void BitArray::clear() {
 void BitArray::resize(size_t num_bits, bool value) {
     if (num_bits > length) {
         for (size_t i = 0; i < length - num_bits; ++i) {
-            this->push_back(value);
+            push_back(value);
         }
     } else {
         dataSize = length / UCHAR_WIDTH + (length % UCHAR_WIDTH) ? 1 : 0;
@@ -278,28 +278,28 @@ BitArray &BitArray::operator=(const BitArray &b) {
 }
 
 BitArray &BitArray::operator&=(const BitArray &b) {
-    this->resize(std::max(dataSize, b.dataSize));
+    resize(std::max(dataSize, b.dataSize));
     length = std::max(length, b.length);
-    for (size_t i = 0; i < length; ++i) {
-        set(i, (*this)[i] && b[i]);
+    for (size_t i = 0; i < data.size(); ++i) {
+        data[i] &= b.data[i];
     }
     return *this;
 }
 
 BitArray &BitArray::operator^=(const BitArray &b) {
-    this->resize(std::max(dataSize, b.dataSize));
+    resize(std::max(dataSize, b.dataSize));
     length = std::max(length, b.length);
-    for (size_t i = 0; i < length; ++i) {
-        set(i, (*this)[i] != b[i]);
+    for (size_t i = 0; i < data.size(); ++i) {
+        data[i] ^= b.data[i];
     }
     return *this;
 }
 
 BitArray &BitArray::operator|=(const BitArray &b) {
-    this->resize(std::max(dataSize, b.dataSize));
+    resize(std::max(dataSize, b.dataSize));
     length = std::max(length, b.length);
     for (size_t i = 0; i < length; ++i) {
-        set(i, (*this)[i] || b[i]);
+        data[i] |= b.data[i];
     }
     return *this;
 }
