@@ -9,16 +9,12 @@
 
 class NeighborhoodSelect: public QWidget{
 public:
-    NeighborhoodSelect(QWidget *parent = 0, TNeighborhood *n = 0);
+    explicit NeighborhoodSelect(QWidget *parent = 0, TNeighborhood *n = 0);
     void setNeighborhood(TNeighborhood *n);
 private:
     void setupUi();
 
     TNeighborhood *neighborhood{};
-    std::vector<char> data;
-    int size;
-protected:
-    void paintEvent(QPaintEvent *event);
 };
 
 

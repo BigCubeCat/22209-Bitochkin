@@ -14,7 +14,7 @@ Life::Life(TNeighborhood n, const TRules &r, size_t w, size_t h) :
 
 Life::Life()
         : width(128), height(128),
-          neighborhood(TNeighborhood(M)), rules(TRules("B3/S2,3")) {
+          neighborhood(TNeighborhood(MOORE)), rules(TRules("B3/S2,3")) {
 }
 
 void Life::nextGen() {

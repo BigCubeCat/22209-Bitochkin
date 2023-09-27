@@ -5,7 +5,7 @@
 		<Option title="untitled"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Life\;CMake Files\types\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\App\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\;CMake Files\UI\;CMake Files\UI\Canvas\;CMake Files\UI\NeighborhoodSelect\;CMake Files\Life\;CMake Files\types\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug"/>
@@ -221,15 +221,268 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="AppLib">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/libAppLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../types"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../Life"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/Canvas"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 AppLib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AppLib/fast">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/libAppLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../types"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../Life"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/Canvas"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 AppLib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="AppLib_autogen">
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 AppLib_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CanvasLib">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/libCanvasLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 CanvasLib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CanvasLib/fast">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/libCanvasLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 CanvasLib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CanvasLib_autogen">
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 CanvasLib_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NeighborhoodSelectLib">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/../types"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 NeighborhoodSelectLib"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NeighborhoodSelectLib/fast">
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/../types"/>
+					<Add directory="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/include"/>
+					<Add directory="/usr/include/qt6/QtCore"/>
+					<Add directory="/usr/include/qt6"/>
+					<Add directory="/usr/lib/qt6/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/qt6/QtGui"/>
+					<Add directory="/usr/include/qt6/QtWidgets"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/../../../../include/c++/13.2.1/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 NeighborhoodSelectLib/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NeighborhoodSelectLib_autogen">
+				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 NeighborhoodSelectLib_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/App.cpp">
+			<Option target="AppLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/App.h">
+			<Option target="AppLib"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/Life.cpp">
 			<Option target="LifeLib"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/Life.h">
 			<Option target="LifeLib"/>
 		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/Canvas.cpp">
+			<Option target="CanvasLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/Canvas.h">
+			<Option target="CanvasLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp">
+			<Option target="NeighborhoodSelectLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.h">
+			<Option target="NeighborhoodSelectLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/mocs_compilation.cpp">
+			<Option target="AppLib"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life/LifeLib_autogen/mocs_compilation.cpp">
 			<Option target="LifeLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp">
+			<Option target="CanvasLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/mocs_compilation.cpp">
+			<Option target="NeighborhoodSelectLib"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/TypesLib_autogen/mocs_compilation.cpp">
 			<Option target="TypesLib"/>
@@ -255,11 +508,8 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Life\"/>
-		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\types\"/>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\App\"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/../../../../../../../usr/lib/cmake/Qt6/FindWrapAtomic.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
@@ -1022,6 +1272,18 @@
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/../../../../../../../usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UI\Canvas\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UI\NeighborhoodSelect\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Life\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\types\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

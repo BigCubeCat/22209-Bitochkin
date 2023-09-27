@@ -5,7 +5,7 @@
 		<Option title="LifeLib"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Life\;CMake Files\types\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\App\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\3rdparty\kwin\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Core\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBus\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6DBusTools\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\;CMake Files\UI\;CMake Files\UI\Canvas\;CMake Files\UI\NeighborhoodSelect\;CMake Files\Life\;CMake Files\types\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life"/>
@@ -86,11 +86,8 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Life\"/>
-		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\types\"/>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\App\"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/../../../../../../../usr/lib/cmake/Qt6/FindWrapAtomic.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6\"/>
@@ -853,6 +850,18 @@
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/../../../../../../../usr/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\Qt6WidgetsTools\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UI\Canvas\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\UI\NeighborhoodSelect\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Life\"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\types\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

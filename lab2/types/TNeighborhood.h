@@ -5,7 +5,7 @@
 #include <string>
 
 enum ENeighborhood {
-    M, F // M - Соседство Мура, F - Фон-Неймана
+    MOORE, VON, CUSTOM // M - Соседство Мура, F - Фон-Неймана
 };
 
 struct TNeighborhood {
@@ -14,7 +14,8 @@ struct TNeighborhood {
     int degree = 1;
     std::vector<std::pair<int, int>> points;
 
-    explicit TNeighborhood(ENeighborhood neigh = M, int deg=1);
+    explicit TNeighborhood(ENeighborhood neigh = MOORE, int deg = 1);
+
     std::string string();
 };
 

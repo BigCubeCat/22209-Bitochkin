@@ -1,0 +1,300 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"build" : "types",
+					"jsonFile" : "directory-types-Debug-23296132209ec1ee85ea.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "types",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"build" : "Life",
+					"jsonFile" : "directory-Life-Debug-8a6f841f0cc6058a83df.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Life",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "App",
+					"jsonFile" : "directory-App-Debug-0bdf1fd094da83e32101.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "App",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "UI/Canvas",
+					"jsonFile" : "directory-UI.Canvas-Debug-141e5041f61646f2d9b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "UI/Canvas",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "UI/NeighborhoodSelect",
+					"jsonFile" : "directory-UI.NeighborhoodSelect-Debug-1f558da44c94f144f556.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "UI/NeighborhoodSelect",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "untitled",
+					"targetIndexes" : 
+					[
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "TypesLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "LifeLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "AppLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "CanvasLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "NeighborhoodSelectLib",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "AppLib::@4cec9bfdf5c218c89c51",
+					"jsonFile" : "target-AppLib-Debug-2985ee752c017b9f4206.json",
+					"name" : "AppLib",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "AppLib_autogen::@4cec9bfdf5c218c89c51",
+					"jsonFile" : "target-AppLib_autogen-Debug-b5e1761e2dfef512f2c1.json",
+					"name" : "AppLib_autogen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "CanvasLib::@a07724a1429f34ecf965",
+					"jsonFile" : "target-CanvasLib-Debug-675c2d33df624cb2744c.json",
+					"name" : "CanvasLib",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "CanvasLib_autogen::@a07724a1429f34ecf965",
+					"jsonFile" : "target-CanvasLib_autogen-Debug-daaac743b9ce18da82c2.json",
+					"name" : "CanvasLib_autogen",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "LifeLib::@f9c91607e35f45579a8f",
+					"jsonFile" : "target-LifeLib-Debug-0c4039e3f4085fff5673.json",
+					"name" : "LifeLib",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "LifeLib_autogen::@f9c91607e35f45579a8f",
+					"jsonFile" : "target-LifeLib_autogen-Debug-a74f1877df004157e250.json",
+					"name" : "LifeLib_autogen",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "NeighborhoodSelectLib::@a4f6eea8b5adeb8d515c",
+					"jsonFile" : "target-NeighborhoodSelectLib-Debug-51c1b8219af812aee72d.json",
+					"name" : "NeighborhoodSelectLib",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "NeighborhoodSelectLib_autogen::@a4f6eea8b5adeb8d515c",
+					"jsonFile" : "target-NeighborhoodSelectLib_autogen-Debug-7a4589387825d778d698.json",
+					"name" : "NeighborhoodSelectLib_autogen",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TypesLib::@7f98f3510d0ca4b0fd06",
+					"jsonFile" : "target-TypesLib-Debug-747ef879ab4ca72bcccb.json",
+					"name" : "TypesLib",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "TypesLib_autogen::@7f98f3510d0ca4b0fd06",
+					"jsonFile" : "target-TypesLib_autogen-Debug-4c724992303e6e627c44.json",
+					"name" : "TypesLib_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "untitled::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-untitled-Debug-d06852fece1e4138a47d.json",
+					"name" : "untitled",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "untitled_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-untitled_autogen-Debug-385717b346a68b9b2986.json",
+					"name" : "untitled_autogen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug",
+		"source" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

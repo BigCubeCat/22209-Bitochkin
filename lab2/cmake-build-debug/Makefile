@@ -194,6 +194,84 @@ LifeLib_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f Life/CMakeFiles/LifeLib_autogen.dir/build.make Life/CMakeFiles/LifeLib_autogen.dir/build
 .PHONY : LifeLib_autogen/fast
 
+#=============================================================================
+# Target rules for targets named AppLib
+
+# Build rule for target.
+AppLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppLib
+.PHONY : AppLib
+
+# fast build rule for target.
+AppLib/fast:
+	$(MAKE) $(MAKESILENT) -f App/CMakeFiles/AppLib.dir/build.make App/CMakeFiles/AppLib.dir/build
+.PHONY : AppLib/fast
+
+#=============================================================================
+# Target rules for targets named AppLib_autogen
+
+# Build rule for target.
+AppLib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppLib_autogen
+.PHONY : AppLib_autogen
+
+# fast build rule for target.
+AppLib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f App/CMakeFiles/AppLib_autogen.dir/build.make App/CMakeFiles/AppLib_autogen.dir/build
+.PHONY : AppLib_autogen/fast
+
+#=============================================================================
+# Target rules for targets named CanvasLib
+
+# Build rule for target.
+CanvasLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CanvasLib
+.PHONY : CanvasLib
+
+# fast build rule for target.
+CanvasLib/fast:
+	$(MAKE) $(MAKESILENT) -f UI/Canvas/CMakeFiles/CanvasLib.dir/build.make UI/Canvas/CMakeFiles/CanvasLib.dir/build
+.PHONY : CanvasLib/fast
+
+#=============================================================================
+# Target rules for targets named CanvasLib_autogen
+
+# Build rule for target.
+CanvasLib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CanvasLib_autogen
+.PHONY : CanvasLib_autogen
+
+# fast build rule for target.
+CanvasLib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f UI/Canvas/CMakeFiles/CanvasLib_autogen.dir/build.make UI/Canvas/CMakeFiles/CanvasLib_autogen.dir/build
+.PHONY : CanvasLib_autogen/fast
+
+#=============================================================================
+# Target rules for targets named NeighborhoodSelectLib
+
+# Build rule for target.
+NeighborhoodSelectLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NeighborhoodSelectLib
+.PHONY : NeighborhoodSelectLib
+
+# fast build rule for target.
+NeighborhoodSelectLib/fast:
+	$(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build
+.PHONY : NeighborhoodSelectLib/fast
+
+#=============================================================================
+# Target rules for targets named NeighborhoodSelectLib_autogen
+
+# Build rule for target.
+NeighborhoodSelectLib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NeighborhoodSelectLib_autogen
+.PHONY : NeighborhoodSelectLib_autogen
+
+# fast build rule for target.
+NeighborhoodSelectLib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build
+.PHONY : NeighborhoodSelectLib_autogen/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -250,10 +328,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... AppLib_autogen"
+	@echo "... CanvasLib_autogen"
 	@echo "... LifeLib_autogen"
+	@echo "... NeighborhoodSelectLib_autogen"
 	@echo "... TypesLib_autogen"
 	@echo "... untitled_autogen"
+	@echo "... AppLib"
+	@echo "... CanvasLib"
 	@echo "... LifeLib"
+	@echo "... NeighborhoodSelectLib"
 	@echo "... TypesLib"
 	@echo "... untitled"
 	@echo "... main.o"

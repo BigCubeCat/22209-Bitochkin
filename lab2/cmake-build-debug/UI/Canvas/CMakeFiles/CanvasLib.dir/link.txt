@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCanvasLib.a CMakeFiles/CanvasLib.dir/CanvasLib_autogen/mocs_compilation.cpp.o CMakeFiles/CanvasLib.dir/Canvas.cpp.o
+/usr/bin/ranlib libCanvasLib.a
