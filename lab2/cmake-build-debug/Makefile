@@ -187,6 +187,30 @@ test_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_autogen.dir/build.make CMakeFiles/test_autogen.dir/build
 .PHONY : test_autogen/fast
 
+App/Life/Life.o: App/Life/Life.cpp.o
+.PHONY : App/Life/Life.o
+
+# target to build an object file
+App/Life/Life.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/Life/Life.cpp.o
+.PHONY : App/Life/Life.cpp.o
+
+App/Life/Life.i: App/Life/Life.cpp.i
+.PHONY : App/Life/Life.i
+
+# target to preprocess a source file
+App/Life/Life.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/Life/Life.cpp.i
+.PHONY : App/Life/Life.cpp.i
+
+App/Life/Life.s: App/Life/Life.cpp.s
+.PHONY : App/Life/Life.s
+
+# target to generate assembly for a file
+App/Life/Life.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/Life/Life.cpp.s
+.PHONY : App/Life/Life.cpp.s
+
 App/main.o: App/main.cpp.o
 .PHONY : App/main.o
 
@@ -211,6 +235,54 @@ App/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/main.cpp.s
 .PHONY : App/main.cpp.s
 
+App/types/TNeighborhood.o: App/types/TNeighborhood.cpp.o
+.PHONY : App/types/TNeighborhood.o
+
+# target to build an object file
+App/types/TNeighborhood.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o
+.PHONY : App/types/TNeighborhood.cpp.o
+
+App/types/TNeighborhood.i: App/types/TNeighborhood.cpp.i
+.PHONY : App/types/TNeighborhood.i
+
+# target to preprocess a source file
+App/types/TNeighborhood.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TNeighborhood.cpp.i
+.PHONY : App/types/TNeighborhood.cpp.i
+
+App/types/TNeighborhood.s: App/types/TNeighborhood.cpp.s
+.PHONY : App/types/TNeighborhood.s
+
+# target to generate assembly for a file
+App/types/TNeighborhood.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TNeighborhood.cpp.s
+.PHONY : App/types/TNeighborhood.cpp.s
+
+App/types/TRules.o: App/types/TRules.cpp.o
+.PHONY : App/types/TRules.o
+
+# target to build an object file
+App/types/TRules.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TRules.cpp.o
+.PHONY : App/types/TRules.cpp.o
+
+App/types/TRules.i: App/types/TRules.cpp.i
+.PHONY : App/types/TRules.i
+
+# target to preprocess a source file
+App/types/TRules.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TRules.cpp.i
+.PHONY : App/types/TRules.cpp.i
+
+App/types/TRules.s: App/types/TRules.cpp.s
+.PHONY : App/types/TRules.s
+
+# target to generate assembly for a file
+App/types/TRules.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TRules.cpp.s
+.PHONY : App/types/TRules.cpp.s
+
 App/ui/mainwindow/mainwindow.o: App/ui/mainwindow/mainwindow.cpp.o
 .PHONY : App/ui/mainwindow/mainwindow.o
 
@@ -234,6 +306,102 @@ App/ui/mainwindow/mainwindow.s: App/ui/mainwindow/mainwindow.cpp.s
 App/ui/mainwindow/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.s
 .PHONY : App/ui/mainwindow/mainwindow.cpp.s
+
+App/ui/neighborhoodselect/neighborhoodselect.o: App/ui/neighborhoodselect/neighborhoodselect.cpp.o
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.o
+
+# target to build an object file
+App/ui/neighborhoodselect/neighborhoodselect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.cpp.o
+
+App/ui/neighborhoodselect/neighborhoodselect.i: App/ui/neighborhoodselect/neighborhoodselect.cpp.i
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.i
+
+# target to preprocess a source file
+App/ui/neighborhoodselect/neighborhoodselect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.i
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.cpp.i
+
+App/ui/neighborhoodselect/neighborhoodselect.s: App/ui/neighborhoodselect/neighborhoodselect.cpp.s
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.s
+
+# target to generate assembly for a file
+App/ui/neighborhoodselect/neighborhoodselect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.s
+.PHONY : App/ui/neighborhoodselect/neighborhoodselect.cpp.s
+
+App/ui/panel/panel.o: App/ui/panel/panel.cpp.o
+.PHONY : App/ui/panel/panel.o
+
+# target to build an object file
+App/ui/panel/panel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/panel/panel.cpp.o
+.PHONY : App/ui/panel/panel.cpp.o
+
+App/ui/panel/panel.i: App/ui/panel/panel.cpp.i
+.PHONY : App/ui/panel/panel.i
+
+# target to preprocess a source file
+App/ui/panel/panel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/panel/panel.cpp.i
+.PHONY : App/ui/panel/panel.cpp.i
+
+App/ui/panel/panel.s: App/ui/panel/panel.cpp.s
+.PHONY : App/ui/panel/panel.s
+
+# target to generate assembly for a file
+App/ui/panel/panel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/panel/panel.cpp.s
+.PHONY : App/ui/panel/panel.cpp.s
+
+App/ui/rule/rule.o: App/ui/rule/rule.cpp.o
+.PHONY : App/ui/rule/rule.o
+
+# target to build an object file
+App/ui/rule/rule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/rule/rule.cpp.o
+.PHONY : App/ui/rule/rule.cpp.o
+
+App/ui/rule/rule.i: App/ui/rule/rule.cpp.i
+.PHONY : App/ui/rule/rule.i
+
+# target to preprocess a source file
+App/ui/rule/rule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/rule/rule.cpp.i
+.PHONY : App/ui/rule/rule.cpp.i
+
+App/ui/rule/rule.s: App/ui/rule/rule.cpp.s
+.PHONY : App/ui/rule/rule.s
+
+# target to generate assembly for a file
+App/ui/rule/rule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/rule/rule.cpp.s
+.PHONY : App/ui/rule/rule.cpp.s
+
+App/ui/stepper/stepper.o: App/ui/stepper/stepper.cpp.o
+.PHONY : App/ui/stepper/stepper.o
+
+# target to build an object file
+App/ui/stepper/stepper.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o
+.PHONY : App/ui/stepper/stepper.cpp.o
+
+App/ui/stepper/stepper.i: App/ui/stepper/stepper.cpp.i
+.PHONY : App/ui/stepper/stepper.i
+
+# target to preprocess a source file
+App/ui/stepper/stepper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.i
+.PHONY : App/ui/stepper/stepper.cpp.i
+
+App/ui/stepper/stepper.s: App/ui/stepper/stepper.cpp.s
+.PHONY : App/ui/stepper/stepper.s
+
+# target to generate assembly for a file
+App/ui/stepper/stepper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.s
+.PHONY : App/ui/stepper/stepper.cpp.s
 
 test_autogen/mocs_compilation.o: test_autogen/mocs_compilation.cpp.o
 .PHONY : test_autogen/mocs_compilation.o
@@ -273,12 +441,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test_autogen"
 	@echo "... test"
+	@echo "... App/Life/Life.o"
+	@echo "... App/Life/Life.i"
+	@echo "... App/Life/Life.s"
 	@echo "... App/main.o"
 	@echo "... App/main.i"
 	@echo "... App/main.s"
+	@echo "... App/types/TNeighborhood.o"
+	@echo "... App/types/TNeighborhood.i"
+	@echo "... App/types/TNeighborhood.s"
+	@echo "... App/types/TRules.o"
+	@echo "... App/types/TRules.i"
+	@echo "... App/types/TRules.s"
 	@echo "... App/ui/mainwindow/mainwindow.o"
 	@echo "... App/ui/mainwindow/mainwindow.i"
 	@echo "... App/ui/mainwindow/mainwindow.s"
+	@echo "... App/ui/neighborhoodselect/neighborhoodselect.o"
+	@echo "... App/ui/neighborhoodselect/neighborhoodselect.i"
+	@echo "... App/ui/neighborhoodselect/neighborhoodselect.s"
+	@echo "... App/ui/panel/panel.o"
+	@echo "... App/ui/panel/panel.i"
+	@echo "... App/ui/panel/panel.s"
+	@echo "... App/ui/rule/rule.o"
+	@echo "... App/ui/rule/rule.i"
+	@echo "... App/ui/rule/rule.s"
+	@echo "... App/ui/stepper/stepper.o"
+	@echo "... App/ui/stepper/stepper.i"
+	@echo "... App/ui/stepper/stepper.s"
 	@echo "... test_autogen/mocs_compilation.o"
 	@echo "... test_autogen/mocs_compilation.i"
 	@echo "... test_autogen/mocs_compilation.s"

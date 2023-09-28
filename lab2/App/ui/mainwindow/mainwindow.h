@@ -1,7 +1,8 @@
-#ifndef TEST_MAINWINDOW_H
-#define TEST_MAINWINDOW_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "../panel/panel.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -18,7 +19,8 @@ public:
 
 private:
     Ui::mainwindow *ui;
+    panel *leftPanel;
 };
 
 
-#endif //TEST_MAINWINDOW_H
+#endif

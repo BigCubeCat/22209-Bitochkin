@@ -83,9 +83,51 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.h",
+			"MU",
+			"DTBTEZN4WH/moc_Life.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h",
+			"MU",
+			"IFZJGKRWXW/moc_TNeighborhood.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h",
+			"MU",
+			"IFZJGKRWXW/moc_TRules.cpp",
+			null
+		],
+		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.h",
 			"MU",
 			"DFBDCEFQHQ/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h",
+			"MU",
+			"DKXY4O23NO/moc_neighborhoodselect.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.h",
+			"MU",
+			"SROFFC2GUR/moc_panel.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.h",
+			"MU",
+			"TXUOL7RJOK/moc_rule.cpp",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.h",
+			"MU",
+			"SAKKLE7JIX/moc_stepper.cpp",
 			null
 		]
 	],
@@ -141,12 +183,47 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/main.cpp",
 			"MU",
 			null
 		],
 		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.cpp",
 			"MU",
 			null
 		]

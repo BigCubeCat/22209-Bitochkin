@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/TypesLib_autogen/include
+CXX_INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types/TypesLib_autogen/include
 
-CXX_FLAGS = -g -fdiagnostics-color=always
+CXX_FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
 

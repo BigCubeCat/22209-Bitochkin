@@ -1,5 +1,9 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/moc_predefs.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm/errno.h \
@@ -309,6 +313,7 @@
   /usr/include/qt/QtGui/qtransform.h \
   /usr/include/qt/QtGui/qwindowdefs.h \
   /usr/include/qt/QtWidgets/QMainWindow \
+  /usr/include/qt/QtWidgets/QWidget \
   /usr/include/qt/QtWidgets/qmainwindow.h \
   /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \

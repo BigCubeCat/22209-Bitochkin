@@ -308,13 +308,13 @@ CanvasLib_IS_TOP_LEVEL:STATIC=OFF
 CanvasLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas
 
 //Value Computed by CMake
-LifeLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/Life
+LifeLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/Life
 
 //Value Computed by CMake
 LifeLib_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-LifeLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/Life
+LifeLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life
 
 //Value Computed by CMake
 NeighborhoodSelectLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect
@@ -423,13 +423,13 @@ Qt6Widgets_DIR:PATH=/usr/lib/cmake/Qt6Widgets
 Qt6_DIR:PATH=/usr/lib/cmake/Qt6
 
 //Value Computed by CMake
-TypesLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/types
+TypesLib_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/types
 
 //Value Computed by CMake
 TypesLib_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-TypesLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/types
+TypesLib_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types
 
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=/bin/glslangValidator

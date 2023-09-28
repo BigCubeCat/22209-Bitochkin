@@ -240,4 +240,17 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
  /usr/include/qt/QtGui/qkeysequence.h \
- /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h
+ /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/panel.h \
+ /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../stepper/stepper.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../rule/rule.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/../../../App/ui/neighborhoodselect/neighborhoodselect.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/../../../App/ui/panel/panel.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/TXUOL7RJOK/moc_rule.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/TXUOL7RJOK/../../../App/ui/rule/rule.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SAKKLE7JIX/moc_stepper.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SAKKLE7JIX/../../../App/ui/stepper/stepper.h

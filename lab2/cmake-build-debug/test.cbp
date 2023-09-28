@@ -150,7 +150,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/main.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h">
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.cpp">
@@ -162,7 +180,55 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.ui">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.ui">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.ui">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.ui">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.ui">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/App/ui/mainwindow/ui_mainwindow.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/App/ui/neighborhoodselect/ui_neighborhoodselect.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/App/ui/panel/ui_panel.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/App/ui/rule/ui_rule.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/App/ui/stepper/ui_stepper.h">
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/mocs_compilation.cpp">

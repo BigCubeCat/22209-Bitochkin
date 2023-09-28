@@ -17,6 +17,31 @@ set(PROJECT_SOURCES
         App/ui/mainwindow/mainwindow.cpp
         App/ui/mainwindow/mainwindow.h
         App/ui/mainwindow/mainwindow.ui
+
+        App/ui/panel/panel.cpp
+        App/ui/panel/panel.h
+        App/ui/panel/panel.ui
+
+        App/ui/stepper/stepper.cpp
+        App/ui/stepper/stepper.h
+        App/ui/stepper/stepper.ui
+
+        App/ui/rule/rule.cpp
+        App/ui/rule/rule.h
+        App/ui/rule/rule.ui
+
+        App/ui/neighborhoodselect/neighborhoodselect.cpp
+        App/ui/neighborhoodselect/neighborhoodselect.h
+        App/ui/neighborhoodselect/neighborhoodselect.ui
+
+        App/types/TNeighborhood.cpp
+        App/types/TNeighborhood.h
+
+        App/types/TRules.cpp
+        App/types/TRules.h
+
+        App/Life/Life.cpp
+        App/Life/Life.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -250,4 +250,9 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/mainwindow.h \
  /usr/include/qt/QtWidgets/QMainWindow \
  /usr/include/qt/QtWidgets/qmainwindow.h \
- /usr/include/qt/QtWidgets/qtabwidget.h
+ /usr/include/qt/QtWidgets/qtabwidget.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/panel.h \
+ /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../stepper/stepper.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/rule.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h
