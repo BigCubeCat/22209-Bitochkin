@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug//CMakeFiles/progress.marks
@@ -117,208 +162,102 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named test
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
-# Target rules for targets named untitled_autogen
+# Target rules for targets named test_autogen
 
 # Build rule for target.
-untitled_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 untitled_autogen
-.PHONY : untitled_autogen
+test_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_autogen
+.PHONY : test_autogen
 
 # fast build rule for target.
-untitled_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled_autogen.dir/build.make CMakeFiles/untitled_autogen.dir/build
-.PHONY : untitled_autogen/fast
+test_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_autogen.dir/build.make CMakeFiles/test_autogen.dir/build
+.PHONY : test_autogen/fast
 
-#=============================================================================
-# Target rules for targets named TypesLib
-
-# Build rule for target.
-TypesLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TypesLib
-.PHONY : TypesLib
-
-# fast build rule for target.
-TypesLib/fast:
-	$(MAKE) $(MAKESILENT) -f types/CMakeFiles/TypesLib.dir/build.make types/CMakeFiles/TypesLib.dir/build
-.PHONY : TypesLib/fast
-
-#=============================================================================
-# Target rules for targets named TypesLib_autogen
-
-# Build rule for target.
-TypesLib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TypesLib_autogen
-.PHONY : TypesLib_autogen
-
-# fast build rule for target.
-TypesLib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f types/CMakeFiles/TypesLib_autogen.dir/build.make types/CMakeFiles/TypesLib_autogen.dir/build
-.PHONY : TypesLib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named LifeLib
-
-# Build rule for target.
-LifeLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LifeLib
-.PHONY : LifeLib
-
-# fast build rule for target.
-LifeLib/fast:
-	$(MAKE) $(MAKESILENT) -f Life/CMakeFiles/LifeLib.dir/build.make Life/CMakeFiles/LifeLib.dir/build
-.PHONY : LifeLib/fast
-
-#=============================================================================
-# Target rules for targets named LifeLib_autogen
-
-# Build rule for target.
-LifeLib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LifeLib_autogen
-.PHONY : LifeLib_autogen
-
-# fast build rule for target.
-LifeLib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f Life/CMakeFiles/LifeLib_autogen.dir/build.make Life/CMakeFiles/LifeLib_autogen.dir/build
-.PHONY : LifeLib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named AppLib
-
-# Build rule for target.
-AppLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppLib
-.PHONY : AppLib
-
-# fast build rule for target.
-AppLib/fast:
-	$(MAKE) $(MAKESILENT) -f App/CMakeFiles/AppLib.dir/build.make App/CMakeFiles/AppLib.dir/build
-.PHONY : AppLib/fast
-
-#=============================================================================
-# Target rules for targets named AppLib_autogen
-
-# Build rule for target.
-AppLib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 AppLib_autogen
-.PHONY : AppLib_autogen
-
-# fast build rule for target.
-AppLib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f App/CMakeFiles/AppLib_autogen.dir/build.make App/CMakeFiles/AppLib_autogen.dir/build
-.PHONY : AppLib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named CanvasLib
-
-# Build rule for target.
-CanvasLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CanvasLib
-.PHONY : CanvasLib
-
-# fast build rule for target.
-CanvasLib/fast:
-	$(MAKE) $(MAKESILENT) -f UI/Canvas/CMakeFiles/CanvasLib.dir/build.make UI/Canvas/CMakeFiles/CanvasLib.dir/build
-.PHONY : CanvasLib/fast
-
-#=============================================================================
-# Target rules for targets named CanvasLib_autogen
-
-# Build rule for target.
-CanvasLib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CanvasLib_autogen
-.PHONY : CanvasLib_autogen
-
-# fast build rule for target.
-CanvasLib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f UI/Canvas/CMakeFiles/CanvasLib_autogen.dir/build.make UI/Canvas/CMakeFiles/CanvasLib_autogen.dir/build
-.PHONY : CanvasLib_autogen/fast
-
-#=============================================================================
-# Target rules for targets named NeighborhoodSelectLib
-
-# Build rule for target.
-NeighborhoodSelectLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NeighborhoodSelectLib
-.PHONY : NeighborhoodSelectLib
-
-# fast build rule for target.
-NeighborhoodSelectLib/fast:
-	$(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build
-.PHONY : NeighborhoodSelectLib/fast
-
-#=============================================================================
-# Target rules for targets named NeighborhoodSelectLib_autogen
-
-# Build rule for target.
-NeighborhoodSelectLib_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NeighborhoodSelectLib_autogen
-.PHONY : NeighborhoodSelectLib_autogen
-
-# fast build rule for target.
-NeighborhoodSelectLib_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build
-.PHONY : NeighborhoodSelectLib_autogen/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
+App/main.o: App/main.cpp.o
+.PHONY : App/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.o
-.PHONY : main.cpp.o
+App/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/main.cpp.o
+.PHONY : App/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+App/main.i: App/main.cpp.i
+.PHONY : App/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.i
-.PHONY : main.cpp.i
+App/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/main.cpp.i
+.PHONY : App/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+App/main.s: App/main.cpp.s
+.PHONY : App/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.s
-.PHONY : main.cpp.s
+App/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/main.cpp.s
+.PHONY : App/main.cpp.s
 
-untitled_autogen/mocs_compilation.o: untitled_autogen/mocs_compilation.cpp.o
-.PHONY : untitled_autogen/mocs_compilation.o
+App/ui/mainwindow/mainwindow.o: App/ui/mainwindow/mainwindow.cpp.o
+.PHONY : App/ui/mainwindow/mainwindow.o
 
 # target to build an object file
-untitled_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o
-.PHONY : untitled_autogen/mocs_compilation.cpp.o
+App/ui/mainwindow/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o
+.PHONY : App/ui/mainwindow/mainwindow.cpp.o
 
-untitled_autogen/mocs_compilation.i: untitled_autogen/mocs_compilation.cpp.i
-.PHONY : untitled_autogen/mocs_compilation.i
+App/ui/mainwindow/mainwindow.i: App/ui/mainwindow/mainwindow.cpp.i
+.PHONY : App/ui/mainwindow/mainwindow.i
 
 # target to preprocess a source file
-untitled_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.i
-.PHONY : untitled_autogen/mocs_compilation.cpp.i
+App/ui/mainwindow/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.i
+.PHONY : App/ui/mainwindow/mainwindow.cpp.i
 
-untitled_autogen/mocs_compilation.s: untitled_autogen/mocs_compilation.cpp.s
-.PHONY : untitled_autogen/mocs_compilation.s
+App/ui/mainwindow/mainwindow.s: App/ui/mainwindow/mainwindow.cpp.s
+.PHONY : App/ui/mainwindow/mainwindow.s
 
 # target to generate assembly for a file
-untitled_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.s
-.PHONY : untitled_autogen/mocs_compilation.cpp.s
+App/ui/mainwindow/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.s
+.PHONY : App/ui/mainwindow/mainwindow.cpp.s
+
+test_autogen/mocs_compilation.o: test_autogen/mocs_compilation.cpp.o
+.PHONY : test_autogen/mocs_compilation.o
+
+# target to build an object file
+test_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o
+.PHONY : test_autogen/mocs_compilation.cpp.o
+
+test_autogen/mocs_compilation.i: test_autogen/mocs_compilation.cpp.i
+.PHONY : test_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+test_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.i
+.PHONY : test_autogen/mocs_compilation.cpp.i
+
+test_autogen/mocs_compilation.s: test_autogen/mocs_compilation.cpp.s
+.PHONY : test_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+test_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.s
+.PHONY : test_autogen/mocs_compilation.cpp.s
 
 # Help Target
 help:
@@ -327,25 +266,22 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... AppLib_autogen"
-	@echo "... CanvasLib_autogen"
-	@echo "... LifeLib_autogen"
-	@echo "... NeighborhoodSelectLib_autogen"
-	@echo "... TypesLib_autogen"
-	@echo "... untitled_autogen"
-	@echo "... AppLib"
-	@echo "... CanvasLib"
-	@echo "... LifeLib"
-	@echo "... NeighborhoodSelectLib"
-	@echo "... TypesLib"
-	@echo "... untitled"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... untitled_autogen/mocs_compilation.o"
-	@echo "... untitled_autogen/mocs_compilation.i"
-	@echo "... untitled_autogen/mocs_compilation.s"
+	@echo "... test_autogen"
+	@echo "... test"
+	@echo "... App/main.o"
+	@echo "... App/main.i"
+	@echo "... App/main.s"
+	@echo "... App/ui/mainwindow/mainwindow.o"
+	@echo "... App/ui/mainwindow/mainwindow.i"
+	@echo "... App/ui/mainwindow/mainwindow.s"
+	@echo "... test_autogen/mocs_compilation.o"
+	@echo "... test_autogen/mocs_compilation.i"
+	@echo "... test_autogen/mocs_compilation.s"
 .PHONY : help
 
 

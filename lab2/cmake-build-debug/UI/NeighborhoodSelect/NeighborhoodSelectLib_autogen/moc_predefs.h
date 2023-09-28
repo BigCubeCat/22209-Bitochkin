@@ -10,6 +10,7 @@
 #define __UINT_LEAST8_TYPE__ unsigned char
 #define __SIZEOF_FLOAT80__ 16
 #define __BFLT16_DENORM_MIN__ 9.18354961579912115600575419704879436e-41BF16
+#define NeighborhoodSelectLib_EXPORTS 1
 #define __INTMAX_C(c) c ## L
 #define __CHAR_BIT__ 8
 #define __UINT8_MAX__ 0xff

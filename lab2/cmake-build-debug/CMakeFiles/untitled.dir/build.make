@@ -112,7 +112,7 @@ untitled: types/libTypesLib.a
 untitled: Life/libLifeLib.a
 untitled: UI/Canvas/libCanvasLib.a
 untitled: App/libAppLib.a
-untitled: UI/NeighborhoodSelect/libNeighborhoodSelectLib.a
+untitled: UI/NeighborhoodSelect/libNeighborhoodSelectLib.so
 untitled: Life/libLifeLib.a
 untitled: UI/Canvas/libCanvasLib.a
 untitled: /usr/lib/libQt6Widgets.so.6.5.2

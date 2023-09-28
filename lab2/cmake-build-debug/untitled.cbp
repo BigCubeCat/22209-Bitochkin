@@ -374,10 +374,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="NeighborhoodSelectLib">
-				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_CORE_LIB"/>
@@ -406,10 +406,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="NeighborhoodSelectLib/fast">
-				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.a" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/libNeighborhoodSelectLib.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect"/>
 				<Option object_output="./"/>
-				<Option type="2"/>
+				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_CORE_LIB"/>
@@ -466,10 +466,13 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/Canvas/Canvas.h">
 			<Option target="CanvasLib"/>
 		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp">
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp">
 			<Option target="NeighborhoodSelectLib"/>
 		</Unit>
-		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.h">
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.h">
+			<Option target="NeighborhoodSelectLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.ui">
 			<Option target="NeighborhoodSelectLib"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/App/AppLib_autogen/mocs_compilation.cpp">
@@ -480,6 +483,9 @@
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/Canvas/CanvasLib_autogen/mocs_compilation.cpp">
 			<Option target="CanvasLib"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/include/ui_neighborhoodselect.h">
+			<Option target="NeighborhoodSelectLib"/>
 		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/mocs_compilation.cpp">
 			<Option target="NeighborhoodSelectLib"/>

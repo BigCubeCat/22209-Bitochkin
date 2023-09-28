@@ -360,5 +360,6 @@ App/CMakeFiles/AppLib.dir/App.cpp.o: \
  /usr/include/qt6/QtWidgets/QPushButton \
  /usr/include/qt6/QtWidgets/qpushbutton.h \
  /usr/include/qt6/QtWidgets/qabstractbutton.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect/NeighborhoodSelect.h \
+ /usr/include/qt6/QtCore/QRect \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect/neighborhoodselect.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/../UI/NeighborhoodSelect/../../types/TNeighborhood.h

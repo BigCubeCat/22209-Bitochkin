@@ -1,0 +1,2 @@
+/usr/bin/ar qc libTypesLib.a CMakeFiles/TypesLib.dir/TypesLib_autogen/mocs_compilation.cpp.o CMakeFiles/TypesLib.dir/TRules.cpp.o CMakeFiles/TypesLib.dir/TNeighborhood.cpp.o
+/usr/bin/ranlib libTypesLib.a

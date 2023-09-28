@@ -83,38 +83,43 @@ UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.s"
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/mocs_compilation.cpp -o CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.s
 
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/flags.make
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o"
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o -MF CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o.d -o CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/flags.make
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o -MF CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o.d -o CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp
 
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.i"
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp > CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.i
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.i"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp > CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.i
 
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.s"
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp -o CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.s
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.s"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp -o CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.s
 
 # Object files for target NeighborhoodSelectLib
 NeighborhoodSelectLib_OBJECTS = \
 "CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o"
+"CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o"
 
 # External object files for target NeighborhoodSelectLib
 NeighborhoodSelectLib_EXTERNAL_OBJECTS =
 
-UI/NeighborhoodSelect/libNeighborhoodSelectLib.a: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.o
-UI/NeighborhoodSelect/libNeighborhoodSelectLib.a: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o
-UI/NeighborhoodSelect/libNeighborhoodSelectLib.a: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make
-UI/NeighborhoodSelect/libNeighborhoodSelectLib.a: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libNeighborhoodSelectLib.a"
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && $(CMAKE_COMMAND) -P CMakeFiles/NeighborhoodSelectLib.dir/cmake_clean_target.cmake
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.o
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: types/libTypesLib.a
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: /usr/lib/libQt6Widgets.so.6.5.2
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: /usr/lib/libQt6Gui.so.6.5.2
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: /usr/lib/libQt6Core.so.6.5.2
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: /usr/lib/libGLX.so
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: /usr/lib/libOpenGL.so
+UI/NeighborhoodSelect/libNeighborhoodSelectLib.so: UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libNeighborhoodSelectLib.so"
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NeighborhoodSelectLib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build: UI/NeighborhoodSelect/libNeighborhoodSelectLib.a
+UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build: UI/NeighborhoodSelect/libNeighborhoodSelectLib.so
 .PHONY : UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build
 
 UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/clean:

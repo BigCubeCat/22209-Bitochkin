@@ -325,4 +325,10 @@ UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cp
  /usr/include/qt6/QtWidgets/qlayout.h \
  /usr/include/qt6/QtWidgets/qlayoutitem.h \
  /usr/include/qt6/QtWidgets/qboxlayout.h \
- /usr/include/qt6/QtWidgets/qgridlayout.h
+ /usr/include/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/qt6/QtWidgets/QSpinBox \
+ /usr/include/qt6/QtWidgets/qspinbox.h \
+ /usr/include/qt6/QtWidgets/qabstractspinbox.h \
+ /usr/include/qt6/QtGui/qvalidator.h \
+ /usr/include/qt6/QtCore/qregularexpression.h \
+ /usr/include/qt6/QtCore/qlocale.h

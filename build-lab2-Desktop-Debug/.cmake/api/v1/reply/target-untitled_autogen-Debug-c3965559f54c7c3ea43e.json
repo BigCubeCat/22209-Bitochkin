@@ -1,0 +1,81 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "TypesLib::@7f98f3510d0ca4b0fd06"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "LifeLib::@f9c91607e35f45579a8f"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "AppLib::@4cec9bfdf5c218c89c51"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "CanvasLib::@a07724a1429f34ecf965"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "NeighborhoodSelectLib::@a4f6eea8b5adeb8d515c"
+		}
+	],
+	"id" : "untitled_autogen::@6890427a1f51a3e7e1df",
+	"isGeneratorProvided" : true,
+	"name" : "untitled_autogen",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/build-lab2-Desktop-Debug/CMakeFiles/untitled_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/build-lab2-Desktop-Debug/CMakeFiles/untitled_autogen.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

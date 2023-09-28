@@ -144,30 +144,6 @@ NeighborhoodSelectLib_autogen/fast:
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib_autogen.dir/build
 .PHONY : NeighborhoodSelectLib_autogen/fast
 
-NeighborhoodSelect.o: NeighborhoodSelect.cpp.o
-.PHONY : NeighborhoodSelect.o
-
-# target to build an object file
-NeighborhoodSelect.cpp.o:
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o
-.PHONY : NeighborhoodSelect.cpp.o
-
-NeighborhoodSelect.i: NeighborhoodSelect.cpp.i
-.PHONY : NeighborhoodSelect.i
-
-# target to preprocess a source file
-NeighborhoodSelect.cpp.i:
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.i
-.PHONY : NeighborhoodSelect.cpp.i
-
-NeighborhoodSelect.s: NeighborhoodSelect.cpp.s
-.PHONY : NeighborhoodSelect.s
-
-# target to generate assembly for a file
-NeighborhoodSelect.cpp.s:
-	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.s
-.PHONY : NeighborhoodSelect.cpp.s
-
 NeighborhoodSelectLib_autogen/mocs_compilation.o: NeighborhoodSelectLib_autogen/mocs_compilation.cpp.o
 .PHONY : NeighborhoodSelectLib_autogen/mocs_compilation.o
 
@@ -192,6 +168,30 @@ NeighborhoodSelectLib_autogen/mocs_compilation.cpp.s:
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.s
 .PHONY : NeighborhoodSelectLib_autogen/mocs_compilation.cpp.s
 
+neighborhoodselect.o: neighborhoodselect.cpp.o
+.PHONY : neighborhoodselect.o
+
+# target to build an object file
+neighborhoodselect.cpp.o:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.o
+.PHONY : neighborhoodselect.cpp.o
+
+neighborhoodselect.i: neighborhoodselect.cpp.i
+.PHONY : neighborhoodselect.i
+
+# target to preprocess a source file
+neighborhoodselect.cpp.i:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.i
+.PHONY : neighborhoodselect.cpp.i
+
+neighborhoodselect.s: neighborhoodselect.cpp.s
+.PHONY : neighborhoodselect.s
+
+# target to generate assembly for a file
+neighborhoodselect.cpp.s:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/build.make UI/NeighborhoodSelect/CMakeFiles/NeighborhoodSelectLib.dir/neighborhoodselect.cpp.s
+.PHONY : neighborhoodselect.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,12 +202,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... NeighborhoodSelectLib_autogen"
 	@echo "... NeighborhoodSelectLib"
-	@echo "... NeighborhoodSelect.o"
-	@echo "... NeighborhoodSelect.i"
-	@echo "... NeighborhoodSelect.s"
 	@echo "... NeighborhoodSelectLib_autogen/mocs_compilation.o"
 	@echo "... NeighborhoodSelectLib_autogen/mocs_compilation.i"
 	@echo "... NeighborhoodSelectLib_autogen/mocs_compilation.s"
+	@echo "... neighborhoodselect.o"
+	@echo "... neighborhoodselect.i"
+	@echo "... neighborhoodselect.s"
 .PHONY : help
 
 

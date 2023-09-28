@@ -1,0 +1,2 @@
+/usr/bin/ar qc libAppLib.a CMakeFiles/AppLib.dir/AppLib_autogen/mocs_compilation.cpp.o CMakeFiles/AppLib.dir/App.cpp.o
+/usr/bin/ranlib libAppLib.a

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/NeighborhoodSelectLib_autogen"
+  "NeighborhoodSelectLib_autogen/include/ui_neighborhoodselect.h"
   "NeighborhoodSelectLib_autogen/mocs_compilation.cpp"
 )
 

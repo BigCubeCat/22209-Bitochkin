@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNeighborhoodSelectLib.a CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelectLib_autogen/mocs_compilation.cpp.o CMakeFiles/NeighborhoodSelectLib.dir/NeighborhoodSelect.cpp.o
+/usr/bin/ranlib libNeighborhoodSelectLib.a

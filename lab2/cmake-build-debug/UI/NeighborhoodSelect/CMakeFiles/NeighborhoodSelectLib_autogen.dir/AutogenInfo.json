@@ -36,16 +36,22 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.h",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.h",
 			"MU",
-			"EWIEGA46WW/moc_NeighborhoodSelect.cpp",
+			"EWIEGA46WW/moc_neighborhoodselect.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/UI/NeighborhoodSelect/NeighborhoodSelectLib_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"NeighborhoodSelectLib_EXPORTS",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -101,7 +107,7 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/NeighborhoodSelect.cpp",
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/UI/NeighborhoodSelect/neighborhoodselect.cpp",
 			"MU",
 			null
 		]
