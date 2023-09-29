@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "test_autogen"
   "CMakeFiles/test.dir/App/Life/Life.cpp.o"
   "CMakeFiles/test.dir/App/Life/Life.cpp.o.d"
+  "CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o"
+  "CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o.d"
   "CMakeFiles/test.dir/App/main.cpp.o"
   "CMakeFiles/test.dir/App/main.cpp.o.d"
   "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o"

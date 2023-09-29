@@ -2,12 +2,12 @@
 #include "ui_panel.h"
 
 
-panel::panel(QWidget *parent) :
-        QWidget(parent), ui(new Ui::panel) {
+panel::panel(QWidget *parent, StateStorage *store) :
+        QWidget(parent), ui(new Ui::panel), store(store) {
     ui->setupUi(this);
 
     gameStepper = new stepper(this);
-    gameRules = new rule(this);
+    gameRules = new rule(this, store);
     neighborhoodSelect = new neighborhoodselect(this);
 
     ui->panelLayout->addWidget(gameStepper);
@@ -15,6 +15,8 @@ panel::panel(QWidget *parent) :
     ui->panelLayout->addWidget(neighborhoodSelect);
 
     this->setMaximumWidth(301);
+
+
 }
 
 panel::~panel() {

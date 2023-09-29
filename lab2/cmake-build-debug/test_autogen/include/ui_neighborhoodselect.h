@@ -38,7 +38,7 @@ public:
     {
         if (neighborhoodselect->objectName().isEmpty())
             neighborhoodselect->setObjectName(QString::fromUtf8("neighborhoodselect"));
-        neighborhoodselect->resize(360, 308);
+        neighborhoodselect->resize(284, 298);
         verticalLayout_2 = new QVBoxLayout(neighborhoodselect);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();

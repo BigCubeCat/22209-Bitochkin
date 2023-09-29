@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include "../panel/panel.h"
+#include "../../Life/Life.h"
+#include "../../types/TRules.h"
+#include "../../StateStorage/StateStorage.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -17,9 +20,15 @@ public:
 
     ~mainwindow() override;
 
+    Life *life;
+
 private:
     Ui::mainwindow *ui;
+    StateStorage *store;
     panel *leftPanel;
+
+    TRules *rule;
+    TNeighborhood *neighborhood;
 };
 
 

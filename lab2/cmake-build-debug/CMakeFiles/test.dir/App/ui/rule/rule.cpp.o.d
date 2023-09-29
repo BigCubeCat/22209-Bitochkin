@@ -240,6 +240,22 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
  /usr/include/qt/QtGui/qkeysequence.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/StateStorage.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/../types/TRules.h \
+ /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
+ /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.h \
+ /usr/include/c++/13.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/13.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
+ /usr/include/c++/13.2.1/bits/istream.tcc \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/ui_rule.h \
  /usr/include/qt/QtCore/QVariant /usr/include/qt/QtCore/qvariant.h \
  /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
@@ -256,10 +272,18 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: \
  /usr/include/qt/QtWidgets/qboxlayout.h \
  /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtWidgets/QLabel \
  /usr/include/qt/QtWidgets/qlabel.h /usr/include/qt/QtWidgets/qframe.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtWidgets/QTextEdit \
+ /usr/include/qt/QtWidgets/qwidget.h \
+ /usr/include/qt/QtWidgets/QPushButton \
+ /usr/include/qt/QtWidgets/qpushbutton.h \
+ /usr/include/qt/QtWidgets/qabstractbutton.h \
+ /usr/include/qt/QtGui/qicon.h /usr/include/qt/QtWidgets/QSpacerItem \
+ /usr/include/qt/QtWidgets/qlayoutitem.h \
+ /usr/include/qt/QtWidgets/QTextEdit \
  /usr/include/qt/QtWidgets/qtextedit.h \
  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
  /usr/include/qt/QtGui/qtextdocument.h /usr/include/qt/QtCore/qurl.h \
  /usr/include/qt/QtGui/qtextoption.h /usr/include/qt/QtGui/qtextcursor.h \
  /usr/include/qt/QtGui/qtextformat.h /usr/include/qt/QtGui/qpen.h \
- /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget
+ /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget \
+ /usr/include/qt/QtWidgets/QPushButton \
+ /usr/include/qt/QtWidgets/QTextEdit

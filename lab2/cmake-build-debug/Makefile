@@ -211,6 +211,30 @@ App/Life/Life.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/Life/Life.cpp.s
 .PHONY : App/Life/Life.cpp.s
 
+App/StateStorage/StateStorage.o: App/StateStorage/StateStorage.cpp.o
+.PHONY : App/StateStorage/StateStorage.o
+
+# target to build an object file
+App/StateStorage/StateStorage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o
+.PHONY : App/StateStorage/StateStorage.cpp.o
+
+App/StateStorage/StateStorage.i: App/StateStorage/StateStorage.cpp.i
+.PHONY : App/StateStorage/StateStorage.i
+
+# target to preprocess a source file
+App/StateStorage/StateStorage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.i
+.PHONY : App/StateStorage/StateStorage.cpp.i
+
+App/StateStorage/StateStorage.s: App/StateStorage/StateStorage.cpp.s
+.PHONY : App/StateStorage/StateStorage.s
+
+# target to generate assembly for a file
+App/StateStorage/StateStorage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.s
+.PHONY : App/StateStorage/StateStorage.cpp.s
+
 App/main.o: App/main.cpp.o
 .PHONY : App/main.o
 
@@ -444,6 +468,9 @@ help:
 	@echo "... App/Life/Life.o"
 	@echo "... App/Life/Life.i"
 	@echo "... App/Life/Life.s"
+	@echo "... App/StateStorage/StateStorage.o"
+	@echo "... App/StateStorage/StateStorage.i"
+	@echo "... App/StateStorage/StateStorage.s"
 	@echo "... App/main.o"
 	@echo "... App/main.i"
 	@echo "... App/main.s"

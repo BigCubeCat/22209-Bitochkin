@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp" "CMakeFiles/test.dir/App/Life/Life.cpp.o" "gcc" "CMakeFiles/test.dir/App/Life/Life.cpp.o.d"
+  "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp" "CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o" "gcc" "CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/main.cpp" "CMakeFiles/test.dir/App/main.cpp.o" "gcc" "CMakeFiles/test.dir/App/main.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp" "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o" "gcc" "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp" "CMakeFiles/test.dir/App/types/TRules.cpp.o" "gcc" "CMakeFiles/test.dir/App/types/TRules.cpp.o.d"

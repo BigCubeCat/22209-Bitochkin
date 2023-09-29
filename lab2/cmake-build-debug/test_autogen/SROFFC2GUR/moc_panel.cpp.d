@@ -1,5 +1,9 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/moc_predefs.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.h \
@@ -97,6 +101,7 @@
   /usr/include/c++/13.2.1/bits/hash_bytes.h \
   /usr/include/c++/13.2.1/bits/invoke.h \
   /usr/include/c++/13.2.1/bits/ios_base.h \
+  /usr/include/c++/13.2.1/bits/istream.tcc \
   /usr/include/c++/13.2.1/bits/iterator_concepts.h \
   /usr/include/c++/13.2.1/bits/list.tcc \
   /usr/include/c++/13.2.1/bits/locale_classes.h \
@@ -189,6 +194,8 @@
   /usr/include/c++/13.2.1/initializer_list \
   /usr/include/c++/13.2.1/ios \
   /usr/include/c++/13.2.1/iosfwd \
+  /usr/include/c++/13.2.1/iostream \
+  /usr/include/c++/13.2.1/istream \
   /usr/include/c++/13.2.1/iterator \
   /usr/include/c++/13.2.1/limits \
   /usr/include/c++/13.2.1/list \
@@ -233,6 +240,7 @@
   /usr/include/linux/errno.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt/QtCore/QObject \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \

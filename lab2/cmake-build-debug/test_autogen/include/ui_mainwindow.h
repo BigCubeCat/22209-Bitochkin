@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -30,6 +31,8 @@ public:
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *mainLayout;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -53,6 +56,16 @@ public:
         mainLayout->setObjectName(QString::fromUtf8("mainLayout"));
 
         horizontalLayout_2->addLayout(mainLayout);
+
+        scrollArea = new QScrollArea(centralwidget);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 372, 228));
+        scrollArea->setWidget(scrollAreaWidgetContents);
+
+        horizontalLayout_2->addWidget(scrollArea);
 
         mainwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(mainwindow);

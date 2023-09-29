@@ -255,4 +255,26 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../stepper/stepper.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/rule.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/StateStorage.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TRules.h \
+ /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
+ /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.h \
+ /usr/include/c++/13.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/13.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
+ /usr/include/c++/13.2.1/bits/istream.tcc \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../StateStorage/StateStorage.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../../StateStorage/StateStorage.h

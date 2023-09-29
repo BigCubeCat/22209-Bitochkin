@@ -156,6 +156,12 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/main.cpp">
 			<Option target="test"/>
 		</Unit>

@@ -1,7 +1,7 @@
 CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/moc_StateStorage.cpp \
  /usr/include/c++/13.2.1/memory /usr/include/c++/13.2.1/bits/memoryfwd.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -101,12 +101,11 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/backward/auto_ptr.h \
  /usr/include/c++/13.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/13.2.1/pstl/execution_defs.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/mainwindow.h \
- /usr/include/qt/QtWidgets/QMainWindow \
- /usr/include/qt/QtWidgets/qmainwindow.h \
- /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
- /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtCore/qglobal.h \
- /usr/include/c++/13.2.1/cstddef /usr/include/c++/13.2.1/utility \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/StateStorage.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
+ /usr/include/qt/QtCore/qglobal.h /usr/include/c++/13.2.1/cstddef \
+ /usr/include/c++/13.2.1/utility \
  /usr/include/c++/13.2.1/bits/stl_relops.h \
  /usr/include/c++/13.2.1/initializer_list /usr/include/assert.h \
  /usr/include/qt/QtCore/qconfig.h /usr/include/qt/QtCore/qtcore-config.h \
@@ -133,17 +132,12 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCore/qgenericatomic.h /usr/include/c++/13.2.1/atomic \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
- /usr/include/qt/QtGui/qtgui-config.h \
- /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
- /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
  /usr/include/qt/QtCore/qobjectdefs_impl.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qstring.h \
- /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qbytearray.h \
- /usr/include/qt/QtCore/qrefcount.h /usr/include/qt/QtCore/qarraydata.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/c++/13.2.1/cstdint /usr/include/c++/13.2.1/stdlib.h \
- /usr/include/c++/13.2.1/string \
+ /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
+ /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
+ /usr/include/qt/QtCore/qarraydata.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/13.2.1/cstdint \
+ /usr/include/c++/13.2.1/stdlib.h /usr/include/c++/13.2.1/string \
  /usr/include/c++/13.2.1/bits/char_traits.h \
  /usr/include/c++/13.2.1/bits/localefwd.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
@@ -223,17 +217,39 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
  /usr/include/c++/13.2.1/limits /usr/include/c++/13.2.1/ctime \
  /usr/include/c++/13.2.1/bits/parse_numbers.h \
- /usr/include/qt/QtCore/qmargins.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qsize.h \
- /usr/include/qt/QtCore/qpoint.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qline.h \
- /usr/include/qt/QtGui/qtransform.h /usr/include/qt/QtGui/qimage.h \
- /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
- /usr/include/qt/QtCore/qsharedpointer.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/../types/TRules.h \
+ /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
+ /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.h \
+ /usr/include/c++/13.2.1/cwctype /usr/include/wctype.h \
+ /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+ /usr/include/c++/13.2.1/bits/basic_ios.tcc \
+ /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
+ /usr/include/c++/13.2.1/bits/istream.tcc \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/mainwindow.h \
+ /usr/include/qt/QtWidgets/QMainWindow \
+ /usr/include/qt/QtWidgets/qmainwindow.h \
+ /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
+ /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtGui/qtgui-config.h \
+ /usr/include/qt/QtWidgets/qtwidgets-config.h \
+ /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
+ /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtGui/qpaintdevice.h /usr/include/qt/QtCore/qrect.h \
+ /usr/include/qt/QtCore/qsize.h /usr/include/qt/QtCore/qpoint.h \
+ /usr/include/qt/QtGui/qpalette.h /usr/include/qt/QtGui/qcolor.h \
+ /usr/include/qt/QtGui/qrgb.h /usr/include/qt/QtGui/qrgba64.h \
+ /usr/include/qt/QtGui/qbrush.h /usr/include/qt/QtGui/qmatrix.h \
+ /usr/include/qt/QtGui/qpolygon.h /usr/include/qt/QtGui/qregion.h \
+ /usr/include/qt/QtCore/qdatastream.h /usr/include/qt/QtCore/qiodevice.h \
+ /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
+ /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpixelformat.h \
+ /usr/include/qt/QtGui/qpixmap.h /usr/include/qt/QtCore/qsharedpointer.h \
  /usr/include/qt/QtCore/qshareddata.h /usr/include/qt/QtCore/qhash.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
  /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
@@ -245,7 +261,14 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../stepper/stepper.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../rule/rule.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../rule/../../StateStorage/StateStorage.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../../StateStorage/StateStorage.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../StateStorage/StateStorage.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/../../../App/ui/neighborhoodselect/neighborhoodselect.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp \

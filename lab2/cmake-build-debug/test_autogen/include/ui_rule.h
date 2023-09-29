@@ -13,6 +13,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -23,17 +25,20 @@ class Ui_rule
 {
 public:
     QVBoxLayout *verticalLayout_2;
+    QWidget *widget;
     QVBoxLayout *verticalLayout;
     QWidget *horizontalWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QTextEdit *textEdit;
-    QLabel *birthError;
     QWidget *horizontalWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QTextEdit *textEdit_2;
-    QLabel *label_3;
+    QWidget *horizontalWidget1;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *applyButton;
 
     void setupUi(QWidget *rule)
     {
@@ -42,13 +47,17 @@ public:
         rule->resize(400, 334);
         verticalLayout_2 = new QVBoxLayout(rule);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        horizontalWidget_2 = new QWidget(rule);
-        horizontalWidget_2->setObjectName(QString::fromUtf8("horizontalWidget_2"));
+        widget = new QWidget(rule);
+        widget->setObjectName(QString::fromUtf8("widget"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalWidget_2 = new QWidget(widget);
+        horizontalWidget_2->setObjectName(QString::fromUtf8("horizontalWidget_2"));
         sizePolicy.setHeightForWidth(horizontalWidget_2->sizePolicy().hasHeightForWidth());
         horizontalWidget_2->setSizePolicy(sizePolicy);
         horizontalWidget_2->setMaximumSize(QSize(16777215, 50));
@@ -67,14 +76,10 @@ public:
 
         verticalLayout->addWidget(horizontalWidget_2);
 
-        birthError = new QLabel(rule);
-        birthError->setObjectName(QString::fromUtf8("birthError"));
-        birthError->setMaximumSize(QSize(16777215, 40));
-
-        verticalLayout->addWidget(birthError);
-
-        horizontalWidget = new QWidget(rule);
+        horizontalWidget = new QWidget(widget);
         horizontalWidget->setObjectName(QString::fromUtf8("horizontalWidget"));
+        sizePolicy.setHeightForWidth(horizontalWidget->sizePolicy().hasHeightForWidth());
+        horizontalWidget->setSizePolicy(sizePolicy);
         horizontalWidget->setMaximumSize(QSize(16777215, 50));
         horizontalLayout = new QHBoxLayout(horizontalWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -92,14 +97,26 @@ public:
 
         verticalLayout->addWidget(horizontalWidget);
 
-        label_3 = new QLabel(rule);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setMaximumSize(QSize(16777215, 40));
+        horizontalWidget1 = new QWidget(widget);
+        horizontalWidget1->setObjectName(QString::fromUtf8("horizontalWidget1"));
+        sizePolicy.setHeightForWidth(horizontalWidget1->sizePolicy().hasHeightForWidth());
+        horizontalWidget1->setSizePolicy(sizePolicy);
+        horizontalLayout_3 = new QHBoxLayout(horizontalWidget1);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        verticalLayout->addWidget(label_3);
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        applyButton = new QPushButton(horizontalWidget1);
+        applyButton->setObjectName(QString::fromUtf8("applyButton"));
+
+        horizontalLayout_3->addWidget(applyButton);
 
 
-        verticalLayout_2->addLayout(verticalLayout);
+        verticalLayout->addWidget(horizontalWidget1);
+
+
+        verticalLayout_2->addWidget(widget);
 
 
         retranslateUi(rule);
@@ -111,9 +128,8 @@ public:
     {
         rule->setWindowTitle(QCoreApplication::translate("rule", "rule", nullptr));
         label->setText(QCoreApplication::translate("rule", "Birth-rule:", nullptr));
-        birthError->setText(QString());
         label_2->setText(QCoreApplication::translate("rule", "Save-rule:", nullptr));
-        label_3->setText(QString());
+        applyButton->setText(QCoreApplication::translate("rule", "Apply", nullptr));
     } // retranslateUi
 
 };

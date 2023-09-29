@@ -89,6 +89,12 @@
 			null
 		],
 		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h",
+			"MU",
+			"RMCT2SQA25/moc_StateStorage.cpp",
+			null
+		],
+		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h",
 			"MU",
 			"IFZJGKRWXW/moc_TNeighborhood.cpp",
@@ -184,6 +190,11 @@
 	[
 		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp",
 			"MU",
 			null
 		],

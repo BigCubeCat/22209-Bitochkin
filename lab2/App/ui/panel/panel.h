@@ -2,9 +2,14 @@
 #define PANEL_H
 
 #include <QWidget>
+
 #include "../stepper/stepper.h"
 #include "../rule/rule.h"
 #include "../neighborhoodselect/neighborhoodselect.h"
+
+#include "../../types/TRules.h"
+#include "../../types/TNeighborhood.h"
+#include "../../StateStorage/StateStorage.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class panel; }
@@ -14,7 +19,7 @@ class panel : public QWidget {
 Q_OBJECT
 
 public:
-    explicit panel(QWidget *parent = nullptr);
+    explicit panel(QWidget *parent = nullptr, StateStorage *s = nullptr);
 
     ~panel() override;
 
@@ -24,6 +29,7 @@ private:
     rule *gameRules;
     neighborhoodselect *neighborhoodSelect;
 
+    StateStorage *store;
 };
 
 

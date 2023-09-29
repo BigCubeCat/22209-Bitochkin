@@ -42,6 +42,9 @@ set(PROJECT_SOURCES
 
         App/Life/Life.cpp
         App/Life/Life.h
+
+        App/StateStorage/StateStorage.cpp
+        App/StateStorage/StateStorage.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -1,11 +1,10 @@
-CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp \
+CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp \
  /usr/include/stdc-predef.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.h \
- /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
- /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
- /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtCore/qglobal.h \
- /usr/include/c++/13.2.1/type_traits \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
+ /usr/include/qt/QtCore/qglobal.h /usr/include/c++/13.2.1/type_traits \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -83,16 +82,12 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: \
  /usr/include/c++/13.2.1/bits/atomic_lockfree_defines.h \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
- /usr/include/qt/QtGui/qtgui-config.h \
- /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtGui/qwindowdefs.h /usr/include/qt/QtCore/qobjectdefs.h \
- /usr/include/qt/QtCore/qnamespace.h \
  /usr/include/qt/QtCore/qobjectdefs_impl.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qstring.h \
- /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qbytearray.h \
- /usr/include/qt/QtCore/qrefcount.h /usr/include/qt/QtCore/qarraydata.h \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/c++/13.2.1/cstdint /usr/include/c++/13.2.1/stdlib.h \
+ /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
+ /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
+ /usr/include/qt/QtCore/qarraydata.h /usr/include/string.h \
+ /usr/include/strings.h /usr/include/c++/13.2.1/cstdint \
+ /usr/include/c++/13.2.1/stdlib.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
  /usr/include/c++/13.2.1/string \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
@@ -213,40 +208,9 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: \
  /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
  /usr/include/c++/13.2.1/limits /usr/include/c++/13.2.1/ctime \
  /usr/include/c++/13.2.1/bits/parse_numbers.h \
- /usr/include/qt/QtCore/qmargins.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qsize.h \
- /usr/include/qt/QtCore/qpoint.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qline.h \
- /usr/include/qt/QtGui/qtransform.h /usr/include/qt/QtGui/qimage.h \
- /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
- /usr/include/qt/QtCore/qsharedpointer.h \
- /usr/include/qt/QtCore/qshareddata.h /usr/include/qt/QtCore/qhash.h \
- /usr/include/qt/QtCore/qsharedpointer_impl.h \
- /usr/include/c++/13.2.1/memory \
- /usr/include/c++/13.2.1/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13.2.1/bits/align.h \
- /usr/include/c++/13.2.1/bits/unique_ptr.h \
- /usr/include/c++/13.2.1/bits/shared_ptr.h \
- /usr/include/c++/13.2.1/bits/shared_ptr_base.h \
- /usr/include/c++/13.2.1/ext/concurrence.h \
- /usr/include/c++/13.2.1/bits/shared_ptr_atomic.h \
- /usr/include/c++/13.2.1/backward/auto_ptr.h \
- /usr/include/c++/13.2.1/pstl/glue_memory_defs.h \
- /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
- /usr/include/qt/QtGui/qfontinfo.h \
- /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
- /usr/include/qt/QtGui/qkeysequence.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../stepper/stepper.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../rule/rule.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../rule/../../StateStorage/StateStorage.h \
- /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../rule/../../StateStorage/../Life/Life.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../rule/../../StateStorage/../Life/../types/TNeighborhood.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../rule/../../StateStorage/../Life/../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/../types/TRules.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
  /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
  /usr/include/c++/13.2.1/bits/locale_facets.h \
@@ -257,24 +221,4 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: \
  /usr/include/c++/13.2.1/bits/locale_facets.tcc \
  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
- /usr/include/c++/13.2.1/bits/istream.tcc \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../neighborhoodselect/neighborhoodselect.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../../types/TRules.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../../types/TNeighborhood.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/../../StateStorage/StateStorage.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/ui_panel.h \
- /usr/include/qt/QtCore/QVariant /usr/include/qt/QtCore/qvariant.h \
- /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
- /usr/include/qt/QtWidgets/QApplication \
- /usr/include/qt/QtWidgets/qapplication.h \
- /usr/include/qt/QtCore/qcoreapplication.h \
- /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qeventloop.h \
- /usr/include/qt/QtGui/qguiapplication.h \
- /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtCore/qlocale.h \
- /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtWidgets/QVBoxLayout \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qlayout.h \
- /usr/include/qt/QtWidgets/qlayoutitem.h \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/QWidget
+ /usr/include/c++/13.2.1/bits/istream.tcc
