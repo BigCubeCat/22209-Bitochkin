@@ -4,6 +4,6 @@
 
 #include <string>
 
-std::string binaryString(int number, int bitSize = 32) ;
+std::string binaryString(int number, int bitSize = 32);
 
 #endif
