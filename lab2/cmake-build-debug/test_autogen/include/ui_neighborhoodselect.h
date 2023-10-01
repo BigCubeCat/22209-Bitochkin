@@ -11,12 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QSpinBox>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -27,9 +25,12 @@ class Ui_neighborhoodselect
 public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
-    QGridLayout *gridLayout;
-    QTableView *tableView;
+    QLabel *title;
     QWidget *horizontalWidget;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_2;
+    QComboBox *comboBox;
+    QWidget *horizontalWidget1;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpinBox *spinBox;
@@ -38,34 +39,51 @@ public:
     {
         if (neighborhoodselect->objectName().isEmpty())
             neighborhoodselect->setObjectName(QString::fromUtf8("neighborhoodselect"));
-        neighborhoodselect->resize(284, 298);
+        neighborhoodselect->resize(258, 298);
         verticalLayout_2 = new QVBoxLayout(neighborhoodselect);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        gridLayout = new QGridLayout();
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        tableView = new QTableView(neighborhoodselect);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setMinimumSize(QSize(100, 100));
-        tableView->setMaximumSize(QSize(300, 300));
+        title = new QLabel(neighborhoodselect);
+        title->setObjectName(QString::fromUtf8("title"));
+        QFont font;
+        font.setPointSize(16);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        title->setFont(font);
+        title->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(tableView, 0, 0, 1, 1);
-
-
-        verticalLayout->addLayout(gridLayout);
+        verticalLayout->addWidget(title);
 
         horizontalWidget = new QWidget(neighborhoodselect);
         horizontalWidget->setObjectName(QString::fromUtf8("horizontalWidget"));
-        horizontalWidget->setMaximumSize(QSize(300, 16777215));
-        horizontalLayout = new QHBoxLayout(horizontalWidget);
+        horizontalLayout_2 = new QHBoxLayout(horizontalWidget);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        label_2 = new QLabel(horizontalWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        comboBox = new QComboBox(horizontalWidget);
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+
+        horizontalLayout_2->addWidget(comboBox);
+
+
+        verticalLayout->addWidget(horizontalWidget);
+
+        horizontalWidget1 = new QWidget(neighborhoodselect);
+        horizontalWidget1->setObjectName(QString::fromUtf8("horizontalWidget1"));
+        horizontalWidget1->setMaximumSize(QSize(300, 16777215));
+        horizontalLayout = new QHBoxLayout(horizontalWidget1);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(horizontalWidget);
+        label = new QLabel(horizontalWidget1);
         label->setObjectName(QString::fromUtf8("label"));
 
         horizontalLayout->addWidget(label);
 
-        spinBox = new QSpinBox(horizontalWidget);
+        spinBox = new QSpinBox(horizontalWidget1);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
         spinBox->setMinimum(1);
         spinBox->setMaximum(3);
@@ -73,7 +91,7 @@ public:
         horizontalLayout->addWidget(spinBox);
 
 
-        verticalLayout->addWidget(horizontalWidget);
+        verticalLayout->addWidget(horizontalWidget1);
 
 
         verticalLayout_2->addLayout(verticalLayout);
@@ -87,6 +105,9 @@ public:
     void retranslateUi(QWidget *neighborhoodselect)
     {
         neighborhoodselect->setWindowTitle(QCoreApplication::translate("neighborhoodselect", "neighborhoodselect", nullptr));
+        title->setText(QCoreApplication::translate("neighborhoodselect", "Neighborhood", nullptr));
+        label_2->setText(QCoreApplication::translate("neighborhoodselect", "Type:", nullptr));
+        comboBox->setCurrentText(QString());
         label->setText(QCoreApplication::translate("neighborhoodselect", "Degree:", nullptr));
     } // retranslateUi
 

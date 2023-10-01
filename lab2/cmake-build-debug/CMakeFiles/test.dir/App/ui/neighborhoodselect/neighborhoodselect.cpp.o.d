@@ -249,22 +249,9 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: \
  /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qeventloop.h \
  /usr/include/qt/QtGui/qguiapplication.h \
  /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtCore/qlocale.h \
- /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtWidgets/QGridLayout \
- /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/qlayout.h \
- /usr/include/qt/QtWidgets/qlayoutitem.h \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/qgridlayout.h \
- /usr/include/qt/QtWidgets/QHBoxLayout \
- /usr/include/qt/QtWidgets/qboxlayout.h \
- /usr/include/qt/QtWidgets/QHeaderView \
- /usr/include/qt/QtWidgets/qheaderview.h \
- /usr/include/qt/QtWidgets/qabstractitemview.h \
- /usr/include/qt/QtWidgets/qabstractscrollarea.h \
- /usr/include/qt/QtWidgets/qframe.h /usr/include/qt/QtWidgets/qwidget.h \
- /usr/include/qt/QtCore/qabstractitemmodel.h \
- /usr/include/qt/QtCore/qitemselectionmodel.h \
- /usr/include/qt/QtCore/qset.h \
+ /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtWidgets/QComboBox \
+ /usr/include/qt/QtWidgets/qcombobox.h \
+ /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
  /usr/include/qt/QtWidgets/qstyleoption.h \
  /usr/include/qt/QtWidgets/qabstractspinbox.h \
@@ -274,9 +261,15 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: \
  /usr/include/qt/QtWidgets/qabstractslider.h \
  /usr/include/qt/QtWidgets/qstyle.h /usr/include/qt/QtWidgets/qtabbar.h \
  /usr/include/qt/QtWidgets/qtabwidget.h \
- /usr/include/qt/QtWidgets/qrubberband.h /usr/include/qt/QtWidgets/QLabel \
+ /usr/include/qt/QtWidgets/qrubberband.h \
+ /usr/include/qt/QtWidgets/qframe.h \
+ /usr/include/qt/QtCore/qabstractitemmodel.h \
+ /usr/include/qt/QtWidgets/QHBoxLayout \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qlayout.h \
+ /usr/include/qt/QtWidgets/qlayoutitem.h \
+ /usr/include/qt/QtWidgets/qboxlayout.h \
+ /usr/include/qt/QtWidgets/qgridlayout.h /usr/include/qt/QtWidgets/QLabel \
  /usr/include/qt/QtWidgets/qlabel.h /usr/include/qt/QtWidgets/QSpinBox \
  /usr/include/qt/QtWidgets/qspinbox.h \
- /usr/include/qt/QtWidgets/QTableView \
- /usr/include/qt/QtWidgets/qtableview.h \
  /usr/include/qt/QtWidgets/QVBoxLayout /usr/include/qt/QtWidgets/QWidget

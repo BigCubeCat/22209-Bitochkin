@@ -27,6 +27,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
+    QLabel *title;
     QWidget *horizontalWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
@@ -35,6 +36,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QTextEdit *textEdit_2;
+    QLabel *errorMessage;
     QWidget *horizontalWidget1;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer;
@@ -56,6 +58,15 @@ public:
         widget->setSizePolicy(sizePolicy);
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        title = new QLabel(widget);
+        title->setObjectName(QString::fromUtf8("title"));
+        QFont font;
+        font.setPointSize(16);
+        title->setFont(font);
+        title->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(title);
+
         horizontalWidget_2 = new QWidget(widget);
         horizontalWidget_2->setObjectName(QString::fromUtf8("horizontalWidget_2"));
         sizePolicy.setHeightForWidth(horizontalWidget_2->sizePolicy().hasHeightForWidth());
@@ -97,6 +108,11 @@ public:
 
         verticalLayout->addWidget(horizontalWidget);
 
+        errorMessage = new QLabel(widget);
+        errorMessage->setObjectName(QString::fromUtf8("errorMessage"));
+
+        verticalLayout->addWidget(errorMessage);
+
         horizontalWidget1 = new QWidget(widget);
         horizontalWidget1->setObjectName(QString::fromUtf8("horizontalWidget1"));
         sizePolicy.setHeightForWidth(horizontalWidget1->sizePolicy().hasHeightForWidth());
@@ -127,8 +143,10 @@ public:
     void retranslateUi(QWidget *rule)
     {
         rule->setWindowTitle(QCoreApplication::translate("rule", "rule", nullptr));
+        title->setText(QCoreApplication::translate("rule", "Rules:", nullptr));
         label->setText(QCoreApplication::translate("rule", "Birth-rule:", nullptr));
         label_2->setText(QCoreApplication::translate("rule", "Save-rule:", nullptr));
+        errorMessage->setText(QString());
         applyButton->setText(QCoreApplication::translate("rule", "Apply", nullptr));
     } // retranslateUi
 

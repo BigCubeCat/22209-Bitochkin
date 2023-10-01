@@ -1877,7 +1877,6 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtCore/qhash.h \
   /usr/include/qt/QtCore/qhashfunctions.h \
   /usr/include/qt/QtCore/qiodevice.h \
-  /usr/include/qt/QtCore/qitemselectionmodel.h \
   /usr/include/qt/QtCore/qiterator.h \
   /usr/include/qt/QtCore/qline.h \
   /usr/include/qt/QtCore/qlist.h \
@@ -1900,7 +1899,6 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtCore/qregexp.h \
   /usr/include/qt/QtCore/qregularexpression.h \
   /usr/include/qt/QtCore/qscopedpointer.h \
-  /usr/include/qt/QtCore/qset.h \
   /usr/include/qt/QtCore/qshareddata.h \
   /usr/include/qt/QtCore/qsharedpointer.h \
   /usr/include/qt/QtCore/qsharedpointer_impl.h \
@@ -1945,24 +1943,20 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtGui/qvalidator.h \
   /usr/include/qt/QtGui/qwindowdefs.h \
   /usr/include/qt/QtWidgets/QApplication \
-  /usr/include/qt/QtWidgets/QGridLayout \
+  /usr/include/qt/QtWidgets/QComboBox \
   /usr/include/qt/QtWidgets/QHBoxLayout \
-  /usr/include/qt/QtWidgets/QHeaderView \
   /usr/include/qt/QtWidgets/QLabel \
   /usr/include/qt/QtWidgets/QSpinBox \
-  /usr/include/qt/QtWidgets/QTableView \
   /usr/include/qt/QtWidgets/QVBoxLayout \
   /usr/include/qt/QtWidgets/QWidget \
   /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
-  /usr/include/qt/QtWidgets/qabstractitemview.h \
-  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
   /usr/include/qt/QtWidgets/qabstractslider.h \
   /usr/include/qt/QtWidgets/qabstractspinbox.h \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qcombobox.h \
   /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/qgridlayout.h \
-  /usr/include/qt/QtWidgets/qheaderview.h \
   /usr/include/qt/QtWidgets/qlabel.h \
   /usr/include/qt/QtWidgets/qlayout.h \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
@@ -1973,7 +1967,6 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtWidgets/qstyle.h \
   /usr/include/qt/QtWidgets/qstyleoption.h \
   /usr/include/qt/QtWidgets/qtabbar.h \
-  /usr/include/qt/QtWidgets/qtableview.h \
   /usr/include/qt/QtWidgets/qtabwidget.h \
   /usr/include/qt/QtWidgets/qtwidgets-config.h \
   /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
@@ -3518,17 +3511,13 @@ test_autogen/include/ui_panel.h:
 
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp:
 
-/usr/include/qt/QtWidgets/qtableview.h:
+/usr/include/qt/QtWidgets/qtabbar.h:
 
 /usr/include/qt/QtWidgets/qstyleoption.h:
 
 /usr/include/qt/QtWidgets/qstyle.h:
 
 /usr/include/qt/QtWidgets/qspinbox.h:
-
-/usr/include/qt/QtWidgets/qtabbar.h:
-
-/usr/include/qt/QtWidgets/qheaderview.h:
 
 /usr/include/qt/QtWidgets/qabstractslider.h:
 
@@ -3538,9 +3527,7 @@ test_autogen/include/ui_panel.h:
 
 /usr/include/qt/QtWidgets/QLabel:
 
-/usr/include/qt/QtWidgets/QGridLayout:
-
-/usr/include/qt/QtCore/qset.h:
+/usr/include/qt/QtWidgets/QComboBox:
 
 test_autogen/include/ui_neighborhoodselect.h:
 
@@ -3834,6 +3821,8 @@ test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp:
 
 test_autogen/SROFFC2GUR/moc_panel.cpp:
 
+/usr/include/qt/QtWidgets/qcombobox.h:
+
 /usr/include/qt/QtCore/qnamespace.h:
 
 /usr/include/c++/13.2.1/bits/stl_iterator.h:
@@ -4017,8 +4006,6 @@ test_autogen/mocs_compilation.cpp:
 /usr/include/bits/waitstatus.h:
 
 /usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/qt/QtWidgets/qabstractitemview.h:
 
 /usr/include/qt/QtCore/qcompilerdetection.h:
 
@@ -4242,8 +4229,6 @@ test_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h:
 
-/usr/include/qt/QtWidgets/QHeaderView:
-
 /usr/include/c++/13.2.1/bits/chrono.h:
 
 /usr/include/stdint.h:
@@ -4272,8 +4257,6 @@ test_autogen/mocs_compilation.cpp:
 
 test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp:
 
-/usr/include/qt/QtCore/qitemselectionmodel.h:
-
 /usr/include/stdlib.h:
 
 /usr/include/sys/cdefs.h:
@@ -4285,8 +4268,6 @@ test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp:
 /usr/include/sys/select.h:
 
 /usr/include/qt/QtCore/qurl.h:
-
-/usr/include/qt/QtWidgets/QTableView:
 
 /usr/include/qt/QtCore/qlocale.h:
 

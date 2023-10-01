@@ -29,6 +29,8 @@ public slots:
     void setS();
     void applySlot();
 
+    void invalidRules();
+
 signals:
     void emitRules(const std::string &);
 };

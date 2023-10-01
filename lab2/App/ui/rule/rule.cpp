@@ -15,6 +15,7 @@ rule::rule(QWidget *parent, StateStorage *store) :
     QObject::connect(ui->applyButton, &QPushButton::clicked, this, &rule::applySlot);
 
     QObject::connect(this, &rule::emitRules, this->store, &StateStorage::setRules);
+    QObject::connect(this->store, &StateStorage::invalidRule, this, &rule::invalidRules);
 }
 
 rule::~rule() {
@@ -34,6 +35,12 @@ void rule::setS() {
 void rule::applySlot() {
     std::cout << bRuleString << " " << sRuleString << "\n";
     auto rules = "B" + bRuleString + "/S" + sRuleString;
-    std::cout << "Rules = " << rules << "\n";
+    ui->errorMessage->setText("");
+    this->update();
     emit emitRules(rules);
+}
+
+void rule::invalidRules() {
+    ui->errorMessage->setText("Invalid rules");
+    this->update();
 }

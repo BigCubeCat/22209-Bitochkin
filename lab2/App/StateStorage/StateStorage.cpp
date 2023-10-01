@@ -5,17 +5,17 @@
 StateStorage::StateStorage() = default;
 
 StateStorage::~StateStorage() {
-    delete life;
-    delete rules;
-    delete neighborhood;
 }
 
 void StateStorage::updateAll() {
 }
 
 void StateStorage::setRules(const std::string &newRules) {
-    std::cout <<"new Rules = " << newRules << std::endl;
-    rules = new TRules(newRules);
+    try {
+        rules = new TRules(newRules);
+    } catch (const std::invalid_argument &ex) {
+        emit invalidRule();
+    }
 }
 
 void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
