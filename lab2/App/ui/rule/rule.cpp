@@ -7,8 +7,6 @@
 
 #include <iostream>
 
-#include "../../StateStorage/StateStorage.h"
-
 rule::rule(QWidget *parent, StateStorage *store) :
         QWidget(parent), ui(new Ui::rule), store(store) {
     ui->setupUi(this);
@@ -34,5 +32,8 @@ void rule::setS() {
 }
 
 void rule::applySlot() {
-    emit emitRules("B" + bRuleString + "/" + sRuleString);
+    std::cout << bRuleString << " " << sRuleString << "\n";
+    auto rules = "B" + bRuleString + "/S" + sRuleString;
+    std::cout << "Rules = " << rules << "\n";
+    emit emitRules(rules);
 }

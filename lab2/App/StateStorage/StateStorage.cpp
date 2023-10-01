@@ -15,7 +15,7 @@ void StateStorage::updateAll() {
 
 void StateStorage::setRules(const std::string &newRules) {
     std::cout <<"new Rules = " << newRules << std::endl;
-    //rules = new TRules(newRules);
+    rules = new TRules(newRules);
 }
 
 void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {

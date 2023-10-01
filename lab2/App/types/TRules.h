@@ -11,7 +11,6 @@ struct TRules {
 
     explicit TRules(const std::string &source = "B2/S2,3");
     explicit TRules(const std::vector<size_t>& b, const std::vector<size_t>& s);
-    ~TRules();
 };
 
 #endif //UNTITLED_TRULES_H

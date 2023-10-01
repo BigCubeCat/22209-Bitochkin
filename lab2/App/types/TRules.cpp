@@ -7,6 +7,7 @@ TRules::TRules(const std::string &source): string(source) {
     std::string currentNumber;
     int newValue;
     bool isSave = false;
+    std::cout << string << std::endl;
     for (size_t i = 0; i < string.length(); ++i) {
         switch (string[i]) {
             case 'B':
@@ -16,20 +17,25 @@ TRules::TRules(const std::string &source): string(source) {
                 isSave = true;
                 break;
             case ',':
+            case '/':
                 newValue = std::stoi(currentNumber);
                 if (isSave) {
                     saveRule.push_back(newValue);
                 } else {
                     birthRule.push_back(newValue);
                 }
+                currentNumber = "";
                 break;
-            case '/':
-                continue;
             default:
-                currentNumber += source[i];
+                currentNumber += string[i];
                 break;
         }
-
+    }
+    newValue = std::stoi(currentNumber);
+    if (isSave) {
+        saveRule.push_back(newValue);
+    } else {
+        birthRule.push_back(newValue);
     }
 }
 
@@ -44,9 +50,4 @@ TRules::TRules(const std::vector<size_t>& b, const std::vector<size_t>& s) : bir
         string += std::to_string(saveRule[i]);
         string += (i == birthRule.size() - 1) ? '\n' : ',';
     }
-}
-
-TRules::~TRules() {
-    birthRule.clear();
-    saveRule.clear();
 }
