@@ -17,12 +17,15 @@ public:
     void setGap(int size);
 
 private:
-    std::vector<std::vector<char>> *data;
-    int cellSize = 20;
+    char *data;
+    size_t width;
+    size_t height;
+
+    int cellSize = 10;
     int gapSize = 1;
 public slots:
 
-    void redraw(std::vector<std::vector<char>> *data);
+    void redraw(char *data, size_t width, size_t height);
 };
 
 

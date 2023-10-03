@@ -7,9 +7,6 @@ StateStorage::StateStorage() = default;
 StateStorage::~StateStorage() {
 }
 
-void StateStorage::updateAll() {
-}
-
 void StateStorage::setRules(const std::string &newRules) {
     try {
         life->setRules(TRules(newRules));
@@ -22,22 +19,19 @@ void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
     life->setNeighborhood(TNeighborhood(newNeigh, degree));
 }
 
-void StateStorage::resizeLife(int countRows, int countCols) {
-    if (life)
-        life->setGeometry(countRows, countCols);
-}
-
 void StateStorage::toggleLife(int row, int col) {
+    std::cout << "toggle " << row << " " << col << "\n";
     if (life)
         life->toggleCell(row, col);
 }
 
-void StateStorage::InitLife() {
-    life = new Life();
+void StateStorage::InitLife(int countRows, int countCols) {
+    arenaHeight = countRows;
+    arenaWidth = countCols;
+    life = new Life(arenaWidth, arenaHeight);
 }
 
-std::vector<std::vector<char>> *StateStorage::getArena() {
-
+char *StateStorage::getArena() {
     if (life) {
         auto answer = life->getArena();
         if (answer) {
@@ -47,4 +41,12 @@ std::vector<std::vector<char>> *StateStorage::getArena() {
         }
     }
     return nullptr;
+}
+
+size_t StateStorage::getWidth() const {
+    return life->getWidth();
+}
+
+size_t StateStorage::getHeight() const {
+    return life->getHeight();
 }

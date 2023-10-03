@@ -12,14 +12,16 @@ public:
 
     ~StateStorage() override;
 
-    void InitLife();
+    char *getArena();
 
-    void updateAll();
-
-    std::vector<std::vector<char>> * getArena();
+    size_t getWidth() const;
+    size_t getHeight() const;
 
 private:
     Life *life;
+
+    size_t arenaWidth;
+    size_t arenaHeight;
 
 public slots:
 
@@ -27,7 +29,7 @@ public slots:
 
     void setNeighborhood(ENeighborhood newNeigh, int degree = 1);
 
-    void resizeLife(int countRows, int countCols);
+    void InitLife(int countRows, int countCols);
 
     void toggleLife(int row, int col);
 

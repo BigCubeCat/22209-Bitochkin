@@ -9,8 +9,8 @@
 
 class Life {
 private:
-    std::vector<std::vector<char>> newArena;
-    std::vector<std::vector<char>> oldArena;
+    char *newArena{};
+    char *oldArena{};
 
     size_t width;
     size_t height;
@@ -22,9 +22,7 @@ private:
     TRules rules;
 public:
 
-    explicit Life();
-
-    void setGeometry(size_t countRows, size_t countCols);
+    explicit Life(size_t w = 64, size_t h = 64);
 
     void toggleCell(size_t row, size_t col);
 
@@ -32,11 +30,16 @@ public:
 
     void setNeighborhood(const TNeighborhood &n);
 
-    std::vector<std::vector<char>> *getArena();
+    char *getArena();
 
     void nextGen();
 
+    size_t getWidth() const;
+
+    size_t getHeight() const;
+
     size_t calcNeighbors(size_t row, size_t col);
+
     char newValue(size_t row, size_t col);
 };
 

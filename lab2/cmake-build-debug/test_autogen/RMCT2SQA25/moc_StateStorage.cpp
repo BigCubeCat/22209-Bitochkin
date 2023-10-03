@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_StateStorage_t {
     QByteArrayData data[19];
-    char stringdata0[173];
+    char stringdata0[171];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,18 +45,18 @@ QT_MOC_LITERAL(9, 77, 15), // "setNeighborhood"
 QT_MOC_LITERAL(10, 93, 13), // "ENeighborhood"
 QT_MOC_LITERAL(11, 107, 8), // "newNeigh"
 QT_MOC_LITERAL(12, 116, 6), // "degree"
-QT_MOC_LITERAL(13, 123, 10), // "resizeLife"
-QT_MOC_LITERAL(14, 134, 9), // "countRows"
-QT_MOC_LITERAL(15, 144, 9), // "countCols"
-QT_MOC_LITERAL(16, 154, 10), // "toggleLife"
-QT_MOC_LITERAL(17, 165, 3), // "row"
-QT_MOC_LITERAL(18, 169, 3) // "col"
+QT_MOC_LITERAL(13, 123, 8), // "InitLife"
+QT_MOC_LITERAL(14, 132, 9), // "countRows"
+QT_MOC_LITERAL(15, 142, 9), // "countCols"
+QT_MOC_LITERAL(16, 152, 10), // "toggleLife"
+QT_MOC_LITERAL(17, 163, 3), // "row"
+QT_MOC_LITERAL(18, 167, 3) // "col"
 
     },
     "StateStorage\0invalidRule\0\0renderLife\0"
     "Life\0life\0setRules\0std::string\0newRules\0"
     "setNeighborhood\0ENeighborhood\0newNeigh\0"
-    "degree\0resizeLife\0countRows\0countCols\0"
+    "degree\0InitLife\0countRows\0countCols\0"
     "toggleLife\0row\0col"
 };
 #undef QT_MOC_LITERAL
@@ -110,7 +110,7 @@ void StateStorage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 2: _t->setRules((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         case 3: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 4: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1]))); break;
-        case 5: _t->resizeLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 5: _t->InitLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 6: _t->toggleLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }

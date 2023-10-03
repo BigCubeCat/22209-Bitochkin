@@ -58,7 +58,6 @@ void mainwindow::saveLife() {
 }
 
 void mainwindow::readLife() {
-    store->InitLife();
     QFile inputFile(fileName);
     inputFile.open(QIODevice::ReadOnly);
     if (!inputFile.isOpen())
@@ -79,11 +78,11 @@ void mainwindow::readLife() {
                 int degree = words[2].toInt();
                 store->setNeighborhood(nType, degree);
             } else if (words[0] == QString("#G")) {
-                store->resizeLife(words[1].toInt(), words[2].toInt());
+                store->InitLife(words[1].toInt(), words[2].toInt());
             }
         } else {
             store->toggleLife(words[0].toInt(), words[1].toInt());
         }
     };
-    canvas->redraw(store->getArena());
+    canvas->redraw(store->getArena(), store->getWidth(), store->getHeight());
 }
