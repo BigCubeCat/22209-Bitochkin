@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <iostream>
 #include <QTextStream>
+#include "../Canvas/Canvas.h"
 
 
 mainwindow::mainwindow(QWidget *parent) :
@@ -12,6 +13,8 @@ mainwindow::mainwindow(QWidget *parent) :
     store = new StateStorage();
     leftPanel = new panel(this, store);
     ui->mainLayout->addWidget(leftPanel);
+    canvas = new Canvas(&store->arena, this);
+    ui->scrollArea->setWidget(canvas);
 
     connect(ui->actionOpen, &QAction::triggered, this, &mainwindow::openFile);
     ui->actionOpen->setShortcut(QKeySequence(tr("Ctrl+o")));
@@ -25,6 +28,7 @@ mainwindow::mainwindow(QWidget *parent) :
 
 mainwindow::~mainwindow() {
     delete leftPanel;
+    delete canvas;
     delete ui;
     delete store;
 }
@@ -54,20 +58,19 @@ void mainwindow::saveLife() {
 }
 
 void mainwindow::readLife() {
+    store->InitLife();
     QFile inputFile(fileName);
     inputFile.open(QIODevice::ReadOnly);
     if (!inputFile.isOpen())
         return;
 
     QTextStream stream(&inputFile);
-    std::string stdLine;
     for (QString line = stream.readLine();
          !line.isNull();
          line = stream.readLine()) {
-        stdLine = line.toStdString();
         QStringList words = line.split(" ");
         if (line.at(0) == QChar('#')) {
-            if (words[0] == QString("#N")) {
+            if (words[0] == QString("#T")) {
                 this->setWindowTitle(line);
             } else if (words[0] == QString("#R")) {
                 store->setRules(words[1].toStdString());
@@ -82,4 +85,5 @@ void mainwindow::readLife() {
             store->toggleLife(words[0].toInt(), words[1].toInt());
         }
     };
+    canvas->update();
 }

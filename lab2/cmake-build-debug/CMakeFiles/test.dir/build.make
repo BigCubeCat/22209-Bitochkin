@@ -125,10 +125,24 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/App/ui/panel/panel.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp -o CMakeFiles/test.dir/App/ui/panel/panel.cpp.s
 
+CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp
+CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o -MF CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o.d -o CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp
+
+CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp > CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.i
+
+CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp -o CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.s
+
 CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.cpp
 CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o -MF CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o.d -o CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/stepper/stepper.cpp
 
 CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.s: cmake_force
 CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.cpp
 CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/App/ui/rule/rule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/App/ui/rule/rule.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/ui/rule/rule.cpp.o -MF CMakeFiles/test.dir/App/ui/rule/rule.cpp.o.d -o CMakeFiles/test.dir/App/ui/rule/rule.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.cpp
 
 CMakeFiles/test.dir/App/ui/rule/rule.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.s: cmake_force
 CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp
 CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o -MF CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o.d -o CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp
 
 CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.s: cmake_fo
 CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp
 CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o -MF CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o.d -o CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp
 
 CMakeFiles/test.dir/App/types/TNeighborhood.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/test.dir/App/types/TNeighborhood.cpp.s: cmake_force
 CMakeFiles/test.dir/App/types/TRules.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/types/TRules.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp
 CMakeFiles/test.dir/App/types/TRules.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.dir/App/types/TRules.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/App/types/TRules.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/types/TRules.cpp.o -MF CMakeFiles/test.dir/App/types/TRules.cpp.o.d -o CMakeFiles/test.dir/App/types/TRules.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp
 
 CMakeFiles/test.dir/App/types/TRules.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/test.dir/App/types/TRules.cpp.s: cmake_force
 CMakeFiles/test.dir/App/Life/Life.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/Life/Life.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp
 CMakeFiles/test.dir/App/Life/Life.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.dir/App/Life/Life.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/App/Life/Life.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/Life/Life.cpp.o -MF CMakeFiles/test.dir/App/Life/Life.cpp.o.d -o CMakeFiles/test.dir/App/Life/Life.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp
 
 CMakeFiles/test.dir/App/Life/Life.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/test.dir/App/Life/Life.cpp.s: cmake_force
 CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp
 CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o -MF CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o.d -o CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp
 
 CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.i: cmake_force
@@ -229,6 +243,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/App/main.cpp.o" \
 "CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o" \
 "CMakeFiles/test.dir/App/ui/panel/panel.cpp.o" \
+"CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o" \
 "CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o" \
 "CMakeFiles/test.dir/App/ui/rule/rule.cpp.o" \
 "CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o" \
@@ -244,6 +259,7 @@ test: CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o
 test: CMakeFiles/test.dir/App/main.cpp.o
 test: CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o
 test: CMakeFiles/test.dir/App/ui/panel/panel.cpp.o
+test: CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o
 test: CMakeFiles/test.dir/App/ui/stepper/stepper.cpp.o
 test: CMakeFiles/test.dir/App/ui/rule/rule.cpp.o
 test: CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o
@@ -256,7 +272,7 @@ test: /usr/lib/libQt5Widgets.so.5.15.10
 test: /usr/lib/libQt5Gui.so.5.15.10
 test: /usr/lib/libQt5Core.so.5.15.10
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

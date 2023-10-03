@@ -25,6 +25,10 @@ public:
     explicit Life();
     explicit Life(TNeighborhood n, const TRules &r, size_t w, size_t h);
 
+    void setGeometry(size_t countRows, size_t countCols);
+
+    void toggleCell(size_t row, size_t col);
+
     void nextGen();
 
     size_t getWidth() const;

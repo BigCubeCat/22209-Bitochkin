@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/main.cpp" "CMakeFiles/test.dir/App/main.cpp.o" "gcc" "CMakeFiles/test.dir/App/main.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp" "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o" "gcc" "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp" "CMakeFiles/test.dir/App/types/TRules.cpp.o" "gcc" "CMakeFiles/test.dir/App/types/TRules.cpp.o.d"
+  "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp" "CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o" "gcc" "CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.cpp" "CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o" "gcc" "CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp" "CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o" "gcc" "CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o.d"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/panel/panel.cpp" "CMakeFiles/test.dir/App/ui/panel/panel.cpp.o" "gcc" "CMakeFiles/test.dir/App/ui/panel/panel.cpp.o.d"

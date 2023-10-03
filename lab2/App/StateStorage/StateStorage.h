@@ -9,27 +9,32 @@ class StateStorage : public QObject {
 Q_OBJECT
 public:
     StateStorage();
+
     ~StateStorage() override;
+
+    void InitLife();
 
     void updateAll();
 
+    std::vector<std::vector<char>> arena;
+
 private:
     Life *life;
-    TRules *rules;
-    TNeighborhood *neighborhood;
 
 public slots:
-    void testSlot();
 
-    void setRules(const std::string & newRules);
+    void setRules(const std::string &newRules);
 
     void setNeighborhood(ENeighborhood newNeigh, int degree = 1);
 
-    void resizeLife(int width, int height);
+    void resizeLife(int countRows, int countCols);
+
     void toggleLife(int row, int col);
 
 signals:
+
     void invalidRule();
+
     void renderLife(const Life &life);
 };
 

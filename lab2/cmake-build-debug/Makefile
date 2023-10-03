@@ -307,6 +307,30 @@ App/types/TRules.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/types/TRules.cpp.s
 .PHONY : App/types/TRules.cpp.s
 
+App/ui/Canvas/Canvas.o: App/ui/Canvas/Canvas.cpp.o
+.PHONY : App/ui/Canvas/Canvas.o
+
+# target to build an object file
+App/ui/Canvas/Canvas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o
+.PHONY : App/ui/Canvas/Canvas.cpp.o
+
+App/ui/Canvas/Canvas.i: App/ui/Canvas/Canvas.cpp.i
+.PHONY : App/ui/Canvas/Canvas.i
+
+# target to preprocess a source file
+App/ui/Canvas/Canvas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.i
+.PHONY : App/ui/Canvas/Canvas.cpp.i
+
+App/ui/Canvas/Canvas.s: App/ui/Canvas/Canvas.cpp.s
+.PHONY : App/ui/Canvas/Canvas.s
+
+# target to generate assembly for a file
+App/ui/Canvas/Canvas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.s
+.PHONY : App/ui/Canvas/Canvas.cpp.s
+
 App/ui/mainwindow/mainwindow.o: App/ui/mainwindow/mainwindow.cpp.o
 .PHONY : App/ui/mainwindow/mainwindow.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... App/types/TRules.o"
 	@echo "... App/types/TRules.i"
 	@echo "... App/types/TRules.s"
+	@echo "... App/ui/Canvas/Canvas.o"
+	@echo "... App/ui/Canvas/Canvas.i"
+	@echo "... App/ui/Canvas/Canvas.s"
 	@echo "... App/ui/mainwindow/mainwindow.o"
 	@echo "... App/ui/mainwindow/mainwindow.i"
 	@echo "... App/ui/mainwindow/mainwindow.s"

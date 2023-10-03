@@ -54,5 +54,19 @@ size_t Life::calcNeighbors(size_t row, size_t col) {
     return result;
 }
 
+void Life::setGeometry(size_t countRows, size_t countCols) {
+    std::cout << "geometry = " << countRows << " " << countCols << "\n";
+    oldArena.resize(countRows);
+    newArena.resize(countRows);
+    for (size_t i = 0; i < countRows; ++i) {
+        oldArena[i].resize(countCols);
+        newArena[i].resize(countCols);
+    }
+}
+
+void Life::toggleCell(size_t row, size_t col) {
+    oldArena[row][col] = 1;
+}
+
 
 

@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_StateStorage_t {
-    QByteArrayData data[20];
-    char stringdata0[175];
+    QByteArrayData data[19];
+    char stringdata0[173];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,27 +38,26 @@ QT_MOC_LITERAL(2, 25, 0), // ""
 QT_MOC_LITERAL(3, 26, 10), // "renderLife"
 QT_MOC_LITERAL(4, 37, 4), // "Life"
 QT_MOC_LITERAL(5, 42, 4), // "life"
-QT_MOC_LITERAL(6, 47, 8), // "testSlot"
-QT_MOC_LITERAL(7, 56, 8), // "setRules"
-QT_MOC_LITERAL(8, 65, 11), // "std::string"
-QT_MOC_LITERAL(9, 77, 8), // "newRules"
-QT_MOC_LITERAL(10, 86, 15), // "setNeighborhood"
-QT_MOC_LITERAL(11, 102, 13), // "ENeighborhood"
-QT_MOC_LITERAL(12, 116, 8), // "newNeigh"
-QT_MOC_LITERAL(13, 125, 6), // "degree"
-QT_MOC_LITERAL(14, 132, 10), // "resizeLife"
-QT_MOC_LITERAL(15, 143, 5), // "width"
-QT_MOC_LITERAL(16, 149, 6), // "height"
-QT_MOC_LITERAL(17, 156, 10), // "toggleLife"
-QT_MOC_LITERAL(18, 167, 3), // "row"
-QT_MOC_LITERAL(19, 171, 3) // "col"
+QT_MOC_LITERAL(6, 47, 8), // "setRules"
+QT_MOC_LITERAL(7, 56, 11), // "std::string"
+QT_MOC_LITERAL(8, 68, 8), // "newRules"
+QT_MOC_LITERAL(9, 77, 15), // "setNeighborhood"
+QT_MOC_LITERAL(10, 93, 13), // "ENeighborhood"
+QT_MOC_LITERAL(11, 107, 8), // "newNeigh"
+QT_MOC_LITERAL(12, 116, 6), // "degree"
+QT_MOC_LITERAL(13, 123, 10), // "resizeLife"
+QT_MOC_LITERAL(14, 134, 9), // "countRows"
+QT_MOC_LITERAL(15, 144, 9), // "countCols"
+QT_MOC_LITERAL(16, 154, 10), // "toggleLife"
+QT_MOC_LITERAL(17, 165, 3), // "row"
+QT_MOC_LITERAL(18, 169, 3) // "col"
 
     },
     "StateStorage\0invalidRule\0\0renderLife\0"
-    "Life\0life\0testSlot\0setRules\0std::string\0"
-    "newRules\0setNeighborhood\0ENeighborhood\0"
-    "newNeigh\0degree\0resizeLife\0width\0"
-    "height\0toggleLife\0row\0col"
+    "Life\0life\0setRules\0std::string\0newRules\0"
+    "setNeighborhood\0ENeighborhood\0newNeigh\0"
+    "degree\0resizeLife\0countRows\0countCols\0"
+    "toggleLife\0row\0col"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,7 +67,7 @@ static const uint qt_meta_data_StateStorage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -76,28 +75,26 @@ static const uint qt_meta_data_StateStorage[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x06 /* Public */,
-       3,    1,   55,    2, 0x06 /* Public */,
+       1,    0,   49,    2, 0x06 /* Public */,
+       3,    1,   50,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,   58,    2, 0x0a /* Public */,
-       7,    1,   59,    2, 0x0a /* Public */,
-      10,    2,   62,    2, 0x0a /* Public */,
-      10,    1,   67,    2, 0x2a /* Public | MethodCloned */,
-      14,    2,   70,    2, 0x0a /* Public */,
-      17,    2,   75,    2, 0x0a /* Public */,
+       6,    1,   53,    2, 0x0a /* Public */,
+       9,    2,   56,    2, 0x0a /* Public */,
+       9,    1,   61,    2, 0x2a /* Public | MethodCloned */,
+      13,    2,   64,    2, 0x0a /* Public */,
+      16,    2,   69,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 4,    5,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 8,    9,
-    QMetaType::Void, 0x80000000 | 11, QMetaType::Int,   12,   13,
-    QMetaType::Void, 0x80000000 | 11,   12,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   15,   16,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   18,   19,
+    QMetaType::Void, 0x80000000 | 7,    8,
+    QMetaType::Void, 0x80000000 | 10, QMetaType::Int,   11,   12,
+    QMetaType::Void, 0x80000000 | 10,   11,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   14,   15,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   17,   18,
 
        0        // eod
 };
@@ -110,12 +107,11 @@ void StateStorage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->invalidRule(); break;
         case 1: _t->renderLife((*reinterpret_cast< const Life(*)>(_a[1]))); break;
-        case 2: _t->testSlot(); break;
-        case 3: _t->setRules((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
-        case 4: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 5: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1]))); break;
-        case 6: _t->resizeLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 7: _t->toggleLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 2: _t->setRules((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 3: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 4: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1]))); break;
+        case 5: _t->resizeLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 6: _t->toggleLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -166,13 +162,13 @@ int StateStorage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 8;
+        _id -= 7;
     }
     return _id;
 }

@@ -177,6 +177,12 @@
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.cpp">
 			<Option target="test"/>
 		</Unit>

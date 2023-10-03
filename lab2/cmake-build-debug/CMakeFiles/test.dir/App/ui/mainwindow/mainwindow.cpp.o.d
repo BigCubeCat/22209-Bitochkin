@@ -269,17 +269,24 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/../../Life/Life.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/../../types/TRules.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/../../StateStorage/StateStorage.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/../Canvas/Canvas.h \
+ /usr/include/qt/QtGui/QPainter /usr/include/qt/QtGui/qpainter.h \
+ /usr/include/qt/QtGui/qtextoption.h /usr/include/qt/QtGui/qpen.h \
+ /usr/include/qt/QtGui/QPaintEvent /usr/include/qt/QtGui/qevent.h \
+ /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
+ /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qurl.h \
+ /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \
+ /usr/include/qt/QtGui/qvector2d.h /usr/include/qt/QtGui/qtouchdevice.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/include/ui_mainwindow.h \
  /usr/include/qt/QtCore/QVariant /usr/include/qt/QtCore/qvariant.h \
- /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
  /usr/include/qt/QtWidgets/QAction /usr/include/qt/QtWidgets/qaction.h \
- /usr/include/qt/QtCore/qvariant.h \
  /usr/include/qt/QtWidgets/qactiongroup.h \
  /usr/include/qt/QtWidgets/qaction.h \
  /usr/include/qt/QtWidgets/QApplication \
  /usr/include/qt/QtWidgets/qapplication.h \
  /usr/include/qt/QtCore/qcoreapplication.h \
- /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qeventloop.h \
+ /usr/include/qt/QtCore/qeventloop.h \
  /usr/include/qt/QtGui/qguiapplication.h \
  /usr/include/qt/QtGui/qinputmethod.h /usr/include/qt/QtCore/qlocale.h \
  /usr/include/qt/QtWidgets/QHBoxLayout \
@@ -298,7 +305,5 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: \
  /usr/include/qt/QtWidgets/qstatusbar.h /usr/include/qt/QtWidgets/QWidget \
  /usr/include/qt/QtWidgets/QFileDialog \
  /usr/include/qt/QtWidgets/qfiledialog.h /usr/include/qt/QtCore/qdir.h \
- /usr/include/qt/QtCore/qfileinfo.h /usr/include/qt/QtCore/qfile.h \
- /usr/include/qt/QtCore/qfiledevice.h /usr/include/qt/QtCore/qurl.h \
- /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtCore/QTextStream \
- /usr/include/qt/QtCore/qtextstream.h
+ /usr/include/qt/QtCore/qfileinfo.h /usr/include/qt/QtWidgets/qdialog.h \
+ /usr/include/qt/QtCore/QTextStream /usr/include/qt/QtCore/qtextstream.h

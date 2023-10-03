@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/App/types/TNeighborhood.cpp.o.d"
   "CMakeFiles/test.dir/App/types/TRules.cpp.o"
   "CMakeFiles/test.dir/App/types/TRules.cpp.o.d"
+  "CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o"
+  "CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o.d"
   "CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o"
   "CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o.d"
   "CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o"

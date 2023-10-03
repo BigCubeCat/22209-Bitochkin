@@ -269,6 +269,15 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../Life/Life.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../types/TRules.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../StateStorage/StateStorage.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../Canvas/Canvas.h \
+ /usr/include/qt/QtGui/QPainter /usr/include/qt/QtGui/qpainter.h \
+ /usr/include/qt/QtGui/qtextoption.h /usr/include/qt/QtGui/qpen.h \
+ /usr/include/qt/QtGui/QPaintEvent /usr/include/qt/QtGui/qevent.h \
+ /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qvariant.h \
+ /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
+ /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qurl.h \
+ /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \
+ /usr/include/qt/QtGui/qvector2d.h /usr/include/qt/QtGui/qtouchdevice.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/../../../App/ui/neighborhoodselect/neighborhoodselect.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp \

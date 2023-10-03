@@ -6,6 +6,7 @@
 #include "../../Life/Life.h"
 #include "../../types/TRules.h"
 #include "../../StateStorage/StateStorage.h"
+#include "../Canvas/Canvas.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -20,12 +21,11 @@ public:
 
     ~mainwindow() override;
 
-    Life *life;
-
 private:
     Ui::mainwindow *ui;
     StateStorage *store;
     panel *leftPanel;
+    Canvas *canvas;
 
     QString fileName;
 

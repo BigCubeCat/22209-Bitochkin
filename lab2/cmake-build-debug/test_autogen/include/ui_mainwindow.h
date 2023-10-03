@@ -41,7 +41,7 @@ public:
     {
         if (mainwindow->objectName().isEmpty())
             mainwindow->setObjectName(QString::fromUtf8("mainwindow"));
-        mainwindow->resize(400, 300);
+        mainwindow->resize(993, 680);
         actionOpen = new QAction(mainwindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionSave = new QAction(mainwindow);
@@ -62,7 +62,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 372, 228));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 965, 608));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         horizontalLayout_2->addWidget(scrollArea);
@@ -70,7 +70,7 @@ public:
         mainwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(mainwindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 400, 26));
+        menubar->setGeometry(QRect(0, 0, 993, 26));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         mainwindow->setMenuBar(menubar);

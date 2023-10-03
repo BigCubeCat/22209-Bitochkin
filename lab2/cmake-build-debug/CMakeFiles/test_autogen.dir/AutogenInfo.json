@@ -107,6 +107,12 @@
 			null
 		],
 		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.h",
+			"MU",
+			"DN6ZCUHUWO/moc_Canvas.cpp",
+			null
+		],
+		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/mainwindow/mainwindow.h",
 			"MU",
 			"DFBDCEFQHQ/moc_mainwindow.cpp",
@@ -210,6 +216,11 @@
 		],
 		[
 			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.cpp",
 			"MU",
 			null
 		],

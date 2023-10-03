@@ -22,6 +22,9 @@ set(PROJECT_SOURCES
         App/ui/panel/panel.h
         App/ui/panel/panel.ui
 
+        App/ui/Canvas/Canvas.cpp
+        App/ui/Canvas/Canvas.h
+
         App/ui/stepper/stepper.cpp
         App/ui/stepper/stepper.h
         App/ui/stepper/stepper.ui
