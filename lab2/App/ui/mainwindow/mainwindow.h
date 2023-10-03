@@ -27,8 +27,17 @@ private:
     StateStorage *store;
     panel *leftPanel;
 
-    TRules *rule;
-    TNeighborhood *neighborhood;
+    QString fileName;
+
+    void saveLife();
+    void readLife();
+public slots:
+
+    void openFile();
+
+    void saveFile();
+
+    void saveAsFile();
 };
 
 

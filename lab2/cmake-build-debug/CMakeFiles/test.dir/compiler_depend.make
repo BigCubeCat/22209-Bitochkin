@@ -1501,7 +1501,11 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/qt/QtCore/qcoreapplication.h \
   /usr/include/qt/QtCore/qcoreevent.h \
   /usr/include/qt/QtCore/qdatastream.h \
+  /usr/include/qt/QtCore/qdir.h \
   /usr/include/qt/QtCore/qeventloop.h \
+  /usr/include/qt/QtCore/qfile.h \
+  /usr/include/qt/QtCore/qfiledevice.h \
+  /usr/include/qt/QtCore/qfileinfo.h \
   /usr/include/qt/QtCore/qflags.h \
   /usr/include/qt/QtCore/qgenericatomic.h \
   /usr/include/qt/QtCore/qglobal.h \
@@ -1544,6 +1548,7 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
+  /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \
   /usr/include/qt/QtCore/qvector.h \
@@ -1574,6 +1579,7 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/qt/QtGui/qwindowdefs.h \
   /usr/include/qt/QtWidgets/QAction \
   /usr/include/qt/QtWidgets/QApplication \
+  /usr/include/qt/QtWidgets/QFileDialog \
   /usr/include/qt/QtWidgets/QHBoxLayout \
   /usr/include/qt/QtWidgets/QMainWindow \
   /usr/include/qt/QtWidgets/QMenu \
@@ -1586,6 +1592,8 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/qt/QtWidgets/qactiongroup.h \
   /usr/include/qt/QtWidgets/qapplication.h \
   /usr/include/qt/QtWidgets/qboxlayout.h \
+  /usr/include/qt/QtWidgets/qdialog.h \
+  /usr/include/qt/QtWidgets/qfiledialog.h \
   /usr/include/qt/QtWidgets/qframe.h \
   /usr/include/qt/QtWidgets/qgridlayout.h \
   /usr/include/qt/QtWidgets/qlayout.h \
@@ -3539,6 +3547,10 @@ test_autogen/include/ui_neighborhoodselect.h:
 
 /usr/include/qt/QtWidgets/qgridlayout.h:
 
+/usr/include/qt/QtWidgets/qfiledialog.h:
+
+/usr/include/qt/QtWidgets/qdialog.h:
+
 /usr/include/qt/QtWidgets/qactiongroup.h:
 
 /usr/include/qt/QtWidgets/qabstractscrollarea.h:
@@ -3550,6 +3562,8 @@ test_autogen/include/ui_neighborhoodselect.h:
 /usr/include/qt/QtWidgets/QMenuBar:
 
 /usr/include/qt/QtWidgets/QHBoxLayout:
+
+/usr/include/qt/QtCore/qfile.h:
 
 /usr/include/qt/QtWidgets/qrubberband.h:
 
@@ -3793,6 +3807,8 @@ test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp:
 
 /usr/include/c++/13.2.1/bits/locale_classes.tcc:
 
+/usr/include/qt/QtWidgets/QFileDialog:
+
 /usr/include/qt/QtCore/qstringalgorithms.h:
 
 /usr/include/c++/13.2.1/bits/stl_algobase.h:
@@ -4016,6 +4032,8 @@ test_autogen/mocs_compilation.cpp:
 /usr/include/c++/13.2.1/bits/cpp_type_traits.h:
 
 /usr/include/bits/time.h:
+
+/usr/include/qt/QtCore/qdir.h:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -4333,6 +4351,8 @@ test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp:
 
 /usr/include/c++/13.2.1/cstdint:
 
+/usr/include/qt/QtCore/qfileinfo.h:
+
 /usr/include/c++/13.2.1/ctime:
 
 /usr/include/c++/13.2.1/iterator:
@@ -4348,6 +4368,8 @@ test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp:
 /usr/include/c++/13.2.1/ratio:
 
 test_autogen/TXUOL7RJOK/moc_rule.cpp:
+
+/usr/include/qt/QtCore/qfiledevice.h:
 
 /usr/include/c++/13.2.1/unordered_map:
 

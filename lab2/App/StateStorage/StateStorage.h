@@ -25,6 +25,9 @@ public slots:
 
     void setNeighborhood(ENeighborhood newNeigh, int degree = 1);
 
+    void resizeLife(int width, int height);
+    void toggleLife(int row, int col);
+
 signals:
     void invalidRule();
     void renderLife(const Life &life);

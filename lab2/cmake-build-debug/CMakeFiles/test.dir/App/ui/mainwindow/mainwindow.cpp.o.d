@@ -295,4 +295,10 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: \
  /usr/include/qt/QtWidgets/qscrollarea.h \
  /usr/include/qt/QtWidgets/qabstractscrollarea.h \
  /usr/include/qt/QtWidgets/qframe.h /usr/include/qt/QtWidgets/QStatusBar \
- /usr/include/qt/QtWidgets/qstatusbar.h /usr/include/qt/QtWidgets/QWidget
+ /usr/include/qt/QtWidgets/qstatusbar.h /usr/include/qt/QtWidgets/QWidget \
+ /usr/include/qt/QtWidgets/QFileDialog \
+ /usr/include/qt/QtWidgets/qfiledialog.h /usr/include/qt/QtCore/qdir.h \
+ /usr/include/qt/QtCore/qfileinfo.h /usr/include/qt/QtCore/qfile.h \
+ /usr/include/qt/QtCore/qfiledevice.h /usr/include/qt/QtCore/qurl.h \
+ /usr/include/qt/QtWidgets/qdialog.h /usr/include/qt/QtCore/QTextStream \
+ /usr/include/qt/QtCore/qtextstream.h

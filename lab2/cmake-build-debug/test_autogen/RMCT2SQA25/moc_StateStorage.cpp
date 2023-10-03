@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_StateStorage_t {
-    QByteArrayData data[14];
-    char stringdata0[132];
+    QByteArrayData data[20];
+    char stringdata0[175];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -45,13 +45,20 @@ QT_MOC_LITERAL(9, 77, 8), // "newRules"
 QT_MOC_LITERAL(10, 86, 15), // "setNeighborhood"
 QT_MOC_LITERAL(11, 102, 13), // "ENeighborhood"
 QT_MOC_LITERAL(12, 116, 8), // "newNeigh"
-QT_MOC_LITERAL(13, 125, 6) // "degree"
+QT_MOC_LITERAL(13, 125, 6), // "degree"
+QT_MOC_LITERAL(14, 132, 10), // "resizeLife"
+QT_MOC_LITERAL(15, 143, 5), // "width"
+QT_MOC_LITERAL(16, 149, 6), // "height"
+QT_MOC_LITERAL(17, 156, 10), // "toggleLife"
+QT_MOC_LITERAL(18, 167, 3), // "row"
+QT_MOC_LITERAL(19, 171, 3) // "col"
 
     },
     "StateStorage\0invalidRule\0\0renderLife\0"
     "Life\0life\0testSlot\0setRules\0std::string\0"
     "newRules\0setNeighborhood\0ENeighborhood\0"
-    "newNeigh\0degree"
+    "newNeigh\0degree\0resizeLife\0width\0"
+    "height\0toggleLife\0row\0col"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,7 +68,7 @@ static const uint qt_meta_data_StateStorage[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,14 +76,16 @@ static const uint qt_meta_data_StateStorage[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   44,    2, 0x06 /* Public */,
-       3,    1,   45,    2, 0x06 /* Public */,
+       1,    0,   54,    2, 0x06 /* Public */,
+       3,    1,   55,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    0,   48,    2, 0x0a /* Public */,
-       7,    1,   49,    2, 0x0a /* Public */,
-      10,    2,   52,    2, 0x0a /* Public */,
-      10,    1,   57,    2, 0x2a /* Public | MethodCloned */,
+       6,    0,   58,    2, 0x0a /* Public */,
+       7,    1,   59,    2, 0x0a /* Public */,
+      10,    2,   62,    2, 0x0a /* Public */,
+      10,    1,   67,    2, 0x2a /* Public | MethodCloned */,
+      14,    2,   70,    2, 0x0a /* Public */,
+      17,    2,   75,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void,
@@ -87,6 +96,8 @@ static const uint qt_meta_data_StateStorage[] = {
     QMetaType::Void, 0x80000000 | 8,    9,
     QMetaType::Void, 0x80000000 | 11, QMetaType::Int,   12,   13,
     QMetaType::Void, 0x80000000 | 11,   12,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   15,   16,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,   18,   19,
 
        0        // eod
 };
@@ -103,6 +114,8 @@ void StateStorage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         case 3: _t->setRules((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         case 4: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 5: _t->setNeighborhood((*reinterpret_cast< ENeighborhood(*)>(_a[1]))); break;
+        case 6: _t->resizeLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 7: _t->toggleLife((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -153,13 +166,13 @@ int StateStorage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 6;
+        _id -= 8;
     }
     return _id;
 }
