@@ -16,7 +16,7 @@ public:
 
     void updateAll();
 
-    std::vector<std::vector<char>> arena;
+    std::vector<std::vector<char>> * getArena();
 
 private:
     Life *life;

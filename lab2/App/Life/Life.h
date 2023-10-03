@@ -10,6 +10,7 @@
 class Life {
 private:
     std::vector<std::vector<char>> newArena;
+    std::vector<std::vector<char>> oldArena;
 
     size_t width;
     size_t height;
@@ -17,24 +18,24 @@ private:
     std::map<size_t, char> birthMap;
     std::map<size_t, char> saveMap;
 
-public:
-    std::vector<std::vector<char>> oldArena;
     TNeighborhood neighborhood;
     TRules rules;
+public:
 
     explicit Life();
-    explicit Life(TNeighborhood n, const TRules &r, size_t w, size_t h);
 
     void setGeometry(size_t countRows, size_t countCols);
 
     void toggleCell(size_t row, size_t col);
 
+    void setRules(const TRules &r);
+
+    void setNeighborhood(const TNeighborhood &n);
+
+    std::vector<std::vector<char>> *getArena();
+
     void nextGen();
 
-    size_t getWidth() const;
-    size_t getHeight() const;
-
-    char operator[] (size_t index);
     size_t calcNeighbors(size_t row, size_t col);
     char newValue(size_t row, size_t col);
 };

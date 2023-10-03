@@ -1482,11 +1482,13 @@ CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o: /home/bigcubecat/Projects/NSU/se
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -1539,6 +1541,7 @@ CMakeFiles/test.dir/App/ui/Canvas/Canvas.cpp.o: /home/bigcubecat/Projects/NSU/se
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
@@ -3973,6 +3976,8 @@ test_autogen/include/ui_neighborhoodselect.h:
 
 test_autogen/include/ui_mainwindow.h:
 
+/usr/include/qt/QtCore/qtimer.h:
+
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp:
 
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp:
@@ -4004,6 +4009,8 @@ test_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtWidgets/QPushButton:
 
 /usr/include/qt/QtGui/qtouchdevice.h:
+
+/usr/include/qt/QtCore/QTimer:
 
 /usr/include/qt/QtGui/qtguiglobal.h:
 
@@ -4070,6 +4077,8 @@ test_autogen/include/ui_mainwindow.h:
 /usr/include/c++/13.2.1/ext/concurrence.h:
 
 /usr/include/c++/13.2.1/bits/stl_raw_storage_iter.h:
+
+/usr/include/qt/QtCore/qbasictimer.h:
 
 /usr/include/c++/13.2.1/bits/shared_ptr_base.h:
 

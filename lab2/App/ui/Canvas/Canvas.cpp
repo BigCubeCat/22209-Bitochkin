@@ -1,30 +1,40 @@
 #include "Canvas.h"
 
 #include <iostream>
+#include <QTimer>
 
-Canvas::Canvas(
-        std::vector<std::vector<char>> *data,
-        QWidget *parent) : QWidget(parent), data(data) {
+Canvas::Canvas(QWidget *parent) : QWidget(parent) {
+    data = nullptr;
 }
 
 void Canvas::paintEvent(QPaintEvent *event) {
+    std::cout << "paintEvent\n";
     QPainter painter;
     painter.begin(this);
     painter.fillRect(event->rect(), Qt::green);
-    painter.setBrush(QBrush(QColor(20, 128, 129)));
     int step = cellSize + gapSize;
-    std::cout << data->size();
-    for (size_t i = 0; i < data->size(); ++i) {
-        for (size_t j = 0; j < data[i].size(); ++j) {
-            painter.drawRect(i * step, j * step, cellSize, cellSize);
+
+    if (data) {
+        std::cout << "here\n";
+        for (size_t i = 0; i < 128; ++i) {
+            for (size_t j = 0; j < 128; ++j) {
+                if (data->at(i).at(j)) {
+                    painter.setBrush(QBrush(QColor(20, 128, 129)));
+                } else {
+                    painter.setBrush(QBrush(QColor(127, 128, 129)));
+                }
+                painter.drawRect(i * step, j * step, cellSize, cellSize);
+            }
         }
     }
     QWidget::paintEvent(event);
     painter.end();
 }
 
-void Canvas::redraw() {
-
+void Canvas::redraw(std::vector<std::vector<char>> *d) {
+    data = d;
+    std::cout << "redraw\n";
+    update();
 }
 
 void Canvas::setCellSize(int size) {

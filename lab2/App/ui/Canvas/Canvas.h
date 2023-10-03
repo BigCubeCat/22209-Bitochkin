@@ -8,9 +8,7 @@
 
 class Canvas : public QWidget {
 public:
-    explicit Canvas(std::vector<std::vector<char>> *data = nullptr,
-                    QWidget *parent = 0
-    );
+    explicit Canvas(QWidget *parent = 0);
 
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
@@ -24,7 +22,7 @@ private:
     int gapSize = 1;
 public slots:
 
-    void redraw();
+    void redraw(std::vector<std::vector<char>> *data);
 };
 
 

@@ -1,19 +1,7 @@
 #include "Life.h"
 
-Life::Life(TNeighborhood n, const TRules &r, size_t w, size_t h) :
-        width(w), height(h), rules(r), neighborhood(std::move(n)) {
-    oldArena.resize(height);
-    newArena.resize(height);
-    for (size_t i = 0; i < height; ++i) {
-        std::vector<char> oldRow(width, 0);
-        std::vector<char> newRow(width, 0);
-        oldArena[i] = oldRow;
-        newArena[i] = newRow;
-    }
-}
-
 Life::Life()
-        : width(128), height(128),
+        : width(64), height(64),
           neighborhood(TNeighborhood(MOORE)), rules(TRules("B3/S2,3")) {
 }
 
@@ -24,14 +12,6 @@ void Life::nextGen() {
         }
     }
     newArena.swap(oldArena);
-}
-
-size_t Life::getWidth() const {
-    return width;
-}
-
-size_t Life::getHeight() const {
-    return height;
 }
 
 char Life::newValue(size_t row, size_t col) {
@@ -55,7 +35,6 @@ size_t Life::calcNeighbors(size_t row, size_t col) {
 }
 
 void Life::setGeometry(size_t countRows, size_t countCols) {
-    std::cout << "geometry = " << countRows << " " << countCols << "\n";
     oldArena.resize(countRows);
     newArena.resize(countRows);
     for (size_t i = 0; i < countRows; ++i) {
@@ -66,6 +45,18 @@ void Life::setGeometry(size_t countRows, size_t countCols) {
 
 void Life::toggleCell(size_t row, size_t col) {
     oldArena[row][col] = 1;
+}
+
+void Life::setRules(const TRules &r) {
+    rules = r;
+}
+
+void Life::setNeighborhood(const TNeighborhood &n) {
+    neighborhood = n;
+}
+
+std::vector<std::vector<char>> *Life::getArena() {
+    return &oldArena;
 }
 
 

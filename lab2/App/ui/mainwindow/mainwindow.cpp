@@ -13,7 +13,7 @@ mainwindow::mainwindow(QWidget *parent) :
     store = new StateStorage();
     leftPanel = new panel(this, store);
     ui->mainLayout->addWidget(leftPanel);
-    canvas = new Canvas(&store->arena, this);
+    canvas = new Canvas(this);
     ui->scrollArea->setWidget(canvas);
 
     connect(ui->actionOpen, &QAction::triggered, this, &mainwindow::openFile);
@@ -85,5 +85,5 @@ void mainwindow::readLife() {
             store->toggleLife(words[0].toInt(), words[1].toInt());
         }
     };
-    canvas->update();
+    canvas->redraw(store->getArena());
 }
