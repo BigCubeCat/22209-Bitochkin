@@ -3,8 +3,6 @@
 #include <climits>
 #include <iostream>
 
-#include "utils.h"
-
 BitArray::~BitArray() = default;
 
 /*

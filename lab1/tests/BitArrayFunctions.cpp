@@ -55,3 +55,8 @@ TEST(BitArrayTests, stringTest) {
     EXPECT_EQ("0001", ba.to_string());
 }
 
+TEST(BitArrayTests, emptySetTest) {
+    auto ba = BitArray("1011");
+    ba.set();
+    EXPECT_EQ("1111", ba.to_string());
+}
