@@ -18,6 +18,25 @@ public:
 
 private:
     Ui::stepper *ui;
+private slots:
+
+    void stepSlot();
+
+    void stopSlot();
+
+    void runSlot();
+
+    void setSpeedSlot(int value);
+
+signals:
+
+    void step();
+
+    void stop();
+
+    void run();
+
+    void setSpeed(int value);
 };
 
 

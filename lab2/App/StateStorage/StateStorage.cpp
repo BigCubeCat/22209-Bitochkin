@@ -2,9 +2,25 @@
 
 #include <iostream>
 
-StateStorage::StateStorage() = default;
+StateStorage::StateStorage() {
+    gameTimer = new QTimer(this);
+    canvasTimer = new QTimer(this);
+
+    QObject::connect(gameTimer, &QTimer::timeout, this, &StateStorage::tickGame);
+    QObject::connect(canvasTimer, &QTimer::timeout, this, &StateStorage::tickCanvas);
+
+    gameTimer->setInterval(300);
+    canvasTimer->setInterval(100);
+
+    gameTimer->start();
+    canvasTimer->start();
+}
 
 StateStorage::~StateStorage() {
+    delete canvasTimer;
+    canvasTimer = nullptr;
+    delete gameTimer;
+    gameTimer = nullptr;
 }
 
 void StateStorage::setRules(const std::string &newRules) {
@@ -19,7 +35,8 @@ void StateStorage::setRules(const std::string &newRules) {
 
 void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
     auto n = TNeighborhood(newNeigh, degree);
-    life->setNeighborhood(n);
+    if (life)
+        life->setNeighborhood(n);
     emit updateNeighborhood(n);
 }
 
@@ -48,9 +65,48 @@ char *StateStorage::getArena() {
 }
 
 size_t StateStorage::getWidth() const {
-    return life->getWidth();
+    if (life)
+        return life->getWidth();
+    return 0;
 }
 
 size_t StateStorage::getHeight() const {
-    return life->getHeight();
+    if (life)
+        return life->getHeight();
+    return 0;
+}
+
+void StateStorage::tickGame() {
+    if (isRunning) {
+        std::cout << "tick game\n";
+        step();
+        needRedraw = true;
+    }
+}
+
+void StateStorage::tickCanvas() {
+    if (needRedraw) {
+        // redraw
+        needRedraw = false;
+    }
+}
+
+void StateStorage::step() {
+    if (life) {
+        std::cout << "next gen\n";
+        life->nextGen();
+    }
+}
+
+void StateStorage::stop() {
+    isRunning = false;
+}
+
+void StateStorage::run() {
+    isRunning = true;
+}
+
+void StateStorage::setSpeed(int value) {
+    std::cout << "new speed is " << value << '\n';
+    gameTimer->setInterval(value);
 }

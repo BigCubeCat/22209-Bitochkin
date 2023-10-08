@@ -1,8 +1,10 @@
 #ifndef STATESTORAGE_H
 #define STATESTORAGE_H
 
+#include <QTimer>
 #include <QObject>
 #include <string>
+
 #include "../Life/Life.h"
 
 class StateStorage : public QObject {
@@ -19,10 +21,16 @@ public:
     size_t getHeight() const;
 
 private:
-    Life *life;
+    Life *life{};
 
-    size_t arenaWidth;
-    size_t arenaHeight;
+    size_t arenaWidth{};
+    size_t arenaHeight{};
+
+    bool needRedraw = false;
+    bool isRunning = false;
+
+    QTimer *gameTimer;
+    QTimer *canvasTimer;
 
 public slots:
 
@@ -33,6 +41,18 @@ public slots:
     void InitLife(int countRows, int countCols);
 
     void toggleLife(int row, int col);
+
+    void tickGame();
+
+    void tickCanvas();
+
+    void step();
+
+    void stop();
+
+    void run();
+
+    void setSpeed(int value);
 
 signals:
 

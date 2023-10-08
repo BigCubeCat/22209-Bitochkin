@@ -42,6 +42,14 @@ void Life::toggleCell(size_t row, size_t col) {
 
 void Life::setRules(const TRules &r) {
     rules = r;
+    birthMap.clear();
+    saveMap.clear();
+    for (const auto &value : rules.birthRule) {
+        birthMap[value] = true;
+    }
+    for (const auto &value : rules.saveRule) {
+        saveMap[value] = true;
+    }
 }
 
 void Life::setNeighborhood(const TNeighborhood &n) {

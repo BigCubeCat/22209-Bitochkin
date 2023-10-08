@@ -23,6 +23,11 @@ panel::panel(QWidget *parent, StateStorage *store) :
     QObject::connect(store, &StateStorage::updateRules, gameRules, &rule::parseTRules);
     QObject::connect(gameRules, &rule::emitRules, store, &StateStorage::setRules);
 
+    QObject::connect(gameStepper, &stepper::step, store, &StateStorage::step);
+    QObject::connect(gameStepper, &stepper::stop, store, &StateStorage::stop);
+    QObject::connect(gameStepper, &stepper::run, store, &StateStorage::run);
+    QObject::connect(gameStepper, &stepper::setSpeed, store, &StateStorage::setSpeed);
+
 }
 
 panel::~panel() {
