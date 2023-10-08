@@ -18,7 +18,9 @@ void StateStorage::setRules(const std::string &newRules) {
 }
 
 void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
-    life->setNeighborhood(TNeighborhood(newNeigh, degree));
+    auto n = TNeighborhood(newNeigh, degree);
+    life->setNeighborhood(n);
+    emit updateNeighborhood(n);
 }
 
 void StateStorage::toggleLife(int row, int col) {

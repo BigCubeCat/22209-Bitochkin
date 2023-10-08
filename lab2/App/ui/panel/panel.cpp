@@ -7,7 +7,7 @@ panel::panel(QWidget *parent, StateStorage *store) :
     ui->setupUi(this);
 
     gameStepper = new stepper(this);
-    gameRules = new rule(this, store);
+    gameRules = new rule(this);
     neighborhoodSelect = new neighborhoodselect(this);
 
     ui->panelLayout->addWidget(gameStepper);
@@ -16,6 +16,12 @@ panel::panel(QWidget *parent, StateStorage *store) :
 
     this->setMaximumWidth(301);
 
+    QObject::connect(store, &StateStorage::updateNeighborhood, neighborhoodSelect, &neighborhoodselect::setN);
+    QObject::connect(neighborhoodSelect, &neighborhoodselect::applyN, store, &StateStorage::setNeighborhood);
+
+    QObject::connect(store, &StateStorage::invalidRule, gameRules, &rule::invalidRules);
+    QObject::connect(store, &StateStorage::updateRules, gameRules, &rule::parseTRules);
+    QObject::connect(gameRules, &rule::emitRules, store, &StateStorage::setRules);
 
 }
 

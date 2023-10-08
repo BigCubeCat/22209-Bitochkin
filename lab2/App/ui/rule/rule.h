@@ -12,14 +12,12 @@ class rule : public QWidget {
 Q_OBJECT
 
 public:
-    explicit rule(QWidget *parent = nullptr, StateStorage *store = nullptr);
+    explicit rule(QWidget *parent = nullptr);
 
     ~rule() override;
 
 private:
     Ui::rule *ui;
-
-    StateStorage *store;
 
     std::string bRuleString = "";
     std::string sRuleString = "";

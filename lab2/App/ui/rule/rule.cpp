@@ -7,17 +7,12 @@
 
 #include <iostream>
 
-rule::rule(QWidget *parent, StateStorage *store) :
-        QWidget(parent), ui(new Ui::rule), store(store) {
+rule::rule(QWidget *parent) :
+        QWidget(parent), ui(new Ui::rule) {
     ui->setupUi(this);
     QObject::connect(ui->textEdit, &QTextEdit::textChanged, this, &rule::setB);
     QObject::connect(ui->textEdit_2, &QTextEdit::textChanged, this, &rule::setS);
     QObject::connect(ui->applyButton, &QPushButton::clicked, this, &rule::applySlot);
-
-    QObject::connect(this, &rule::emitRules, this->store, &StateStorage::setRules);
-    QObject::connect(this->store, &StateStorage::invalidRule, this, &rule::invalidRules);
-
-    QObject::connect(this->store, &StateStorage::updateRules, this, &rule::parseTRules);
 }
 
 rule::~rule() {

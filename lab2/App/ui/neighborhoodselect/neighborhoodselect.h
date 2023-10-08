@@ -2,6 +2,7 @@
 #define NEIGHBORHOODSELECT_H
 
 #include <QWidget>
+#include "../../types/TNeighborhood.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -18,6 +19,16 @@ public:
 
 private:
     Ui::neighborhoodselect *ui;
+
+public slots:
+
+    void setN(const TNeighborhood &n);
+
+    void applyClicked();
+
+signals:
+
+    void applyN(const ENeighborhood title, int deg);
 };
 
 

@@ -41,6 +41,8 @@ signals:
     void renderLife(const Life &life);
 
     void updateRules(const TRules &rules);
+
+    void updateNeighborhood(const TNeighborhood &n);
 };
 
 
