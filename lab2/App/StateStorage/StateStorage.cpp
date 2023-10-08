@@ -9,7 +9,9 @@ StateStorage::~StateStorage() {
 
 void StateStorage::setRules(const std::string &newRules) {
     try {
-        life->setRules(TRules(newRules));
+        auto r = TRules(newRules);
+        life->setRules(r);
+        emit updateRules(r);
     } catch (const std::invalid_argument &ex) {
         emit invalidRule();
     }

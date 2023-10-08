@@ -15,6 +15,7 @@ public:
     char *getArena();
 
     size_t getWidth() const;
+
     size_t getHeight() const;
 
 private:
@@ -38,6 +39,8 @@ signals:
     void invalidRule();
 
     void renderLife(const Life &life);
+
+    void updateRules(const TRules &rules);
 };
 
 

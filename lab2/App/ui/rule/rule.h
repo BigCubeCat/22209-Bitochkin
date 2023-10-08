@@ -29,6 +29,8 @@ public slots:
     void setS();
     void applySlot();
 
+    void parseTRules(const TRules &);
+
     void invalidRules();
 
 signals:
