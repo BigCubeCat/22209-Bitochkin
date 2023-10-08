@@ -28,9 +28,9 @@ public:
     QVBoxLayout *verticalLayout;
     QWidget *btnWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QPushButton *stopButton;
+    QPushButton *stepButton;
+    QPushButton *runButton;
     QWidget *horizontalWidget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
@@ -40,7 +40,7 @@ public:
     {
         if (stepper->objectName().isEmpty())
             stepper->setObjectName(QString::fromUtf8("stepper"));
-        stepper->resize(292, 150);
+        stepper->resize(306, 150);
         verticalLayout_2 = new QVBoxLayout(stepper);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalWidget = new QWidget(stepper);
@@ -59,20 +59,20 @@ public:
         btnWidget->setSizePolicy(sizePolicy);
         horizontalLayout = new QHBoxLayout(btnWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButton_3 = new QPushButton(btnWidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        stopButton = new QPushButton(btnWidget);
+        stopButton->setObjectName(QString::fromUtf8("stopButton"));
 
-        horizontalLayout->addWidget(pushButton_3);
+        horizontalLayout->addWidget(stopButton);
 
-        pushButton = new QPushButton(btnWidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        stepButton = new QPushButton(btnWidget);
+        stepButton->setObjectName(QString::fromUtf8("stepButton"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(stepButton);
 
-        pushButton_2 = new QPushButton(btnWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        runButton = new QPushButton(btnWidget);
+        runButton->setObjectName(QString::fromUtf8("runButton"));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(runButton);
 
 
         verticalLayout->addWidget(btnWidget);
@@ -109,9 +109,9 @@ public:
     void retranslateUi(QWidget *stepper)
     {
         stepper->setWindowTitle(QCoreApplication::translate("stepper", "stepper", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("stepper", "stop", nullptr));
-        pushButton->setText(QCoreApplication::translate("stepper", "step", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("stepper", "run", nullptr));
+        stopButton->setText(QCoreApplication::translate("stepper", "stop", nullptr));
+        stepButton->setText(QCoreApplication::translate("stepper", "step", nullptr));
+        runButton->setText(QCoreApplication::translate("stepper", "run", nullptr));
         label->setText(QCoreApplication::translate("stepper", "speed:", nullptr));
     } // retranslateUi
 

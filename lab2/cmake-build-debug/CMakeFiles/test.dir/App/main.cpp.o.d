@@ -256,7 +256,9 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../stepper/stepper.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/rule.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/StateStorage.h \
- /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/QObject \
+ /usr/include/qt/QtCore/qobject.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/Life.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TRules.h \
@@ -272,6 +274,7 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
  /usr/include/c++/13.2.1/bits/istream.tcc \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../neighborhoodselect/neighborhoodselect.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../neighborhoodselect/../../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../types/TRules.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../../StateStorage/StateStorage.h \

@@ -58,11 +58,12 @@ signals:
 
     void invalidRule();
 
-    void renderLife(const Life &life);
+    void redraw(char *data, size_t width, size_t height);
 
     void updateRules(const TRules &rules);
 
     void updateNeighborhood(const TNeighborhood &n);
+
 };
 
 

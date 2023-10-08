@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_rule_t {
-    QByteArrayData data[8];
-    char stringdata0[61];
+    QByteArrayData data[10];
+    char stringdata0[80];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,11 +39,13 @@ QT_MOC_LITERAL(3, 16, 11), // "std::string"
 QT_MOC_LITERAL(4, 28, 4), // "setB"
 QT_MOC_LITERAL(5, 33, 4), // "setS"
 QT_MOC_LITERAL(6, 38, 9), // "applySlot"
-QT_MOC_LITERAL(7, 48, 12) // "invalidRules"
+QT_MOC_LITERAL(7, 48, 11), // "parseTRules"
+QT_MOC_LITERAL(8, 60, 6), // "TRules"
+QT_MOC_LITERAL(9, 67, 12) // "invalidRules"
 
     },
     "rule\0emitRules\0\0std::string\0setB\0setS\0"
-    "applySlot\0invalidRules"
+    "applySlot\0parseTRules\0TRules\0invalidRules"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,7 +55,7 @@ static const uint qt_meta_data_rule[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -61,13 +63,14 @@ static const uint qt_meta_data_rule[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x06 /* Public */,
+       1,    1,   44,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       4,    0,   42,    2, 0x0a /* Public */,
-       5,    0,   43,    2, 0x0a /* Public */,
-       6,    0,   44,    2, 0x0a /* Public */,
-       7,    0,   45,    2, 0x0a /* Public */,
+       4,    0,   47,    2, 0x0a /* Public */,
+       5,    0,   48,    2, 0x0a /* Public */,
+       6,    0,   49,    2, 0x0a /* Public */,
+       7,    1,   50,    2, 0x0a /* Public */,
+       9,    0,   53,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
@@ -76,6 +79,7 @@ static const uint qt_meta_data_rule[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 8,    2,
     QMetaType::Void,
 
        0        // eod
@@ -91,7 +95,8 @@ void rule::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 1: _t->setB(); break;
         case 2: _t->setS(); break;
         case 3: _t->applySlot(); break;
-        case 4: _t->invalidRules(); break;
+        case 4: _t->parseTRules((*reinterpret_cast< const TRules(*)>(_a[1]))); break;
+        case 5: _t->invalidRules(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -135,13 +140,13 @@ int rule::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

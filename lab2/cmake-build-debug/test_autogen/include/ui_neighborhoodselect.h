@@ -14,6 +14,8 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -34,6 +36,10 @@ public:
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpinBox *spinBox;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *applyButton;
 
     void setupUi(QWidget *neighborhoodselect)
     {
@@ -93,6 +99,22 @@ public:
 
         verticalLayout->addWidget(horizontalWidget1);
 
+        widget = new QWidget(neighborhoodselect);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        horizontalLayout_3 = new QHBoxLayout(widget);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+        applyButton = new QPushButton(widget);
+        applyButton->setObjectName(QString::fromUtf8("applyButton"));
+
+        horizontalLayout_3->addWidget(applyButton);
+
+
+        verticalLayout->addWidget(widget);
+
 
         verticalLayout_2->addLayout(verticalLayout);
 
@@ -109,6 +131,7 @@ public:
         label_2->setText(QCoreApplication::translate("neighborhoodselect", "Type:", nullptr));
         comboBox->setCurrentText(QString());
         label->setText(QCoreApplication::translate("neighborhoodselect", "Degree:", nullptr));
+        applyButton->setText(QCoreApplication::translate("neighborhoodselect", "Apply", nullptr));
     } // retranslateUi
 
 };

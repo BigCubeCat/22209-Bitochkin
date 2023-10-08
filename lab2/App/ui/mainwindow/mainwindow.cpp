@@ -24,6 +24,8 @@ mainwindow::mainwindow(QWidget *parent) :
 
     connect(ui->actionSave_As, &QAction::triggered, this, &mainwindow::saveAsFile);
     ui->actionSave_As->setShortcut(QKeySequence(tr("Ctrl+Alt+s")));
+
+    QObject::connect(store, &StateStorage::redraw, canvas, &Canvas::redraw);
 }
 
 mainwindow::~mainwindow() {

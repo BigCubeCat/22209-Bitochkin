@@ -442,11 +442,13 @@ CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: /home/bigcubecat/Projec
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -483,6 +485,7 @@ CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: /home/bigcubecat/Projec
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \
   /usr/include/qt/QtCore/qvector.h \
@@ -515,6 +518,7 @@ CMakeFiles/test.dir/App/main.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/222
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
@@ -768,11 +772,13 @@ CMakeFiles/test.dir/App/main.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/222
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -828,6 +834,7 @@ CMakeFiles/test.dir/App/main.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/222
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
@@ -1611,6 +1618,7 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
@@ -1866,12 +1874,14 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
   /usr/include/qt/QtCore/QTextStream \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -1930,6 +1940,7 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
   /usr/include/qt/QtCore/qtextstream.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
@@ -2020,6 +2031,7 @@ CMakeFiles/test.dir/App/ui/mainwindow/mainwindow.cpp.o: /home/bigcubecat/Project
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/syslimits.h
 
 CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.cpp \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   test_autogen/include/ui_neighborhoodselect.h \
   /usr/include/alloca.h \
@@ -2345,9 +2357,12 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtWidgets/QComboBox \
   /usr/include/qt/QtWidgets/QHBoxLayout \
   /usr/include/qt/QtWidgets/QLabel \
+  /usr/include/qt/QtWidgets/QPushButton \
+  /usr/include/qt/QtWidgets/QSpacerItem \
   /usr/include/qt/QtWidgets/QSpinBox \
   /usr/include/qt/QtWidgets/QVBoxLayout \
   /usr/include/qt/QtWidgets/QWidget \
+  /usr/include/qt/QtWidgets/qabstractbutton.h \
   /usr/include/qt/QtWidgets/qabstractitemdelegate.h \
   /usr/include/qt/QtWidgets/qabstractslider.h \
   /usr/include/qt/QtWidgets/qabstractspinbox.h \
@@ -2359,6 +2374,7 @@ CMakeFiles/test.dir/App/ui/neighborhoodselect/neighborhoodselect.cpp.o: /home/bi
   /usr/include/qt/QtWidgets/qlabel.h \
   /usr/include/qt/QtWidgets/qlayout.h \
   /usr/include/qt/QtWidgets/qlayoutitem.h \
+  /usr/include/qt/QtWidgets/qpushbutton.h \
   /usr/include/qt/QtWidgets/qrubberband.h \
   /usr/include/qt/QtWidgets/qsizepolicy.h \
   /usr/include/qt/QtWidgets/qslider.h \
@@ -2393,6 +2409,7 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: /home/bigcubecat/Projects/NSU/seco
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
@@ -2646,12 +2663,14 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: /home/bigcubecat/Projects/NSU/seco
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -2704,6 +2723,7 @@ CMakeFiles/test.dir/App/ui/panel/panel.cpp.o: /home/bigcubecat/Projects/NSU/seco
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qvariant.h \
   /usr/include/qt/QtCore/qvarlengtharray.h \
@@ -3015,12 +3035,14 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: /home/bigcubecat/Projects/NSU/second
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/QVariant \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -3073,6 +3095,7 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: /home/bigcubecat/Projects/NSU/second
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
@@ -3519,6 +3542,7 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: test_autogen/mocs_compi
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/rule.h \
@@ -3783,11 +3807,13 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: test_autogen/mocs_compi
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/qt/QtCore/QObject \
+  /usr/include/qt/QtCore/QTimer \
   /usr/include/qt/QtCore/qalgorithms.h \
   /usr/include/qt/QtCore/qarraydata.h \
   /usr/include/qt/QtCore/qatomic.h \
   /usr/include/qt/QtCore/qatomic_cxx11.h \
   /usr/include/qt/QtCore/qbasicatomic.h \
+  /usr/include/qt/QtCore/qbasictimer.h \
   /usr/include/qt/QtCore/qbytearray.h \
   /usr/include/qt/QtCore/qbytearraylist.h \
   /usr/include/qt/QtCore/qchar.h \
@@ -3840,6 +3866,7 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: test_autogen/mocs_compi
   /usr/include/qt/QtCore/qsysinfo.h \
   /usr/include/qt/QtCore/qsystemdetection.h \
   /usr/include/qt/QtCore/qtcore-config.h \
+  /usr/include/qt/QtCore/qtimer.h \
   /usr/include/qt/QtCore/qtypeinfo.h \
   /usr/include/qt/QtCore/qurl.h \
   /usr/include/qt/QtCore/qvariant.h \
@@ -3915,8 +3942,6 @@ test_autogen/include/ui_stepper.h:
 
 /usr/include/qt/QtWidgets/QTextEdit:
 
-/usr/include/qt/QtWidgets/QSpacerItem:
-
 /usr/include/qt/QtGui/qtextdocument.h:
 
 test_autogen/include/ui_rule.h:
@@ -3938,6 +3963,8 @@ test_autogen/include/ui_panel.h:
 /usr/include/qt/QtWidgets/qabstractitemdelegate.h:
 
 /usr/include/qt/QtWidgets/QVBoxLayout:
+
+/usr/include/qt/QtWidgets/QSpacerItem:
 
 /usr/include/qt/QtWidgets/QLabel:
 
@@ -3977,8 +4004,6 @@ test_autogen/include/ui_neighborhoodselect.h:
 
 test_autogen/include/ui_mainwindow.h:
 
-/usr/include/qt/QtCore/qtimer.h:
-
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.cpp:
 
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.cpp:
@@ -4010,10 +4035,6 @@ test_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtWidgets/QPushButton:
 
 /usr/include/qt/QtGui/qtouchdevice.h:
-
-/usr/include/qt/QtCore/QTimer:
-
-/usr/include/qt/QtGui/qtguiglobal.h:
 
 /usr/include/qt/QtGui/qtextoption.h:
 
@@ -4079,10 +4100,6 @@ test_autogen/include/ui_mainwindow.h:
 
 /usr/include/c++/13.2.1/bits/stl_raw_storage_iter.h:
 
-/usr/include/qt/QtCore/qbasictimer.h:
-
-/usr/include/c++/13.2.1/bits/shared_ptr_base.h:
-
 /usr/include/c++/13.2.1/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/13.2.1/bits/shared_ptr.h:
@@ -4114,6 +4131,8 @@ test_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtCore/qvector.h:
 
 /usr/include/qt/QtCore/qvarlengtharray.h:
+
+/usr/include/qt/QtCore/qtimer.h:
 
 /usr/include/qt/QtCore/qtcore-config.h:
 
@@ -4176,6 +4195,12 @@ test_autogen/include/ui_mainwindow.h:
 /usr/include/qt/QtCore/qbytearraylist.h:
 
 /usr/include/qt/QtCore/qbytearray.h:
+
+/usr/include/c++/13.2.1/bits/shared_ptr_base.h:
+
+/usr/include/qt/QtCore/qbasictimer.h:
+
+/usr/include/qt/QtCore/qbasicatomic.h:
 
 /usr/include/c++/13.2.1/bits/postypes.h:
 
@@ -4817,6 +4842,10 @@ test_autogen/TXUOL7RJOK/moc_rule.cpp:
 
 /usr/include/linux/limits.h:
 
+/usr/include/qt/QtGui/qtguiglobal.h:
+
+/usr/include/qt/QtCore/QTimer:
+
 /usr/include/c++/13.2.1/bits/requires_hosted.h:
 
 /usr/include/bits/types/__fpos64_t.h:
@@ -4824,5 +4853,3 @@ test_autogen/TXUOL7RJOK/moc_rule.cpp:
 /usr/include/qt/QtCore/qalgorithms.h:
 
 /usr/include/qt/QtCore/qarraydata.h:
-
-/usr/include/qt/QtCore/qbasicatomic.h:

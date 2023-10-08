@@ -85,8 +85,8 @@ void StateStorage::tickGame() {
 }
 
 void StateStorage::tickCanvas() {
-    if (needRedraw) {
-        // redraw
+    if (needRedraw && life) {
+        emit redraw(life->getArena(), life->getWidth(), life->getHeight());
         needRedraw = false;
     }
 }
@@ -95,6 +95,7 @@ void StateStorage::step() {
     if (life) {
         std::cout << "next gen\n";
         life->nextGen();
+        needRedraw = true;
     }
 }
 
@@ -107,6 +108,5 @@ void StateStorage::run() {
 }
 
 void StateStorage::setSpeed(int value) {
-    std::cout << "new speed is " << value << '\n';
     gameTimer->setInterval(value);
 }

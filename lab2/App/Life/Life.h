@@ -15,8 +15,8 @@ private:
     size_t width;
     size_t height;
 
-    std::map<size_t, char> birthMap;
-    std::map<size_t, char> saveMap;
+    std::map<size_t, bool> birthMap;
+    std::map<size_t, bool> saveMap;
 
     TNeighborhood neighborhood;
     TRules rules;

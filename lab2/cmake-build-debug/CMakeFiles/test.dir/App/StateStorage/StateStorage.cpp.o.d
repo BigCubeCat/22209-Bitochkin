@@ -2,8 +2,7 @@ CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.cpp \
  /usr/include/stdc-predef.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/StateStorage.h \
- /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
- /usr/include/qt/QtCore/qobjectdefs.h /usr/include/qt/QtCore/qnamespace.h \
+ /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
  /usr/include/qt/QtCore/qglobal.h /usr/include/c++/13.2.1/type_traits \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -82,6 +81,8 @@ CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: \
  /usr/include/c++/13.2.1/bits/atomic_lockfree_defines.h \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/qnamespace.h \
+ /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qobjectdefs.h \
  /usr/include/qt/QtCore/qobjectdefs_impl.h \
  /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
  /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
@@ -208,6 +209,7 @@ CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o: \
  /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
  /usr/include/c++/13.2.1/limits /usr/include/c++/13.2.1/ctime \
  /usr/include/c++/13.2.1/bits/parse_numbers.h \
+ /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/Life.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/StateStorage/../Life/../types/TRules.h \
