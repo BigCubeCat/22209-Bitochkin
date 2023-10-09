@@ -1,6 +1,5 @@
 #include "Canvas.h"
 
-#include <iostream>
 #include <QTimer>
 
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {
@@ -17,9 +16,9 @@ void Canvas::paintEvent(QPaintEvent *event) {
         for (size_t i = 0; i < height; ++i) {
             for (size_t j = 0; j < width; ++j) {
                 if (data[i * width + j] != 0) {
-                    painter.setBrush(QBrush(QColor(20, 128, 129)));
+                    painter.setBrush(QBrush(QColor(200, 20, 20)));
                 } else {
-                    painter.setBrush(QBrush(QColor(127, 128, 129)));
+                    painter.setBrush(QBrush(QColor(255, 255, 255)));
                 }
                 painter.drawRect(i * step, j * step, cellSize, cellSize);
             }

@@ -108,5 +108,5 @@ void StateStorage::run() {
 }
 
 void StateStorage::setSpeed(int value) {
-    gameTimer->setInterval(value);
+    gameTimer->setInterval(200 - value);
 }
