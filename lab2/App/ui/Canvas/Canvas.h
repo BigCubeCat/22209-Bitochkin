@@ -1,4 +1,3 @@
-
 #ifndef UNTITLED_CANVAS_H
 #define UNTITLED_CANVAS_H
 
@@ -12,10 +11,6 @@ public:
 
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-    void setCellSize(int size);
-
-    void setGap(int size);
-
 private:
     char *data;
     size_t width;
@@ -23,10 +18,15 @@ private:
 
     int cellSize = 10;
     int gapSize = 1;
+
 public slots:
+
+    void setCellSize(int size);
+
+    void setGapSize(int size);
 
     void redraw(char *data, size_t width, size_t height);
 };
 
 
-#endif //UNTITLED_CANVAS_H
+#endif

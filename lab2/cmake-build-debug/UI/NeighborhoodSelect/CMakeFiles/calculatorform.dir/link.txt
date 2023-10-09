@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/calculatorform.dir/calculatorform_autogen/mocs_compilation.cpp.o CMakeFiles/calculatorform.dir/neighborhoodselect.cpp.o -o calculatorform  ../../types/libTypesLib.a /usr/lib/libQt6Widgets.so.6.5.2 /usr/lib/libQt6Gui.so.6.5.2 /usr/lib/libQt6Core.so.6.5.2 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

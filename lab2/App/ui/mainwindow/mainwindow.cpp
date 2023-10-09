@@ -4,7 +4,6 @@
 #include <QFileDialog>
 #include <iostream>
 #include <QTextStream>
-#include "../Canvas/Canvas.h"
 
 
 mainwindow::mainwindow(QWidget *parent) :
@@ -26,6 +25,8 @@ mainwindow::mainwindow(QWidget *parent) :
     ui->actionSave_As->setShortcut(QKeySequence(tr("Ctrl+Alt+s")));
 
     QObject::connect(store, &StateStorage::redraw, canvas, &Canvas::redraw);
+    QObject::connect(store, &StateStorage::gapSizeSignal, canvas, &Canvas::setGapSize);
+    QObject::connect(store, &StateStorage::cellSizeSignal, canvas, &Canvas::setCellSize);
 }
 
 mainwindow::~mainwindow() {
@@ -87,4 +88,14 @@ void mainwindow::readLife() {
         }
     };
     canvas->redraw(store->getArena(), store->getWidth(), store->getHeight());
+}
+
+void mainwindow::setCellSize(int size) {
+    if (canvas)
+        canvas->setCellSize(size);
+}
+
+void mainwindow::setGapSize(int size) {
+    if (canvas)
+        canvas->setCellSize(size);
 }

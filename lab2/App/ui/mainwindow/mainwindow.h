@@ -21,6 +21,10 @@ public:
 
     ~mainwindow() override;
 
+    void setCellSize(int size);
+
+    void setGapSize(int size);
+
 private:
     Ui::mainwindow *ui;
     StateStorage *store;
@@ -30,7 +34,9 @@ private:
     QString fileName;
 
     void saveLife();
+
     void readLife();
+
 public slots:
 
     void openFile();
@@ -38,6 +44,7 @@ public slots:
     void saveFile();
 
     void saveAsFile();
+
 };
 
 

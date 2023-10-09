@@ -54,6 +54,10 @@ public slots:
 
     void setSpeed(int value);
 
+    void setCellSize(int size);
+
+    void setGapSize(int size);
+
 signals:
 
     void invalidRule();
@@ -63,6 +67,10 @@ signals:
     void updateRules(const TRules &rules);
 
     void updateNeighborhood(const TNeighborhood &n);
+
+    void cellSizeSignal(int size);
+
+    void gapSizeSignal(int size);
 
 };
 

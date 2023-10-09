@@ -1,2 +1,0 @@
-/usr/bin/ar qc libLifeLib.a CMakeFiles/LifeLib.dir/LifeLib_autogen/mocs_compilation.cpp.o CMakeFiles/LifeLib.dir/Life.cpp.o
-/usr/bin/ranlib libLifeLib.a

@@ -10,6 +10,7 @@
 #include "../../types/TRules.h"
 #include "../../types/TNeighborhood.h"
 #include "../../StateStorage/StateStorage.h"
+#include "../settings/conf.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class panel; }
@@ -28,6 +29,7 @@ private:
     stepper *gameStepper;
     rule *gameRules;
     neighborhoodselect *neighborhoodSelect;
+    conf *canvasConfig;
 
     StateStorage *store;
 };

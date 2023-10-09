@@ -9,10 +9,12 @@ panel::panel(QWidget *parent, StateStorage *store) :
     gameStepper = new stepper(this);
     gameRules = new rule(this);
     neighborhoodSelect = new neighborhoodselect(this);
+    canvasConfig = new conf(this);
 
     ui->panelLayout->addWidget(gameStepper);
     ui->panelLayout->addWidget(gameRules);
     ui->panelLayout->addWidget(neighborhoodSelect);
+    ui->panelLayout->addWidget(canvasConfig);
 
     this->setMaximumWidth(301);
 
@@ -28,11 +30,14 @@ panel::panel(QWidget *parent, StateStorage *store) :
     QObject::connect(gameStepper, &stepper::run, store, &StateStorage::run);
     QObject::connect(gameStepper, &stepper::setSpeed, store, &StateStorage::setSpeed);
 
+    QObject::connect(canvasConfig, &conf::setCellSize, store, &StateStorage::setCellSize);
+    QObject::connect(canvasConfig, &conf::setGapSize, store, &StateStorage::setGapSize);
 }
 
 panel::~panel() {
     delete neighborhoodSelect;
     delete gameStepper;
     delete gameRules;
+    delete canvasConfig;
     delete ui;
 }

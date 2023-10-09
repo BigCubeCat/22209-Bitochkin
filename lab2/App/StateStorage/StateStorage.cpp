@@ -110,3 +110,11 @@ void StateStorage::run() {
 void StateStorage::setSpeed(int value) {
     gameTimer->setInterval(200 - value);
 }
+
+void StateStorage::setCellSize(int size) {
+    emit cellSizeSignal(size);
+}
+
+void StateStorage::setGapSize(int size) {
+    emit gapSizeSignal(size);
+}
