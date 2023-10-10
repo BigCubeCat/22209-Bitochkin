@@ -58,6 +58,8 @@ public slots:
 
     void setGapSize(int size);
 
+    void setColor(const QColor &color, int index);
+
 signals:
 
     void invalidRule();
@@ -72,6 +74,7 @@ signals:
 
     void gapSizeSignal(int size);
 
+    void setColorSignal(const QColor &color, int index);
 };
 
 

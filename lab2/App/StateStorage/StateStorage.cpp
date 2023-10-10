@@ -1,6 +1,6 @@
 #include "StateStorage.h"
 
-#include <iostream>
+#include <QColor>
 
 StateStorage::StateStorage() {
     gameTimer = new QTimer(this);
@@ -117,4 +117,8 @@ void StateStorage::setCellSize(int size) {
 
 void StateStorage::setGapSize(int size) {
     emit gapSizeSignal(size);
+}
+
+void StateStorage::setColor(const QColor & color, int index) {
+    emit setColorSignal(color, index);
 }

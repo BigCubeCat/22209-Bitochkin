@@ -32,6 +32,8 @@ panel::panel(QWidget *parent, StateStorage *store) :
 
     QObject::connect(canvasConfig, &conf::setCellSize, store, &StateStorage::setCellSize);
     QObject::connect(canvasConfig, &conf::setGapSize, store, &StateStorage::setGapSize);
+
+    QObject::connect(canvasConfig, &conf::changeColor, store, &StateStorage::setColor);
 }
 
 panel::~panel() {

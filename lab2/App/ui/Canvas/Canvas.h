@@ -19,6 +19,10 @@ private:
     int cellSize = 10;
     int gapSize = 1;
 
+    QColor borderColor;
+    QColor emptyColor;
+    QColor aliveColor;
+
 public slots:
 
     void setCellSize(int size);
@@ -26,6 +30,8 @@ public slots:
     void setGapSize(int size);
 
     void redraw(char *data, size_t width, size_t height);
+
+    void setColor(QColor color, int index);
 };
 
 

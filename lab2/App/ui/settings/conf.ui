@@ -34,14 +34,21 @@
      <item>
       <widget class="QPushButton" name="aliveButton">
        <property name="text">
-        <string>Alive color</string>
+        <string>Alive</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="diedButton">
        <property name="text">
-        <string>Died color</string>
+        <string>Empty</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="borderButton">
+       <property name="text">
+        <string>Border</string>
        </property>
       </widget>
      </item>

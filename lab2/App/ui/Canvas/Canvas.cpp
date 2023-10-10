@@ -11,7 +11,7 @@ Canvas::Canvas(QWidget *parent) : QWidget(parent) {
 void Canvas::paintEvent(QPaintEvent *event) {
     QPainter painter;
     painter.begin(this);
-    painter.fillRect(event->rect(), Qt::darkBlue);
+    painter.fillRect(event->rect(), borderColor);
     int step = cellSize + gapSize;
     std::cout << cellSize << " " << gapSize << "\n";
 
@@ -20,9 +20,9 @@ void Canvas::paintEvent(QPaintEvent *event) {
         for (size_t i = 0; i < height; ++i) {
             for (size_t j = 0; j < width; ++j) {
                 if (data[i * width + j] != 0) {
-                    brush = QBrush(QColor(200, 20, 20));
+                    brush = QBrush(aliveColor);
                 } else {
-                    brush = QBrush(QColor(255, 255, 255));
+                    brush = QBrush(emptyColor);
                 }
                 painter.fillRect(i * step, j * step, cellSize, cellSize, brush);
             }
@@ -53,4 +53,14 @@ void Canvas::setGapSize(int size) {
     setFixedWidth(width * (cellSize + gapSize));
     setFixedHeight(height * (cellSize + gapSize));
     update();
+}
+
+void Canvas::setColor(QColor color, int index) {
+    if (index == 0) {
+        aliveColor = color;
+    } else if (index == 1) {
+        emptyColor = color;
+    } else {
+        borderColor = color;
+    }
 }

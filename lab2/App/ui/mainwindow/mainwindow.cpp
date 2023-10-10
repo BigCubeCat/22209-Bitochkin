@@ -27,6 +27,8 @@ mainwindow::mainwindow(QWidget *parent) :
     QObject::connect(store, &StateStorage::redraw, canvas, &Canvas::redraw);
     QObject::connect(store, &StateStorage::gapSizeSignal, canvas, &Canvas::setGapSize);
     QObject::connect(store, &StateStorage::cellSizeSignal, canvas, &Canvas::setCellSize);
+
+    QObject::connect(store, &StateStorage::setColorSignal, canvas, &Canvas::setColor);
 }
 
 mainwindow::~mainwindow() {

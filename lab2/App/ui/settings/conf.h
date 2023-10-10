@@ -16,14 +16,26 @@ public:
 
     ~conf() override;
 
+public slots:
+
+    void aliveColor();
+
+    void emptyColor();
+
+    void borderColor();
+
 signals:
 
     void setCellSize(int size);
 
     void setGapSize(int size);
 
+    void changeColor(const QColor &color, int index);
+
 public slots:
+
     void onCellSizeChange(int vaue);
+
     void onGapSizeChange(int vaue);
 
 private:

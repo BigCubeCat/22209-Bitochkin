@@ -48,6 +48,10 @@ set(PROJECT_SOURCES
 
         App/StateStorage/StateStorage.cpp
         App/StateStorage/StateStorage.h
+
+        App/ui/settings/conf.h
+        App/ui/settings/conf.cpp
+        App/ui/settings/conf.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
