@@ -6,6 +6,7 @@
 #include <QPaintEvent>
 
 class Canvas : public QWidget {
+Q_OBJECT
 public:
     explicit Canvas(QWidget *parent = 0);
 
@@ -18,6 +19,7 @@ private:
 
     int cellSize = 10;
     int gapSize = 1;
+    int step = 1;
 
     QColor borderColor;
     QColor emptyColor;
@@ -32,6 +34,13 @@ public slots:
     void redraw(char *data, size_t width, size_t height);
 
     void setColor(QColor color, int index);
+
+protected:
+    void mousePressEvent(QMouseEvent *event) override;
+
+signals:
+
+    void toggleCell(int row, int col);
 };
 
 

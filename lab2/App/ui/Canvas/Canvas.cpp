@@ -12,7 +12,6 @@ void Canvas::paintEvent(QPaintEvent *event) {
     QPainter painter;
     painter.begin(this);
     painter.fillRect(event->rect(), borderColor);
-    int step = cellSize + gapSize;
     std::cout << cellSize << " " << gapSize << "\n";
 
     QBrush brush;
@@ -24,7 +23,7 @@ void Canvas::paintEvent(QPaintEvent *event) {
                 } else {
                     brush = QBrush(emptyColor);
                 }
-                painter.fillRect(i * step, j * step, cellSize, cellSize, brush);
+                painter.fillRect(i * step + gapSize, j * step + gapSize, cellSize, cellSize, brush);
             }
         }
     }
@@ -36,22 +35,23 @@ void Canvas::redraw(char *d, size_t w, size_t h) {
     data = d;
     width = w;
     height = h;
-    setFixedWidth(width * (cellSize + gapSize));
-    setFixedHeight(height * (cellSize + gapSize));
+    step = cellSize + gapSize;
+    setFixedWidth(width * step + gapSize);
+    setFixedHeight(height * step + gapSize);
     update();
 }
 
 void Canvas::setCellSize(int size) {
     cellSize = size;
-    setFixedWidth(width * (cellSize + gapSize));
-    setFixedHeight(height * (cellSize + gapSize));
+    setFixedWidth(width * step + gapSize);
+    setFixedHeight(height * step + gapSize);
     update();
 }
 
 void Canvas::setGapSize(int size) {
     gapSize = size;
-    setFixedWidth(width * (cellSize + gapSize));
-    setFixedHeight(height * (cellSize + gapSize));
+    setFixedWidth(width * step + gapSize);
+    setFixedHeight(height * step + gapSize);
     update();
 }
 
@@ -64,3 +64,12 @@ void Canvas::setColor(QColor color, int index) {
         borderColor = color;
     }
 }
+
+void Canvas::mousePressEvent(QMouseEvent *event) {
+    QWidget::mousePressEvent(event);
+    int x = event->x() / step;
+    int y = event->y() / step;
+    emit toggleCell(x, y);
+    update();
+}
+

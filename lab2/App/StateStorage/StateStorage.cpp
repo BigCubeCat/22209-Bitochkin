@@ -10,7 +10,7 @@ StateStorage::StateStorage() {
     QObject::connect(canvasTimer, &QTimer::timeout, this, &StateStorage::tickCanvas);
 
     gameTimer->setInterval(300);
-    canvasTimer->setInterval(100);
+    canvasTimer->setInterval(1);
 
     gameTimer->start();
     canvasTimer->start();
@@ -41,9 +41,10 @@ void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
 }
 
 void StateStorage::toggleLife(int row, int col) {
-    std::cout << "toggle " << row << " " << col << "\n";
-    if (life)
+    if (life) {
         life->toggleCell(row, col);
+        needRedraw = true;
+    }
 }
 
 void StateStorage::InitLife(int countRows, int countCols) {
@@ -58,7 +59,6 @@ char *StateStorage::getArena() {
         if (answer) {
             return answer;
         } else {
-            std::cout << "shit\n";
         }
     }
     return nullptr;
@@ -78,7 +78,6 @@ size_t StateStorage::getHeight() const {
 
 void StateStorage::tickGame() {
     if (isRunning) {
-        std::cout << "tick game\n";
         step();
         needRedraw = true;
     }
@@ -93,7 +92,6 @@ void StateStorage::tickCanvas() {
 
 void StateStorage::step() {
     if (life) {
-        std::cout << "next gen\n";
         life->nextGen();
         needRedraw = true;
     }

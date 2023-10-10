@@ -29,6 +29,8 @@ mainwindow::mainwindow(QWidget *parent) :
     QObject::connect(store, &StateStorage::cellSizeSignal, canvas, &Canvas::setCellSize);
 
     QObject::connect(store, &StateStorage::setColorSignal, canvas, &Canvas::setColor);
+
+    QObject::connect(canvas, &Canvas::toggleCell, store, &StateStorage::toggleLife);
 }
 
 mainwindow::~mainwindow() {

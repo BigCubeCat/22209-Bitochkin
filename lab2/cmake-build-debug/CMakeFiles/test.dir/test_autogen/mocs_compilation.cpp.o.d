@@ -233,34 +233,44 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
  /usr/include/c++/13.2.1/bits/istream.tcc \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/mainwindow.h \
- /usr/include/qt/QtWidgets/QMainWindow \
- /usr/include/qt/QtWidgets/qmainwindow.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DN6ZCUHUWO/moc_Canvas.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DN6ZCUHUWO/../../../App/ui/Canvas/Canvas.h \
+ /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtWidgets/qtwidgetsglobal.h \
  /usr/include/qt/QtGui/qtguiglobal.h /usr/include/qt/QtGui/qtgui-config.h \
  /usr/include/qt/QtWidgets/qtwidgets-config.h \
- /usr/include/qt/QtWidgets/qwidget.h /usr/include/qt/QtGui/qwindowdefs.h \
- /usr/include/qt/QtCore/qmargins.h /usr/include/qt/QtGui/qpaintdevice.h \
- /usr/include/qt/QtCore/qrect.h /usr/include/qt/QtCore/qsize.h \
- /usr/include/qt/QtCore/qpoint.h /usr/include/qt/QtGui/qpalette.h \
- /usr/include/qt/QtGui/qcolor.h /usr/include/qt/QtGui/qrgb.h \
- /usr/include/qt/QtGui/qrgba64.h /usr/include/qt/QtGui/qbrush.h \
- /usr/include/qt/QtGui/qmatrix.h /usr/include/qt/QtGui/qpolygon.h \
- /usr/include/qt/QtGui/qregion.h /usr/include/qt/QtCore/qdatastream.h \
- /usr/include/qt/QtCore/qiodevice.h /usr/include/qt/QtCore/qline.h \
- /usr/include/qt/QtGui/qtransform.h /usr/include/qt/QtGui/qimage.h \
- /usr/include/qt/QtGui/qpixelformat.h /usr/include/qt/QtGui/qpixmap.h \
- /usr/include/qt/QtCore/qsharedpointer.h \
+ /usr/include/qt/QtGui/qwindowdefs.h /usr/include/qt/QtCore/qmargins.h \
+ /usr/include/qt/QtGui/qpaintdevice.h /usr/include/qt/QtCore/qrect.h \
+ /usr/include/qt/QtCore/qsize.h /usr/include/qt/QtCore/qpoint.h \
+ /usr/include/qt/QtGui/qpalette.h /usr/include/qt/QtGui/qcolor.h \
+ /usr/include/qt/QtGui/qrgb.h /usr/include/qt/QtGui/qrgba64.h \
+ /usr/include/qt/QtGui/qbrush.h /usr/include/qt/QtGui/qmatrix.h \
+ /usr/include/qt/QtGui/qpolygon.h /usr/include/qt/QtGui/qregion.h \
+ /usr/include/qt/QtCore/qdatastream.h /usr/include/qt/QtCore/qiodevice.h \
+ /usr/include/qt/QtCore/qline.h /usr/include/qt/QtGui/qtransform.h \
+ /usr/include/qt/QtGui/qimage.h /usr/include/qt/QtGui/qpixelformat.h \
+ /usr/include/qt/QtGui/qpixmap.h /usr/include/qt/QtCore/qsharedpointer.h \
  /usr/include/qt/QtCore/qshareddata.h /usr/include/qt/QtCore/qhash.h \
  /usr/include/qt/QtCore/qsharedpointer_impl.h \
  /usr/include/qt/QtGui/qfont.h /usr/include/qt/QtGui/qfontmetrics.h \
  /usr/include/qt/QtGui/qfontinfo.h \
  /usr/include/qt/QtWidgets/qsizepolicy.h /usr/include/qt/QtGui/qcursor.h \
- /usr/include/qt/QtGui/qkeysequence.h \
+ /usr/include/qt/QtGui/qkeysequence.h /usr/include/qt/QtGui/QPainter \
+ /usr/include/qt/QtGui/qpainter.h /usr/include/qt/QtGui/qtextoption.h \
+ /usr/include/qt/QtGui/qpen.h /usr/include/qt/QtGui/QPaintEvent \
+ /usr/include/qt/QtGui/qevent.h /usr/include/qt/QtCore/qcoreevent.h \
+ /usr/include/qt/QtCore/qvariant.h /usr/include/qt/QtCore/qmap.h \
+ /usr/include/c++/13.2.1/variant /usr/include/qt/QtCore/qset.h \
+ /usr/include/qt/QtCore/qurl.h /usr/include/qt/QtCore/qfile.h \
+ /usr/include/qt/QtCore/qfiledevice.h /usr/include/qt/QtGui/qvector2d.h \
+ /usr/include/qt/QtGui/qtouchdevice.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/mainwindow.h \
+ /usr/include/qt/QtWidgets/QMainWindow \
+ /usr/include/qt/QtWidgets/qmainwindow.h \
+ /usr/include/qt/QtWidgets/qwidget.h \
  /usr/include/qt/QtWidgets/qtabwidget.h /usr/include/qt/QtGui/qicon.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/panel.h \
- /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../stepper/stepper.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../rule/rule.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../panel/../rule/../../StateStorage/StateStorage.h \
@@ -274,14 +284,6 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../types/TRules.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../StateStorage/StateStorage.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../Canvas/Canvas.h \
- /usr/include/qt/QtGui/QPainter /usr/include/qt/QtGui/qpainter.h \
- /usr/include/qt/QtGui/qtextoption.h /usr/include/qt/QtGui/qpen.h \
- /usr/include/qt/QtGui/QPaintEvent /usr/include/qt/QtGui/qevent.h \
- /usr/include/qt/QtCore/qcoreevent.h /usr/include/qt/QtCore/qvariant.h \
- /usr/include/qt/QtCore/qmap.h /usr/include/c++/13.2.1/variant \
- /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qurl.h \
- /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \
- /usr/include/qt/QtGui/qvector2d.h /usr/include/qt/QtGui/qtouchdevice.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/../../../App/ui/neighborhoodselect/neighborhoodselect.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp \

@@ -3928,6 +3928,8 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: test_autogen/mocs_compi
   test_autogen/DFBDCEFQHQ/moc_mainwindow.cpp \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/neighborhoodselect/neighborhoodselect.h \
   test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/Canvas/Canvas.h \
+  test_autogen/DN6ZCUHUWO/moc_Canvas.cpp \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TNeighborhood.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/types/TRules.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.h \
@@ -4583,6 +4585,8 @@ test_autogen/VI3D5544C7/moc_conf.cpp:
 /usr/include/c++/13.2.1/bits/shared_ptr_base.h:
 
 /usr/include/qt/QtCore/qbasictimer.h:
+
+test_autogen/DN6ZCUHUWO/moc_Canvas.cpp:
 
 /usr/include/qt/QtCore/qbasicatomic.h:
 

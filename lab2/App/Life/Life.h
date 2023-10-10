@@ -24,7 +24,7 @@ public:
 
     explicit Life(size_t w = 64, size_t h = 64);
 
-    void toggleCell(size_t row, size_t col);
+    void toggleCell(int row, int col);
 
     void setRules(const TRules &r);
 
