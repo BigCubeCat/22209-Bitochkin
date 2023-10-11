@@ -2,6 +2,7 @@
 #define UNTITLED_LIFE_H
 
 #include <map>
+#include <QString>
 
 #include "../types/TNeighborhood.h"
 #include "../types/TRules.h"
@@ -41,7 +42,13 @@ public:
     size_t calcNeighbors(size_t row, size_t col);
 
     char newValue(size_t row, size_t col);
+
+    QString getRules() const;
+
+    QString getNeighborhood() const;
+
+    char operator[](int index);
 };
 
 
-#endif //UNTITLED_LIFE_H
+#endif

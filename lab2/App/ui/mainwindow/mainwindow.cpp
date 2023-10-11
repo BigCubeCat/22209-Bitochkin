@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <iostream>
 #include <QTextStream>
+#include <QString>
 
 
 mainwindow::mainwindow(QWidget *parent) :
@@ -14,6 +15,7 @@ mainwindow::mainwindow(QWidget *parent) :
     ui->mainLayout->addWidget(leftPanel);
     canvas = new Canvas(this);
     ui->scrollArea->setWidget(canvas);
+    fw = new FileWorker(store);
 
     connect(ui->actionOpen, &QAction::triggered, this, &mainwindow::openFile);
     ui->actionOpen->setShortcut(QKeySequence(tr("Ctrl+o")));
@@ -31,6 +33,8 @@ mainwindow::mainwindow(QWidget *parent) :
     QObject::connect(store, &StateStorage::setColorSignal, canvas, &Canvas::setColor);
 
     QObject::connect(canvas, &Canvas::toggleCell, store, &StateStorage::toggleLife);
+
+    QObject::connect(fw, &FileWorker::setWindowTitle, this, &mainwindow::setTitle);
 }
 
 mainwindow::~mainwindow() {
@@ -41,9 +45,9 @@ mainwindow::~mainwindow() {
 }
 
 void mainwindow::openFile() {
-    fileName = QFileDialog::getOpenFileName(this,
+    auto fileName = QFileDialog::getOpenFileName(this,
                                             tr("Open Life 1.06 file"), "", tr("Life Files (*.life)"));
-    std::cout << "filename = " << fileName.toStdString() << "\n";
+    fw->setFileName(fileName);
     readLife();
 }
 
@@ -52,45 +56,22 @@ void mainwindow::saveFile() {
 }
 
 void mainwindow::saveAsFile() {
-    fileName = QFileDialog::getSaveFileName(
+    auto fileName = QFileDialog::getSaveFileName(
             this, tr("Save File"),
             "",
             tr("Life (*.life)")
     );
+    fw->setFileName(fileName);
     saveFile();
 }
 
 void mainwindow::saveLife() {
-
+    fw->saveFile();
 }
 
 void mainwindow::readLife() {
-    QFile inputFile(fileName);
-    inputFile.open(QIODevice::ReadOnly);
-    if (!inputFile.isOpen())
-        return;
-
-    QTextStream stream(&inputFile);
-    for (QString line = stream.readLine();
-         !line.isNull();
-         line = stream.readLine()) {
-        QStringList words = line.split(" ");
-        if (line.at(0) == QChar('#')) {
-            if (words[0] == QString("#T")) {
-                this->setWindowTitle(line);
-            } else if (words[0] == QString("#R")) {
-                store->setRules(words[1].toStdString());
-            } else if (words[0] == QString("#N")) {
-                ENeighborhood nType = (words[1] == QString("M")) ? MOORE : VON;
-                int degree = words[2].toInt();
-                store->setNeighborhood(nType, degree);
-            } else if (words[0] == QString("#G")) {
-                store->InitLife(words[1].toInt(), words[2].toInt());
-            }
-        } else {
-            store->toggleLife(words[0].toInt(), words[1].toInt());
-        }
-    };
+    auto [text, status] = fw->readFile();
+    std::cout << text.toStdString() << " " << status << "\n";
     canvas->redraw(store->getArena(), store->getWidth(), store->getHeight());
 }
 
@@ -102,4 +83,8 @@ void mainwindow::setCellSize(int size) {
 void mainwindow::setGapSize(int size) {
     if (canvas)
         canvas->setCellSize(size);
+}
+
+void mainwindow::setTitle(const QString &title) {
+    this->setWindowTitle(title);
 }

@@ -53,46 +53,31 @@ CMakeFiles/test.dir/App/Life/Life.cpp.o: \
  /usr/include/c++/13.2.1/cstddef \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h \
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/../types/TNeighborhood.h \
- /usr/include/c++/13.2.1/vector \
- /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/13.2.1/bits/stl_vector.h \
- /usr/include/c++/13.2.1/bits/stl_bvector.h \
- /usr/include/c++/13.2.1/bits/functional_hash.h \
- /usr/include/c++/13.2.1/bits/hash_bytes.h \
- /usr/include/c++/13.2.1/bits/refwrap.h \
- /usr/include/c++/13.2.1/bits/vector.tcc /usr/include/c++/13.2.1/string \
- /usr/include/c++/13.2.1/bits/stringfwd.h \
- /usr/include/c++/13.2.1/bits/char_traits.h \
- /usr/include/c++/13.2.1/bits/postypes.h /usr/include/c++/13.2.1/cwchar \
- /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
- /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
- /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
- /usr/include/bits/types/mbstate_t.h \
- /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h \
- /usr/include/c++/13.2.1/bits/localefwd.h \
- /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/13.2.1/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/13.2.1/iosfwd \
- /usr/include/c++/13.2.1/cctype /usr/include/ctype.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/endian.h \
- /usr/include/bits/endianness.h \
- /usr/include/c++/13.2.1/bits/ostream_insert.h \
- /usr/include/c++/13.2.1/bits/cxxabi_forced.h \
- /usr/include/c++/13.2.1/bits/basic_string.h \
- /usr/include/c++/13.2.1/string_view \
- /usr/include/c++/13.2.1/bits/string_view.tcc \
- /usr/include/c++/13.2.1/ext/string_conversions.h \
+ /usr/include/qt/QtCore/QString /usr/include/qt/QtCore/qstring.h \
+ /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qglobal.h \
+ /usr/include/c++/13.2.1/utility \
+ /usr/include/c++/13.2.1/bits/stl_relops.h /usr/include/assert.h \
+ /usr/include/qt/QtCore/qconfig.h /usr/include/qt/QtCore/qtcore-config.h \
+ /usr/include/qt/QtCore/qsystemdetection.h \
+ /usr/include/qt/QtCore/qprocessordetection.h \
+ /usr/include/qt/QtCore/qcompilerdetection.h \
+ /usr/include/c++/13.2.1/algorithm \
+ /usr/include/c++/13.2.1/bits/stl_algo.h \
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/13.2.1/bits/stl_heap.h \
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/13.2.1/cstdlib /usr/include/stdlib.h \
- /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
+ /usr/include/bits/libc-header-start.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/bits/floatn.h \
+ /usr/include/bits/floatn-common.h /usr/include/bits/types/locale_t.h \
+ /usr/include/bits/types/__locale_t.h /usr/include/sys/types.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/time64.h /usr/include/bits/types/clock_t.h \
  /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
  /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
- /usr/include/endian.h /usr/include/bits/byteswap.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/endianness.h /usr/include/bits/byteswap.h \
  /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
  /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
  /usr/include/bits/types/__sigset_t.h \
@@ -103,6 +88,45 @@ CMakeFiles/test.dir/App/Life/Life.cpp.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/c++/13.2.1/bits/std_abs.h \
+ /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13.2.1/pstl/execution_defs.h \
+ /usr/include/qt/QtCore/qtypeinfo.h /usr/include/qt/QtCore/qsysinfo.h \
+ /usr/include/qt/QtCore/qlogging.h /usr/include/qt/QtCore/qflags.h \
+ /usr/include/qt/QtCore/qatomic.h /usr/include/qt/QtCore/qbasicatomic.h \
+ /usr/include/qt/QtCore/qatomic_cxx11.h \
+ /usr/include/qt/QtCore/qgenericatomic.h /usr/include/c++/13.2.1/atomic \
+ /usr/include/c++/13.2.1/bits/atomic_base.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h \
+ /usr/include/c++/13.2.1/bits/atomic_lockfree_defines.h \
+ /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
+ /usr/include/qt/QtCore/qversiontagging.h \
+ /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
+ /usr/include/qt/QtCore/qnamespace.h /usr/include/qt/QtCore/qarraydata.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/13.2.1/cstdint /usr/include/c++/13.2.1/stdlib.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+ /usr/include/c++/13.2.1/string /usr/include/c++/13.2.1/bits/stringfwd.h \
+ /usr/include/c++/13.2.1/bits/char_traits.h \
+ /usr/include/c++/13.2.1/bits/postypes.h /usr/include/c++/13.2.1/cwchar \
+ /usr/include/wchar.h /usr/include/bits/types/wint_t.h \
+ /usr/include/bits/types/mbstate_t.h \
+ /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/c++/13.2.1/bits/localefwd.h \
+ /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/13.2.1/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/13.2.1/iosfwd \
+ /usr/include/c++/13.2.1/cctype /usr/include/ctype.h \
+ /usr/include/c++/13.2.1/bits/ostream_insert.h \
+ /usr/include/c++/13.2.1/bits/cxxabi_forced.h \
+ /usr/include/c++/13.2.1/bits/refwrap.h \
+ /usr/include/c++/13.2.1/bits/basic_string.h \
+ /usr/include/c++/13.2.1/string_view \
+ /usr/include/c++/13.2.1/bits/functional_hash.h \
+ /usr/include/c++/13.2.1/bits/hash_bytes.h \
+ /usr/include/c++/13.2.1/bits/string_view.tcc \
+ /usr/include/c++/13.2.1/ext/string_conversions.h \
  /usr/include/c++/13.2.1/cstdio /usr/include/stdio.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
@@ -114,13 +138,10 @@ CMakeFiles/test.dir/App/Life/Life.cpp.o: \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/13.2.1/bits/charconv.h \
  /usr/include/c++/13.2.1/bits/basic_string.tcc \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/../types/TRules.h \
- /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
- /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/exception \
- /usr/include/c++/13.2.1/bits/exception_ptr.h \
- /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h \
- /usr/include/c++/13.2.1/typeinfo \
- /usr/include/c++/13.2.1/bits/nested_exception.h \
+ /usr/include/c++/13.2.1/iterator \
+ /usr/include/c++/13.2.1/bits/stream_iterator.h \
+ /usr/include/c++/13.2.1/bits/streambuf_iterator.h \
+ /usr/include/c++/13.2.1/streambuf \
  /usr/include/c++/13.2.1/bits/ios_base.h \
  /usr/include/c++/13.2.1/ext/atomicity.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
@@ -138,17 +159,30 @@ CMakeFiles/test.dir/App/Life/Life.cpp.o: \
  /usr/include/c++/13.2.1/bits/locale_classes.tcc \
  /usr/include/c++/13.2.1/system_error \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
- /usr/include/c++/13.2.1/stdexcept /usr/include/c++/13.2.1/streambuf \
+ /usr/include/c++/13.2.1/stdexcept /usr/include/c++/13.2.1/exception \
+ /usr/include/c++/13.2.1/bits/exception_ptr.h \
+ /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h \
+ /usr/include/c++/13.2.1/typeinfo \
+ /usr/include/c++/13.2.1/bits/nested_exception.h \
  /usr/include/c++/13.2.1/bits/streambuf.tcc \
- /usr/include/c++/13.2.1/bits/basic_ios.h \
+ /usr/include/qt/QtCore/qstringliteral.h \
+ /usr/include/qt/QtCore/qstringalgorithms.h \
+ /usr/include/qt/QtCore/qstringview.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/../types/TNeighborhood.h \
+ /usr/include/c++/13.2.1/vector \
+ /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
+ /usr/include/c++/13.2.1/bits/stl_vector.h \
+ /usr/include/c++/13.2.1/bits/stl_bvector.h \
+ /usr/include/c++/13.2.1/bits/vector.tcc \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/../types/TRules.h \
+ /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
+ /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
  /usr/include/c++/13.2.1/bits/locale_facets.h \
  /usr/include/c++/13.2.1/cwctype /usr/include/wctype.h \
  /usr/include/bits/wctype-wchar.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/13.2.1/bits/streambuf_iterator.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
  /usr/include/c++/13.2.1/bits/locale_facets.tcc \
  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
- /usr/include/c++/13.2.1/bits/istream.tcc \
- /usr/include/c++/13.2.1/stdlib.h
+ /usr/include/c++/13.2.1/bits/istream.tcc

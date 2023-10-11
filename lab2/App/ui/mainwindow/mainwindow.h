@@ -7,6 +7,7 @@
 #include "../../types/TRules.h"
 #include "../../StateStorage/StateStorage.h"
 #include "../Canvas/Canvas.h"
+#include "../../FileWorker/FileWorker.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -30,8 +31,7 @@ private:
     StateStorage *store;
     panel *leftPanel;
     Canvas *canvas;
-
-    QString fileName;
+    FileWorker *fw;
 
     void saveLife();
 
@@ -44,6 +44,8 @@ public slots:
     void saveFile();
 
     void saveAsFile();
+
+    void setTitle(const QString &title);
 
 };
 

@@ -245,6 +245,7 @@ CMakeFiles/test.dir/App/ui/rule/rule.cpp.o: \
  /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/QObject \
  /usr/include/qt/QtCore/qobject.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/Life.h \
+ /usr/include/qt/QtCore/QString /usr/include/qt/QtCore/qstring.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/ui/rule/../../StateStorage/../Life/../types/TRules.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \

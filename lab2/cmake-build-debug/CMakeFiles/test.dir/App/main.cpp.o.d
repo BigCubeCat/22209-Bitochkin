@@ -260,6 +260,7 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/QObject \
  /usr/include/qt/QtCore/qobject.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/Life.h \
+ /usr/include/qt/QtCore/QString /usr/include/qt/QtCore/qstring.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TNeighborhood.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../panel/../rule/../../StateStorage/../Life/../types/TRules.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
@@ -288,4 +289,6 @@ CMakeFiles/test.dir/App/main.cpp.o: \
  /usr/include/qt/QtGui/QPaintEvent /usr/include/qt/QtGui/qevent.h \
  /usr/include/qt/QtCore/qset.h /usr/include/qt/QtCore/qurl.h \
  /usr/include/qt/QtCore/qfile.h /usr/include/qt/QtCore/qfiledevice.h \
- /usr/include/qt/QtGui/qvector2d.h /usr/include/qt/QtGui/qtouchdevice.h
+ /usr/include/qt/QtGui/qvector2d.h /usr/include/qt/QtGui/qtouchdevice.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../../FileWorker/FileWorker.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/./ui/mainwindow/../../FileWorker/../StateStorage/StateStorage.h

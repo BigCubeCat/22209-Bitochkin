@@ -1,7 +1,7 @@
 CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/moc_StateStorage.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/moc_FileWorker.cpp \
  /usr/include/c++/13.2.1/memory /usr/include/c++/13.2.1/bits/memoryfwd.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -101,10 +101,10 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/backward/auto_ptr.h \
  /usr/include/c++/13.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/13.2.1/pstl/execution_defs.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/StateStorage.h \
- /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
- /usr/include/qt/QtCore/qglobal.h /usr/include/c++/13.2.1/cstddef \
- /usr/include/c++/13.2.1/utility \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/../../../App/FileWorker/FileWorker.h \
+ /usr/include/qt/QtCore/QString /usr/include/qt/QtCore/qstring.h \
+ /usr/include/qt/QtCore/qchar.h /usr/include/qt/QtCore/qglobal.h \
+ /usr/include/c++/13.2.1/cstddef /usr/include/c++/13.2.1/utility \
  /usr/include/c++/13.2.1/bits/stl_relops.h \
  /usr/include/c++/13.2.1/initializer_list /usr/include/assert.h \
  /usr/include/qt/QtCore/qconfig.h /usr/include/qt/QtCore/qtcore-config.h \
@@ -131,14 +131,11 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/qt/QtCore/qgenericatomic.h /usr/include/c++/13.2.1/atomic \
  /usr/include/qt/QtCore/qglobalstatic.h /usr/include/qt/QtCore/qnumeric.h \
  /usr/include/qt/QtCore/qversiontagging.h \
- /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/qnamespace.h \
- /usr/include/qt/QtCore/qobject.h /usr/include/qt/QtCore/qobjectdefs.h \
- /usr/include/qt/QtCore/qobjectdefs_impl.h \
- /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qchar.h \
  /usr/include/qt/QtCore/qbytearray.h /usr/include/qt/QtCore/qrefcount.h \
- /usr/include/qt/QtCore/qarraydata.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/13.2.1/cstdint \
- /usr/include/c++/13.2.1/stdlib.h /usr/include/c++/13.2.1/string \
+ /usr/include/qt/QtCore/qnamespace.h /usr/include/qt/QtCore/qarraydata.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/13.2.1/cstdint /usr/include/c++/13.2.1/stdlib.h \
+ /usr/include/c++/13.2.1/string \
  /usr/include/c++/13.2.1/bits/char_traits.h \
  /usr/include/c++/13.2.1/bits/localefwd.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
@@ -177,7 +174,13 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/bits/streambuf.tcc \
  /usr/include/qt/QtCore/qstringliteral.h \
  /usr/include/qt/QtCore/qstringalgorithms.h \
- /usr/include/qt/QtCore/qstringview.h /usr/include/qt/QtCore/qlist.h \
+ /usr/include/qt/QtCore/qstringview.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/../../../App/FileWorker/../StateStorage/StateStorage.h \
+ /usr/include/qt/QtCore/QTimer /usr/include/qt/QtCore/qtimer.h \
+ /usr/include/qt/QtCore/qbasictimer.h /usr/include/qt/QtCore/qobject.h \
+ /usr/include/qt/QtCore/qobjectdefs.h \
+ /usr/include/qt/QtCore/qobjectdefs_impl.h \
+ /usr/include/qt/QtCore/qstring.h /usr/include/qt/QtCore/qlist.h \
  /usr/include/qt/QtCore/qalgorithms.h /usr/include/qt/QtCore/qiterator.h \
  /usr/include/qt/QtCore/qhashfunctions.h /usr/include/qt/QtCore/qpair.h \
  /usr/include/c++/13.2.1/numeric \
@@ -219,9 +222,9 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/limits /usr/include/c++/13.2.1/ctime \
  /usr/include/c++/13.2.1/bits/parse_numbers.h \
  /usr/include/qt/QtCore/QObject /usr/include/qt/QtCore/qobject.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/Life.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/../types/TNeighborhood.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/../Life/../types/TRules.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/../../../App/FileWorker/../StateStorage/../Life/Life.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/../../../App/FileWorker/../StateStorage/../Life/../types/TNeighborhood.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/LMTGQLTK6K/../../../App/FileWorker/../StateStorage/../Life/../types/TRules.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
  /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/basic_ios.h \
  /usr/include/c++/13.2.1/bits/locale_facets.h \
@@ -233,6 +236,8 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
  /usr/include/c++/13.2.1/bits/istream.tcc \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/moc_StateStorage.cpp \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/RMCT2SQA25/../../../App/StateStorage/StateStorage.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DN6ZCUHUWO/moc_Canvas.cpp \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DN6ZCUHUWO/../../../App/ui/Canvas/Canvas.h \
  /usr/include/qt/QtWidgets/QWidget /usr/include/qt/QtWidgets/qwidget.h \
@@ -284,6 +289,7 @@ CMakeFiles/test.dir/test_autogen/mocs_compilation.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../types/TRules.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../StateStorage/StateStorage.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../Canvas/Canvas.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DFBDCEFQHQ/../../../App/ui/mainwindow/../../FileWorker/FileWorker.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/moc_neighborhoodselect.cpp \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/DKXY4O23NO/../../../App/ui/neighborhoodselect/neighborhoodselect.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/cmake-build-debug/test_autogen/SROFFC2GUR/moc_panel.cpp \

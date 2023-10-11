@@ -120,3 +120,26 @@ void StateStorage::setGapSize(int size) {
 void StateStorage::setColor(const QColor & color, int index) {
     emit setColorSignal(color, index);
 }
+
+QString StateStorage::getRules() {
+    if (life) {
+        return life->getRules();
+    }
+    return {""};
+}
+
+QString StateStorage::getNeighborhood() {
+    if (life) {
+        return life->getNeighborhood();
+    }
+    return {""};
+}
+
+bool StateStorage::aliveAt(int index) {
+    if (life) {
+        if ((*life)[index] != 0) {
+            return true;
+        }
+    }
+    return false;
+}

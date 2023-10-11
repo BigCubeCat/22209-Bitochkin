@@ -150,6 +150,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/FileWorker/FileWorker.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/FileWorker/FileWorker.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab2/App/Life/Life.cpp">
 			<Option target="test"/>
 		</Unit>

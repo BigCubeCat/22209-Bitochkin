@@ -40,7 +40,7 @@ public:
     {
         if (stepper->objectName().isEmpty())
             stepper->setObjectName(QString::fromUtf8("stepper"));
-        stepper->resize(306, 150);
+        stepper->resize(306, 189);
         verticalLayout_2 = new QVBoxLayout(stepper);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalWidget = new QWidget(stepper);

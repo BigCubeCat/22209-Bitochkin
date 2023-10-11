@@ -2,8 +2,6 @@
 
 #include <QTimer>
 
-#include <iostream>
-
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {
     data = nullptr;
 }
@@ -12,7 +10,6 @@ void Canvas::paintEvent(QPaintEvent *event) {
     QPainter painter;
     painter.begin(this);
     painter.fillRect(event->rect(), borderColor);
-    std::cout << cellSize << " " << gapSize << "\n";
 
     QBrush brush;
     if (data) {
@@ -55,7 +52,7 @@ void Canvas::setGapSize(int size) {
     update();
 }
 
-void Canvas::setColor(QColor color, int index) {
+void Canvas::setColor(const QColor& color, int index) {
     if (index == 0) {
         aliveColor = color;
     } else if (index == 1) {
@@ -63,6 +60,7 @@ void Canvas::setColor(QColor color, int index) {
     } else {
         borderColor = color;
     }
+    update();
 }
 
 void Canvas::mousePressEvent(QMouseEvent *event) {

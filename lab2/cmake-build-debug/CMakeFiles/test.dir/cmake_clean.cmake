@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/test_autogen.dir/ParseCache.txt"
   "test_autogen"
+  "CMakeFiles/test.dir/App/FileWorker/FileWorker.cpp.o"
+  "CMakeFiles/test.dir/App/FileWorker/FileWorker.cpp.o.d"
   "CMakeFiles/test.dir/App/Life/Life.cpp.o"
   "CMakeFiles/test.dir/App/Life/Life.cpp.o.d"
   "CMakeFiles/test.dir/App/StateStorage/StateStorage.cpp.o"

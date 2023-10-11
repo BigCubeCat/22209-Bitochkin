@@ -52,6 +52,9 @@ set(PROJECT_SOURCES
         App/ui/settings/conf.h
         App/ui/settings/conf.cpp
         App/ui/settings/conf.ui
+
+        App/FileWorker/FileWorker.cpp
+        App/FileWorker/FileWorker.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

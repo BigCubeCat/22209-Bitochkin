@@ -20,6 +20,12 @@ public:
 
     size_t getHeight() const;
 
+    QString getRules();
+
+    QString getNeighborhood();
+
+    bool aliveAt(int index);
+
 private:
     Life *life{};
 

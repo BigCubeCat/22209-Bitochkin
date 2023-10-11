@@ -33,7 +33,7 @@ public slots:
 
     void redraw(char *data, size_t width, size_t height);
 
-    void setColor(QColor color, int index);
+    void setColor(const QColor& color, int index);
 
 protected:
     void mousePressEvent(QMouseEvent *event) override;

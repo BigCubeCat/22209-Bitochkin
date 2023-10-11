@@ -69,5 +69,19 @@ size_t Life::getHeight() const {
     return height;
 }
 
+QString Life::getNeighborhood() const {
+    QString result = QString::fromStdString(neighborhood.title == MOORE ? "M " : "V ");
+    result += QString::number(neighborhood.degree);
+    return result;
+}
+
+QString Life::getRules() const {
+    return QString::fromStdString(rules.string);
+}
+
+char Life::operator[](int index) {
+    return oldArena[index];
+}
+
 
 

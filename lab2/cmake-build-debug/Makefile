@@ -187,6 +187,30 @@ test_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_autogen.dir/build.make CMakeFiles/test_autogen.dir/build
 .PHONY : test_autogen/fast
 
+App/FileWorker/FileWorker.o: App/FileWorker/FileWorker.cpp.o
+.PHONY : App/FileWorker/FileWorker.o
+
+# target to build an object file
+App/FileWorker/FileWorker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/FileWorker/FileWorker.cpp.o
+.PHONY : App/FileWorker/FileWorker.cpp.o
+
+App/FileWorker/FileWorker.i: App/FileWorker/FileWorker.cpp.i
+.PHONY : App/FileWorker/FileWorker.i
+
+# target to preprocess a source file
+App/FileWorker/FileWorker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/FileWorker/FileWorker.cpp.i
+.PHONY : App/FileWorker/FileWorker.cpp.i
+
+App/FileWorker/FileWorker.s: App/FileWorker/FileWorker.cpp.s
+.PHONY : App/FileWorker/FileWorker.s
+
+# target to generate assembly for a file
+App/FileWorker/FileWorker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/App/FileWorker/FileWorker.cpp.s
+.PHONY : App/FileWorker/FileWorker.cpp.s
+
 App/Life/Life.o: App/Life/Life.cpp.o
 .PHONY : App/Life/Life.o
 
@@ -513,6 +537,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test_autogen"
 	@echo "... test"
+	@echo "... App/FileWorker/FileWorker.o"
+	@echo "... App/FileWorker/FileWorker.i"
+	@echo "... App/FileWorker/FileWorker.s"
 	@echo "... App/Life/Life.o"
 	@echo "... App/Life/Life.i"
 	@echo "... App/Life/Life.s"
