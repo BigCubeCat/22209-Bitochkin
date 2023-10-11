@@ -11,7 +11,7 @@ mainwindow::mainwindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::mainwindow) {
     ui->setupUi(this);
     store = new StateStorage();
-    leftPanel = new panel(this, store);
+    leftPanel = new Panel(this, store);
     ui->mainLayout->addWidget(leftPanel);
     canvas = new Canvas(this);
     ui->scrollArea->setWidget(canvas);

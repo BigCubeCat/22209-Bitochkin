@@ -18,8 +18,8 @@ set(PROJECT_SOURCES
         App/ui/mainwindow/mainwindow.h
         App/ui/mainwindow/mainwindow.ui
 
-        App/ui/panel/panel.cpp
-        App/ui/panel/panel.h
+        App/ui/panel/Panel.cpp
+        App/ui/panel/Panel.h
         App/ui/panel/panel.ui
 
         App/ui/Canvas/Canvas.cpp

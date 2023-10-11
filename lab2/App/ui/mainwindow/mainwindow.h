@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../panel/panel.h"
+#include "../panel/Panel.h"
 #include "../../Life/Life.h"
 #include "../../types/TRules.h"
 #include "../../StateStorage/StateStorage.h"
@@ -29,7 +29,7 @@ public:
 private:
     Ui::mainwindow *ui;
     StateStorage *store;
-    panel *leftPanel;
+    Panel *leftPanel;
     Canvas *canvas;
     FileWorker *fw;
 
