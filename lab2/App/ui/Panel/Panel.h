@@ -5,7 +5,7 @@
 
 #include "../stepper/stepper.h"
 #include "../rule/rule.h"
-#include "../neighborhoodselect/neighborhoodselect.h"
+#include "../NeighborhoodSelect/NeighborhoodSelect.h"
 
 #include "../../types/TRules.h"
 #include "../../types/TNeighborhood.h"
@@ -28,7 +28,7 @@ private:
     Ui::Panel *ui;
     stepper *gameStepper;
     rule *gameRules;
-    neighborhoodselect *neighborhoodSelect;
+    NeighborhoodSelect *neighborhoodSelect;
     conf *canvasConfig;
 
     StateStorage *store;

@@ -6,19 +6,19 @@
 
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class neighborhoodselect; }
+namespace Ui { class NeighborhoodSelect; }
 QT_END_NAMESPACE
 
-class neighborhoodselect : public QWidget {
+class NeighborhoodSelect : public QWidget {
 Q_OBJECT
 
 public:
-    explicit neighborhoodselect(QWidget *parent = nullptr);
+    explicit NeighborhoodSelect(QWidget *parent = nullptr);
 
-    ~neighborhoodselect() override;
+    ~NeighborhoodSelect() override;
 
 private:
-    Ui::neighborhoodselect *ui;
+    Ui::NeighborhoodSelect *ui;
 
 public slots:
 

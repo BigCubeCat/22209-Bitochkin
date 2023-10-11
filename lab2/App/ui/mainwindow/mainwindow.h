@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../panel/Panel.h"
+#include "../Panel/Panel.h"
 #include "../../Life/Life.h"
 #include "../../types/TRules.h"
 #include "../../StateStorage/StateStorage.h"

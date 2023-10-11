@@ -18,9 +18,9 @@ set(PROJECT_SOURCES
         App/ui/mainwindow/mainwindow.h
         App/ui/mainwindow/mainwindow.ui
 
-        App/ui/panel/Panel.cpp
-        App/ui/panel/Panel.h
-        App/ui/panel/panel.ui
+        App/ui/Panel/Panel.cpp
+        App/ui/Panel/Panel.h
+        App/ui/Panel/panel.ui
 
         App/ui/Canvas/Canvas.cpp
         App/ui/Canvas/Canvas.h
@@ -33,9 +33,9 @@ set(PROJECT_SOURCES
         App/ui/rule/rule.h
         App/ui/rule/rule.ui
 
-        App/ui/neighborhoodselect/neighborhoodselect.cpp
-        App/ui/neighborhoodselect/neighborhoodselect.h
-        App/ui/neighborhoodselect/neighborhoodselect.ui
+        App/ui/NeighborhoodSelect/NeighborhoodSelect.cpp
+        App/ui/NeighborhoodSelect/NeighborhoodSelect.h
+        App/ui/NeighborhoodSelect/neighborhoodselect.ui
 
         App/types/TNeighborhood.cpp
         App/types/TNeighborhood.h
