@@ -1,15 +1,15 @@
 #include "TRules.h"
 
 #include <string>
+#include <utility>
 
 
-TRules::TRules(const std::string &source): string(source) {
+TRules::TRules(std::string source): string(std::move(source)) {
     std::string currentNumber;
     int newValue;
     bool isSave = false;
-    std::cout << string << std::endl;
-    for (size_t i = 0; i < string.length(); ++i) {
-        switch (string[i]) {
+    for (char ch : string) {
+        switch (ch) {
             case 'B':
                 isSave = false;
                 break;
@@ -27,7 +27,7 @@ TRules::TRules(const std::string &source): string(source) {
                 currentNumber = "";
                 break;
             default:
-                currentNumber += string[i];
+                currentNumber += ch;
                 break;
         }
     }

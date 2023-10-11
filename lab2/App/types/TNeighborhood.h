@@ -4,19 +4,31 @@
 #include <vector>
 #include <string>
 
+/*
+ * ENeighborhood
+ *
+ * Moore - (2 * degree + 1) x (2 * degree + 1) rect
+ * Von-Neighman - Manhattan distance <= degree
+ */
 enum ENeighborhood {
-    MOORE, VON, CUSTOM // M - Соседство Мура, F - Фон-Неймана
+    MOORE, VON // MOORE - Соседство Мура, VON - Фон-Неймана
 };
 
 struct TNeighborhood {
+    /*
+     * title
+     * Neighborhood
+     */
     ENeighborhood title;
-    int countPoints = 0;
+    /*
+     * degree
+     *
+     * Degree of neighborhood
+     */
     int degree = 1;
     std::vector<std::pair<int, int>> points;
 
     explicit TNeighborhood(ENeighborhood neigh = MOORE, int deg = 1);
-
-    std::string string();
 };
 
 
