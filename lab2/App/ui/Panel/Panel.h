@@ -3,14 +3,14 @@
 
 #include <QWidget>
 
-#include "../stepper/stepper.h"
-#include "../rule/rule.h"
+#include "../Stepper/Stepper.h"
+#include "../Rule/Rule.h"
 #include "../NeighborhoodSelect/NeighborhoodSelect.h"
 
 #include "../../types/TRules.h"
 #include "../../types/TNeighborhood.h"
 #include "../../StateStorage/StateStorage.h"
-#include "../settings/conf.h"
+#include "../Conf/Conf.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Panel; }
@@ -26,10 +26,10 @@ public:
 
 private:
     Ui::Panel *ui;
-    stepper *gameStepper;
-    rule *gameRules;
+    Stepper *gameStepper;
+    Rule *gameRules;
     NeighborhoodSelect *neighborhoodSelect;
-    conf *canvasConfig;
+    Conf *canvasConfig;
 
     StateStorage *store;
 };

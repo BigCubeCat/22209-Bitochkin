@@ -1,4 +1,4 @@
-#include "rule.h"
+#include "Rule.h"
 #include "ui_rule.h"
 
 #include <QPushButton>
@@ -7,29 +7,29 @@
 
 #include <iostream>
 
-rule::rule(QWidget *parent) :
-        QWidget(parent), ui(new Ui::rule) {
+Rule::Rule(QWidget *parent) :
+        QWidget(parent), ui(new Ui::Rule) {
     ui->setupUi(this);
-    QObject::connect(ui->textEdit, &QTextEdit::textChanged, this, &rule::setB);
-    QObject::connect(ui->textEdit_2, &QTextEdit::textChanged, this, &rule::setS);
-    QObject::connect(ui->applyButton, &QPushButton::clicked, this, &rule::applySlot);
+    QObject::connect(ui->textEdit, &QTextEdit::textChanged, this, &Rule::setB);
+    QObject::connect(ui->textEdit_2, &QTextEdit::textChanged, this, &Rule::setS);
+    QObject::connect(ui->applyButton, &QPushButton::clicked, this, &Rule::applySlot);
 }
 
-rule::~rule() {
+Rule::~Rule() {
     delete ui;
 }
 
-void rule::setB() {
+void Rule::setB() {
     auto txt = ui->textEdit->toPlainText();
     bRuleString = txt.toStdString();
 }
 
-void rule::setS() {
+void Rule::setS() {
     auto txt = ui->textEdit_2->toPlainText();
     sRuleString = txt.toStdString();
 }
 
-void rule::applySlot() {
+void Rule::applySlot() {
     std::cout << bRuleString << " " << sRuleString << "\n";
     auto rules = "B" + bRuleString + "/S" + sRuleString;
     ui->errorMessage->setText("");
@@ -37,12 +37,12 @@ void rule::applySlot() {
     emit emitRules(rules);
 }
 
-void rule::invalidRules() {
+void Rule::invalidRules() {
     ui->errorMessage->setText("Invalid rules");
     this->update();
 }
 
-void rule::parseTRules(const TRules & newRules) {
+void Rule::parseTRules(const TRules & newRules) {
     std::string bText = "";
     std::string sText = "";
     for (size_t i = 0; i < newRules.birthRule.size(); ++i) {

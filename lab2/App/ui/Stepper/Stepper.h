@@ -5,19 +5,19 @@
 
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class stepper; }
+namespace Ui { class Stepper; }
 QT_END_NAMESPACE
 
-class stepper : public QWidget {
+class Stepper : public QWidget {
 Q_OBJECT
 
 public:
-    explicit stepper(QWidget *parent = nullptr);
+    explicit Stepper(QWidget *parent = nullptr);
 
-    ~stepper() override;
+    ~Stepper() override;
 
 private:
-    Ui::stepper *ui;
+    Ui::Stepper *ui;
 private slots:
 
     void stepSlot();

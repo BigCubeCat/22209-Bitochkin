@@ -5,16 +5,16 @@
 
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class conf; }
+namespace Ui { class Conf; }
 QT_END_NAMESPACE
 
-class conf : public QWidget {
+class Conf : public QWidget {
 Q_OBJECT
 
 public:
-    explicit conf(QWidget *parent = nullptr);
+    explicit Conf(QWidget *parent = nullptr);
 
-    ~conf() override;
+    ~Conf() override;
 
 public slots:
 
@@ -39,7 +39,7 @@ public slots:
     void onGapSizeChange(int vaue);
 
 private:
-    Ui::conf *ui;
+    Ui::Conf *ui;
 };
 
 

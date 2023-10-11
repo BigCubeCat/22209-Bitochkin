@@ -14,8 +14,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         App/main.cpp
-        App/ui/mainwindow/mainwindow.cpp
-        App/ui/mainwindow/mainwindow.h
+        App/ui/mainwindow/MainWindow.cpp
+        App/ui/mainwindow/MainWindow.h
         App/ui/mainwindow/mainwindow.ui
 
         App/ui/Panel/Panel.cpp
@@ -25,13 +25,13 @@ set(PROJECT_SOURCES
         App/ui/Canvas/Canvas.cpp
         App/ui/Canvas/Canvas.h
 
-        App/ui/stepper/stepper.cpp
-        App/ui/stepper/stepper.h
-        App/ui/stepper/stepper.ui
+        App/ui/Stepper/Stepper.cpp
+        App/ui/Stepper/Stepper.h
+        App/ui/Stepper/stepper.ui
 
-        App/ui/rule/rule.cpp
-        App/ui/rule/rule.h
-        App/ui/rule/rule.ui
+        App/ui/Rule/Rule.cpp
+        App/ui/Rule/Rule.h
+        App/ui/Rule/rule.ui
 
         App/ui/NeighborhoodSelect/NeighborhoodSelect.cpp
         App/ui/NeighborhoodSelect/NeighborhoodSelect.h
@@ -49,9 +49,9 @@ set(PROJECT_SOURCES
         App/StateStorage/StateStorage.cpp
         App/StateStorage/StateStorage.h
 
-        App/ui/settings/conf.h
-        App/ui/settings/conf.cpp
-        App/ui/settings/conf.ui
+        App/ui/Conf/Conf.h
+        App/ui/Conf/Conf.cpp
+        App/ui/Conf/conf.ui
 
         App/FileWorker/FileWorker.cpp
         App/FileWorker/FileWorker.h

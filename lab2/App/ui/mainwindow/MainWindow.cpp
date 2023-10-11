@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "MainWindow.h"
 #include "ui_mainwindow.h"
 
 #include <QFileDialog>
@@ -7,8 +7,8 @@
 #include <QString>
 
 
-mainwindow::mainwindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::mainwindow) {
+MainWindow::MainWindow(QWidget *parent) :
+        QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     store = new StateStorage();
     leftPanel = new Panel(this, store);
@@ -17,13 +17,13 @@ mainwindow::mainwindow(QWidget *parent) :
     ui->scrollArea->setWidget(canvas);
     fw = new FileWorker(store);
 
-    connect(ui->actionOpen, &QAction::triggered, this, &mainwindow::openFile);
+    connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::openFile);
     ui->actionOpen->setShortcut(QKeySequence(tr("Ctrl+o")));
 
-    connect(ui->actionSave, &QAction::triggered, this, &mainwindow::saveFile);
+    connect(ui->actionSave, &QAction::triggered, this, &MainWindow::saveFile);
     ui->actionSave->setShortcut(QKeySequence(tr("Ctrl+s")));
 
-    connect(ui->actionSave_As, &QAction::triggered, this, &mainwindow::saveAsFile);
+    connect(ui->actionSave_As, &QAction::triggered, this, &MainWindow::saveAsFile);
     ui->actionSave_As->setShortcut(QKeySequence(tr("Ctrl+Alt+s")));
 
     QObject::connect(store, &StateStorage::redraw, canvas, &Canvas::redraw);
@@ -34,28 +34,28 @@ mainwindow::mainwindow(QWidget *parent) :
 
     QObject::connect(canvas, &Canvas::toggleCell, store, &StateStorage::toggleLife);
 
-    QObject::connect(fw, &FileWorker::setWindowTitle, this, &mainwindow::setTitle);
+    QObject::connect(fw, &FileWorker::setWindowTitle, this, &MainWindow::setTitle);
 }
 
-mainwindow::~mainwindow() {
+MainWindow::~MainWindow() {
     delete leftPanel;
     delete canvas;
     delete ui;
     delete store;
 }
 
-void mainwindow::openFile() {
+void MainWindow::openFile() {
     auto fileName = QFileDialog::getOpenFileName(this,
                                             tr("Open Life 1.06 file"), "", tr("Life Files (*.life)"));
     fw->setFileName(fileName);
     readLife();
 }
 
-void mainwindow::saveFile() {
+void MainWindow::saveFile() {
     saveLife();
 }
 
-void mainwindow::saveAsFile() {
+void MainWindow::saveAsFile() {
     auto fileName = QFileDialog::getSaveFileName(
             this, tr("Save File"),
             "",
@@ -65,26 +65,26 @@ void mainwindow::saveAsFile() {
     saveFile();
 }
 
-void mainwindow::saveLife() {
+void MainWindow::saveLife() {
     fw->saveFile();
 }
 
-void mainwindow::readLife() {
+void MainWindow::readLife() {
     auto [text, status] = fw->readFile();
     std::cout << text.toStdString() << " " << status << "\n";
     canvas->redraw(store->getArena(), store->getWidth(), store->getHeight());
 }
 
-void mainwindow::setCellSize(int size) {
+void MainWindow::setCellSize(int size) {
     if (canvas)
         canvas->setCellSize(size);
 }
 
-void mainwindow::setGapSize(int size) {
+void MainWindow::setGapSize(int size) {
     if (canvas)
         canvas->setCellSize(size);
 }
 
-void mainwindow::setTitle(const QString &title) {
+void MainWindow::setTitle(const QString &title) {
     this->setWindowTitle(title);
 }

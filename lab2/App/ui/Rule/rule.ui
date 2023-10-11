@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>rule</class>
- <widget class="QWidget" name="rule">
+ <class>Rule</class>
+ <widget class="QWidget" name="Rule">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>rule</string>
+   <string>Rule</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -56,7 +56,7 @@
          <item>
           <widget class="QLabel" name="label">
            <property name="text">
-            <string>Birth-rule:</string>
+            <string>Birth-Rule:</string>
            </property>
           </widget>
          </item>
@@ -84,7 +84,7 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>Save-rule:</string>
+            <string>Save-Rule:</string>
            </property>
           </widget>
          </item>

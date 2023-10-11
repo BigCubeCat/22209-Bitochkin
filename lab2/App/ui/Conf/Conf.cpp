@@ -1,34 +1,34 @@
-#include "conf.h"
+#include "Conf.h"
 #include "ui_conf.h"
 
 #include <QColorDialog>
 #include <QString>
 
-conf::conf(QWidget *parent) :
-        QWidget(parent), ui(new Ui::conf) {
+Conf::Conf(QWidget *parent) :
+        QWidget(parent), ui(new Ui::Conf) {
     ui->setupUi(this);
 
-    QObject::connect(ui->cellSizeSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &conf::onCellSizeChange);
-    QObject::connect(ui->gapSizeSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &conf::onGapSizeChange);
+    QObject::connect(ui->cellSizeSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &Conf::onCellSizeChange);
+    QObject::connect(ui->gapSizeSpin, QOverload<int>::of(&QSpinBox::valueChanged), this, &Conf::onGapSizeChange);
 
-    QObject::connect(ui->aliveButton, &QPushButton::clicked, this, &conf::aliveColor);
-    QObject::connect(ui->diedButton, &QPushButton::clicked, this, &conf::emptyColor);
-    QObject::connect(ui->borderButton, &QPushButton::clicked, this, &conf::borderColor);
+    QObject::connect(ui->aliveButton, &QPushButton::clicked, this, &Conf::aliveColor);
+    QObject::connect(ui->diedButton, &QPushButton::clicked, this, &Conf::emptyColor);
+    QObject::connect(ui->borderButton, &QPushButton::clicked, this, &Conf::borderColor);
 }
 
-conf::~conf() {
+Conf::~Conf() {
     delete ui;
 }
 
-void conf::onCellSizeChange(int value) {
+void Conf::onCellSizeChange(int value) {
     emit setCellSize(value);
 }
 
-void conf::onGapSizeChange(int value) {
+void Conf::onGapSizeChange(int value) {
     emit setGapSize(value);
 }
 
-void conf::aliveColor() {
+void Conf::aliveColor() {
     QColor color = QColorDialog::getColor();
     if (color.isValid()) {
         QString qss = QString("background-color: %1").arg(color.name());
@@ -38,7 +38,7 @@ void conf::aliveColor() {
 }
 
 
-void conf::emptyColor() {
+void Conf::emptyColor() {
     QColor color = QColorDialog::getColor();
     if (color.isValid()) {
         QString qss = QString("background-color: %1").arg(color.name());
@@ -47,7 +47,7 @@ void conf::emptyColor() {
     }
 }
 
-void conf::borderColor() {
+void Conf::borderColor() {
     QColor color = QColorDialog::getColor();
     if (color.isValid()) {
         QString qss = QString("background-color: %1").arg(color.name());

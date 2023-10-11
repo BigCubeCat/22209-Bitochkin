@@ -5,19 +5,19 @@
 #include "../../StateStorage/StateStorage.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class rule; }
+namespace Ui { class Rule; }
 QT_END_NAMESPACE
 
-class rule : public QWidget {
+class Rule : public QWidget {
 Q_OBJECT
 
 public:
-    explicit rule(QWidget *parent = nullptr);
+    explicit Rule(QWidget *parent = nullptr);
 
-    ~rule() override;
+    ~Rule() override;
 
 private:
-    Ui::rule *ui;
+    Ui::Rule *ui;
 
     std::string bRuleString = "";
     std::string sRuleString = "";
