@@ -4,9 +4,9 @@
 #include <QMainWindow>
 
 #include "../../FileWorker/FileWorker.h"
-#include "../../Life/Life.h"
+#include "../../Kernel/Life/Life.h"
 #include "../../StateStorage/StateStorage.h"
-#include "../../types/TRules.h"
+#include "../../Kernel/types/TRules.h"
 #include "../Canvas/Canvas.h"
 #include "../Panel/Panel.h"
 

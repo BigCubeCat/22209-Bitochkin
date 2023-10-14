@@ -1,11 +1,10 @@
 #ifndef UNTITLED_LIFE_H
 #define UNTITLED_LIFE_H
 
-#include <QString>
 #include <map>
 
-#include "../types/TNeighborhood.h"
-#include "../types/TRules.h"
+#include "../../Kernel/types/TNeighborhood.h"
+#include "../../Kernel/types/TRules.h"
 
 class Life {
    private:
@@ -42,9 +41,9 @@ class Life {
 
     char newValue(size_t row, size_t col);
 
-    QString getRules() const;
+    std::string getRules() const;
 
-    QString getNeighborhood() const;
+    std::string getNeighborhood() const;
 
     char operator[](int index);
 };

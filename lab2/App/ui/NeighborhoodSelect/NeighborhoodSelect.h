@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "../../types/TNeighborhood.h"
+#include "../../Kernel/types/TNeighborhood.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

@@ -1,4 +1,3 @@
 cmake-build-debug
-.idea
+App/.idea
 build/
-googletests/

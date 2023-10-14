@@ -68,15 +68,15 @@ size_t Life::getHeight() const {
     return height;
 }
 
-QString Life::getNeighborhood() const {
-    QString result =
-        QString::fromStdString(neighborhood.title == MOORE ? "M " : "V ");
-    result += QString::number(neighborhood.degree);
+std::string Life::getNeighborhood() const {
+    std::string result =
+        neighborhood.title == MOORE ? "M " : "V ";
+    result += std::to_string(neighborhood.degree);
     return result;
 }
 
-QString Life::getRules() const {
-    return QString::fromStdString(rules.string);
+std::string Life::getRules() const {
+    return rules.string;
 }
 
 char Life::operator[](int index) {

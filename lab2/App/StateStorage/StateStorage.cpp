@@ -123,14 +123,14 @@ void StateStorage::setColor(const QColor &color, int index) {
 
 QString StateStorage::getRules() {
     if (life) {
-        return life->getRules();
+        return QString::fromStdString(life->getRules());
     }
     return {""};
 }
 
 QString StateStorage::getNeighborhood() {
     if (life) {
-        return life->getNeighborhood();
+        return QString::fromStdString(life->getNeighborhood());
     }
     return {""};
 }

@@ -4,8 +4,8 @@
 #include <QWidget>
 
 #include "../../StateStorage/StateStorage.h"
-#include "../../types/TNeighborhood.h"
-#include "../../types/TRules.h"
+#include "../../Kernel/types/TNeighborhood.h"
+#include "../../Kernel/types/TRules.h"
 #include "../Conf/Conf.h"
 #include "../NeighborhoodSelect/NeighborhoodSelect.h"
 #include "../Rule/Rule.h"

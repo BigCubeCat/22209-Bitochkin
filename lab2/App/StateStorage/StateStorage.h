@@ -5,7 +5,7 @@
 #include <QTimer>
 #include <string>
 
-#include "../Life/Life.h"
+#include "../Kernel//Life/Life.h"
 
 class StateStorage : public QObject {
     Q_OBJECT
