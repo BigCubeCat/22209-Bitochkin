@@ -21,9 +21,9 @@ private:
     int gapSize = 1;
     int step = 1;
 
-    QColor borderColor;
-    QColor emptyColor;
-    QColor aliveColor;
+    QColor borderColor = QColor(100, 100, 100);
+    QColor emptyColor = QColor(255, 255, 255);
+    QColor aliveColor = QColor(200, 0, 0);
 
 public slots:
 

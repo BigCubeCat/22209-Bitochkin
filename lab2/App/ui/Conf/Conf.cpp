@@ -14,6 +14,10 @@ Conf::Conf(QWidget *parent) :
     QObject::connect(ui->aliveButton, &QPushButton::clicked, this, &Conf::aliveColor);
     QObject::connect(ui->diedButton, &QPushButton::clicked, this, &Conf::emptyColor);
     QObject::connect(ui->borderButton, &QPushButton::clicked, this, &Conf::borderColor);
+
+    ui->aliveButton->setStyleSheet(QString("background-color: %1").arg(currentAliveColor.name()));
+    ui->diedButton->setStyleSheet(QString("background-color: %1").arg(currentEmptyColor.name()));
+    ui->borderButton->setStyleSheet(QString("background-color: %1").arg(currentBorderColor.name()));
 }
 
 Conf::~Conf() {
@@ -29,29 +33,29 @@ void Conf::onGapSizeChange(int value) {
 }
 
 void Conf::aliveColor() {
-    QColor color = QColorDialog::getColor();
-    if (color.isValid()) {
-        QString qss = QString("background-color: %1").arg(color.name());
+    currentAliveColor = QColorDialog::getColor();
+    if (currentAliveColor.isValid()) {
+        QString qss = QString("background-color: %1").arg(currentAliveColor.name());
         ui->aliveButton->setStyleSheet(qss);
-        emit changeColor(color, 0);
+        emit changeColor(currentAliveColor, 0);
     }
 }
 
 
 void Conf::emptyColor() {
-    QColor color = QColorDialog::getColor();
-    if (color.isValid()) {
-        QString qss = QString("background-color: %1").arg(color.name());
+    currentEmptyColor = QColorDialog::getColor();
+    if (currentEmptyColor.isValid()) {
+        QString qss = QString("background-color: %1").arg(currentEmptyColor.name());
         ui->diedButton->setStyleSheet(qss);
-        emit changeColor(color, 1);
+        emit changeColor(currentEmptyColor, 1);
     }
 }
 
 void Conf::borderColor() {
-    QColor color = QColorDialog::getColor();
-    if (color.isValid()) {
-        QString qss = QString("background-color: %1").arg(color.name());
+    currentBorderColor = QColorDialog::getColor();
+    if (currentBorderColor.isValid()) {
+        QString qss = QString("background-color: %1").arg(currentBorderColor.name());
         ui->borderButton->setStyleSheet(qss);
-        emit changeColor(color, 2);
+        emit changeColor(currentBorderColor, 2);
     }
 }

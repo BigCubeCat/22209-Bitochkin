@@ -40,6 +40,10 @@ public slots:
 
 private:
     Ui::Conf *ui;
+
+    QColor currentAliveColor = QColor(200, 0, 0);
+    QColor currentEmptyColor = QColor(255, 255, 255);
+    QColor currentBorderColor = QColor(100, 100, 100);
 };
 
 

@@ -9,7 +9,7 @@ StateStorage::StateStorage() {
     QObject::connect(gameTimer, &QTimer::timeout, this, &StateStorage::tickGame);
     QObject::connect(canvasTimer, &QTimer::timeout, this, &StateStorage::tickCanvas);
 
-    gameTimer->setInterval(300);
+    gameTimer->setInterval(100);
     canvasTimer->setInterval(1);
 
     gameTimer->start();
@@ -80,6 +80,7 @@ void StateStorage::tickGame() {
     if (isRunning) {
         step();
         needRedraw = true;
+        isRunning = true;
     }
 }
 
@@ -94,6 +95,7 @@ void StateStorage::step() {
     if (life) {
         life->nextGen();
         needRedraw = true;
+        isRunning = false;
     }
 }
 
