@@ -32,7 +32,6 @@ private:
     size_t arenaWidth{};
     size_t arenaHeight{};
 
-    bool needRedraw = false;
     bool isRunning = false;
 
     QTimer *gameTimer;

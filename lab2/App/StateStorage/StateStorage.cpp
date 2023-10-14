@@ -10,12 +10,12 @@ StateStorage::StateStorage() {
     QObject::connect(canvasTimer, &QTimer::timeout, this, &StateStorage::tickCanvas);
 
     gameTimer->setInterval(100);
-    canvasTimer->setInterval(1);
+    canvasTimer->setInterval(80);
 
     gameTimer->start();
     canvasTimer->start();
 
-    InitLife(256, 256);
+    InitLife(128, 128);
 }
 
 StateStorage::~StateStorage() {
@@ -45,7 +45,6 @@ void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
 void StateStorage::toggleLife(int row, int col) {
     if (life) {
         life->toggleCell(row, col);
-        needRedraw = true;
     }
 }
 
@@ -82,22 +81,19 @@ size_t StateStorage::getHeight() const {
 void StateStorage::tickGame() {
     if (isRunning) {
         step();
-        needRedraw = true;
         isRunning = true;
     }
 }
 
 void StateStorage::tickCanvas() {
-    if (needRedraw && life) {
+    if (life) {
         emit redraw(life->getArena(), life->getWidth(), life->getHeight());
-        needRedraw = false;
     }
 }
 
 void StateStorage::step() {
     if (life) {
         life->nextGen();
-        needRedraw = true;
         isRunning = false;
     }
 }
@@ -122,7 +118,7 @@ void StateStorage::setGapSize(int size) {
     emit gapSizeSignal(size);
 }
 
-void StateStorage::setColor(const QColor & color, int index) {
+void StateStorage::setColor(const QColor &color, int index) {
     emit setColorSignal(color, index);
 }
 
