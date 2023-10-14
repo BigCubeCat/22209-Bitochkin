@@ -14,6 +14,8 @@ StateStorage::StateStorage() {
 
     gameTimer->start();
     canvasTimer->start();
+
+    InitLife(256, 256);
 }
 
 StateStorage::~StateStorage() {
@@ -50,6 +52,7 @@ void StateStorage::toggleLife(int row, int col) {
 void StateStorage::InitLife(int countRows, int countCols) {
     arenaHeight = countRows;
     arenaWidth = countCols;
+    delete life;
     life = new Life(arenaWidth, arenaHeight);
 }
 
