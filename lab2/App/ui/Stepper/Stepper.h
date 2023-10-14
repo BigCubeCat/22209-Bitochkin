@@ -3,22 +3,23 @@
 
 #include <QWidget>
 
-
 QT_BEGIN_NAMESPACE
-namespace Ui { class Stepper; }
+namespace Ui {
+class Stepper;
+}
 QT_END_NAMESPACE
 
 class Stepper : public QWidget {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit Stepper(QWidget *parent = nullptr);
 
     ~Stepper() override;
 
-private:
+   private:
     Ui::Stepper *ui;
-private slots:
+   private slots:
 
     void stepSlot();
 
@@ -28,7 +29,7 @@ private slots:
 
     void setSpeedSlot(int value);
 
-signals:
+   signals:
 
     void step();
 
@@ -38,6 +39,5 @@ signals:
 
     void setSpeed(int value);
 };
-
 
 #endif

@@ -1,9 +1,9 @@
 #include "Panel.h"
+
 #include "ui_panel.h"
 
-
-Panel::Panel(QWidget *parent, StateStorage *store) :
-        QWidget(parent), ui(new Ui::Panel), store(store) {
+Panel::Panel(QWidget *parent, StateStorage *store)
+    : QWidget(parent), ui(new Ui::Panel), store(store) {
     ui->setupUi(this);
 
     gameStepper = new Stepper(this);
@@ -18,22 +18,31 @@ Panel::Panel(QWidget *parent, StateStorage *store) :
 
     this->setMaximumWidth(301);
 
-    QObject::connect(store, &StateStorage::updateNeighborhood, neighborhoodSelect, &NeighborhoodSelect::setN);
-    QObject::connect(neighborhoodSelect, &NeighborhoodSelect::applyN, store, &StateStorage::setNeighborhood);
+    QObject::connect(store, &StateStorage::updateNeighborhood,
+                     neighborhoodSelect, &NeighborhoodSelect::setN);
+    QObject::connect(neighborhoodSelect, &NeighborhoodSelect::applyN, store,
+                     &StateStorage::setNeighborhood);
 
-    QObject::connect(store, &StateStorage::invalidRule, gameRules, &Rule::invalidRules);
-    QObject::connect(store, &StateStorage::updateRules, gameRules, &Rule::parseTRules);
-    QObject::connect(gameRules, &Rule::emitRules, store, &StateStorage::setRules);
+    QObject::connect(store, &StateStorage::invalidRule, gameRules,
+                     &Rule::invalidRules);
+    QObject::connect(store, &StateStorage::updateRules, gameRules,
+                     &Rule::parseTRules);
+    QObject::connect(gameRules, &Rule::emitRules, store,
+                     &StateStorage::setRules);
 
     QObject::connect(gameStepper, &Stepper::step, store, &StateStorage::step);
     QObject::connect(gameStepper, &Stepper::stop, store, &StateStorage::stop);
     QObject::connect(gameStepper, &Stepper::run, store, &StateStorage::run);
-    QObject::connect(gameStepper, &Stepper::setSpeed, store, &StateStorage::setSpeed);
+    QObject::connect(gameStepper, &Stepper::setSpeed, store,
+                     &StateStorage::setSpeed);
 
-    QObject::connect(canvasConfig, &Conf::setCellSize, store, &StateStorage::setCellSize);
-    QObject::connect(canvasConfig, &Conf::setGapSize, store, &StateStorage::setGapSize);
+    QObject::connect(canvasConfig, &Conf::setCellSize, store,
+                     &StateStorage::setCellSize);
+    QObject::connect(canvasConfig, &Conf::setGapSize, store,
+                     &StateStorage::setGapSize);
 
-    QObject::connect(canvasConfig, &Conf::changeColor, store, &StateStorage::setColor);
+    QObject::connect(canvasConfig, &Conf::changeColor, store,
+                     &StateStorage::setColor);
 }
 
 Panel::~Panel() {

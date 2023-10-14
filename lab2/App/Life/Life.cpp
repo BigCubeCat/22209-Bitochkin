@@ -3,10 +3,9 @@
 #include <stdlib.h>
 
 Life::Life(size_t w, size_t h)
-        : width(w), height(h),
-          neighborhood(TNeighborhood(MOORE)) {
-    oldArena = (char *) calloc(height * width, sizeof(char));
-    newArena = (char *) calloc(height * width, sizeof(char));
+    : width(w), height(h), neighborhood(TNeighborhood(MOORE)) {
+    oldArena = (char *)calloc(height * width, sizeof(char));
+    newArena = (char *)calloc(height * width, sizeof(char));
     setRules(TRules("B3/S2,3"));
 }
 
@@ -29,7 +28,7 @@ char Life::newValue(size_t row, size_t col) {
 
 size_t Life::calcNeighbors(size_t row, size_t col) {
     size_t result = 0;
-    for (const auto &coords: neighborhood.points) {
+    for (const auto &coords : neighborhood.points) {
         size_t rowIndex = (height + row + coords.first) % height;
         size_t colIndex = (width + col + coords.second) % width;
         result += oldArena[rowIndex * width + colIndex];
@@ -45,10 +44,10 @@ void Life::setRules(const TRules &r) {
     rules = r;
     birthMap.clear();
     saveMap.clear();
-    for (const auto &value: rules.birthRule) {
+    for (const auto &value : rules.birthRule) {
         birthMap[value] = true;
     }
-    for (const auto &value: rules.saveRule) {
+    for (const auto &value : rules.saveRule) {
         saveMap[value] = true;
     }
 }
@@ -70,7 +69,8 @@ size_t Life::getHeight() const {
 }
 
 QString Life::getNeighborhood() const {
-    QString result = QString::fromStdString(neighborhood.title == MOORE ? "M " : "V ");
+    QString result =
+        QString::fromStdString(neighborhood.title == MOORE ? "M " : "V ");
     result += QString::number(neighborhood.degree);
     return result;
 }
@@ -82,6 +82,3 @@ QString Life::getRules() const {
 char Life::operator[](int index) {
     return oldArena[index];
 }
-
-
-

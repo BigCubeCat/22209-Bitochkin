@@ -1,15 +1,14 @@
 #ifndef UNTITLED_LIFE_H
 #define UNTITLED_LIFE_H
 
-#include <map>
 #include <QString>
+#include <map>
 
 #include "../types/TNeighborhood.h"
 #include "../types/TRules.h"
 
-
 class Life {
-private:
+   private:
     char *newArena{};
     char *oldArena{};
 
@@ -21,8 +20,8 @@ private:
 
     TNeighborhood neighborhood;
     TRules rules;
-public:
 
+   public:
     explicit Life(size_t w = 64, size_t h = 64);
 
     void toggleCell(int row, int col);
@@ -49,6 +48,5 @@ public:
 
     char operator[](int index);
 };
-
 
 #endif

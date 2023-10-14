@@ -1,8 +1,8 @@
 #ifndef TNEIGHBORHOOD_H
 #define TNEIGHBORHOOD_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 /*
  * ENeighborhood
@@ -11,7 +11,8 @@
  * Von-Neighman - Manhattan distance <= degree
  */
 enum ENeighborhood {
-    MOORE, VON // MOORE - Соседство Мура, VON - Фон-Неймана
+    MOORE,
+    VON  // MOORE - Соседство Мура, VON - Фон-Неймана
 };
 
 struct TNeighborhood {
@@ -30,6 +31,5 @@ struct TNeighborhood {
 
     explicit TNeighborhood(ENeighborhood neigh = MOORE, int deg = 1);
 };
-
 
 #endif

@@ -1,15 +1,15 @@
 #ifndef STATESTORAGE_H
 #define STATESTORAGE_H
 
-#include <QTimer>
 #include <QObject>
+#include <QTimer>
 #include <string>
 
 #include "../Life/Life.h"
 
 class StateStorage : public QObject {
-Q_OBJECT
-public:
+    Q_OBJECT
+   public:
     StateStorage();
 
     ~StateStorage() override;
@@ -26,7 +26,7 @@ public:
 
     bool aliveAt(int index);
 
-private:
+   private:
     Life *life{};
 
     size_t arenaWidth{};
@@ -37,7 +37,7 @@ private:
     QTimer *gameTimer;
     QTimer *canvasTimer;
 
-public slots:
+   public slots:
 
     void setRules(const std::string &newRules);
 
@@ -65,7 +65,7 @@ public slots:
 
     void setColor(const QColor &color, int index);
 
-signals:
+   signals:
 
     void invalidRule();
 
@@ -81,6 +81,5 @@ signals:
 
     void setColorSignal(const QColor &color, int index);
 };
-
 
 #endif

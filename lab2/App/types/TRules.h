@@ -1,8 +1,8 @@
 #ifndef TRULES_H
 #define TRULES_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 struct TRules {
     /*

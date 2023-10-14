@@ -1,18 +1,18 @@
 #ifndef UNTITLED_CANVAS_H
 #define UNTITLED_CANVAS_H
 
-#include <QWidget>
-#include <QPainter>
 #include <QPaintEvent>
+#include <QPainter>
+#include <QWidget>
 
 class Canvas : public QWidget {
-Q_OBJECT
-public:
+    Q_OBJECT
+   public:
     explicit Canvas(QWidget *parent = 0);
 
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-private:
+   private:
     char *data;
     size_t width;
     size_t height;
@@ -25,7 +25,7 @@ private:
     QColor emptyColor = QColor(255, 255, 255);
     QColor aliveColor = QColor(200, 0, 0);
 
-public slots:
+   public slots:
 
     void setCellSize(int size);
 
@@ -33,15 +33,14 @@ public slots:
 
     void redraw(char *data, size_t width, size_t height);
 
-    void setColor(const QColor& color, int index);
+    void setColor(const QColor &color, int index);
 
-protected:
+   protected:
     void mousePressEvent(QMouseEvent *event) override;
 
-signals:
+   signals:
 
     void toggleCell(int row, int col);
 };
-
 
 #endif

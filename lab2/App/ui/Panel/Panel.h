@@ -3,28 +3,29 @@
 
 #include <QWidget>
 
-#include "../Stepper/Stepper.h"
-#include "../Rule/Rule.h"
-#include "../NeighborhoodSelect/NeighborhoodSelect.h"
-
-#include "../../types/TRules.h"
-#include "../../types/TNeighborhood.h"
 #include "../../StateStorage/StateStorage.h"
+#include "../../types/TNeighborhood.h"
+#include "../../types/TRules.h"
 #include "../Conf/Conf.h"
+#include "../NeighborhoodSelect/NeighborhoodSelect.h"
+#include "../Rule/Rule.h"
+#include "../Stepper/Stepper.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Panel; }
+namespace Ui {
+class Panel;
+}
 QT_END_NAMESPACE
 
 class Panel : public QWidget {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit Panel(QWidget *parent = nullptr, StateStorage *s = nullptr);
 
     ~Panel() override;
 
-private:
+   private:
     Ui::Panel *ui;
     Stepper *gameStepper;
     Rule *gameRules;
@@ -33,6 +34,5 @@ private:
 
     StateStorage *store;
 };
-
 
 #endif

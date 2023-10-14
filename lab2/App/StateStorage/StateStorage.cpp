@@ -6,8 +6,10 @@ StateStorage::StateStorage() {
     gameTimer = new QTimer(this);
     canvasTimer = new QTimer(this);
 
-    QObject::connect(gameTimer, &QTimer::timeout, this, &StateStorage::tickGame);
-    QObject::connect(canvasTimer, &QTimer::timeout, this, &StateStorage::tickCanvas);
+    QObject::connect(gameTimer, &QTimer::timeout, this,
+                     &StateStorage::tickGame);
+    QObject::connect(canvasTimer, &QTimer::timeout, this,
+                     &StateStorage::tickCanvas);
 
     gameTimer->setInterval(100);
     canvasTimer->setInterval(80);
@@ -37,8 +39,7 @@ void StateStorage::setRules(const std::string &newRules) {
 
 void StateStorage::setNeighborhood(ENeighborhood newNeigh, int degree) {
     auto n = TNeighborhood(newNeigh, degree);
-    if (life)
-        life->setNeighborhood(n);
+    if (life) life->setNeighborhood(n);
     emit updateNeighborhood(n);
 }
 
@@ -67,14 +68,12 @@ char *StateStorage::getArena() {
 }
 
 size_t StateStorage::getWidth() const {
-    if (life)
-        return life->getWidth();
+    if (life) return life->getWidth();
     return 0;
 }
 
 size_t StateStorage::getHeight() const {
-    if (life)
-        return life->getHeight();
+    if (life) return life->getHeight();
     return 0;
 }
 

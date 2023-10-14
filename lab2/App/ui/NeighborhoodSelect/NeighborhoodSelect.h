@@ -2,34 +2,35 @@
 #define NEIGHBORHOODSELECT_H
 
 #include <QWidget>
+
 #include "../../types/TNeighborhood.h"
 
-
 QT_BEGIN_NAMESPACE
-namespace Ui { class NeighborhoodSelect; }
+namespace Ui {
+class NeighborhoodSelect;
+}
 QT_END_NAMESPACE
 
 class NeighborhoodSelect : public QWidget {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit NeighborhoodSelect(QWidget *parent = nullptr);
 
     ~NeighborhoodSelect() override;
 
-private:
+   private:
     Ui::NeighborhoodSelect *ui;
 
-public slots:
+   public slots:
 
     void setN(const TNeighborhood &n);
 
     void applyClicked();
 
-signals:
+   signals:
 
     void applyN(const ENeighborhood title, int deg);
 };
-
 
 #endif

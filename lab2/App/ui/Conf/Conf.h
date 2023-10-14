@@ -3,20 +3,21 @@
 
 #include <QWidget>
 
-
 QT_BEGIN_NAMESPACE
-namespace Ui { class Conf; }
+namespace Ui {
+class Conf;
+}
 QT_END_NAMESPACE
 
 class Conf : public QWidget {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit Conf(QWidget *parent = nullptr);
 
     ~Conf() override;
 
-public slots:
+   public slots:
 
     void aliveColor();
 
@@ -24,7 +25,7 @@ public slots:
 
     void borderColor();
 
-signals:
+   signals:
 
     void setCellSize(int size);
 
@@ -32,19 +33,18 @@ signals:
 
     void changeColor(const QColor &color, int index);
 
-public slots:
+   public slots:
 
     void onCellSizeChange(int vaue);
 
     void onGapSizeChange(int vaue);
 
-private:
+   private:
     Ui::Conf *ui;
 
     QColor currentAliveColor = QColor(200, 0, 0);
     QColor currentEmptyColor = QColor(255, 255, 255);
     QColor currentBorderColor = QColor(100, 100, 100);
 };
-
 
 #endif

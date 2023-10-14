@@ -2,22 +2,24 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../Panel/Panel.h"
-#include "../../Life/Life.h"
-#include "../../types/TRules.h"
-#include "../../StateStorage/StateStorage.h"
-#include "../Canvas/Canvas.h"
-#include "../../FileWorker/FileWorker.h"
 
+#include "../../FileWorker/FileWorker.h"
+#include "../../Life/Life.h"
+#include "../../StateStorage/StateStorage.h"
+#include "../../types/TRules.h"
+#include "../Canvas/Canvas.h"
+#include "../Panel/Panel.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow() override;
@@ -26,7 +28,7 @@ public:
 
     void setGapSize(int size);
 
-private:
+   private:
     Ui::MainWindow *ui;
     StateStorage *store;
     Panel *leftPanel;
@@ -37,7 +39,7 @@ private:
 
     void readLife();
 
-public slots:
+   public slots:
 
     void openFile();
 
@@ -46,8 +48,6 @@ public slots:
     void saveAsFile();
 
     void setTitle(const QString &title);
-
 };
-
 
 #endif

@@ -1,18 +1,19 @@
 #include "Rule.h"
-#include "ui_rule.h"
 
+#include <QObject>
 #include <QPushButton>
 #include <QTextEdit>
-#include <QObject>
-
 #include <iostream>
 
-Rule::Rule(QWidget *parent) :
-        QWidget(parent), ui(new Ui::Rule) {
+#include "ui_rule.h"
+
+Rule::Rule(QWidget *parent) : QWidget(parent), ui(new Ui::Rule) {
     ui->setupUi(this);
     QObject::connect(ui->textEdit, &QTextEdit::textChanged, this, &Rule::setB);
-    QObject::connect(ui->textEdit_2, &QTextEdit::textChanged, this, &Rule::setS);
-    QObject::connect(ui->applyButton, &QPushButton::clicked, this, &Rule::applySlot);
+    QObject::connect(ui->textEdit_2, &QTextEdit::textChanged, this,
+                     &Rule::setS);
+    QObject::connect(ui->applyButton, &QPushButton::clicked, this,
+                     &Rule::applySlot);
 }
 
 Rule::~Rule() {
@@ -42,7 +43,7 @@ void Rule::invalidRules() {
     this->update();
 }
 
-void Rule::parseTRules(const TRules & newRules) {
+void Rule::parseTRules(const TRules &newRules) {
     std::string bText = "";
     std::string sText = "";
     for (size_t i = 0; i < newRules.birthRule.size(); ++i) {

@@ -20,7 +20,8 @@ void Canvas::paintEvent(QPaintEvent *event) {
                 } else {
                     brush = QBrush(emptyColor);
                 }
-                painter.fillRect(i * step + gapSize, j * step + gapSize, cellSize, cellSize, brush);
+                painter.fillRect(i * step + gapSize, j * step + gapSize,
+                                 cellSize, cellSize, brush);
             }
         }
     }
@@ -52,7 +53,7 @@ void Canvas::setGapSize(int size) {
     update();
 }
 
-void Canvas::setColor(const QColor& color, int index) {
+void Canvas::setColor(const QColor &color, int index) {
     if (index == 0) {
         aliveColor = color;
     } else if (index == 1) {
@@ -70,4 +71,3 @@ void Canvas::mousePressEvent(QMouseEvent *event) {
     emit toggleCell(x, y);
     update();
 }
-

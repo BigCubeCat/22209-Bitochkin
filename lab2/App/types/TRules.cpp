@@ -3,8 +3,7 @@
 #include <string>
 #include <utility>
 
-
-TRules::TRules(std::string source): string(std::move(source)) {
+TRules::TRules(std::string source) : string(std::move(source)) {
     std::string currentNumber;
     int newValue;
     bool isSave = false;
@@ -39,7 +38,8 @@ TRules::TRules(std::string source): string(std::move(source)) {
     }
 }
 
-TRules::TRules(const std::vector<size_t>& b, const std::vector<size_t>& s) : birthRule(b), saveRule(s) {
+TRules::TRules(const std::vector<size_t>& b, const std::vector<size_t>& s)
+    : birthRule(b), saveRule(s) {
     string = "B";
     for (size_t i = 0; i < birthRule.size(); ++i) {
         string += std::to_string(birthRule[i]);

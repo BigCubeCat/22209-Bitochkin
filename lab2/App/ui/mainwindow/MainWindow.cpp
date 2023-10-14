@@ -1,14 +1,14 @@
 #include "MainWindow.h"
-#include "ui_mainwindow.h"
 
 #include <QFileDialog>
-#include <iostream>
-#include <QTextStream>
 #include <QString>
+#include <QTextStream>
+#include <iostream>
 
+#include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent), ui(new Ui::MainWindow) {
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     store = new StateStorage();
     leftPanel = new Panel(this, store);
@@ -23,18 +23,24 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionSave, &QAction::triggered, this, &MainWindow::saveFile);
     ui->actionSave->setShortcut(QKeySequence(tr("Ctrl+s")));
 
-    connect(ui->actionSave_As, &QAction::triggered, this, &MainWindow::saveAsFile);
+    connect(ui->actionSave_As, &QAction::triggered, this,
+            &MainWindow::saveAsFile);
     ui->actionSave_As->setShortcut(QKeySequence(tr("Ctrl+Alt+s")));
 
     QObject::connect(store, &StateStorage::redraw, canvas, &Canvas::redraw);
-    QObject::connect(store, &StateStorage::gapSizeSignal, canvas, &Canvas::setGapSize);
-    QObject::connect(store, &StateStorage::cellSizeSignal, canvas, &Canvas::setCellSize);
+    QObject::connect(store, &StateStorage::gapSizeSignal, canvas,
+                     &Canvas::setGapSize);
+    QObject::connect(store, &StateStorage::cellSizeSignal, canvas,
+                     &Canvas::setCellSize);
 
-    QObject::connect(store, &StateStorage::setColorSignal, canvas, &Canvas::setColor);
+    QObject::connect(store, &StateStorage::setColorSignal, canvas,
+                     &Canvas::setColor);
 
-    QObject::connect(canvas, &Canvas::toggleCell, store, &StateStorage::toggleLife);
+    QObject::connect(canvas, &Canvas::toggleCell, store,
+                     &StateStorage::toggleLife);
 
-    QObject::connect(fw, &FileWorker::setWindowTitle, this, &MainWindow::setTitle);
+    QObject::connect(fw, &FileWorker::setWindowTitle, this,
+                     &MainWindow::setTitle);
 }
 
 MainWindow::~MainWindow() {
@@ -45,8 +51,8 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::openFile() {
-    auto fileName = QFileDialog::getOpenFileName(this,
-                                            tr("Open Life 1.06 file"), "", tr("Life Files (*.life)"));
+    auto fileName = QFileDialog::getOpenFileName(
+        this, tr("Open Life 1.06 file"), "", tr("Life Files (*.life)"));
     fw->setFileName(fileName);
     readLife();
 }
@@ -56,11 +62,8 @@ void MainWindow::saveFile() {
 }
 
 void MainWindow::saveAsFile() {
-    auto fileName = QFileDialog::getSaveFileName(
-            this, tr("Save File"),
-            "",
-            tr("Life (*.life)")
-    );
+    auto fileName = QFileDialog::getSaveFileName(this, tr("Save File"), "",
+                                                 tr("Life (*.life)"));
     fw->setFileName(fileName);
     saveFile();
 }
@@ -76,13 +79,11 @@ void MainWindow::readLife() {
 }
 
 void MainWindow::setCellSize(int size) {
-    if (canvas)
-        canvas->setCellSize(size);
+    if (canvas) canvas->setCellSize(size);
 }
 
 void MainWindow::setGapSize(int size) {
-    if (canvas)
-        canvas->setCellSize(size);
+    if (canvas) canvas->setCellSize(size);
 }
 
 void MainWindow::setTitle(const QString &title) {

@@ -2,27 +2,30 @@
 #define RULE_H
 
 #include <QWidget>
+
 #include "../../StateStorage/StateStorage.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Rule; }
+namespace Ui {
+class Rule;
+}
 QT_END_NAMESPACE
 
 class Rule : public QWidget {
-Q_OBJECT
+    Q_OBJECT
 
-public:
+   public:
     explicit Rule(QWidget *parent = nullptr);
 
     ~Rule() override;
 
-private:
+   private:
     Ui::Rule *ui;
 
     std::string bRuleString = "";
     std::string sRuleString = "";
 
-public slots:
+   public slots:
     void setB();
     void setS();
     void applySlot();
@@ -31,7 +34,7 @@ public slots:
 
     void invalidRules();
 
-signals:
+   signals:
     void emitRules(const std::string &);
 };
 

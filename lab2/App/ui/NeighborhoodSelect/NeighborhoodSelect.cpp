@@ -1,14 +1,15 @@
 #include "NeighborhoodSelect.h"
+
 #include "ui_neighborhoodselect.h"
 
-
-NeighborhoodSelect::NeighborhoodSelect(QWidget *parent) :
-        QWidget(parent), ui(new Ui::NeighborhoodSelect) {
+NeighborhoodSelect::NeighborhoodSelect(QWidget *parent)
+    : QWidget(parent), ui(new Ui::NeighborhoodSelect) {
     ui->setupUi(this);
     ui->comboBox->addItem(QString("Moore"));
     ui->comboBox->addItem(QString("von Neumann"));
 
-    QObject::connect(ui->applyButton, &QPushButton::clicked, this, &NeighborhoodSelect::applyClicked);
+    QObject::connect(ui->applyButton, &QPushButton::clicked, this,
+                     &NeighborhoodSelect::applyClicked);
 }
 
 NeighborhoodSelect::~NeighborhoodSelect() {
@@ -21,5 +22,6 @@ void NeighborhoodSelect::setN(const TNeighborhood &n) {
 }
 
 void NeighborhoodSelect::applyClicked() {
-    emit applyN((ui->comboBox->currentIndex() == 0) ? MOORE : VON, ui->spinBox->value());
+    emit applyN((ui->comboBox->currentIndex() == 0) ? MOORE : VON,
+                ui->spinBox->value());
 }

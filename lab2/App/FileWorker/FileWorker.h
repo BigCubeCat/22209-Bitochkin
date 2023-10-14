@@ -1,13 +1,13 @@
 #ifndef FILEWORKER_H
 #define FILEWORKER_H
 
-
 #include <QString>
+
 #include "../StateStorage/StateStorage.h"
 
-class FileWorker: public QObject {
-Q_OBJECT
-public:
+class FileWorker : public QObject {
+    Q_OBJECT
+   public:
     explicit FileWorker(StateStorage *store = nullptr);
 
     ~FileWorker();
@@ -18,13 +18,12 @@ public:
 
     void saveFile();
 
-private:
+   private:
     QString fileName;
     StateStorage *store;
-signals:
+   signals:
 
     void setWindowTitle(const QString &title);
 };
-
 
 #endif

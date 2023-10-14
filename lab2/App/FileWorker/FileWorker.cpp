@@ -1,6 +1,7 @@
+#include "FileWorker.h"
+
 #include <QFile>
 #include <QTextStream>
-#include "FileWorker.h"
 
 FileWorker::FileWorker(StateStorage *store) : store(store) {
     fileName = "~/a.life";
@@ -27,8 +28,7 @@ std::pair<QString, bool> FileWorker::readFile() {
     }
 
     QTextStream stream(&inputFile);
-    for (QString line = stream.readLine();
-         !line.isNull();
+    for (QString line = stream.readLine(); !line.isNull();
          line = stream.readLine()) {
         QStringList words = line.split(" ");
         if (line.at(0) == QChar('#')) {
@@ -58,7 +58,8 @@ void FileWorker::saveFile() {
     if (file.open(QIODevice::ReadWrite)) {
         QTextStream stream(&file);
         stream << "#T " << fileName << "\n";
-        stream << "#G " << store->getWidth() << " " << store->getHeight() << "\n";
+        stream << "#G " << store->getWidth() << " " << store->getHeight()
+               << "\n";
         stream << "#N " << store->getNeighborhood() << "\n";
         stream << "#R " << store->getRules() << "\n";
         int width = store->getWidth();
