@@ -1,7 +1,5 @@
 #include "Life.h"
 
-#include <stdlib.h>
-
 Life::Life(size_t w, size_t h)
     : width(w), height(h), neighborhood(TNeighborhood(MOORE)) {
     oldArena = (char *)calloc(height * width, sizeof(char));
