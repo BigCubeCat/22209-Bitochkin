@@ -5,8 +5,17 @@
 
 class Configurator {
 public:
-    explicit Configurator(std::string fileName);
+    explicit Configurator(const std::string &filename);
+
     ~Configurator();
+
+    void run();
+
+    bool hasErrors() const;
+
+private:
+    std::string fileName;
+    bool errorsOccurred = false;
 };
 
 #endif

@@ -7,7 +7,7 @@ TFile::TFile(const std::string &fileName) {
     std::string currentString;
     for (int i = 0; i < fileName.size(); ++i) {
         if (fileName[i] == '.') {
-            this->Title = currentString;
+            Title = currentString;
             currentString = "";
         } else {
             currentString += fileName[i];
@@ -16,8 +16,6 @@ TFile::TFile(const std::string &fileName) {
     std::transform(currentString.begin(), currentString.end(), currentString.begin(),
                    [](unsigned char c) { return std::tolower(c); });
 
-    this->Format = currentString;
-    if (this->Title != "" && this->Format != "") {
-        this->ErrorOccurred = true;
-    }
+    Format = currentString;
+    ErrorOccurred = (Title.empty() || Format.empty());
 }

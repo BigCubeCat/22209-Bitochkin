@@ -16,6 +16,12 @@ public:
 
     TFile getConfigFile() const;
 
+    std::string getConfigFileString() const;
+
+    bool hasErrors() const;
+
+    std::string getErrorMessage();
+
     ~ArgParser();
 
 private:
@@ -23,6 +29,7 @@ private:
     std::vector<TFile> inputFiles;
     TFile outputFile = TFile("");
 
+    std::string errorMessage;
     bool errorsOccurred = false;
 };
 
