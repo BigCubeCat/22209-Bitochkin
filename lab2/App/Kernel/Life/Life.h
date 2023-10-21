@@ -22,6 +22,7 @@ class Life {
 
    public:
     explicit Life(size_t w = 64, size_t h = 64);
+    ~Life();
 
     void toggleCell(int row, int col);
 

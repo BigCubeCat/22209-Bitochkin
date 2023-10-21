@@ -80,3 +80,7 @@ std::string Life::getRules() const {
 char Life::operator[](int index) {
     return oldArena[index];
 }
+Life::~Life() {
+    free(oldArena);
+    free(newArena);
+}
