@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "ArgParser/ArgParser.h"
-#include "Configurator/Configurator.h"
+#include "../../ArgParser/ArgParser.h"
+#include "../../Configurator/Configurator.h"
 
 namespace {
     void printHelp() {

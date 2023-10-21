@@ -1,14 +1,17 @@
 cmake_minimum_required(VERSION 3.27)
-project(SoundProcessor)
 
-set(SOURCE_LIB main.cpp)
+set(PROJECT_NAME SoundProcessor)
+set(SOURCE src/main.cpp)
+set(LIBRARY_DIR lib)
+set(LIBRARY WAV Configurator ArgParser)
 
-include_directories(Configurator)
-include_directories(ArgParser)
+project(${PROJECT_NAME} CXX)
 
-add_executable(SoundProcessor ${SOURCE_LIB})
+add_executable(${PROJECT_NAME} ${SOURCE})
 
-add_subdirectory(Configurator)
-add_subdirectory(ArgParser)
+foreach(LIBRARY ${LIBRARY})
+    add_subdirectory("${LIBRARY_DIR}/${LIBRARY}")
+    message(STATUS "Add subdirectory ${LIBRARY_DIR}/${LIBRARY}")
+endforeach(LIBRARY)
 
-target_link_libraries(SoundProcessor Configurator ArgParser)
+target_link_libraries(${PROJECT_NAME} ${LIBRARY})
