@@ -44,7 +44,7 @@ std::pair<QString, bool> FileWorker::readFile() {
                 store->InitLife(words[1].toInt(), words[2].toInt());
             }
         } else {
-            store->toggleLife(words[0].toInt(), words[1].toInt());
+            store->toggleLife(words[1].toInt(), words[0].toInt());
         }
     };
 
