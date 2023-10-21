@@ -2,10 +2,11 @@
 
 #include <fstream>
 #include <sstream>
+#include <utility>
 
 Configurator::~Configurator() = default;
 
-Configurator::Configurator(const std::string &filename) : fileName(filename) {
+Configurator::Configurator(std::string filename) : fileName(std::move(filename)) {
 
 }
 

@@ -2,6 +2,10 @@
 #define WAV_READER_H
 
 #include "wav.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <exception>
 
 namespace reader {
     class WrongRIFFChunkId : public std::invalid_argument {

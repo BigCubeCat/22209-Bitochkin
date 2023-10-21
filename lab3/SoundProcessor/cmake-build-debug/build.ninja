@@ -47,12 +47,12 @@ cmake_ninja_workdir = /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/l
 #############################################
 # Order-only phony target for SoundProcessor
 
-build cmake_object_order_depends_target_SoundProcessor: phony || cmake_object_order_depends_target_ArgParser cmake_object_order_depends_target_Configurator cmake_object_order_depends_target_WAV
+build cmake_object_order_depends_target_SoundProcessor: phony || cmake_object_order_depends_target_ArgParser cmake_object_order_depends_target_Configurator cmake_object_order_depends_target_Converter cmake_object_order_depends_target_WAV
 
 build CMakeFiles/SoundProcessor.dir/src/main.cpp.o: CXX_COMPILER__SoundProcessor_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/src/main.cpp || cmake_object_order_depends_target_SoundProcessor
   DEP_FILE = CMakeFiles/SoundProcessor.dir/src/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include
   OBJECT_DIR = CMakeFiles/SoundProcessor.dir
   OBJECT_FILE_DIR = CMakeFiles/SoundProcessor.dir/src
 
@@ -64,9 +64,9 @@ build CMakeFiles/SoundProcessor.dir/src/main.cpp.o: CXX_COMPILER__SoundProcessor
 #############################################
 # Link the executable SoundProcessor
 
-build SoundProcessor: CXX_EXECUTABLE_LINKER__SoundProcessor_Debug CMakeFiles/SoundProcessor.dir/src/main.cpp.o | lib/WAV/libWAV.a lib/Configurator/libConfigurator.a lib/ArgParser/libArgParser.a || lib/ArgParser/libArgParser.a lib/Configurator/libConfigurator.a lib/WAV/libWAV.a
+build SoundProcessor: CXX_EXECUTABLE_LINKER__SoundProcessor_Debug CMakeFiles/SoundProcessor.dir/src/main.cpp.o | lib/WAV/libWAV.a lib/Configurator/libConfigurator.a lib/ArgParser/libArgParser.a lib/Converter/libConverter.a lib/WAV/libWAV.a || lib/ArgParser/libArgParser.a lib/Configurator/libConfigurator.a lib/Converter/libConverter.a lib/WAV/libWAV.a
   FLAGS = -g
-  LINK_LIBRARIES = lib/WAV/libWAV.a  lib/Configurator/libConfigurator.a  lib/ArgParser/libArgParser.a
+  LINK_LIBRARIES = lib/WAV/libWAV.a  lib/Configurator/libConfigurator.a  lib/ArgParser/libArgParser.a  lib/Converter/libConverter.a  lib/WAV/libWAV.a
   OBJECT_DIR = CMakeFiles/SoundProcessor.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -834,13 +834,174 @@ build lib/ArgParser/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/ArgParser/
 build lib/ArgParser/install/strip: phony lib/ArgParser/CMakeFiles/install/strip.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target Converter
+
+
+#############################################
+# Order-only phony target for Converter
+
+build cmake_object_order_depends_target_Converter: phony || cmake_object_order_depends_target_WAV
+
+build lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/converterFactory.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
+build lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/mix.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
+build lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/noise.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
+build lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/mute.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target Converter
+
+
+#############################################
+# Link the static library lib/Converter/libConverter.a
+
+build lib/Converter/libConverter.a: CXX_STATIC_LIBRARY_LINKER__Converter_Debug lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o || lib/WAV/libWAV.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/Converter/libConverter.a
+  TARGET_PDB = Converter.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target converter_tests
+
+
+#############################################
+# Order-only phony target for converter_tests
+
+build cmake_object_order_depends_target_converter_tests: phony || cmake_object_order_depends_target_Converter cmake_object_order_depends_target_WAV cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: CXX_COMPILER__converter_tests_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/test/converter_tests.cpp || cmake_object_order_depends_target_converter_tests
+  DEP_FILE = lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = lib/Converter/CMakeFiles/converter_tests.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/converter_tests.dir/test
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target converter_tests
+
+
+#############################################
+# Link the executable lib/Converter/converter_tests
+
+build lib/Converter/converter_tests: CXX_EXECUTABLE_LINKER__converter_tests_Debug lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o | lib/libgtest_main.a lib/Converter/libConverter.a lib/libgtest.a lib/WAV/libWAV.a || lib/Converter/libConverter.a lib/WAV/libWAV.a lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest_main.a  lib/Converter/libConverter.a  lib/libgtest.a  lib/WAV/libWAV.a
+  OBJECT_DIR = lib/Converter/CMakeFiles/converter_tests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lib/Converter/converter_tests
+  TARGET_PDB = converter_tests.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/Converter/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter && /usr/bin/ccmake -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build lib/Converter/edit_cache: phony lib/Converter/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/Converter/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter && /usr/bin/cmake --regenerate-during-build -S/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor -B/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/Converter/rebuild_cache: phony lib/Converter/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/Converter/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/Converter/CMakeFiles/install.util: CUSTOM_COMMAND lib/Converter/all
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter && /usr/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/Converter/install: phony lib/Converter/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/Converter/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/Converter/all
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/Converter/install/local: phony lib/Converter/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/Converter/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/Converter/all
+  COMMAND = cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/Converter/install/strip: phony lib/Converter/CMakeFiles/install/strip.util
+
+# =============================================================================
 # Target aliases.
 
 build ArgParser: phony lib/ArgParser/libArgParser.a
 
 build Configurator: phony lib/Configurator/libConfigurator.a
 
+build Converter: phony lib/Converter/libConverter.a
+
 build WAV: phony lib/WAV/libWAV.a
+
+build converter_tests: phony lib/Converter/converter_tests
 
 build gmock: phony lib/libgmock.a
 
@@ -853,6 +1014,8 @@ build gtest_main: phony lib/libgtest_main.a
 build libArgParser.a: phony lib/ArgParser/libArgParser.a
 
 build libConfigurator.a: phony lib/Configurator/libConfigurator.a
+
+build libConverter.a: phony lib/Converter/libConverter.a
 
 build libWAV.a: phony lib/WAV/libWAV.a
 
@@ -874,7 +1037,7 @@ build wav_tests: phony lib/WAV/wav_tests
 #############################################
 # Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug
 
-build all: phony SoundProcessor lib/WAV/all lib/Configurator/all lib/ArgParser/all
+build all: phony SoundProcessor lib/WAV/all lib/Configurator/all lib/ArgParser/all lib/Converter/all
 
 # =============================================================================
 
@@ -914,6 +1077,13 @@ build lib/Configurator/all: phony lib/Configurator/libConfigurator.a
 # =============================================================================
 
 #############################################
+# Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter
+
+build lib/Converter/all: phony lib/Converter/libConverter.a lib/Converter/converter_tests
+
+# =============================================================================
+
+#############################################
 # Folder: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/WAV
 
 build lib/WAV/all: phony lib/WAV/libWAV.a lib/WAV/wav_tests _deps/googletest-build/all
@@ -925,14 +1095,14 @@ build lib/WAV/all: phony lib/WAV/libWAV.a lib/WAV/wav_tests _deps/googletest-bui
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ArgParser/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.27.7/CMakeCCompiler.cmake CMakeFiles/3.27.7/CMakeCXXCompiler.cmake CMakeFiles/3.27.7/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
+build build.ninja: RERUN_CMAKE | /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ArgParser/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.27.7/CMakeCCompiler.cmake CMakeFiles/3.27.7/CMakeCXXCompiler.cmake CMakeFiles/3.27.7/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ArgParser/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.27.7/CMakeCCompiler.cmake CMakeFiles/3.27.7/CMakeCXXCompiler.cmake CMakeFiles/3.27.7/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
+build /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ArgParser/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/CMakeLists.txt /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/CMakeLists.txt /usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeDependentOption.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakePackageConfigHelpers.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/CheckCSourceCompiles.cmake /usr/share/cmake/Modules/CheckIncludeFile.cmake /usr/share/cmake/Modules/CheckLibraryExists.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake /usr/share/cmake/Modules/FetchContent.cmake /usr/share/cmake/Modules/FetchContent/CMakeLists.cmake.in /usr/share/cmake/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake/Modules/FindPackageMessage.cmake /usr/share/cmake/Modules/FindPython.cmake /usr/share/cmake/Modules/FindPython/Support.cmake /usr/share/cmake/Modules/FindThreads.cmake /usr/share/cmake/Modules/GNUInstallDirs.cmake /usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake /usr/share/cmake/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.27.7/CMakeCCompiler.cmake CMakeFiles/3.27.7/CMakeCXXCompiler.cmake CMakeFiles/3.27.7/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

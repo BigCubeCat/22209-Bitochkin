@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.27)
 set(PROJECT_NAME SoundProcessor)
 set(SOURCE src/main.cpp)
 set(LIBRARY_DIR lib)
-set(LIBRARY WAV Configurator ArgParser)
+set(LIBRARY WAV Configurator ArgParser Converter)
 
 project(${PROJECT_NAME} CXX)
 

@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
     if (argc < 2) {
         printHelp();
-        return 0;
+        return 1;
     }
     for (int i = 1; i < argc; ++i) {
         arguments[i] = std::basic_string(argv[i]);

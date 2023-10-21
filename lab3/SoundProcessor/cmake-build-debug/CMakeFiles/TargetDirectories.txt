@@ -49,3 +49,11 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/ArgParser/CMakeFiles/install.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/ArgParser/CMakeFiles/install/local.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/ArgParser/CMakeFiles/install/strip.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/Converter.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/converter_tests.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/rebuild_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/list_install_components.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/install.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/install/local.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/lib/Converter/CMakeFiles/install/strip.dir

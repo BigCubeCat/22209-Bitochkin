@@ -2,6 +2,7 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion/bin/ninja/linux/x
 -- Add subdirectory lib/WAV
 -- Add subdirectory lib/Configurator
 -- Add subdirectory lib/ArgParser
+-- Add subdirectory lib/Converter
 -- Configuring done (0.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug

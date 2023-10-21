@@ -6,7 +6,7 @@
 
 class Configurator {
 public:
-    explicit Configurator(const std::string &filename);
+    explicit Configurator(std::string filename);
 
     ~Configurator();
 

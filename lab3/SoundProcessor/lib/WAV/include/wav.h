@@ -3,6 +3,8 @@
 
 #include <cstdint>
 #include <vector>
+#include <array>
+#include <string>
 
 namespace wav {
     const uint32_t RIFF_CHUNK_ID = 0x46464952;
