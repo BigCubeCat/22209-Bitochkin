@@ -1,0 +1,20 @@
+# ninja log v5
+1	639	1698158676901610754	lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o	4745548d61d887c4
+0	498	1697885163169942013	lib/ArgParser/CMakeFiles/ArgParser.dir/TFile.cpp.o	6e530afaab8aa956
+581	618	1698159405998866136	lib/Configurator/libConfigurator.a	29cc7738cb546f64
+0	699	1697885163370000531	lib/ArgParser/CMakeFiles/ArgParser.dir/ArgParser.cpp.o	ee39e0c204c8edd
+619	692	1698159406072199207	SoundProcessor	cd4aff0a7afcf2c7
+0	239	1698159747730989775	build.ninja	1d52625ce3c61c89
+1	22	1698159405405534919	lib/Processor/CMakeFiles/Processor.dir/Processor.cpp.o	8f1c4e5f301f1e7b
+639	685	1698158676948277279	lib/Converter/libConverter.a	ff8f33d8671f4190
+1	581	1698159405962199600	lib/Configurator/CMakeFiles/Configurator.dir/Configurator.cpp.o	48dee09c67ce5b28
+1	581	1698158676844944261	lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o	e091865a41d7c85a
+22	62	1698159405442201456	lib/Processor/libProcessor.a	a8d2ac9c7f1fea3a
+1	372	1698158676634944901	lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o	a23ec9639d423951
+0	679	1697885163349994679	CMakeFiles/SoundProcessor.dir/src/main.cpp.o	1bc53d6845d93a3b
+1	368	1698158676631611578	lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o	bd3db9fa4716499e
+1	118	1697885197305539769	lib/ArgParser/libArgParser.a	2dea5c16992134e8
+1	666	1697885357225663067	lib/WAV/CMakeFiles/WAV.dir/src/writer.cpp.o	c25445e3dbfe72fe
+0	680	1697885357238998901	lib/WAV/CMakeFiles/WAV.dir/src/reader.cpp.o	65bdd762fe1baa4c
+680	754	1697885357312345991	lib/WAV/libWAV.a	26ef9f049564c864
+0	83	1698159754237633531	SoundProcessor	4c3399ef8c2da08b

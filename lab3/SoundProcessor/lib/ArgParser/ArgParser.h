@@ -17,6 +17,8 @@ public:
     TFile getConfigFile() const;
 
     std::string getConfigFileString() const;
+    std::vector<std::string> getInputFilesString();
+    std::string getOutputFileString() const;
 
     bool hasErrors() const;
 

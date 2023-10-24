@@ -9,7 +9,7 @@ ArgParser::ArgParser(const std::vector<std::string> &arguments) {
     bool configExists = false;
     bool outputExists = false;
     bool inputNotEmpty = false;
-    for (const auto & arg : arguments) {
+    for (const auto &arg: arguments) {
         if (arg == "-c" || arg == "--config") {
             exceptConfig = true;
             continue;
@@ -58,16 +58,28 @@ TFile ArgParser::getConfigFile() const {
     return configFile;
 }
 
-std::string ArgParser::getConfigFileString() const {
-    return configFile.Title + "." + configFile.Format;
-}
-
 bool ArgParser::hasErrors() const {
     return errorsOccurred;
 }
 
 std::string ArgParser::getErrorMessage() {
     return errorMessage;
+}
+
+std::vector<std::string> ArgParser::getInputFilesString() {
+    std::vector<std::string> res(inputFiles.size());
+    for (int i = 0; i < inputFiles.size(); ++i) {
+        res[i] = inputFiles[i].Title + "." + inputFiles[i].Format;
+    }
+    return res;
+}
+
+std::string ArgParser::getOutputFileString() const {
+    return outputFile.Title + "." + outputFile.Format;
+}
+
+std::string ArgParser::getConfigFileString() const {
+    return configFile.Title + "." + configFile.Format;
 }
 
 ArgParser::~ArgParser() = default;

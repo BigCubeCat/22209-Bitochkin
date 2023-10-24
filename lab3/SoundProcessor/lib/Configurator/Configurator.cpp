@@ -2,12 +2,20 @@
 
 #include <fstream>
 #include <sstream>
-#include <utility>
+#include <iostream>
 
 Configurator::~Configurator() = default;
 
-Configurator::Configurator(std::string filename) : fileName(std::move(filename)) {
+Configurator::Configurator(
+        const std::string &configFile, const std::string &outFile,
+        const std::vector<std::string> &inputFiles
+) : input(inputFiles), config(configFile), out(outFile) {
 
+    commandMap["mix"] = true;
+    commandMap["mute"] = true;
+    commandMap["noise"] = true;
+
+    parse();
 }
 
 bool Configurator::hasErrors() const {
@@ -15,22 +23,17 @@ bool Configurator::hasErrors() const {
 }
 
 void Configurator::parse() {
-    std::ifstream nameFileout;
-    nameFileout.open(fileName);
+    std::ifstream file;
+    file.open(config);
     std::string line;
-    while (std::getline(nameFileout, line)) {
-        parseConfigLine(line);
+    int i = 1;
+    while (std::getline(file, line)) {
+        parseConfigLine(line, i);
+        ++i;
     }
 }
 
-void Configurator::run() {
-    parse();
-    if (!errorsOccurred) {
-
-    }
-}
-
-void Configurator::parseConfigLine(const std::string &line) {
+void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     auto cmd = splitLine(line);
     if (cmd.empty()) {
         return;
@@ -38,9 +41,15 @@ void Configurator::parseConfigLine(const std::string &line) {
     if (cmd[0] == "#") {
         return;
     }
+    std::cout << cmd[0] << ";" + cmd[1] + ";" + cmd[2] << "\n";
     if (!isConvertorName(cmd[0])) {
         errorsOccurred = true;
-        errorMessage += "Invalid command: " + line + "\n";
+        errorMessage += std::to_string(lineNumber) + "Invalid command: " + line + "\n";
+    } else if (commandIsValid(cmd)) {
+        algorithm.push_back(cmd);
+    } else {
+        errorsOccurred = true;
+        errorMessage += std::to_string(lineNumber) + "Invalid convertor arguments: " + line + "\n";
     }
 }
 
@@ -57,13 +66,48 @@ std::vector<std::string> Configurator::splitLine(const std::string &line) {
 }
 
 bool Configurator::isConvertorName(const std::string &name) {
-    return name == "mix" || name == "mute" || name == "reverb";
+    return commandMap[name];
 }
 
 bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
     if (cmd[0] == "mix") {
-
+        if (cmd.size() == 3) {
+            if (linkIsValid(cmd[1]) && isNumber(cmd[2])) {
+                return true;
+            }
+        }
+    } else if (cmd[0] == "mute" || cmd[0] == "noise") {
+        if (cmd.size() == 3) {
+            if (isNumber(cmd[1]) && isNumber(cmd[2])) {
+                return true;
+            }
+        }
     }
+    return false;
 }
 
+std::vector<std::vector<std::string >> Configurator::getAlgorithm() {
+    return algorithm;
+}
+
+bool Configurator::linkIsValid(const std::string &link) {
+    if (link[0] == '$') {
+        for (int i = 1; i < link.size(); ++i) {
+            if (link[i] < '0' | link[i] > '9') {
+                return false;
+            }
+        }
+        return true;
+    }
+    return false;
+}
+
+bool Configurator::isNumber(const std::string &num) {
+    for (int i = 1; i < num.size(); ++i) {
+        if (num[i] < '0' | num[i] > '9') {
+            return false;
+        }
+    }
+    return true;
+}
 

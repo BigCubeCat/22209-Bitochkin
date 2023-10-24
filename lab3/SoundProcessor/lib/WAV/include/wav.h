@@ -11,7 +11,7 @@ namespace wav {
     const uint32_t WAVE_FORMAT = 0x45564157;
 
     const uint32_t FMT_CHUNK_ID = 0x20746d66;
-    const uint16_t FMT_CHUNK_SIZE = 16; // FOR PCM
+    const uint16_t FMT_CHUNK_SIZE = 16;
     const uint16_t AUDIO_FORMAT = 0x0001;
     const uint16_t NUMBER_CHANNELS = 1;
     const uint32_t SAMPLES_PER_SEC = 44100;

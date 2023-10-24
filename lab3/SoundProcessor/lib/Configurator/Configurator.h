@@ -3,10 +3,15 @@
 
 #include <string>
 #include <vector>
+#include <map>
 
 class Configurator {
 public:
-    explicit Configurator(std::string filename);
+    explicit Configurator(
+            const std::string &configFile,
+            const std::string &outFile,
+            const std::vector<std::string> &inputFiles
+    );
 
     ~Configurator();
 
@@ -18,31 +23,36 @@ public:
     void parse();
 
     /*
-     * run();
-     * call parse();
-     * run all convertors and write result
-     */
-    void run();
-
-    /*
      * parseConfigLine(line);
      * Reads line and create Converter
      */
-    void parseConfigLine(const std::string &line);
+    void parseConfigLine(const std::string &line, int lineNumber);
 
     bool hasErrors() const;
 
+    std::vector<std::vector<std::string >> getAlgorithm();
+
 private:
-    std::string fileName;
+    std::vector<std::vector<std::string >> algorithm;
+
+    std::string config;
+    std::string out;
+    std::vector<std::string> input;
 
     std::string errorMessage;
     bool errorsOccurred = false;
 
     static std::vector<std::string> splitLine(const std::string &line);
 
-    static bool isConvertorName(const std::string &name);
+    bool isConvertorName(const std::string &name);
 
     static bool commandIsValid(const std::vector<std::string> &cmd);
+
+    static bool linkIsValid(const std::string &link);
+
+    static bool isNumber(const std::string &num);
+
+    std::map<std::string, bool> commandMap = {};
 
 };
 

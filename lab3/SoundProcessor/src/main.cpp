@@ -45,13 +45,17 @@ int main(int argc, char *argv[]) {
         std::cout << parser.getErrorMessage();
         return 1;
     }
-    Configurator configurator = Configurator(parser.getConfigFileString());
+    auto configurator = Configurator(
+            parser.getConfigFileString(),
+            parser.getOutputFileString(),
+            parser.getInputFilesString()
+    );
     if (configurator.hasErrors()) {
         printConfigError();
         return 1;
     }
 
-    configurator.run();
+    configurator.parse();
 
     return 0;
 }
