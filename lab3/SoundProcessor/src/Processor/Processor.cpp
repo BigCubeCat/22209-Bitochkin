@@ -1,0 +1,50 @@
+#include "Processor.h"
+#include "reader.h"
+#include "writer.h"
+#include "converterFactory.h"
+#include <stdexcept>
+
+Processor::Processor(
+        const std::vector<std::string> &input,
+        const std::string &output
+) : inputFiles(input), outFile(output) {
+    initSamples();
+}
+
+void Processor::initSamples() {
+    for (const auto &inputFile: inputFiles) {
+        reader::Reader reader;
+        reader.load(inputFile);
+
+        wav::SampleVector currentSample;
+
+        while (true) {
+            wav::SampleBuffer buffer;
+            if (!reader.readSample(&buffer)) break;
+            currentSample.push_back(buffer);
+        }
+        inputFilesSamples.push_back(currentSample);
+    }
+}
+
+void Processor::run(const std::vector<std::vector<std::string>>& algorithm) {
+    wav::SampleVector resultSamples = inputFilesSamples[0];
+
+    converterFactory::ConverterFactory factory;
+
+    for (const auto &cmd: algorithm) {
+        converterFactory::ConverterPointer currentConverter = factory.createConverter(cmd);
+        currentConverter->convert(resultSamples, inputFilesSamples);
+    }
+
+    writeOut(resultSamples);
+}
+
+void Processor::writeOut(const std::vector<wav::SampleBuffer> &resultSamples) {
+    writer::Writer writer(outFile);
+    for (auto buffer: resultSamples) {
+        writer.writeSample(&buffer);
+    }
+    writer.writeHeader();
+}
+

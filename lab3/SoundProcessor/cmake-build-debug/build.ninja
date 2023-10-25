@@ -56,6 +56,13 @@ build CMakeFiles/SoundProcessor.dir/src/main.cpp.o: CXX_COMPILER__SoundProcessor
   OBJECT_DIR = CMakeFiles/SoundProcessor.dir
   OBJECT_FILE_DIR = CMakeFiles/SoundProcessor.dir/src
 
+build CMakeFiles/SoundProcessor.dir/src/Processor/Processor.cpp.o: CXX_COMPILER__SoundProcessor_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/src/Processor/Processor.cpp || cmake_object_order_depends_target_SoundProcessor
+  DEP_FILE = CMakeFiles/SoundProcessor.dir/src/Processor/Processor.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include
+  OBJECT_DIR = CMakeFiles/SoundProcessor.dir
+  OBJECT_FILE_DIR = CMakeFiles/SoundProcessor.dir/src/Processor
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SoundProcessor
@@ -64,7 +71,7 @@ build CMakeFiles/SoundProcessor.dir/src/main.cpp.o: CXX_COMPILER__SoundProcessor
 #############################################
 # Link the executable SoundProcessor
 
-build SoundProcessor: CXX_EXECUTABLE_LINKER__SoundProcessor_Debug CMakeFiles/SoundProcessor.dir/src/main.cpp.o | lib/WAV/libWAV.a lib/Configurator/libConfigurator.a lib/ArgParser/libArgParser.a lib/Converter/libConverter.a lib/WAV/libWAV.a || lib/ArgParser/libArgParser.a lib/Configurator/libConfigurator.a lib/Converter/libConverter.a lib/WAV/libWAV.a
+build SoundProcessor: CXX_EXECUTABLE_LINKER__SoundProcessor_Debug CMakeFiles/SoundProcessor.dir/src/main.cpp.o CMakeFiles/SoundProcessor.dir/src/Processor/Processor.cpp.o | lib/WAV/libWAV.a lib/Configurator/libConfigurator.a lib/ArgParser/libArgParser.a lib/Converter/libConverter.a lib/WAV/libWAV.a || lib/ArgParser/libArgParser.a lib/Configurator/libConfigurator.a lib/Converter/libConverter.a lib/WAV/libWAV.a
   FLAGS = -g
   LINK_LIBRARIES = lib/WAV/libWAV.a  lib/Configurator/libConfigurator.a  lib/ArgParser/libArgParser.a  lib/Converter/libConverter.a  lib/WAV/libWAV.a
   OBJECT_DIR = CMakeFiles/SoundProcessor.dir

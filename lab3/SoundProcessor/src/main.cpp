@@ -3,6 +3,7 @@
 
 #include "../../ArgParser/ArgParser.h"
 #include "../../Configurator/Configurator.h"
+#include "Processor/Processor.h"
 
 namespace {
     void printHelp() {
@@ -56,6 +57,14 @@ int main(int argc, char *argv[]) {
     }
 
     configurator.parse();
+
+    auto proc = Processor(
+            parser.getInputFilesString(),
+            parser.getOutputFileString()
+    );
+    proc.run(configurator.getAlgorithm());
+
+    std::cout << "Success!\n";
 
     return 0;
 }
