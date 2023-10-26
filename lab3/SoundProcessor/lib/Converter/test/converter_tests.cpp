@@ -1,45 +1,9 @@
 #include "gtest/gtest.h"
 #include "converterFactory.h"
 
-TEST(constructor_tests, mix) {
-    std::vector<std::string> parameters = {"mix", "$2", "9000"};
-
-    try {
-        mix::Mix mix(parameters);
-    }
-    catch(const converter::WrongTime& e)
-    {
-        EXPECT_STREQ(e.what(), "9000 is wrong time format");
-    }
-}
-
-TEST(constructor_tests, mute) {
-    std::vector<std::string> parameters = {"mute", "40", "9000"};
-
-    try {
-        mix::Mix mix(parameters);
-    }
-    catch(const converter::WrongTime& e)
-    {
-        EXPECT_STREQ(e.what(), "9000 is wrong time format");
-    }
-}
-
-TEST(constructor_tests, noise) {
-    std::vector<std::string> parameters = {"noise", "40", "9000"};
-
-    try {
-        mix::Mix mix(parameters);
-    }
-    catch(const converter::WrongTime& e)
-    {
-        EXPECT_STREQ(e.what(), "9000 is wrong time format");
-    }
-}
-
 TEST(constructor_tests, converterFactory)
 {
-    std::vector<std::string> parameters = {"pupok"};
+    std::vector<std::string> parameters = {"test"};
     try
     {
         converterFactory::ConverterFactory converterFactory;
@@ -48,7 +12,7 @@ TEST(constructor_tests, converterFactory)
 
     catch(const converterFactory::NotFoundConverter& e)
     {
-        EXPECT_STREQ(e.what(), "pupok not found");
+        EXPECT_STREQ(e.what(), "test not found");
     }
 }
 

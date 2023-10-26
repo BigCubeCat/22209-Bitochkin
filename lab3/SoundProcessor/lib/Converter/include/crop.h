@@ -1,0 +1,21 @@
+#ifndef SOUNDPROCESSOR_CROP_H
+#define SOUNDPROCESSOR_CROP_H
+
+#include "converter.h"
+
+namespace crop {
+    class Crop : public converter::Converter {
+    public:
+        explicit Crop(const std::vector<std::string>& parameters);
+
+        void convert(
+                std::vector<wav::SampleBuffer> &currentSamples,
+                const std::vector<wav::SampleVector> &originalSamples
+        ) override;
+
+    private:
+        int begin = 0;
+        int end = 0;
+    };
+}
+#endif

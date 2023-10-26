@@ -14,6 +14,8 @@ Configurator::Configurator(
     commandMap["mix"] = true;
     commandMap["mute"] = true;
     commandMap["noise"] = true;
+    commandMap["cut"] = true;
+    commandMap["crop"] = true;
 
     parse();
 }
@@ -41,7 +43,6 @@ void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     if (cmd[0] == "#") {
         return;
     }
-    std::cout << cmd[0] << ";" + cmd[1] + ";" + cmd[2] << "\n";
     if (!isConvertorName(cmd[0])) {
         errorsOccurred = true;
         errorMessage += std::to_string(lineNumber) + ": Invalid command: " + line + "\n";
@@ -76,7 +77,7 @@ bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
                 return true;
             }
         }
-    } else if (cmd[0] == "mute") {
+    } else if (cmd[0] == "mute" || cmd[0] == "crop" || cmd[0] == "cut") {
         if (cmd.size() == 3) {
             if (isNumber(cmd[1]) && isNumber(cmd[2])) {
                 return true;

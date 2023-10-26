@@ -27,13 +27,17 @@ void Processor::initSamples() {
     }
 }
 
-void Processor::run(const std::vector<std::vector<std::string>>& algorithm) {
+void Processor::run(const std::vector<std::vector<std::string>> &algorithm) {
     wav::SampleVector resultSamples = inputFilesSamples[0];
 
     converterFactory::ConverterFactory factory;
 
     for (const auto &cmd: algorithm) {
         converterFactory::ConverterPointer currentConverter = factory.createConverter(cmd);
+        if (currentConverter->errorsOccurred) {
+            std::cout << "ERROR!\n---\n" << currentConverter->errorMessage << "---\n";
+            return;
+        }
         currentConverter->convert(resultSamples, inputFilesSamples);
     }
 

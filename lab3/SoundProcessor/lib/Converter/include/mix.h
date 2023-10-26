@@ -4,12 +4,6 @@
 #include "converter.h"
 
 namespace mix {
-
-    class WrongFileIndex : public std::invalid_argument {
-    public:
-        explicit WrongFileIndex(int index);
-    };
-
     class Mix : public converter::Converter {
     public:
         explicit Mix(const std::vector<std::string> &parameters);
@@ -20,7 +14,7 @@ namespace mix {
         ) override;
 
     private:
-        int start = 0;
+        int begin = 0;
         int indexFile;
     };
 }

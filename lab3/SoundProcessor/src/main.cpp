@@ -63,9 +63,8 @@ int main(int argc, char *argv[]) {
             parser.getInputFilesString(),
             parser.getOutputFileString()
     );
-    proc.run(configurator.getAlgorithm());
 
-    std::cout << "Success!\n";
+    proc.run(configurator.getAlgorithm());
 
     return 0;
 }

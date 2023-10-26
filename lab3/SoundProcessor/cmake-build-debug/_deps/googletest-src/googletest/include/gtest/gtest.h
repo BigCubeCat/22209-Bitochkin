@@ -423,7 +423,7 @@ class GTEST_API_ TestResult {
   // Returns the elapsed time, in milliseconds.
   TimeInMillis elapsed_time() const { return elapsed_time_; }
 
-  // Gets the time of the test case start, in ms from the start of the
+  // Gets the time of the test case begin, in ms from the begin of the
   // UNIX epoch.
   TimeInMillis start_timestamp() const { return start_timestamp_; }
 
@@ -457,7 +457,7 @@ class GTEST_API_ TestResult {
     return test_properties_;
   }
 
-  // Sets the start time.
+  // Sets the begin time.
   void set_start_timestamp(TimeInMillis start) { start_timestamp_ = start; }
 
   // Sets the elapsed time.
@@ -503,7 +503,7 @@ class GTEST_API_ TestResult {
   std::vector<TestProperty> test_properties_;
   // Running count of death tests.
   int death_test_count_;
-  // The start time, in milliseconds since UNIX Epoch.
+  // The begin time, in milliseconds since UNIX Epoch.
   TimeInMillis start_timestamp_;
   // The elapsed time, in milliseconds.
   TimeInMillis elapsed_time_;
@@ -732,7 +732,7 @@ class GTEST_API_ TestSuite {
   // Returns the elapsed time, in milliseconds.
   TimeInMillis elapsed_time() const { return elapsed_time_; }
 
-  // Gets the time of the test suite start, in ms from the start of the
+  // Gets the time of the test suite begin, in ms from the begin of the
   // UNIX epoch.
   TimeInMillis start_timestamp() const { return start_timestamp_; }
 
@@ -857,7 +857,7 @@ class GTEST_API_ TestSuite {
   internal::TearDownTestSuiteFunc tear_down_tc_;
   // True if and only if any test in this test suite should run.
   bool should_run_;
-  // The start time, in milliseconds since UNIX Epoch.
+  // The begin time, in milliseconds since UNIX Epoch.
   TimeInMillis start_timestamp_;
   // Elapsed time, in milliseconds.
   TimeInMillis elapsed_time_;
@@ -1133,7 +1133,7 @@ class GTEST_API_ UnitTest {
   // or NULL if no test is running.
   const TestInfo* current_test_info() const GTEST_LOCK_EXCLUDED_(mutex_);
 
-  // Returns the random seed used at the start of the current test run.
+  // Returns the random seed used at the begin of the current test run.
   int random_seed() const;
 
   // Returns the ParameterizedTestSuiteRegistry object used to keep track of
@@ -1188,7 +1188,7 @@ class GTEST_API_ UnitTest {
   // Gets the number of tests that should run.
   int test_to_run_count() const;
 
-  // Gets the time of the test program start, in ms from the start of the
+  // Gets the time of the test program begin, in ms from the begin of the
   // UNIX epoch.
   TimeInMillis start_timestamp() const;
 

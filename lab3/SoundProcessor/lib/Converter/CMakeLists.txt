@@ -5,13 +5,18 @@ set(LIBRARY_HEADERS include/converter.h
         include/converterFactory.h
         include/mix.h
         include/noise.h
-        include/mute.h)
+        include/mute.h
+        include/crop.h
+        include/cut.h
+)
 
 set(LIBRARY_SOURCE src/converterFactory.cpp
         src/mix.cpp
         src/noise.cpp
         src/mute.cpp
-        )
+        src/crop.cpp
+        src/cut.cpp
+)
 
 add_library(${LIBRARY_NAME} STATIC ${LIBRARY_HEADERS} ${LIBRARY_SOURCE})
 target_include_directories(${LIBRARY_NAME} PUBLIC ${LIBRARY_HEADERS_DIR} ${CMAKE_SOURCE_DIR}/libs/WAV/include)

@@ -14,7 +14,7 @@ namespace mute {
         ) override;
 
     private:
-        int start = 0;
+        int begin = 0;
         int end = 0;
     };
 }

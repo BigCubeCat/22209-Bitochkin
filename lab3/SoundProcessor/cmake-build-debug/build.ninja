@@ -882,6 +882,20 @@ build lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o: CXX_COMPILER__Conve
   OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
   OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
 
+build lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/crop.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
+build lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o: CXX_COMPILER__Converter_unscanned_Debug /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/cut.cpp || cmake_object_order_depends_target_Converter
+  DEP_FILE = lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/libs/WAV/include -I/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include
+  OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
+  OBJECT_FILE_DIR = lib/Converter/CMakeFiles/Converter.dir/src
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Converter
@@ -890,7 +904,7 @@ build lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o: CXX_COMPILER__Conve
 #############################################
 # Link the static library lib/Converter/libConverter.a
 
-build lib/Converter/libConverter.a: CXX_STATIC_LIBRARY_LINKER__Converter_Debug lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o || lib/WAV/libWAV.a
+build lib/Converter/libConverter.a: CXX_STATIC_LIBRARY_LINKER__Converter_Debug lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o || lib/WAV/libWAV.a
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = lib/Converter/CMakeFiles/Converter.dir
   POST_BUILD = :
