@@ -52,6 +52,7 @@ int main(int argc, char *argv[]) {
             parser.getInputFilesString()
     );
     if (configurator.hasErrors()) {
+        std::cout << configurator.errors() << std::endl;
         printConfigError();
         return 1;
     }

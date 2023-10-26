@@ -4,18 +4,19 @@
 #include "converter.h"
 
 namespace noise {
-
-    const float PERCENT = 50.5f;
     class Noise : public converter::Converter {
     public:
-        Noise(const std::vector<std::string> parameters);
+        explicit Noise(const std::vector<std::string> &parameters);
 
-        void convert(std::vector<wav::SampleBuffer> &current_samples,
-                     const std::vector<wav::SampleVector> original_samples) override;
+        void convert(
+                std::vector<wav::SampleBuffer> &currentSamples,
+                const std::vector<wav::SampleVector> &originalSamples
+        ) override;
 
     private:
         int start = 0;
         int end = 0;
+        int percent = 0;
     };
 }
 #endif

@@ -30,6 +30,8 @@ public:
 
     bool hasErrors() const;
 
+    std::string errors() const;
+
     std::vector<std::vector<std::string >> getAlgorithm();
 
 private:

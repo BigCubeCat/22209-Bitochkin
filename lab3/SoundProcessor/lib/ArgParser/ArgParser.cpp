@@ -1,7 +1,5 @@
 #include "ArgParser.h"
 
-#include <iostream>
-
 #include "TFile.h"
 
 ArgParser::ArgParser(const std::vector<std::string> &arguments) {

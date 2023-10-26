@@ -2,21 +2,22 @@
 #define SOUNDPROCESSOR_MIX_H
 
 #include "converter.h"
-#include <stdexcept>
 
 namespace mix {
 
-    class WrongFileIndex: public std::invalid_argument{
+    class WrongFileIndex : public std::invalid_argument {
     public:
-        WrongFileIndex(const int index);
+        explicit WrongFileIndex(int index);
     };
 
     class Mix : public converter::Converter {
     public:
-        Mix(const std::vector<std::string> parameters);
+        explicit Mix(const std::vector<std::string> &parameters);
 
-        void convert(std::vector<wav::SampleBuffer> &current_samples,
-                     const std::vector<wav::SampleVector> original_samples) override;
+        void convert(
+                std::vector<wav::SampleBuffer> &currentSamples,
+                const std::vector<wav::SampleVector> &originalSamples
+        ) override;
 
     private:
         int start = 0;

@@ -44,12 +44,12 @@ void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     std::cout << cmd[0] << ";" + cmd[1] + ";" + cmd[2] << "\n";
     if (!isConvertorName(cmd[0])) {
         errorsOccurred = true;
-        errorMessage += std::to_string(lineNumber) + "Invalid command: " + line + "\n";
+        errorMessage += std::to_string(lineNumber) + ": Invalid command: " + line + "\n";
     } else if (commandIsValid(cmd)) {
         algorithm.push_back(cmd);
     } else {
         errorsOccurred = true;
-        errorMessage += std::to_string(lineNumber) + "Invalid convertor arguments: " + line + "\n";
+        errorMessage += std::to_string(lineNumber) + ": Invalid convertor arguments: " + line + "\n";
     }
 }
 
@@ -76,9 +76,15 @@ bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
                 return true;
             }
         }
-    } else if (cmd[0] == "mute" || cmd[0] == "noise") {
+    } else if (cmd[0] == "mute") {
         if (cmd.size() == 3) {
             if (isNumber(cmd[1]) && isNumber(cmd[2])) {
+                return true;
+            }
+        }
+    } else if (cmd[0] == "noise") {
+        if(cmd.size() == 4) {
+            if (isNumber(cmd[1]) && isNumber(cmd[2]) && isNumber(cmd[3])) {
                 return true;
             }
         }
@@ -109,5 +115,9 @@ bool Configurator::isNumber(const std::string &num) {
         }
     }
     return true;
+}
+
+std::string Configurator::errors() const {
+    return errorMessage;
 }
 

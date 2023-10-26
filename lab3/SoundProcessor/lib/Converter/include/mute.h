@@ -4,14 +4,14 @@
 #include "converter.h"
 
 namespace mute {
-    const float PERCENT = 0.9f;
-
     class Mute : public converter::Converter {
     public:
-        Mute(const std::vector<std::string> parameters);
+        explicit Mute(const std::vector<std::string>& parameters);
 
-        void convert(std::vector<wav::SampleBuffer> &current_samples,
-                     const std::vector<wav::SampleVector> original_samples) override;
+        void convert(
+                std::vector<wav::SampleBuffer> &currentSamples,
+                const std::vector<wav::SampleVector> &originalSamples
+        ) override;
 
     private:
         int start = 0;
