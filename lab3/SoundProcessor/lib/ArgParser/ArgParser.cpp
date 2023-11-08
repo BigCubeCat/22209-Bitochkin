@@ -67,17 +67,17 @@ std::string ArgParser::getErrorMessage() {
 std::vector<std::string> ArgParser::getInputFilesString() {
     std::vector<std::string> res(inputFiles.size());
     for (int i = 0; i < inputFiles.size(); ++i) {
-        res[i] = inputFiles[i].Title + "." + inputFiles[i].Format;
+        res[i] = inputFiles[i].FileName;
     }
     return res;
 }
 
 std::string ArgParser::getOutputFileString() const {
-    return outputFile.Title + "." + outputFile.Format;
+    return outputFile.FileName;
 }
 
 std::string ArgParser::getConfigFileString() const {
-    return configFile.Title + "." + configFile.Format;
+    return configFile.FileName;
 }
 
 ArgParser::~ArgParser() = default;

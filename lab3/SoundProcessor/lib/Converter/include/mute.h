@@ -1,20 +1,21 @@
 #ifndef SOUNDPROCESSOR_MUTE_H
 #define SOUNDPROCESSOR_MUTE_H
 
+
 #include "converter.h"
 
 namespace mute {
+    const float PERCENT = 0.9f;
+
     class Mute : public converter::Converter {
     public:
-        explicit Mute(const std::vector<std::string>& parameters);
+        Mute(const std::vector<std::string> parameters);
 
-        void convert(
-                std::vector<wav::SampleBuffer> &currentSamples,
-                const std::vector<wav::SampleVector> &originalSamples
-        ) override;
+        void convert(std::vector<wav::SampleBuffer> &current_samples,
+                     const std::vector<wav::SampleVector> original_samples) override;
 
     private:
-        int begin = 0;
+        int start = 0;
         int end = 0;
     };
 }

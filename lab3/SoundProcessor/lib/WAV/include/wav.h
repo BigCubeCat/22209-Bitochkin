@@ -1,10 +1,10 @@
 #ifndef WAV_WAV_H
 #define WAV_WAV_H
 
-#include <cstdint>
-#include <vector>
-#include <array>
 #include <string>
+#include <cstdint>
+#include <array>
+#include <vector>
 
 namespace wav {
     const uint32_t RIFF_CHUNK_ID = 0x46464952;

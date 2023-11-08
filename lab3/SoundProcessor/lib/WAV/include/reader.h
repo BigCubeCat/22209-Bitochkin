@@ -4,7 +4,7 @@
 #include "wav.h"
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <string.h>
 #include <exception>
 
 namespace reader {

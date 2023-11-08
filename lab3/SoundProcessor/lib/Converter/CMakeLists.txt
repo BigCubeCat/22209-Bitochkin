@@ -6,16 +6,16 @@ set(LIBRARY_HEADERS include/converter.h
         include/mix.h
         include/noise.h
         include/mute.h
-        include/crop.h
         include/cut.h
+        include/crop.h
 )
 
 set(LIBRARY_SOURCE src/converterFactory.cpp
         src/mix.cpp
         src/noise.cpp
         src/mute.cpp
-        src/crop.cpp
         src/cut.cpp
+        src/crop.cpp
 )
 
 add_library(${LIBRARY_NAME} STATIC ${LIBRARY_HEADERS} ${LIBRARY_SOURCE})

@@ -1,35 +1,24 @@
-#include <stdexcept>
+#include <iostream>
 #include "mix.h"
 
 using namespace mix;
 
-Mix::Mix(const std::vector<std::string> &parameters) {
+WrongFileIndex::WrongFileIndex(const int index) : std::invalid_argument(std::to_string(index) + "is bad argument") {}
+
+Mix::Mix(const std::vector<std::string> parameters) {
     std::string strIndexFile = parameters[1];
     this->indexFile = std::stoi(strIndexFile.erase(0, 1)) - 1;
-    this->begin = std::stoi(parameters[2]);
+    this->start = std::stoi(parameters[2]);
 }
 
-void Mix::convert(
-        wav::SampleVector &currentSamples,
-        const std::vector<wav::SampleVector> &originalSamples
-) {
-    if (indexFile < 0 || indexFile >= originalSamples.size()) {
-        errorsOccurred = true;
-        errorMessage += "Invalid file index\n";
-    }
+void Mix::convert(wav::SampleVector &current_samples,
+                  const std::vector<wav::SampleVector> original_samples) {
+    if (indexFile < 0 || indexFile >= original_samples.size()) throw WrongFileIndex(indexFile);
+    if (start >= current_samples.size()) throw converter::WrongTime(start);
 
-    if (begin >= currentSamples.size()) {
-        errorsOccurred = true;
-        errorMessage += "Invalid begin time\n";
-    }
-
-    if (errorsOccurred) return;
-
-    for (int i = begin; i < currentSamples.size() && i < originalSamples[indexFile].size(); i++) {
+    for (int i = start; i < current_samples.size() && i < original_samples[indexFile].size(); i++) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            currentSamples[i][j] = (
-                    currentSamples[i][j] / 2 + originalSamples[indexFile][i][j] / 2
-            );
+            current_samples[i][j] = (current_samples[i][j] / 2 + original_samples[indexFile][i][j] / 2);
         }
     }
 }

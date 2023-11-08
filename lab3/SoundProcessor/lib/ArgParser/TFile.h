@@ -6,6 +6,7 @@
 struct TFile {
     std::string Title;
     std::string Format;
+    std::string FileName;
     bool ErrorOccurred = false;
     explicit TFile(const std::string & fileName);
 };

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libArgParser.a CMakeFiles/ArgParser.dir/ArgParser.cpp.o CMakeFiles/ArgParser.dir/TFile.cpp.o
+/usr/bin/ranlib libArgParser.a

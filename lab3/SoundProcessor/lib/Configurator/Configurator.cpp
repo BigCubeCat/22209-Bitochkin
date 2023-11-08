@@ -26,10 +26,13 @@ bool Configurator::hasErrors() const {
 
 void Configurator::parse() {
     std::ifstream file;
+    std::cout << config << std::endl;
     file.open(config);
     std::string line;
     int i = 1;
+    std::cout << "\nparsing " << line << "\n";
     while (std::getline(file, line)) {
+        std::cout << "\nparsing " << line << "\n";
         parseConfigLine(line, i);
         ++i;
     }
@@ -37,6 +40,7 @@ void Configurator::parse() {
 
 void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     auto cmd = splitLine(line);
+    std::cout << "\n" << cmd[0] << "\n";
     if (cmd.empty()) {
         return;
     }
@@ -84,7 +88,7 @@ bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
             }
         }
     } else if (cmd[0] == "noise") {
-        if(cmd.size() == 4) {
+        if (cmd.size() == 4) {
             if (isNumber(cmd[1]) && isNumber(cmd[2]) && isNumber(cmd[3])) {
                 return true;
             }

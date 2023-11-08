@@ -1,0 +1,21 @@
+# ninja log v5
+60	2643	1698913221187725669	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	f1eeca43d1d94102
+0	58	1698913218584419839	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	5edff09769d067f5
+2675	2701	1698913221244391738	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a144a75d40152268
+2753	2773	1698913221317724298	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a721bc1e36e2ea7e
+2675	2701	1698913221244391738	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a144a75d40152268
+2753	2773	1698913221317724298	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	a721bc1e36e2ea7e
+60	2643	1698913221187725669	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	f1eeca43d1d94102
+2793	2821	1698913221364390472	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	14be0d843901e227
+2701	2728	1698913221271058123	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	7eadafa2e28c48bc
+2773	2793	1698913221334390788	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f50e180201d82c1b
+0	58	1698913218584419839	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	5edff09769d067f5
+2793	2821	1698913221364390472	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	14be0d843901e227
+2728	2753	1698913221297724509	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	41cdd0fc219029ff
+2793	2821	1698913221364390472	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	14be0d843901e227
+2793	2821	1698913221364390472	CMakeFiles/googletest-populate-complete	14be0d843901e227
+2701	2728	1698913221271058123	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	7eadafa2e28c48bc
+2773	2793	1698913221334390788	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f50e180201d82c1b
+2644	2675	1698913221217725353	/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	2c562fdc047a635a
+2644	2675	1698913221217725353	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	2c562fdc047a635a
+2728	2753	1698913221297724509	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	41cdd0fc219029ff

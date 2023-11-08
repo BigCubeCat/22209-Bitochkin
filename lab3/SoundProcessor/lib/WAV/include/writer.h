@@ -2,7 +2,9 @@
 #define WAV_WRITER_H
 
 #include "wav.h"
+#include <iostream>
 #include <fstream>
+#include <exception>
 
 namespace writer {
     class Writer {

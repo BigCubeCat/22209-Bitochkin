@@ -1,22 +1,23 @@
 #ifndef SOUNDPROCESSOR_NOISE_H
 #define SOUNDPROCESSOR_NOISE_H
 
+
 #include "converter.h"
 
 namespace noise {
+
+    const float PERCENT = 50.5f;
+
     class Noise : public converter::Converter {
     public:
-        explicit Noise(const std::vector<std::string> &parameters);
+        Noise(const std::vector<std::string> parameters);
 
-        void convert(
-                std::vector<wav::SampleBuffer> &currentSamples,
-                const std::vector<wav::SampleVector> &originalSamples
-        ) override;
+        void convert(std::vector<wav::SampleBuffer> &current_samples,
+                     const std::vector<wav::SampleVector> original_samples) override;
 
     private:
-        int begin = 0;
+        int start = 0;
         int end = 0;
-        int percent = 0;
     };
 }
 #endif

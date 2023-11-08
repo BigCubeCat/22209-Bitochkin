@@ -1,0 +1,2 @@
+/usr/bin/ar qc libConverter.a CMakeFiles/Converter.dir/src/converterFactory.cpp.o CMakeFiles/Converter.dir/src/mix.cpp.o CMakeFiles/Converter.dir/src/noise.cpp.o CMakeFiles/Converter.dir/src/mute.cpp.o
+/usr/bin/ranlib libConverter.a

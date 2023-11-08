@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/SoundProcessor.dir/src/main.cpp.o CMakeFiles/SoundProcessor.dir/src/Processor/Processor.cpp.o -o SoundProcessor  lib/WAV/libWAV.a lib/Configurator/libConfigurator.a lib/ArgParser/libArgParser.a lib/Converter/libConverter.a lib/WAV/libWAV.a 

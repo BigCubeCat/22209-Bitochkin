@@ -1,9 +1,5 @@
 #include "writer.h"
 
-#include <fstream>
-#include <iostream>
-#include <exception>
-
 using namespace writer;
 
 Writer::Writer(const std::string path) {
@@ -30,7 +26,6 @@ void Writer::writeHeader() {
     wav.dataHeader = dataHeader;
 
     outputFile.write((const char *) &wav, sizeof(wav::WAV));
-
 }
 
 void Writer::writeSample(const wav::SampleBuffer *buffer) {

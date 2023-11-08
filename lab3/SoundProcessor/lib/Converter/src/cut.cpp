@@ -12,13 +12,9 @@ void Cut::convert(
         const std::vector<wav::SampleVector> &originalSamples
 ) {
     if (begin >= currentSamples.size()) {
-        errorsOccurred = true;
-        errorMessage += "Invalid begin time\n";
     }
     if (end >= currentSamples.size()) {
-        errorsOccurred = true;
-        errorMessage += "Invalid end time\n";
-    }
+
 
     if (errorsOccurred) return;
 

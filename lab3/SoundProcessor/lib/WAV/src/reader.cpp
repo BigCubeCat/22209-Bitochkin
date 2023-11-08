@@ -1,3 +1,4 @@
+#include <iostream>
 #include "reader.h"
 
 using namespace reader;
@@ -41,6 +42,7 @@ void Reader::load(const std::string path) {
         wav::Header headerChunk;
 
         while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) {
+            std::cout << "here\n";
             inputFile.seekg(wav.dataHeader.ChunkSize, std::fstream::cur);
             inputFile.read((char *) &headerChunk, sizeof(wav::Header));
             wav.dataHeader.ChunkId = headerChunk.ChunkId;
@@ -72,4 +74,3 @@ void Reader::checkInput() {
     else if (wav.blockAlign != wav::BLOCK_ALIGN) throw WrongBlockAlign(wav.blockAlign);
     else if (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) throw WrongDataChunkId(wav.dataHeader.ChunkId);
 }
-
