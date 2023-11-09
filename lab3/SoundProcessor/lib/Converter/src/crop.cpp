@@ -8,20 +8,24 @@ Crop::Crop(const std::vector<std::string> &parameters) {
     this->eh = new ErrorHandler("crop");
 }
 
-void Crop::convert(wav::SampleVector &current_samples,
-                   const std::vector<wav::SampleVector> original_samples) {
-    if (begin >= current_samples.size()) {
+void Crop::convert(std::vector<wav::SampleBuffer> &currentSamples,
+                   const std::vector<wav::SampleVector> originalSamples) {
+    if (begin >= currentSamples.size()) {
         eh->AddError("invalid begin size\n");
         return;
     }
-    if (end >= current_samples.size()) {
+    if (end >= currentSamples.size()) {
         eh->AddError("invalid end size\n");
         return;
     }
 
-    current_samples.erase(std::next(current_samples.begin() + end));
-    current_samples.erase(
-            std::next(current_samples.begin()),
-            std::next(current_samples.begin() + begin - 1)
+    currentSamples.erase(
+            std::next(currentSamples.begin() + end),
+            std::next(currentSamples.end()
+            )
+    );
+    currentSamples.erase(
+            std::next(currentSamples.begin()),
+            std::next(currentSamples.begin() + begin - 1)
     );
 }
