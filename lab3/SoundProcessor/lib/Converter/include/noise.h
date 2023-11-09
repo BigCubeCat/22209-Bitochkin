@@ -6,8 +6,6 @@
 
 namespace noise {
 
-    const float PERCENT = 50.5f;
-
     class Noise : public converter::Converter {
     public:
         Noise(const std::vector<std::string> parameters);
@@ -18,6 +16,7 @@ namespace noise {
     private:
         int start = 0;
         int end = 0;
+        int percent = 50;
     };
 }
 #endif

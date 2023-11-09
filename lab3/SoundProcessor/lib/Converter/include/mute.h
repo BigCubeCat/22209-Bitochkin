@@ -5,7 +5,6 @@
 #include "converter.h"
 
 namespace mute {
-    const float PERCENT = 0.9f;
 
     class Mute : public converter::Converter {
     public:

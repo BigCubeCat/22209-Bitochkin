@@ -68,3 +68,8 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+
+
+/*
+ * ДОБАВИТЬ КЛАСС ErrorHandler, так как механизм обработки ошибок везде одинков
+ */

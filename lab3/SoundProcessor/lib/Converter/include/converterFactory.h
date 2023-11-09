@@ -22,8 +22,8 @@ namespace converterFactory {
     const std::string MUTE = "mute";
     const std::string MIX = "mix";
     const std::string NOISE = "noise";
-    const std::string CUT = "noise";
-    const std::string CROP = "noise";
+    const std::string CUT = "cut";
+    const std::string CROP = "crop";
 
     using ConverterPointer = std::unique_ptr<converter::Converter>;
 
