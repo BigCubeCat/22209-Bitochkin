@@ -1,2 +1,2 @@
-cut 10 12
-noise 0 10 40
+mute 10 11
+cut 0 10

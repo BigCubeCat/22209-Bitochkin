@@ -2,12 +2,8 @@
 
 using namespace converterFactory;
 
-NotFoundConverter::NotFoundConverter(const std::string &converterName)
-        : std::invalid_argument(converterName + " not found") {}
-
 ConverterPointer ConverterFactory::createConverter(const std::vector<std::string> parameters) {
     std::string converterName = parameters[0];
-
     if (converterName == MIX) {
         return std::make_unique<mix::Mix>(parameters);
     } else if (converterName == MUTE) {

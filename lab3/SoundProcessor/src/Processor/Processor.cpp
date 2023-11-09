@@ -28,15 +28,18 @@ void Processor::initSamples() {
 }
 
 void Processor::run(const std::vector<std::vector<std::string>> &algorithm) {
-    std::cout << "RUN\n";
     wav::SampleVector resultSamples = inputFilesSamples[0];
 
     converterFactory::ConverterFactory factory;
 
     for (const auto &cmd: algorithm) {
-        std::cout << cmd[0] << std::endl;
+        std::cout << "\ncmd\t" << cmd[0] << "\n";
         converterFactory::ConverterPointer currentConverter = factory.createConverter(cmd);
         currentConverter->convert(resultSamples, inputFilesSamples);
+        if (currentConverter->eh->hasErrors()) {
+            currentConverter->eh->printErrorText();
+            return;
+        }
     }
 
     writeOut(resultSamples);
@@ -44,9 +47,8 @@ void Processor::run(const std::vector<std::vector<std::string>> &algorithm) {
 
 void Processor::writeOut(const std::vector<wav::SampleBuffer> &resultSamples) {
     writer::Writer writer(outFile);
-    for (auto buffer: resultSamples) {
+    for (const auto &buffer: resultSamples) {
         writer.writeSample(&buffer);
     }
     writer.writeHeader();
 }
-

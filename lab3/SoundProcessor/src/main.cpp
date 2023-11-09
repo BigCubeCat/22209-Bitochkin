@@ -57,8 +57,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    configurator.parse();
-
     auto proc = Processor(
             parser.getInputFilesString(),
             parser.getOutputFileString()
@@ -68,8 +66,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
-
-/*
- * ДОБАВИТЬ КЛАСС ErrorHandler, так как механизм обработки ошибок везде одинков
- */

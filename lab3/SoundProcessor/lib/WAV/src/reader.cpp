@@ -42,7 +42,6 @@ void Reader::load(const std::string path) {
         wav::Header headerChunk;
 
         while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) {
-            std::cout << "here\n";
             inputFile.seekg(wav.dataHeader.ChunkSize, std::fstream::cur);
             inputFile.read((char *) &headerChunk, sizeof(wav::Header));
             wav.dataHeader.ChunkId = headerChunk.ChunkId;

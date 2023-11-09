@@ -1,5 +1,7 @@
 #include "cut.h"
 
+#include <iostream>
+
 using namespace cut;
 
 Cut::Cut(const std::vector<std::string> &parameters) {
@@ -8,8 +10,10 @@ Cut::Cut(const std::vector<std::string> &parameters) {
     this->eh = new ErrorHandler("cut");
 }
 
-void Cut::convert(wav::SampleVector &currentSamples,
+void Cut::convert(std::vector<wav::SampleBuffer> &currentSamples,
                   const std::vector<wav::SampleVector> originalSamples) {
+    std::cout << "\nbegin, end " << begin << " " << end << "\t" << currentSamples.size() << "\n";
+
     if (begin >= currentSamples.size()) {
         eh->AddError("invalid begin time\n");
         return;
