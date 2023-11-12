@@ -213,6 +213,54 @@ src/converterFactory.cpp.s:
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/converterFactory.cpp.s
 .PHONY : src/converterFactory.cpp.s
 
+src/crop.o: src/crop.cpp.o
+.PHONY : src/crop.o
+
+# target to build an object file
+src/crop.cpp.o:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o
+.PHONY : src/crop.cpp.o
+
+src/crop.i: src/crop.cpp.i
+.PHONY : src/crop.i
+
+# target to preprocess a source file
+src/crop.cpp.i:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.i
+.PHONY : src/crop.cpp.i
+
+src/crop.s: src/crop.cpp.s
+.PHONY : src/crop.s
+
+# target to generate assembly for a file
+src/crop.cpp.s:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.s
+.PHONY : src/crop.cpp.s
+
+src/cut.o: src/cut.cpp.o
+.PHONY : src/cut.o
+
+# target to build an object file
+src/cut.cpp.o:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o
+.PHONY : src/cut.cpp.o
+
+src/cut.i: src/cut.cpp.i
+.PHONY : src/cut.i
+
+# target to preprocess a source file
+src/cut.cpp.i:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.i
+.PHONY : src/cut.cpp.i
+
+src/cut.s: src/cut.cpp.s
+.PHONY : src/cut.s
+
+# target to generate assembly for a file
+src/cut.cpp.s:
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build && $(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.s
+.PHONY : src/cut.cpp.s
+
 src/mix.o: src/mix.cpp.o
 .PHONY : src/mix.o
 
@@ -326,6 +374,12 @@ help:
 	@echo "... src/converterFactory.o"
 	@echo "... src/converterFactory.i"
 	@echo "... src/converterFactory.s"
+	@echo "... src/crop.o"
+	@echo "... src/crop.i"
+	@echo "... src/crop.s"
+	@echo "... src/cut.o"
+	@echo "... src/cut.i"
+	@echo "... src/cut.s"
 	@echo "... src/mix.o"
 	@echo "... src/mix.i"
 	@echo "... src/mix.s"

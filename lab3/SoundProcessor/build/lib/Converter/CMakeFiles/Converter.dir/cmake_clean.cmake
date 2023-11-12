@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Converter.dir/src/converterFactory.cpp.o"
   "CMakeFiles/Converter.dir/src/converterFactory.cpp.o.d"
+  "CMakeFiles/Converter.dir/src/crop.cpp.o"
+  "CMakeFiles/Converter.dir/src/crop.cpp.o.d"
+  "CMakeFiles/Converter.dir/src/cut.cpp.o"
+  "CMakeFiles/Converter.dir/src/cut.cpp.o.d"
   "CMakeFiles/Converter.dir/src/mix.cpp.o"
   "CMakeFiles/Converter.dir/src/mix.cpp.o.d"
   "CMakeFiles/Converter.dir/src/mute.cpp.o"

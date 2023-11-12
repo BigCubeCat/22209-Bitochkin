@@ -27,11 +27,10 @@ TEST(constructor_tests, copy_file) {
 
     reader::Reader reader1;
     reader::Reader reader2;
-    reader1.load(pathFolder + "district_four.wav");
-    reader2.load(pathFolder + "a.wav");
+    reader1.load(pathFolder + "input1.wav");
+    reader2.load(pathFolder + "input2.wav");
 
-    while (true)
-    {
+    while (true) {
         wav::SampleBuffer buffer1;
         wav::SampleBuffer buffer2;
         if (!reader1.readSample(&buffer1) || !reader2.readSample(&buffer2)) break;
@@ -39,8 +38,7 @@ TEST(constructor_tests, copy_file) {
     }
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

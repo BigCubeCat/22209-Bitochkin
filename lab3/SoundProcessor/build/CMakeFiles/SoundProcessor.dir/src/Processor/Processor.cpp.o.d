@@ -175,5 +175,8 @@ CMakeFiles/SoundProcessor.dir/src/Processor/Processor.cpp.o: \
  /usr/include/c++/13.2.1/pstl/execution_defs.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mute.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converter.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/../../ErrorHandler/ErrorHandler.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mix.h \
- /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/cut.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/crop.h

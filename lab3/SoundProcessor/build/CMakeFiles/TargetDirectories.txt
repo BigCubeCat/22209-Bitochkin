@@ -57,3 +57,10 @@
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter/CMakeFiles/install.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter/CMakeFiles/install/local.dir
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter/CMakeFiles/install/strip.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/ErrorHandler.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/edit_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/rebuild_cache.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/list_install_components.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/install.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/install/local.dir
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler/CMakeFiles/install/strip.dir

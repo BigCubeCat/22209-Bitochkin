@@ -24,8 +24,11 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ErrorHandler/ErrorHandler.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converter.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converterFactory.h
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/crop.h
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/cut.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mix.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mute.h
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h

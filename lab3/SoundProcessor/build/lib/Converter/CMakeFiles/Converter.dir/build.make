@@ -125,12 +125,42 @@ lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Converter.dir/src/mute.cpp.s"
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/mute.cpp -o CMakeFiles/Converter.dir/src/mute.cpp.s
 
+lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o: lib/Converter/CMakeFiles/Converter.dir/flags.make
+lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/cut.cpp
+lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o: lib/Converter/CMakeFiles/Converter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o -MF CMakeFiles/Converter.dir/src/cut.cpp.o.d -o CMakeFiles/Converter.dir/src/cut.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/cut.cpp
+
+lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Converter.dir/src/cut.cpp.i"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/cut.cpp > CMakeFiles/Converter.dir/src/cut.cpp.i
+
+lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Converter.dir/src/cut.cpp.s"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/cut.cpp -o CMakeFiles/Converter.dir/src/cut.cpp.s
+
+lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o: lib/Converter/CMakeFiles/Converter.dir/flags.make
+lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o: /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/crop.cpp
+lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o: lib/Converter/CMakeFiles/Converter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o -MF CMakeFiles/Converter.dir/src/crop.cpp.o.d -o CMakeFiles/Converter.dir/src/crop.cpp.o -c /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/crop.cpp
+
+lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Converter.dir/src/crop.cpp.i"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/crop.cpp > CMakeFiles/Converter.dir/src/crop.cpp.i
+
+lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Converter.dir/src/crop.cpp.s"
+	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/src/crop.cpp -o CMakeFiles/Converter.dir/src/crop.cpp.s
+
 # Object files for target Converter
 Converter_OBJECTS = \
 "CMakeFiles/Converter.dir/src/converterFactory.cpp.o" \
 "CMakeFiles/Converter.dir/src/mix.cpp.o" \
 "CMakeFiles/Converter.dir/src/noise.cpp.o" \
-"CMakeFiles/Converter.dir/src/mute.cpp.o"
+"CMakeFiles/Converter.dir/src/mute.cpp.o" \
+"CMakeFiles/Converter.dir/src/cut.cpp.o" \
+"CMakeFiles/Converter.dir/src/crop.cpp.o"
 
 # External object files for target Converter
 Converter_EXTERNAL_OBJECTS =
@@ -139,9 +169,11 @@ lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/convert
 lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/mix.cpp.o
 lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/noise.cpp.o
 lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o
+lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/cut.cpp.o
+lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/src/crop.cpp.o
 lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/build.make
 lib/Converter/libConverter.a: lib/Converter/CMakeFiles/Converter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libConverter.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libConverter.a"
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && $(CMAKE_COMMAND) -P CMakeFiles/Converter.dir/cmake_clean_target.cmake
 	cd /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/Converter && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Converter.dir/link.txt --verbose=$(VERBOSE)
 

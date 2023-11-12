@@ -23,6 +23,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ArgParser/CMakeLists.txt"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator/CMakeLists.txt"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/CMakeLists.txt"
+  "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ErrorHandler/CMakeLists.txt"
   "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/CMakeLists.txt"
   "/usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
@@ -84,6 +85,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "lib/Configurator/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/ArgParser/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/Converter/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/ErrorHandler/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -99,4 +101,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "lib/ArgParser/CMakeFiles/ArgParser.dir/DependInfo.cmake"
   "lib/Converter/CMakeFiles/Converter.dir/DependInfo.cmake"
   "lib/Converter/CMakeFiles/converter_tests.dir/DependInfo.cmake"
+  "lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/DependInfo.cmake"
   )

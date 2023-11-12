@@ -23,8 +23,11 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: /home/b
   _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ErrorHandler/ErrorHandler.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converter.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converterFactory.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/crop.h \
+  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/cut.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mix.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mute.h \
   /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h \
@@ -466,11 +469,9 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: /home/b
 
 /usr/include/c++/13.2.1/ext/string_conversions.h:
 
-/usr/include/bits/types/wint_t.h:
+/usr/include/c++/13.2.1/ext/atomicity.h:
 
-/usr/include/bits/sigcontext.h:
-
-/usr/include/bits/types/timer_t.h:
+/usr/include/c++/13.2.1/ext/alloc_traits.h:
 
 /usr/include/bits/types/struct_tm.h:
 
@@ -522,11 +523,13 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: /home/b
 
 /usr/include/bits/types/time_t.h:
 
+/usr/include/c++/13.2.1/ext/concurrence.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
 /usr/include/c++/13.2.1/bits/shared_ptr_atomic.h:
 
 /usr/include/bits/struct_mutex.h:
-
-/usr/include/c++/13.2.1/ext/alloc_traits.h:
 
 /usr/include/bits/stdlib-float.h:
 
@@ -568,10 +571,6 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: /home/b
 
 /usr/include/bits/getopt_core.h:
 
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/include/c++/13.2.1/ext/concurrence.h:
-
 /usr/include/bits/sigaction.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
@@ -600,19 +599,15 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/c++/13.2.1/debug/assertions.h:
 
-/usr/include/bits/types/struct_statx_timestamp.h:
+/usr/include/bits/pthreadtypes-arch.h:
 
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include/wav.h:
+/usr/include/c++/13.2.1/bits/range_access.h:
 
-/usr/include/bits/types/sigevent_t.h:
+/usr/include/bits/pthread_stack_min-dynamic.h:
 
-_deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
+/usr/include/bits/posix_opt.h:
 
-/usr/include/linux/close_range.h:
-
-/usr/include/c++/13.2.1/bits/move.h:
-
-/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h:
+/usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/bits/types/error_t.h:
 
@@ -660,11 +655,11 @@ _deps/googletest-src/googletest/include/gtest/gtest_prod.h:
 
 /usr/include/bits/stat.h:
 
+/usr/include/c++/13.2.1/bits/stl_function.h:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
-
-/usr/include/bits/types.h:
 
 /usr/include/c++/13.2.1/bits/allocated_ptr.h:
 
@@ -676,6 +671,10 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
 
 /usr/include/c++/13.2.1/bits/exception_ptr.h:
 
+/usr/include/bits/sigcontext.h:
+
+/usr/include/bits/types/wint_t.h:
+
 /usr/include/c++/13.2.1/iostream:
 
 /usr/include/bits/types/mbstate_t.h:
@@ -683,6 +682,20 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
 /usr/include/bits/signal_ext.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h:
+
+/usr/include/bits/types/sigevent_t.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/c++/13.2.1/bits/move.h:
+
+/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h:
+
+/usr/include/bits/types/struct_statx_timestamp.h:
+
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include/wav.h:
 
 /usr/include/bits/long-double.h:
 
@@ -698,19 +711,13 @@ _deps/googletest-src/googletest/include/gtest/gtest-message.h:
 
 /usr/include/c++/13.2.1/bits/stl_set.h:
 
-/usr/include/c++/13.2.1/ext/atomicity.h:
-
-/usr/include/bits/types/idtype_t.h:
-
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h:
-
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converter.h:
-
 /usr/include/errno.h:
 
 /usr/include/bits/getopt_posix.h:
 
 _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
+
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ErrorHandler/ErrorHandler.h:
 
 /usr/include/c++/13.2.1/bits/align.h:
 
@@ -718,27 +725,23 @@ _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
 /usr/include/bits/libc-header-start.h:
 
+/usr/include/bits/types.h:
+
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/crop.h:
+
 /usr/include/bits/endian.h:
 
 /usr/include/c++/13.2.1/clocale:
 
 _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 
-/usr/include/c++/13.2.1/bits/cxxabi_forced.h:
+/usr/include/bits/types/idtype_t.h:
 
-/usr/include/c++/13.2.1/bits/uses_allocator_args.h:
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/cut.h:
 
-/usr/include/c++/13.2.1/set:
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h:
 
-/usr/include/c++/13.2.1/bits/unique_lock.h:
-
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converterFactory.h:
-
-_deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
-
-/usr/include/c++/13.2.1/bits/chrono.h:
-
-/usr/include/c++/13.2.1/bits/stl_multiset.h:
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converter.h:
 
 /usr/include/bits/byteswap.h:
 
@@ -757,6 +760,22 @@ _deps/googletest-src/googletest/include/gtest/gtest-typed-test.h:
 /usr/include/asm/types.h:
 
 _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h:
+
+/usr/include/c++/13.2.1/bits/cxxabi_forced.h:
+
+/usr/include/c++/13.2.1/bits/uses_allocator_args.h:
+
+/usr/include/c++/13.2.1/set:
+
+/usr/include/c++/13.2.1/bits/unique_lock.h:
+
+/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/converterFactory.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
+
+/usr/include/c++/13.2.1/bits/chrono.h:
+
+/usr/include/c++/13.2.1/bits/stl_multiset.h:
 
 /usr/include/c++/13.2.1/bits/predefined_ops.h:
 
@@ -814,10 +833,6 @@ _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
 
 /usr/include/c++/13.2.1/bits/stl_uninitialized.h:
 
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/posix_opt.h:
-
 /usr/include/bits/locale.h:
 
 /usr/include/bits/confname.h:
@@ -862,11 +877,7 @@ _deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h:
 
 /usr/include/c++/13.2.1/bits/ios_base.h:
 
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/c++/13.2.1/bits/range_access.h:
+/usr/include/bits/types/timer_t.h:
 
 /usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h:
 
@@ -997,8 +1008,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/bits/wordsize.h:
 
 /usr/include/c++/13.2.1/bits/stl_bvector.h:
-
-/usr/include/c++/13.2.1/bits/stl_function.h:
 
 /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mix.h:
 

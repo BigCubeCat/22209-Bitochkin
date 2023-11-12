@@ -145,8 +145,11 @@ lib/Converter/CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o: \
  /usr/include/c++/13.2.1/compare \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include/wav.h \
  /usr/include/c++/13.2.1/cstdint \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/../../ErrorHandler/ErrorHandler.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/mix.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/noise.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/cut.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/crop.h \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
  /usr/include/c++/13.2.1/limits /usr/include/c++/13.2.1/ostream \
  /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/bits/ios_base.h \

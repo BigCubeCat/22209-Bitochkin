@@ -112,6 +112,7 @@ SoundProcessor: lib/WAV/libWAV.a
 SoundProcessor: lib/Configurator/libConfigurator.a
 SoundProcessor: lib/ArgParser/libArgParser.a
 SoundProcessor: lib/Converter/libConverter.a
+SoundProcessor: lib/ErrorHandler/libErrorHandler.a
 SoundProcessor: lib/WAV/libWAV.a
 SoundProcessor: CMakeFiles/SoundProcessor.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable SoundProcessor"

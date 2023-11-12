@@ -299,6 +299,15 @@ Configurator_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 Configurator_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Configurator
 
+//Value Computed by CMake
+ErrorHandler_BINARY_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/lib/ErrorHandler
+
+//Value Computed by CMake
+ErrorHandler_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ErrorHandler_SOURCE_DIR:STATIC=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/ErrorHandler
+
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps
 
@@ -532,7 +541,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

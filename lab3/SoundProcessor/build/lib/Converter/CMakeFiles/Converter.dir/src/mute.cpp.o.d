@@ -117,4 +117,5 @@ lib/Converter/CMakeFiles/Converter.dir/src/mute.cpp.o: \
  /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/WAV/include/wav.h \
  /usr/include/c++/13.2.1/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/lib/Converter/include/../../ErrorHandler/ErrorHandler.h

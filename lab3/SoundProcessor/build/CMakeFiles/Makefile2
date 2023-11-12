@@ -68,6 +68,7 @@ all: lib/WAV/all
 all: lib/Configurator/all
 all: lib/ArgParser/all
 all: lib/Converter/all
+all: lib/ErrorHandler/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -75,6 +76,7 @@ preinstall: lib/WAV/preinstall
 preinstall: lib/Configurator/preinstall
 preinstall: lib/ArgParser/preinstall
 preinstall: lib/Converter/preinstall
+preinstall: lib/ErrorHandler/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -83,6 +85,7 @@ clean: lib/WAV/clean
 clean: lib/Configurator/clean
 clean: lib/ArgParser/clean
 clean: lib/Converter/clean
+clean: lib/ErrorHandler/clean
 .PHONY : clean
 
 #=============================================================================
@@ -184,6 +187,21 @@ lib/Converter/clean: lib/Converter/CMakeFiles/converter_tests.dir/clean
 .PHONY : lib/Converter/clean
 
 #=============================================================================
+# Directory level rules for directory lib/ErrorHandler
+
+# Recursive "all" directory target.
+lib/ErrorHandler/all: lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/all
+.PHONY : lib/ErrorHandler/all
+
+# Recursive "preinstall" directory target.
+lib/ErrorHandler/preinstall:
+.PHONY : lib/ErrorHandler/preinstall
+
+# Recursive "clean" directory target.
+lib/ErrorHandler/clean: lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/clean
+.PHONY : lib/ErrorHandler/clean
+
+#=============================================================================
 # Directory level rules for directory lib/WAV
 
 # Recursive "all" directory target.
@@ -210,14 +228,15 @@ CMakeFiles/SoundProcessor.dir/all: lib/WAV/CMakeFiles/WAV.dir/all
 CMakeFiles/SoundProcessor.dir/all: lib/Configurator/CMakeFiles/Configurator.dir/all
 CMakeFiles/SoundProcessor.dir/all: lib/ArgParser/CMakeFiles/ArgParser.dir/all
 CMakeFiles/SoundProcessor.dir/all: lib/Converter/CMakeFiles/Converter.dir/all
+CMakeFiles/SoundProcessor.dir/all: lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoundProcessor.dir/build.make CMakeFiles/SoundProcessor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoundProcessor.dir/build.make CMakeFiles/SoundProcessor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=11,12,13 "Built target SoundProcessor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=15,16,17 "Built target SoundProcessor"
 .PHONY : CMakeFiles/SoundProcessor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SoundProcessor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SoundProcessor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 0
 .PHONY : CMakeFiles/SoundProcessor.dir/rule
@@ -238,7 +257,7 @@ CMakeFiles/SoundProcessor.dir/clean:
 lib/WAV/CMakeFiles/WAV.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/WAV/CMakeFiles/WAV.dir/build.make lib/WAV/CMakeFiles/WAV.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/WAV/CMakeFiles/WAV.dir/build.make lib/WAV/CMakeFiles/WAV.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=14,15,16 "Built target WAV"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=18,19,20 "Built target WAV"
 .PHONY : lib/WAV/CMakeFiles/WAV.dir/all
 
 # Build rule for subdir invocation for target.
@@ -266,7 +285,7 @@ lib/WAV/CMakeFiles/wav_tests.dir/all: _deps/googletest-build/googletest/CMakeFil
 lib/WAV/CMakeFiles/wav_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/WAV/CMakeFiles/wav_tests.dir/build.make lib/WAV/CMakeFiles/wav_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/WAV/CMakeFiles/wav_tests.dir/build.make lib/WAV/CMakeFiles/wav_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=27,28 "Built target wav_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=31,32 "Built target wav_tests"
 .PHONY : lib/WAV/CMakeFiles/wav_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -292,7 +311,7 @@ lib/WAV/CMakeFiles/wav_tests.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=19,20 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=23,24 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -319,7 +338,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=21,22 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=25,26 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -345,7 +364,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=23,24 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=27,28 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -371,7 +390,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=25,26 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=29,30 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -449,12 +468,12 @@ lib/ArgParser/CMakeFiles/ArgParser.dir/clean:
 lib/Converter/CMakeFiles/Converter.dir/all: lib/WAV/CMakeFiles/WAV.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/Converter.dir/build.make lib/Converter/CMakeFiles/Converter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target Converter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target Converter"
 .PHONY : lib/Converter/CMakeFiles/Converter.dir/all
 
 # Build rule for subdir invocation for target.
 lib/Converter/CMakeFiles/Converter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/Converter/CMakeFiles/Converter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 0
 .PHONY : lib/Converter/CMakeFiles/Converter.dir/rule
@@ -478,12 +497,12 @@ lib/Converter/CMakeFiles/converter_tests.dir/all: _deps/googletest-build/googlet
 lib/Converter/CMakeFiles/converter_tests.dir/all: lib/Converter/CMakeFiles/Converter.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/converter_tests.dir/build.make lib/Converter/CMakeFiles/converter_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/converter_tests.dir/build.make lib/Converter/CMakeFiles/converter_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=17,18 "Built target converter_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=21,22 "Built target converter_tests"
 .PHONY : lib/Converter/CMakeFiles/converter_tests.dir/all
 
 # Build rule for subdir invocation for target.
 lib/Converter/CMakeFiles/converter_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/Converter/CMakeFiles/converter_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 0
 .PHONY : lib/Converter/CMakeFiles/converter_tests.dir/rule
@@ -496,6 +515,32 @@ converter_tests: lib/Converter/CMakeFiles/converter_tests.dir/rule
 lib/Converter/CMakeFiles/converter_tests.dir/clean:
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/converter_tests.dir/build.make lib/Converter/CMakeFiles/converter_tests.dir/clean
 .PHONY : lib/Converter/CMakeFiles/converter_tests.dir/clean
+
+#=============================================================================
+# Target rules for target lib/ErrorHandler/CMakeFiles/ErrorHandler.dir
+
+# All Build rule for target.
+lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build.make lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build.make lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles --progress-num=13,14 "Built target ErrorHandler"
+.PHONY : lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/all
+
+# Build rule for subdir invocation for target.
+lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/CMakeFiles 0
+.PHONY : lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/rule
+
+# Convenience name for target.
+ErrorHandler: lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/rule
+.PHONY : ErrorHandler
+
+# clean rule for target.
+lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build.make lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/clean
+.PHONY : lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

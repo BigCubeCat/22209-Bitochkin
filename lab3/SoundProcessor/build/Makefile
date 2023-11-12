@@ -304,6 +304,19 @@ converter_tests/fast:
 	$(MAKE) $(MAKESILENT) -f lib/Converter/CMakeFiles/converter_tests.dir/build.make lib/Converter/CMakeFiles/converter_tests.dir/build
 .PHONY : converter_tests/fast
 
+#=============================================================================
+# Target rules for targets named ErrorHandler
+
+# Build rule for target.
+ErrorHandler: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ErrorHandler
+.PHONY : ErrorHandler
+
+# fast build rule for target.
+ErrorHandler/fast:
+	$(MAKE) $(MAKESILENT) -f lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build.make lib/ErrorHandler/CMakeFiles/ErrorHandler.dir/build
+.PHONY : ErrorHandler/fast
+
 src/Processor/Processor.o: src/Processor/Processor.cpp.o
 .PHONY : src/Processor/Processor.o
 
@@ -367,6 +380,7 @@ help:
 	@echo "... ArgParser"
 	@echo "... Configurator"
 	@echo "... Converter"
+	@echo "... ErrorHandler"
 	@echo "... SoundProcessor"
 	@echo "... WAV"
 	@echo "... converter_tests"
