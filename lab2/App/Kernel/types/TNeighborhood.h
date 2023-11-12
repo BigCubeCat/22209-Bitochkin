@@ -4,6 +4,10 @@
 #include <string>
 #include <vector>
 
+struct TPoint {
+    int x, y;
+};
+
 /*
  * ENeighborhood
  *
@@ -27,7 +31,7 @@ struct TNeighborhood {
      * Degree of neighborhood
      */
     int degree = 1;
-    std::vector<std::pair<int, int>> points;
+    std::vector<TPoint> points;
 
     explicit TNeighborhood(ENeighborhood neigh = MOORE, int deg = 1);
 };

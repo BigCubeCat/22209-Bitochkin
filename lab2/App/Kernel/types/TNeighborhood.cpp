@@ -8,9 +8,9 @@ TNeighborhood::TNeighborhood(ENeighborhood neigh, int deg)
         for (int j = -deg; j <= deg; ++j) {
             if (i == 0 && j == 0) continue;
             if (neigh == MOORE) {
-                points.emplace_back(i, j);
+                points.push_back({i, j});
             } else if (abs(i) + abs(j) <= deg) {  // Пространство Фон-Неймана
-                points.emplace_back(i, j);
+                points.push_back({i, j});
             }
         }
     }

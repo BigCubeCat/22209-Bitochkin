@@ -2,8 +2,12 @@
 
 Life::Life(size_t w, size_t h)
     : width(w), height(h), neighborhood(TNeighborhood(MOORE)) {
-    oldArena = (char *)calloc(height * width, sizeof(char));
-    newArena = (char *)calloc(height * width, sizeof(char));
+    oldArena = new char[height * width];
+    newArena = new char[height * width];
+    for (size_t i = 0; i < height * width; ++i) {
+        oldArena[i] = 0;
+        newArena[i] = 0;
+    }
     setRules(TRules("B3/S2,3"));
 }
 
@@ -27,8 +31,8 @@ char Life::newValue(size_t row, size_t col) {
 size_t Life::calcNeighbors(size_t row, size_t col) {
     size_t result = 0;
     for (const auto &coords : neighborhood.points) {
-        size_t rowIndex = (height + row + coords.first) % height;
-        size_t colIndex = (width + col + coords.second) % width;
+        size_t rowIndex = (height + row + coords.x) % height;
+        size_t colIndex = (width + col + coords.y) % width;
         result += oldArena[rowIndex * width + colIndex];
     }
     return result;
