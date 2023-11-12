@@ -1,8 +1,9 @@
 #include "StateStorage.h"
 
+#include <QObject>
 #include <QColor>
 
-StateStorage::StateStorage() {
+StateStorage::StateStorage(QMainWindow *parent) : QObject(parent) {
     gameTimer = new QTimer(this);
     canvasTimer = new QTimer(this);
 

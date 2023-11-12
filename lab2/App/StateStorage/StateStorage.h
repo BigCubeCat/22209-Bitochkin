@@ -6,11 +6,12 @@
 #include <string>
 
 #include "../Kernel//Life/Life.h"
+#include "../ui/mainwindow/MainWindow.h"
 
 class StateStorage : public QObject {
-    Q_OBJECT
-   public:
-    StateStorage();
+Q_OBJECT
+public:
+    StateStorage(QMainWindow *parent = nullptr);
 
     ~StateStorage() override;
 
@@ -26,7 +27,7 @@ class StateStorage : public QObject {
 
     bool aliveAt(int index);
 
-   private:
+private:
     Life *life{};
 
     size_t arenaWidth{};
@@ -37,7 +38,7 @@ class StateStorage : public QObject {
     QTimer *gameTimer;
     QTimer *canvasTimer;
 
-   public slots:
+public slots:
 
     void setRules(const std::string &newRules);
 
@@ -65,7 +66,7 @@ class StateStorage : public QObject {
 
     void setColor(const QColor &color, int index);
 
-   signals:
+signals:
 
     void invalidRule();
 
