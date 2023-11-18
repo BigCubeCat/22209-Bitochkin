@@ -39,8 +39,6 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(canvas, &Canvas::toggleCell, store,
                      &StateStorage::toggleLife);
 
-    QObject::connect(fw, &FileWorker::setWindowTitle, this,
-                     &MainWindow::setTitle);
 }
 
 MainWindow::~MainWindow() {
@@ -55,6 +53,7 @@ void MainWindow::openFile() {
         this, tr("Open Life 1.06 file"), "", tr("Life Files (*.life)"));
     fw->setFileName(fileName);
     readLife();
+    this->setWindowTitle(fw->getTitle());
 }
 
 void MainWindow::saveFile() {
@@ -84,8 +83,4 @@ void MainWindow::setCellSize(int size) {
 
 void MainWindow::setGapSize(int size) {
     if (canvas) canvas->setCellSize(size);
-}
-
-void MainWindow::setTitle(const QString &title) {
-    this->setWindowTitle(title);
 }

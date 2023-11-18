@@ -15,15 +15,14 @@ class FileWorker : public QObject {
     void setFileName(const QString &filename);
 
     std::pair<QString, bool> readFile();
+    QString getTitle();
 
     void saveFile();
 
    private:
     QString fileName;
     StateStorage *store;
-   signals:
-
-    void setWindowTitle(const QString &title);
+    QString title;
 };
 
 #endif

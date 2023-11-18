@@ -12,14 +12,14 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class MainWindow;
+    class MainWindow;
 }
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow {
-    Q_OBJECT
+Q_OBJECT
 
-   public:
+public:
     explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow() override;
@@ -28,7 +28,7 @@ class MainWindow : public QMainWindow {
 
     void setGapSize(int size);
 
-   private:
+private:
     Ui::MainWindow *ui;
     StateStorage *store;
     Panel *leftPanel;
@@ -39,15 +39,13 @@ class MainWindow : public QMainWindow {
 
     void readLife();
 
-   public slots:
+public slots:
 
     void openFile();
 
     void saveFile();
 
     void saveAsFile();
-
-    void setTitle(const QString &title);
 };
 
 #endif

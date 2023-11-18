@@ -14,7 +14,6 @@ FileWorker::~FileWorker() {
 
 void FileWorker::setFileName(const QString &filename) {
     fileName = filename;
-    emit setWindowTitle(filename);
 }
 
 std::pair<QString, bool> FileWorker::readFile() {
@@ -33,7 +32,7 @@ std::pair<QString, bool> FileWorker::readFile() {
         QStringList words = line.split(" ");
         if (line.at(0) == QChar('#')) {
             if (words[0] == QString("#T")) {
-                emit setWindowTitle(words[1]);
+                title = words[1];
             } else if (words[0] == QString("#R")) {
                 store->setRules(words[1].toStdString());
             } else if (words[0] == QString("#N")) {
@@ -72,4 +71,8 @@ void FileWorker::saveFile() {
             }
         }
     }
+}
+
+QString FileWorker::getTitle() {
+    return title;
 }
