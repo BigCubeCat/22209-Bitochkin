@@ -5,13 +5,12 @@
 #include <QTimer>
 #include <string>
 
-#include "../Kernel//Life/Life.h"
-#include "../ui/mainwindow/MainWindow.h"
+#include "../Kernel/Life/Life.h"
 
 class StateStorage : public QObject {
 Q_OBJECT
 public:
-    StateStorage(QMainWindow *parent = nullptr);
+    StateStorage();
 
     ~StateStorage() override;
 

@@ -1,15 +1,16 @@
-#ifndef UNTITLED_LIFE_H
-#define UNTITLED_LIFE_H
+#ifndef LIFE_H
+#define LIFE_H
 
 #include <map>
 
 #include "../../Kernel/types/TNeighborhood.h"
 #include "../../Kernel/types/TRules.h"
+#include "Arena.h"
 
 class Life {
    private:
-    char *newArena{};
-    char *oldArena{};
+    Arena arena{0, 0};
+    Arena newArena{0, 0};
 
     size_t width;
     size_t height;
@@ -24,7 +25,7 @@ class Life {
     explicit Life(size_t w = 64, size_t h = 64);
     ~Life();
 
-    void toggleCell(int row, int col);
+    void toggleCell(size_t row, size_t col);
 
     void setRules(const TRules &r);
 
@@ -46,7 +47,7 @@ class Life {
 
     std::string getNeighborhood() const;
 
-    char operator[](int index);
+    char operator[](size_t index);
 };
 
 #endif

@@ -8,7 +8,7 @@
 class FileWorker : public QObject {
     Q_OBJECT
    public:
-    explicit FileWorker(StateStorage *store = nullptr);
+    explicit FileWorker(StateStorage *s = nullptr);
 
     ~FileWorker();
 

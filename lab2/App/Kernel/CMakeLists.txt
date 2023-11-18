@@ -3,6 +3,8 @@ project(Kernel)
 set(SOURCE_LIB
         Life/Life.cpp
         Life/Life.h
+        Life/Arena.cpp
+        Life/Arena.h
 
         types/TNeighborhood.cpp
         types/TNeighborhood.h

@@ -14,6 +14,12 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
+
+        StateStorage/StateStorage.cpp
+        StateStorage/StateStorage.h
+        FileWorker/FileWorker.cpp
+        FileWorker/FileWorker.h
+
         ui/mainwindow/MainWindow.cpp
         ui/mainwindow/MainWindow.h
         ui/mainwindow/mainwindow.ui
@@ -37,15 +43,10 @@ set(PROJECT_SOURCES
         ui/NeighborhoodSelect/NeighborhoodSelect.h
         ui/NeighborhoodSelect/neighborhoodselect.ui
 
-        StateStorage/StateStorage.cpp
-        StateStorage/StateStorage.h
-
         ui/Conf/Conf.h
         ui/Conf/Conf.cpp
         ui/Conf/conf.ui
 
-        FileWorker/FileWorker.cpp
-        FileWorker/FileWorker.h
 )
 
 include_directories(Kernel)
