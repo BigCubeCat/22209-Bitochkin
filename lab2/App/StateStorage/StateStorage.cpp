@@ -3,7 +3,7 @@
 #include <QColor>
 #include <iostream>
 
-StateStorage::StateStorage() {
+StateStorage::StateStorage(QObject *parent) : QObject(parent) {
     gameTimer = new QTimer(this);
     canvasTimer = new QTimer(this);
 

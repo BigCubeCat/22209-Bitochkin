@@ -10,7 +10,7 @@
 class StateStorage : public QObject {
 Q_OBJECT
 public:
-    StateStorage();
+    explicit StateStorage(QObject *parent = nullptr);
 
     ~StateStorage() override;
 
