@@ -3,13 +3,8 @@
 #include <QFile>
 #include <QTextStream>
 
-FileWorker::FileWorker(StateStorage *store) : store(store) {
+FileWorker::FileWorker(StateStorage *store, QObject *parent) : store(store), QObject(parent) {
     fileName = "~/a.life";
-}
-
-FileWorker::~FileWorker() {
-    delete store;
-    store = nullptr;
 }
 
 void FileWorker::setFileName(const QString &filename) {
