@@ -10,10 +10,6 @@ set(SOURCE_EXE
         src/parser/TuplePrint.h
 )
 
-# include_directories(src/parser)
 
 add_executable(CSVParser ${SOURCE_EXE})
 
-# add_subdirectory(src/parser)
-
-# target_link_libraries(CSVParser parser)
