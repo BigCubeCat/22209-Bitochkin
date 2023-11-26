@@ -19,6 +19,11 @@ class CSVParser {
   char cellDelimiter;
   char escapingChar;
 
+//  Принимать на вход istrean
+//  Убрать IFStream, его логику перенести в парсер
+//  Убрать getREcord (можно оставить, но сделать приватной)
+//
+
   std::vector<std::string> getCells(const std::string &);
 
  public:
