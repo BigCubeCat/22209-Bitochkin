@@ -29,7 +29,7 @@ void Canvas::paintEvent(QPaintEvent *event) {
     painter.end();
 }
 
-void Canvas::redraw(std::vector<ECellState> *d, size_t w, size_t h) {
+void Canvas::redraw(Arena *d, size_t w, size_t h) {
     data = d;
     width = w;
     height = h;

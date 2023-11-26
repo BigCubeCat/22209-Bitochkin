@@ -57,7 +57,7 @@ void StateStorage::InitLife(int countRows, int countCols) {
     life = new Life(arenaWidth, arenaHeight);
 }
 
-std::vector<ECellState> *StateStorage::getArena() {
+Arena *StateStorage::getArena() {
     if (life) {
         return life->getArena();
     }

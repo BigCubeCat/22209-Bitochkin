@@ -31,7 +31,7 @@ class Life {
 
     void setNeighborhood(const TNeighborhood &n);
 
-    std::vector<ECellState> *getArena();
+    Arena *getArena();
 
     void nextGen();
 

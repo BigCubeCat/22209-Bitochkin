@@ -21,10 +21,6 @@ ECellState Arena::getCell(size_t rowIndex, size_t colIndex) {
     return arena[rowIndex * width + colIndex];
 }
 
-std::vector<ECellState> *Arena::getArena() {
-    return &arena;
-}
-
 void Arena::setCell(size_t rowIndex, size_t colIndex, ECellState value) {
     arena[rowIndex * width + colIndex] = value;
 }

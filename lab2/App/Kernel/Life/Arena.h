@@ -19,8 +19,6 @@ public:
 
     void setCell(size_t rowIndex, size_t colIndex, ECellState value);
 
-    std::vector<ECellState> *getArena();
-
 private:
     std::vector<ECellState> arena{};
     size_t width, height;

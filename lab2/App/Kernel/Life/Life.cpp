@@ -54,8 +54,8 @@ void Life::setNeighborhood(const TNeighborhood &n) {
     neighborhood = n;
 }
 
-std::vector<ECellState> *Life::getArena() {
-    return arena.getArena();
+Arena *Life::getArena() {
+    return &arena;
 }
 
 size_t Life::getWidth() const {
