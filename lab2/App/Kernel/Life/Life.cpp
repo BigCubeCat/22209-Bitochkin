@@ -16,12 +16,12 @@ void Life::nextGen() {
     std::swap(arena, newArena);
 }
 
-char Life::newValue(size_t row, size_t col) {
+ECellState Life::newValue(size_t row, size_t col) {
     auto countNeighbors = calcNeighbors(row, col);
-    if (arena.getCell(row, col) == 0) {
-        return birthMap[countNeighbors] ? 1 : 0;
+    if (arena.getCell(row, col) == DEAD) {
+        return birthMap[countNeighbors] ? ALIVE : DEAD;
     }
-    return saveMap[countNeighbors] ? 1 : 0;
+    return saveMap[countNeighbors] ? ALIVE : DEAD;
 }
 
 size_t Life::calcNeighbors(size_t row, size_t col) {
@@ -54,7 +54,7 @@ void Life::setNeighborhood(const TNeighborhood &n) {
     neighborhood = n;
 }
 
-char *Life::getArena() {
+std::vector<ECellState> *Life::getArena() {
     return arena.getArena();
 }
 
@@ -77,7 +77,7 @@ std::string Life::getRules() const {
     return rules.string;
 }
 
-char Life::operator[](size_t index) {
+ECellState Life::operator[](size_t index) {
     return arena[index];
 }
 

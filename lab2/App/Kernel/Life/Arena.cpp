@@ -1,29 +1,30 @@
 #include <algorithm>
+#include <vector>
 #include "Arena.h"
 
 Arena::Arena(size_t width, size_t height) : width(width), height(height){
-    arena = new char[height * width];
+    arena.resize(height * width);
     for (size_t i = 0; i < height * width; ++i) {
-        arena[i] = 0;
+        arena[i] = DEAD;
     }
 }
 
-char Arena::operator[](size_t index) {
+ECellState Arena::operator[](size_t index) {
     return arena[index];
 }
 
 void Arena::toggleCell(size_t row, size_t col) {
-    arena[row * width + col] = arena[row * width + col] == 0 ? 1 : 0;
+    arena[row * width + col] = arena[row * width + col] == DEAD ? ALIVE : DEAD;
 }
 
-char Arena::getCell(size_t rowIndex, size_t colIndex) {
+ECellState Arena::getCell(size_t rowIndex, size_t colIndex) {
     return arena[rowIndex * width + colIndex];
 }
 
-char *Arena::getArena() {
-    return arena;
+std::vector<ECellState> *Arena::getArena() {
+    return &arena;
 }
 
-void Arena::setCell(size_t rowIndex, size_t colIndex, char value) {
+void Arena::setCell(size_t rowIndex, size_t colIndex, ECellState value) {
     arena[rowIndex * width + colIndex] = value;
 }

@@ -14,7 +14,7 @@ public:
 
     ~StateStorage() override;
 
-    char *getArena();
+    std::vector<ECellState> *getArena();
 
     size_t getWidth() const;
 
@@ -69,7 +69,7 @@ signals:
 
     void invalidRule();
 
-    void redraw(char *data, size_t width, size_t height);
+    void redraw(std::vector<ECellState> *data, size_t width, size_t height);
 
     void updateRules(const TRules &rules);
 

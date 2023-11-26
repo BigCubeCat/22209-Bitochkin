@@ -31,7 +31,7 @@ class Life {
 
     void setNeighborhood(const TNeighborhood &n);
 
-    char *getArena();
+    std::vector<ECellState> *getArena();
 
     void nextGen();
 
@@ -41,13 +41,13 @@ class Life {
 
     size_t calcNeighbors(size_t row, size_t col);
 
-    char newValue(size_t row, size_t col);
+    ECellState newValue(size_t row, size_t col);
 
     std::string getRules() const;
 
     std::string getNeighborhood() const;
 
-    char operator[](size_t index);
+    ECellState operator[](size_t index);
 };
 
 #endif

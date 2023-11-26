@@ -15,7 +15,7 @@ void Canvas::paintEvent(QPaintEvent *event) {
     if (data) {
         for (size_t i = 0; i < height; ++i) {
             for (size_t j = 0; j < width; ++j) {
-                if (data[i * width + j] != 0) {
+                if ((*data)[i * width + j] == ALIVE) {
                     brush = QBrush(aliveColor);
                 } else {
                     brush = QBrush(emptyColor);
@@ -29,7 +29,7 @@ void Canvas::paintEvent(QPaintEvent *event) {
     painter.end();
 }
 
-void Canvas::redraw(char *d, size_t w, size_t h) {
+void Canvas::redraw(std::vector<ECellState> *d, size_t w, size_t h) {
     data = d;
     width = w;
     height = h;

@@ -2,16 +2,27 @@
 #define ARENA_H
 
 
+enum ECellState {
+    DEAD,
+    ALIVE
+};
+
 class Arena {
 public:
     Arena(size_t width, size_t height);
-    char operator[](size_t index);
+
+    ECellState operator[](size_t index);
+
     void toggleCell(size_t width, size_t height);
-    char getCell(size_t rowIndex, size_t colIndex);
-    void setCell(size_t rowIndex, size_t colIndex, char value);
-    char *getArena();
+
+    ECellState getCell(size_t rowIndex, size_t colIndex);
+
+    void setCell(size_t rowIndex, size_t colIndex, ECellState value);
+
+    std::vector<ECellState> *getArena();
+
 private:
-    char *arena;
+    std::vector<ECellState> arena{};
     size_t width, height;
 };
 

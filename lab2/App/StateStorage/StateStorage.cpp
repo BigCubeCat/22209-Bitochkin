@@ -57,20 +57,9 @@ void StateStorage::InitLife(int countRows, int countCols) {
     life = new Life(arenaWidth, arenaHeight);
 }
 
-char *StateStorage::getArena() {
+std::vector<ECellState> *StateStorage::getArena() {
     if (life) {
-        std::cout << "here\n";
-        auto answer = life->getArena();
-        for (int i = 0; i < 32 * 32; ++i) {
-            if (answer[i])
-            std::cout << (int)answer[i] << std::endl;
-        }
-        std::cout << answer << std::endl;
-        if (answer) {
-            std::cout << "answr\n";
-            return answer;
-        } else {
-        }
+        return life->getArena();
     }
     return nullptr;
 }
