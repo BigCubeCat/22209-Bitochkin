@@ -7,8 +7,13 @@ using namespace std;
 
 int main(int argc, char **argv) {
   std::string filename = argv[1];
+  std::ifstream is(filename);
+  if (!is.is_open()) {
+    std::cout << "Cant open file\n";
+    return 0;
+  }
   CSVParser<int, string, string, string, string, string, string, string, string>
-      parser(filename, 1, '\n', '"', ',');
+      parser(is, 1, '\n', '"', ',');
   for (auto t : parser) {
     cout << t << endl;
   }

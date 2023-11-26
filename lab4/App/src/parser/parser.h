@@ -2,35 +2,57 @@
 #define PARSER_H
 
 #include <algorithm>
+#include <fstream>
 #include <optional>
 #include <stdexcept>
+#include <string>
 #include <tuple>
 #include <vector>
 
-#include "./IFStream.h"
 #include "./TupleUtil.h"
+
+template <typename InputIterator>
+InputIterator getLineIter(InputIterator begin, InputIterator end,
+                          std::string &result, char delimiterChar,
+                          char escapingChar) {
+  result.clear();
+
+  auto it = begin;
+  bool isEscaping = false;
+
+  while (it != end && (*it != delimiterChar || isEscaping)) {
+    if (*it == escapingChar) {
+      isEscaping = !isEscaping;
+    }
+    result.push_back(*it);
+    ++it;
+  }
+  if (it != end) {
+    ++it;
+  }
+  return it;
+}
 
 template <typename... Types>
 class CSVParser {
  private:
-  utils::IFStream inputFile;
+  std::ifstream *inputStream;
   std::size_t currentLineNum;
   char lineDelimiter;
   char cellDelimiter;
   char escapingChar;
 
-//  Принимать на вход istrean
-//  Убрать IFStream, его логику перенести в парсер
-//  Убрать getREcord (можно оставить, но сделать приватной)
-//
-
   std::vector<std::string> getCells(const std::string &);
 
- public:
-  explicit CSVParser(const std::string &, size_t = 0, char = '\n', char = '"',
-                     char = ',');
+  std::basic_istream<char, std::char_traits<char>> &getLine(std::string &result,
+                                                            char delimiterChar,
+                                                            char escapingChar);
 
   std::optional<std::tuple<Types...>> getRecord();
+
+ public:
+  explicit CSVParser(std::ifstream &, size_t = 0, char = '\n', char = '"',
+                     char = ',');
 
   class Iterator {
    private:
@@ -60,6 +82,20 @@ class CSVParser {
 
   void setEscapingChar(char);
 };
+
+template <typename... Types>
+std::basic_istream<char, std::char_traits<char>> &CSVParser<Types...>::getLine(
+    std::string &result, char delimiterChar, char escapingChar) {
+  auto begin = std::istreambuf_iterator<char>(*inputStream);
+  auto end = std::istreambuf_iterator<char>();
+
+  if (begin == end) {
+    return std::getline(*inputStream, result);
+  }
+  getLineIter(begin, end, result, delimiterChar, escapingChar);
+
+  return *inputStream;
+}
 
 template <typename... Types>
 CSVParser<Types...>::Iterator::Iterator(CSVParser &parser)
@@ -101,27 +137,24 @@ bool CSVParser<Types...>::Iterator::operator!=(
 }
 
 template <typename... Types>
-CSVParser<Types...>::CSVParser(const std::string &filename, size_t skip,
+CSVParser<Types...>::CSVParser(std::ifstream &stream, size_t skip,
                                char line_delimiter, char escaping_char,
                                char cell_delimiter)
-    : inputFile(filename),
+    : inputStream(&stream),
       currentLineNum(skip),
       lineDelimiter(line_delimiter),
       cellDelimiter(cell_delimiter),
       escapingChar(escaping_char) {
-  if (!inputFile.is_open()) {
-    throw std::runtime_error("Cant open file: " + filename);
-  }
   std::string unused_line;
   for (size_t i = 0; i < skip; ++i) {
-    inputFile.getLine(unused_line, lineDelimiter, lineDelimiter);
+    getLine(unused_line, lineDelimiter, lineDelimiter);
   }
 }
 
 template <typename... Types>
 std::optional<std::tuple<Types...>> CSVParser<Types...>::getRecord() {
   std::string line;
-  if (!inputFile.getLine(line, lineDelimiter, lineDelimiter)) {
+  if (!getLine(line, lineDelimiter, lineDelimiter)) {
     return {};
   }
   ++currentLineNum;
@@ -140,8 +173,7 @@ std::vector<std::string> CSVParser<Types...>::getCells(
   std::vector<std::string> res;
   for (auto it = line.cbegin(); it != line.cend();) {
     std::string cell;
-    it = utils::IFStream::getLine(it, line.cend(), cell, cellDelimiter,
-                                  escapingChar);
+    it = getLineIter(it, line.cend(), cell, cellDelimiter, escapingChar);
     cell.erase(std::remove(cell.begin(), cell.end(), escapingChar), cell.end());
     cell.erase(std::remove(cell.begin(), cell.end(), escapingChar), cell.end());
     res.push_back(std::move(cell));
