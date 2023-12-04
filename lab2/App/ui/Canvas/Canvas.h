@@ -14,7 +14,7 @@ class Canvas : public QWidget {
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
    private:
-    Arena *data;
+    Arena data = Arena(0, 0);
     size_t width;
     size_t height;
 
@@ -32,7 +32,7 @@ class Canvas : public QWidget {
 
     void setGapSize(int size);
 
-    void redraw(Arena *data, size_t width, size_t height);
+    void redraw(const Arena &data);
 
     void setColor(const QColor &color, int index);
 

@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QTimer>
 #include <string>
+#include <memory>
 
 #include "../Kernel/Life/Life.h"
 
@@ -14,7 +15,7 @@ public:
 
     ~StateStorage() override;
 
-    Arena *getArena();
+    Arena &getArena() const;
 
     size_t getWidth() const;
 
@@ -27,7 +28,7 @@ public:
     bool aliveAt(int index);
 
 private:
-    Life *life{};
+    std::shared_ptr<Life> life;
 
     size_t arenaWidth{};
     size_t arenaHeight{};
@@ -69,7 +70,7 @@ signals:
 
     void invalidRule();
 
-    void redraw(Arena *data, size_t width, size_t height);
+    void redraw(Arena &data);
 
     void updateRules(const TRules &rules);
 

@@ -19,7 +19,14 @@ public:
 
     void setCell(size_t rowIndex, size_t colIndex, ECellState value);
 
+    bool nonZero() const;
+
+    size_t getWidth() const { return width; }
+
+    size_t getHeight() const { return height; }
+
 private:
+    size_t calcIndex(size_t row, size_t col);
     std::vector<ECellState> arena{};
     size_t width, height;
 };

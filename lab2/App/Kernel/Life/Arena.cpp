@@ -4,9 +4,7 @@
 
 Arena::Arena(size_t width, size_t height) : width(width), height(height){
     arena.resize(height * width);
-    for (size_t i = 0; i < height * width; ++i) {
-        arena[i] = DEAD;
-    }
+    std::fill(arena.begin(), arena.end(), DEAD);
 }
 
 ECellState Arena::operator[](size_t index) {
@@ -14,7 +12,7 @@ ECellState Arena::operator[](size_t index) {
 }
 
 void Arena::toggleCell(size_t row, size_t col) {
-    arena[row * width + col] = arena[row * width + col] == DEAD ? ALIVE : DEAD;
+    arena[calcIndex(row, col)] = arena[calcIndex(row, col)] == DEAD ? ALIVE : DEAD;
 }
 
 ECellState Arena::getCell(size_t rowIndex, size_t colIndex) {
@@ -22,5 +20,13 @@ ECellState Arena::getCell(size_t rowIndex, size_t colIndex) {
 }
 
 void Arena::setCell(size_t rowIndex, size_t colIndex, ECellState value) {
-    arena[rowIndex * width + colIndex] = value;
+    arena[calcIndex(rowIndex, colIndex)] = value;
+}
+
+bool Arena::nonZero() const {
+    return width > 0 && height > 0;
+}
+
+size_t Arena::calcIndex(size_t row, size_t col) {
+    return row * width + col;
 }

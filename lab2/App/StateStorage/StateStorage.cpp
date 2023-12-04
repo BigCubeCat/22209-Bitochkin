@@ -53,24 +53,19 @@ void StateStorage::toggleLife(int row, int col) {
 void StateStorage::InitLife(int countRows, int countCols) {
     arenaHeight = countRows;
     arenaWidth = countCols;
-    delete life;
-    life = new Life(arenaWidth, arenaHeight);
+    life = std::make_shared<Life>(arenaWidth, arenaHeight);
 }
-
-Arena *StateStorage::getArena() {
-    if (life) {
-        return life->getArena();
-    }
-    return nullptr;
+Arena &StateStorage::getArena() const {
+    return life->getArena();
 }
 
 size_t StateStorage::getWidth() const {
-    if (life) return life->getWidth();
+    if (life) return life->getArena().getWidth();
     return 0;
 }
 
 size_t StateStorage::getHeight() const {
-    if (life) return life->getHeight();
+    if (life) return life->getArena().getHeight();
     return 0;
 }
 
@@ -83,7 +78,7 @@ void StateStorage::tickGame() {
 
 void StateStorage::tickCanvas() {
     if (life) {
-        emit redraw(life->getArena(), life->getWidth(), life->getHeight());
+        emit redraw(life->getArena());
     }
 }
 
@@ -134,9 +129,8 @@ QString StateStorage::getNeighborhood() {
 
 bool StateStorage::aliveAt(int index) {
     if (life) {
-        if ((*life)[index] != 0) {
-            return true;
-        }
+        auto arena = life->getArena();
+        return arena[index] == ALIVE;
     }
     return false;
 }

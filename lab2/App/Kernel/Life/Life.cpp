@@ -54,16 +54,8 @@ void Life::setNeighborhood(const TNeighborhood &n) {
     neighborhood = n;
 }
 
-Arena *Life::getArena() {
-    return &arena;
-}
-
-size_t Life::getWidth() const {
-    return width;
-}
-
-size_t Life::getHeight() const {
-    return height;
+Arena &Life::getArena() const {
+    return (Arena &) arena;
 }
 
 std::string Life::getNeighborhood() const {
@@ -75,10 +67,6 @@ std::string Life::getNeighborhood() const {
 
 std::string Life::getRules() const {
     return rules.string;
-}
-
-ECellState Life::operator[](size_t index) {
-    return arena[index];
 }
 
 Life::~Life() {

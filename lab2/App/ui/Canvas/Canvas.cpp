@@ -3,7 +3,6 @@
 #include <QTimer>
 
 Canvas::Canvas(QWidget *parent) : QWidget(parent) {
-    data = nullptr;
 }
 
 void Canvas::paintEvent(QPaintEvent *event) {
@@ -12,10 +11,10 @@ void Canvas::paintEvent(QPaintEvent *event) {
     painter.fillRect(event->rect(), borderColor);
 
     QBrush brush;
-    if (data) {
+    if (data.nonZero()) {
         for (size_t i = 0; i < height; ++i) {
             for (size_t j = 0; j < width; ++j) {
-                if ((*data)[i * width + j] == ALIVE) {
+                if (data.getCell(i, j) == ALIVE) {
                     brush = QBrush(aliveColor);
                 } else {
                     brush = QBrush(emptyColor);
@@ -29,10 +28,10 @@ void Canvas::paintEvent(QPaintEvent *event) {
     painter.end();
 }
 
-void Canvas::redraw(Arena *d, size_t w, size_t h) {
+void Canvas::redraw(const Arena &d) {
     data = d;
-    width = w;
-    height = h;
+    width = d.getWidth();
+    height = d.getHeight();
     step = cellSize + gapSize;
     setFixedWidth(width * step + gapSize);
     setFixedHeight(height * step + gapSize);

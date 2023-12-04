@@ -74,7 +74,7 @@ void MainWindow::saveLife() {
 void MainWindow::readLife() {
     auto [text, status] = fw->readFile();
     std::cout << text.toStdString() << " " << status << "\n";
-    canvas->redraw(store->getArena(), store->getWidth(), store->getHeight());
+    canvas->redraw(store->getArena());
 }
 
 void MainWindow::setCellSize(int size) {

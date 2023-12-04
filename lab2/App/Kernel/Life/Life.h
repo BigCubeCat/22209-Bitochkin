@@ -31,13 +31,9 @@ class Life {
 
     void setNeighborhood(const TNeighborhood &n);
 
-    Arena *getArena();
+    Arena &getArena() const;
 
     void nextGen();
-
-    size_t getWidth() const;
-
-    size_t getHeight() const;
 
     size_t calcNeighbors(size_t row, size_t col);
 
@@ -46,8 +42,6 @@ class Life {
     std::string getRules() const;
 
     std::string getNeighborhood() const;
-
-    ECellState operator[](size_t index);
 };
 
 #endif
