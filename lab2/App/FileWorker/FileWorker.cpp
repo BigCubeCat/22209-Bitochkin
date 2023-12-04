@@ -27,18 +27,24 @@ std::pair<QString, bool> FileWorker::readFile() {
         QStringList words = line.split(" ");
         if (line.at(0) == QChar('#')) {
             if (words[0] == QString("#T")) {
-                title = words[1];
+                if (words.size() == 2)
+                    title = words[1];
             } else if (words[0] == QString("#R")) {
-                store->setRules(words[1].toStdString());
+                if (words.size() == 2)
+                    store->setRules(words[1].toStdString());
             } else if (words[0] == QString("#N")) {
-                ENeighborhood nType = (words[1] == QString("M")) ? MOORE : VON;
-                int degree = words[2].toInt();
-                store->setNeighborhood(nType, degree);
+                if (words.size() == 3) {
+                    ENeighborhood nType = (words[1] == QString("M")) ? MOORE : VON;
+                    int degree = words[2].toInt();
+                    store->setNeighborhood(nType, degree);
+                }
             } else if (words[0] == QString("#G")) {
-                store->InitLife(words[1].toInt(), words[2].toInt());
+                if (words.size() == 3)
+                    store->InitLife(words[1].toInt(), words[2].toInt());
             }
         } else {
-            store->toggleLife(words[1].toInt(), words[0].toInt());
+            if (words.size() == 2)
+                store->toggleLife(words[1].toInt(), words[0].toInt());
         }
     };
 
