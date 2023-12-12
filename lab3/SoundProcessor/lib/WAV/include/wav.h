@@ -27,18 +27,18 @@ namespace wav {
     using SampleBuffer = std::array<int16_t, SAMPLES_PER_SEC>;
     using SampleVector = std::vector<SampleBuffer>;
 
-    struct Header {
+    struct Chunk {
         uint32_t ChunkId;
         uint32_t ChunkSize;
     };
 
-    struct WAV {
+    struct Header {
         /* RIFF Chunk  */
-        Header RIFFHeader;
+        Chunk RIFFHeader;
         uint32_t WAVEFormat;
 
         /* fmt sub-chunk */
-        Header FMTHeader;
+        Chunk FMTHeader;
 
         uint16_t audioFormat;
         uint16_t numberChannels;
@@ -48,7 +48,7 @@ namespace wav {
         uint16_t bitsPerSample;
 
         /* data sub-chunk */
-        Header dataHeader;
+        Chunk dataHeader;
     };
 }
 #endif

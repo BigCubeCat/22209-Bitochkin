@@ -33,17 +33,17 @@ WrongBlockAlign::WrongBlockAlign(const uint16_t blockAlign) :
 WrongDataChunkId::WrongDataChunkId(const uint32_t dataChunkId) :
         std::invalid_argument(std::to_string(dataChunkId) + " is not data") {}
 
-void Reader::load(const std::string path) {
+void Reader::load(const std::string &path) {
     try {
         inputFile.open(path, std::ios_base::binary);
 
-        inputFile.read((char *) &wav, sizeof(wav::WAV));
+        inputFile.read((char *) &wav, sizeof(wav::Header));
 
-        wav::Header headerChunk;
+        wav::Chunk headerChunk;
 
         while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) {
             inputFile.seekg(wav.dataHeader.ChunkSize, std::fstream::cur);
-            inputFile.read((char *) &headerChunk, sizeof(wav::Header));
+            inputFile.read((char *) &headerChunk, sizeof(wav::Chunk));
             wav.dataHeader.ChunkId = headerChunk.ChunkId;
             wav.dataHeader.ChunkSize = headerChunk.ChunkSize;
         }

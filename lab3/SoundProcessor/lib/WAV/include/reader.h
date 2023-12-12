@@ -64,12 +64,12 @@ namespace reader {
 
         ~Reader() {};
 
-        void load(const std::string path);
+        void load(const std::string &path);
 
         bool readSample(wav::SampleBuffer *buffer);
 
     private:
-        wav::WAV wav;
+        wav::Header wav;
         std::ifstream inputFile;
 
         void checkInput();

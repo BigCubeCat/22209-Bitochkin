@@ -10,9 +10,9 @@ Writer::Writer(const std::string path) {
 void Writer::writeHeader() {
     outputFile.seekp(0, std::ios::beg);
 
-    wav::Header RIFFHeader{wav::RIFF_CHUNK_ID, (uint32_t) outputFile.tellp() - wav::BYTE_SIZE};
-    wav::Header FMTHeader{wav::FMT_CHUNK_ID, wav::FMT_CHUNK_SIZE};
-    wav::Header dataHeader{wav::DATA_CHUNK_ID, (uint32_t) outputFile.tellp() - wav::TOTAL_HEADER_SIZE};
+    wav::Chunk RIFFHeader{wav::RIFF_CHUNK_ID, (uint32_t) outputFile.tellp() - wav::BYTE_SIZE};
+    wav::Chunk FMTHeader{wav::FMT_CHUNK_ID, wav::FMT_CHUNK_SIZE};
+    wav::Chunk dataHeader{wav::DATA_CHUNK_ID, (uint32_t) outputFile.tellp() - wav::TOTAL_HEADER_SIZE};
 
     wav.RIFFHeader = RIFFHeader;
     wav.WAVEFormat = wav::WAVE_FORMAT;
@@ -25,7 +25,7 @@ void Writer::writeHeader() {
     wav.bitsPerSample = wav::BITS_PER_SAMPLE;
     wav.dataHeader = dataHeader;
 
-    outputFile.write((const char *) &wav, sizeof(wav::WAV));
+    outputFile.write((const char *) &wav, sizeof(wav::Header));
 }
 
 void Writer::writeSample(const wav::SampleBuffer *buffer) {

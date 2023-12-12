@@ -18,7 +18,7 @@ namespace writer {
         void writeHeader();
 
     private:
-        wav::WAV wav;
+        wav::Header wav;
         std::ofstream outputFile;
     };
 }
