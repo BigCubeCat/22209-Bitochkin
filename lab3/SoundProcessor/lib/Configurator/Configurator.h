@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <set>
 #include "ConverterConfig.h"
 
 class Configurator {
@@ -55,7 +55,7 @@ private:
 
     static bool isNumber(const std::string &num);
 
-    std::map<std::string, bool> commandMap = {};
+    std::set<std::string> commandSet = {"mix", "mute", "noise", "cut", "crop"};
 
 };
 

@@ -10,13 +10,6 @@ Configurator::Configurator(
         const std::string &configFile, const std::string &outFile,
         const std::vector<std::string> &inputFiles
 ) : input(inputFiles), config(configFile), out(outFile) {
-
-    commandMap["mix"] = true;
-    commandMap["mute"] = true;
-    commandMap["noise"] = true;
-    commandMap["cut"] = true;
-    commandMap["crop"] = true;
-
     parse();
 }
 
@@ -63,13 +56,15 @@ std::vector<std::string> Configurator::splitLine(const std::string &line) {
     std::vector<std::string> v;
 
     while (getline(ss, s, ' ')) {
-        result.push_back(s);
+        if (!s.empty()) {
+            result.push_back(s);
+        }
     }
     return result;
 }
 
 bool Configurator::isConvertorName(const std::string &name) {
-    return commandMap[name];
+    return commandSet.contains(name);
 }
 
 bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
