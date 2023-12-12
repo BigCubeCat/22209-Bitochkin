@@ -3,6 +3,9 @@
 using namespace noise;
 
 Noise::Noise(const std::vector<std::string> &parameters) {
+    if (parameters.size() < 3) {
+        throw std::runtime_error("invalid parameters count");
+    }
     start = std::stoi(parameters[0]);
     end = std::stoi(parameters[1]);
     percent = std::stoi(parameters[2]);

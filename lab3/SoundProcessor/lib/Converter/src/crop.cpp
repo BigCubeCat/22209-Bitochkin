@@ -3,6 +3,9 @@
 using namespace crop;
 
 Crop::Crop(const std::vector<std::string> &parameters) {
+    if (parameters.size() < 2) {
+        throw std::runtime_error("invalid parameters count");
+    }
     begin = std::stoi(parameters[0]);
     end = std::stoi(parameters[1]);
     this->eh = new ErrorHandler("crop");

@@ -4,6 +4,9 @@
 using namespace mix;
 
 Mix::Mix(const std::vector<std::string> parameters) {
+    if (parameters.size() < 3) {
+        throw std::runtime_error("invalid parameters count");
+    }
     std::string strIndexFile = parameters[1];
     this->indexFile = std::stoi(strIndexFile.erase(0, 1)) - 1;
     this->start = std::stoi(parameters[2]);
