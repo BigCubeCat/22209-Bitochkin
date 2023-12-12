@@ -10,12 +10,10 @@
 namespace converter {
     class Converter {
     public:
-        virtual ~Converter() { delete eh; };
-
         virtual void convert(std::vector<wav::SampleBuffer> &current_samples,
                              const std::vector<wav::SampleVector> original_samples) = 0;
 
-        ErrorHandler *eh = nullptr;
+        ErrorHandler eh = ErrorHandler("default");
     };
 }
 #endif

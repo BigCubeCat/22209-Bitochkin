@@ -36,8 +36,8 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
         std::cout << "\ncmd\t" << instruction.name << "\n";
         converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
         currentConverter->convert(resultSamples, inputFilesSamples);
-        if (currentConverter->eh->hasErrors()) {
-            currentConverter->eh->printErrorText();
+        if (currentConverter->eh.hasErrors()) {
+            currentConverter->eh.printErrorText();
             return;
         }
     }

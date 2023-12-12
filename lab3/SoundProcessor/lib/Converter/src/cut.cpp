@@ -10,7 +10,7 @@ Cut::Cut(const std::vector<std::string> &parameters) {
     }
     begin = std::stoi(parameters[0]);
     end = std::stoi(parameters[1]);
-    this->eh = new ErrorHandler("cut");
+    eh = ErrorHandler("cut");
 }
 
 void Cut::convert(std::vector<wav::SampleBuffer> &currentSamples,
@@ -18,11 +18,11 @@ void Cut::convert(std::vector<wav::SampleBuffer> &currentSamples,
     std::cout << "\nbegin, end " << begin << " " << end << "\t" << currentSamples.size() << "\n";
 
     if (begin >= currentSamples.size()) {
-        eh->AddError("invalid begin time\n");
+        eh.AddError("invalid begin time\n");
         return;
     }
     if (end >= currentSamples.size()) {
-        eh->AddError("invalid end time\n");
+        eh.AddError("invalid end time\n");
         return;
     }
 

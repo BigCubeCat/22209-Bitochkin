@@ -8,17 +8,17 @@ Mute::Mute(const std::vector<std::string> &parameters) {
     }
     start = std::stoi(parameters[0]);
     end = std::stoi(parameters[1]);
-    this->eh = new ErrorHandler("mute");
+    eh = ErrorHandler("mute");
 }
 
 void Mute::convert(std::vector<wav::SampleBuffer> &currentSamples,
                    const std::vector<wav::SampleVector> originalSamples) {
     if (start >= currentSamples.size()) {
-        eh->AddError("wrong start format");
+        eh.AddError("wrong start format");
         return;
     }
     if (end >= currentSamples.size()) {
-        eh->AddError("wrong end format");
+        eh.AddError("wrong end format");
         return;
     }
 
