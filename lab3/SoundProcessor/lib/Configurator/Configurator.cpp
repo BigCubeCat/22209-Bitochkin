@@ -55,7 +55,7 @@ std::vector<std::string> Configurator::splitLine(const std::string &line) {
     std::stringstream ss(line);
     std::vector<std::string> v;
 
-    while (getline(ss, s, ' ')) {
+    while (std::getline(ss, s, ' ')) {
         if (!s.empty()) {
             result.push_back(s);
         }
