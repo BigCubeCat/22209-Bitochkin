@@ -10,7 +10,7 @@ set(LIBRARY_HEADERS include/converter.h
         include/crop.h
 )
 
-set(LIBRARY_SOURCE src/converterFactory.cpp
+set(LIBRARY_SOURCE
         src/mix.cpp
         src/noise.cpp
         src/mute.cpp
