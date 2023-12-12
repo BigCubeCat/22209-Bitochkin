@@ -3,7 +3,7 @@
 using namespace converterFactory;
 
 ConverterPointer ConverterFactory::createConverter(const std::vector<std::string> parameters) {
-    std::string converterName = parameters[0];
+    const std::string& converterName = parameters[0];
     if (converterName == MIX) {
         return std::make_unique<mix::Mix>(parameters);
     } else if (converterName == MUTE) {

@@ -37,18 +37,19 @@ void Configurator::parse() {
 }
 
 void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
-    auto cmd = splitLine(line);
+    std::vector<std::string> cmd = splitLine(line);
     if (cmd.empty()) {
         return;
     }
-    if (cmd[0] == "#") {
+    if (cmd[0][0] == '#') {
         return;
     }
     if (!isConvertorName(cmd[0])) {
         errorsOccurred = true;
         errorMessage += std::to_string(lineNumber) + ": Invalid command: " + line + "\n";
     } else if (commandIsValid(cmd)) {
-        algorithm.push_back(cmd);
+        auto conf = ConverterConfig{cmd[0], cmd};
+        algorithm.push_back(conf);
     } else {
         errorsOccurred = true;
         errorMessage += std::to_string(lineNumber) + ": Invalid convertor arguments: " + line + "\n";
@@ -94,7 +95,7 @@ bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
     return false;
 }
 
-std::vector<std::vector<std::string >> Configurator::getAlgorithm() {
+std::vector<ConverterConfig> Configurator::getAlgorithm() {
     return algorithm;
 }
 

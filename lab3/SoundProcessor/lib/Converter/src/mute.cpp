@@ -2,9 +2,9 @@
 
 using namespace mute;
 
-Mute::Mute(const std::vector<std::string> parameters) {
-    start = std::stoi(parameters[1]);
-    end = std::stoi(parameters[2]);
+Mute::Mute(const std::vector<std::string> &parameters) {
+    start = std::stoi(parameters[0]);
+    end = std::stoi(parameters[1]);
     this->eh = new ErrorHandler("mute");
 }
 

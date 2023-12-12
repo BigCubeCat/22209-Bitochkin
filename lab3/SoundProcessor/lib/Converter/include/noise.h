@@ -8,7 +8,7 @@ namespace noise {
 
     class Noise : public converter::Converter {
     public:
-        Noise(const std::vector<std::string> parameters);
+        Noise(const std::vector<std::string> &parameters);
 
         void convert(std::vector<wav::SampleBuffer> &current_samples,
                      const std::vector<wav::SampleVector> original_samples) override;

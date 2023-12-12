@@ -5,8 +5,8 @@
 using namespace cut;
 
 Cut::Cut(const std::vector<std::string> &parameters) {
-    begin = std::stoi(parameters[1]);
-    end = std::stoi(parameters[2]);
+    begin = std::stoi(parameters[0]);
+    end = std::stoi(parameters[1]);
     this->eh = new ErrorHandler("cut");
 }
 

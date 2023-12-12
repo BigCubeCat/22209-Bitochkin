@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "ConverterConfig.h"
 
 class Configurator {
 public:
@@ -32,10 +33,10 @@ public:
 
     std::string errors() const;
 
-    std::vector<std::vector<std::string >> getAlgorithm();
+    std::vector<ConverterConfig> getAlgorithm();
 
 private:
-    std::vector<std::vector<std::string >> algorithm;
+    std::vector<ConverterConfig> algorithm;
 
     std::string config;
     std::string out;

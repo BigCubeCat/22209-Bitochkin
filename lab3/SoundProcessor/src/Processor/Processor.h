@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "wav.h"
+#include "../../lib/Configurator/ConverterConfig.h"
 
 class Processor {
 public:
@@ -12,7 +13,7 @@ public:
             const std::string &output
     );
 
-    void run(const std::vector<std::vector<std::string>>& algorithm);
+    void run(const std::vector<ConverterConfig> & algorithm);
 
     void writeOut(const std::vector<wav::SampleBuffer> &resultSamples);
 

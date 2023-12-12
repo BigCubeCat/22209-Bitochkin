@@ -8,7 +8,7 @@ namespace mute {
 
     class Mute : public converter::Converter {
     public:
-        Mute(const std::vector<std::string> parameters);
+        Mute(const std::vector<std::string> &parameters);
 
         void convert(std::vector<wav::SampleBuffer> &current_samples,
                      const std::vector<wav::SampleVector> original_samples) override;
