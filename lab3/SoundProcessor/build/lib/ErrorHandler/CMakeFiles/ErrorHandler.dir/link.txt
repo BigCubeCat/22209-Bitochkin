@@ -1,2 +1,0 @@
-/usr/bin/ar qc libErrorHandler.a CMakeFiles/ErrorHandler.dir/ErrorHandler.cpp.o
-/usr/bin/ranlib libErrorHandler.a

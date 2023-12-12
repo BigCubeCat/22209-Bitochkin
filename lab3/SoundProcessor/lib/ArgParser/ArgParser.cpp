@@ -1,7 +1,5 @@
 #include "ArgParser.h"
 
-#include "TFile.h"
-
 ArgParser::ArgParser(const std::vector<std::string> &arguments) {
     bool exceptConfig = false;
     bool configExists = false;
@@ -12,20 +10,19 @@ ArgParser::ArgParser(const std::vector<std::string> &arguments) {
             exceptConfig = true;
             continue;
         }
-        auto file = TFile(arg);
-        if (file.ErrorOccurred) {
+        if (arg.empty()) {
             continue;
         }
         if (exceptConfig) {
-            configFile = file;
+            configFile = arg;
             configExists = true;
             exceptConfig = false;
         } else {
             if (!outputExists) {
-                outputFile = file;
+                outputFile = arg;
                 outputExists = true;
             } else {
-                inputFiles.push_back(file);
+                inputFiles.push_back(arg);
                 inputNotEmpty = true;
             }
         }
@@ -44,18 +41,6 @@ ArgParser::ArgParser(const std::vector<std::string> &arguments) {
     }
 }
 
-TFile ArgParser::getOutputFile() const {
-    return outputFile;
-}
-
-std::vector<TFile> ArgParser::getInputFiles() {
-    return inputFiles;
-}
-
-TFile ArgParser::getConfigFile() const {
-    return configFile;
-}
-
 bool ArgParser::hasErrors() const {
     return errorsOccurred;
 }
@@ -64,20 +49,20 @@ std::string ArgParser::getErrorMessage() {
     return errorMessage;
 }
 
-std::vector<std::string> ArgParser::getInputFilesString() {
+std::vector<std::string> ArgParser::getInputFiles() {
     std::vector<std::string> res(inputFiles.size());
     for (int i = 0; i < inputFiles.size(); ++i) {
-        res[i] = inputFiles[i].FileName;
+        res[i] = inputFiles[i];
     }
     return res;
 }
 
-std::string ArgParser::getOutputFileString() const {
-    return outputFile.FileName;
+std::string ArgParser::getOutputFile() const {
+    return outputFile;
 }
 
-std::string ArgParser::getConfigFileString() const {
-    return configFile.FileName;
+std::string ArgParser::getConfigFile() const {
+    return configFile;
 }
 
 ArgParser::~ArgParser() = default;

@@ -4,21 +4,15 @@
 #include <vector>
 #include <string>
 
-#include "TFile.h"
-
 class ArgParser {
 public:
-    ArgParser(const std::vector<std::string>& arguments);
+    ArgParser(const std::vector<std::string> &arguments);
 
-    TFile getOutputFile() const;
+    std::string getConfigFile() const;
 
-    std::vector<TFile> getInputFiles();
+    std::vector<std::string> getInputFiles();
 
-    TFile getConfigFile() const;
-
-    std::string getConfigFileString() const;
-    std::vector<std::string> getInputFilesString();
-    std::string getOutputFileString() const;
+    std::string getOutputFile() const;
 
     bool hasErrors() const;
 
@@ -27,9 +21,9 @@ public:
     ~ArgParser();
 
 private:
-    TFile configFile = TFile("");
-    std::vector<TFile> inputFiles;
-    TFile outputFile = TFile("");
+    std::string configFile;
+    std::vector<std::string> inputFiles;
+    std::string outputFile;
 
     std::string errorMessage;
     bool errorsOccurred = false;

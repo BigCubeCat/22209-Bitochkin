@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/converter_tests.dir/test/converter_tests.cpp.o -o converter_tests  ../libgtest_main.a libConverter.a ../libgtest.a ../WAV/libWAV.a 

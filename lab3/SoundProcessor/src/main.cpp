@@ -47,9 +47,9 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     auto configurator = Configurator(
-            parser.getConfigFileString(),
-            parser.getOutputFileString(),
-            parser.getInputFilesString()
+            parser.getConfigFile(),
+            parser.getOutputFile(),
+            parser.getInputFiles()
     );
     if (configurator.hasErrors()) {
         std::cout << configurator.errors() << std::endl;
@@ -58,8 +58,8 @@ int main(int argc, char *argv[]) {
     }
 
     auto proc = Processor(
-            parser.getInputFilesString(),
-            parser.getOutputFileString()
+            parser.getInputFiles(),
+            parser.getOutputFile()
     );
 
     proc.run(configurator.getAlgorithm());

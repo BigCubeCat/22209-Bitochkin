@@ -1,3 +1,0 @@
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
