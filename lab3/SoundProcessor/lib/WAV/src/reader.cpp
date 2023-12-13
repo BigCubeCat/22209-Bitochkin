@@ -37,7 +37,7 @@ void Reader::load(const std::string &path) {
     try {
         inputFile.open(path, std::ios_base::binary);
 
-        inputFile.read((char *) &wav, sizeof(wav::Header));
+        inputFile.read( reinterpret_cast<char *>(&wav), sizeof(wav::Header));
 
         wav::Chunk headerChunk;
 
