@@ -12,43 +12,37 @@ Processor::Processor(
 }
 
 void Processor::initSamples() {
-    for (const auto &inputFile: inputFiles) {
-        reader::Reader reader;
-        reader.load(inputFile);
 
-        wav::SampleVector currentSample;
-
-        while (true) {
-            wav::SampleBuffer buffer;
-            if (!reader.readSample(&buffer)) break;
-            currentSample.push_back(buffer);
-        }
-        inputFilesSamples.push_back(currentSample);
-    }
 }
 
 void Processor::run(const std::vector<ConverterConfig> &algorithm) {
-    wav::SampleVector resultSamples = inputFilesSamples[0];
+    int sampleSize = 0;
 
     converterFactory::ConverterFactory factory;
 
-    for (const auto &instruction: algorithm) {
-        std::cout << "\ncmd\t" << instruction.name << "\n";
-        converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
-        currentConverter->convert(resultSamples, inputFilesSamples);
-        if (currentConverter->eh.hasErrors()) {
-            currentConverter->eh.printErrorText();
-            return;
-        }
-    }
 
-    writeOut(resultSamples);
-}
-
-void Processor::writeOut(const std::vector<wav::SampleBuffer> &resultSamples) {
     writer::Writer writer(outFile);
-    for (const auto &buffer: resultSamples) {
+    reader::Reader reader;
+    reader.load(inputFiles[0]); // Загружаем input file
+    std::cout << "loaded\n";
+    wav::SampleVector currentSample;
+
+    while (true) {
+        wav::SampleBuffer buffer;
+        if (!reader.readSample(&buffer)) break;
+        for (const auto &instruction: algorithm) {
+            std::cout << "instruction: " << instruction.name << "\n";
+            converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
+            buffer = *currentConverter->convert(buffer, buffer, sampleSize);
+        }
         writer.writeSample(&buffer);
+        /*
+        if (buffer) {
+            std::cout << "write buff\n";
+        }
+         */
+        sampleSize++;
     }
+
     writer.writeHeader();
 }

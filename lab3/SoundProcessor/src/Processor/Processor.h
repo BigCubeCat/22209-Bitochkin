@@ -13,11 +13,10 @@ public:
             const std::string &output
     );
 
-    void run(const std::vector<ConverterConfig> & algorithm);
-
-    void writeOut(const std::vector<wav::SampleBuffer> &resultSamples);
+    void run(const std::vector<ConverterConfig> &algorithm);
 
 private:
+
     void initSamples();
 
     std::vector<std::string> inputFiles;

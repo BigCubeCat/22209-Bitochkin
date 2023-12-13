@@ -61,7 +61,7 @@ bool Reader::readSample(wav::SampleBuffer *buffer) {
     return true;
 }
 
-void Reader::checkInput() {
+void Reader::checkInput() const {
     if (wav.RIFFHeader.ChunkId != wav::RIFF_CHUNK_ID) throw WrongRIFFChunkId(wav.RIFFHeader.ChunkId);
     else if (wav.WAVEFormat != wav::WAVE_FORMAT) throw WrongWAVEFormat(wav.WAVEFormat);
     else if (wav.FMTHeader.ChunkId != wav::FMT_CHUNK_ID) throw WrongFMTChunkId(wav.FMTHeader.ChunkId);

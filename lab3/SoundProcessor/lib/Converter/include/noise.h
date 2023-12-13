@@ -10,8 +10,11 @@ namespace noise {
     public:
         Noise(const std::vector<std::string> &parameters);
 
-        void convert(std::vector<wav::SampleBuffer> &current_samples,
-                     const std::vector<wav::SampleVector> original_samples) override;
+        wav::SampleBuffer *convert(
+                wav::SampleBuffer &current_samples,
+                wav::SampleBuffer &original_samples,
+                int sec
+        ) override;
 
     private:
         int start = 0;

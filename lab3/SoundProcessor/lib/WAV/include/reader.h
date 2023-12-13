@@ -72,7 +72,7 @@ namespace reader {
         wav::Header wav;
         std::ifstream inputFile;
 
-        void checkInput();
+        void checkInput() const;
     };
 }
 #endif
