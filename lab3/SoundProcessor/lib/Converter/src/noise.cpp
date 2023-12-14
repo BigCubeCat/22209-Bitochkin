@@ -15,16 +15,14 @@ Noise::Noise(const std::vector<std::string> &parameters) {
     }
 }
 
-wav::SampleBuffer *Noise::convert(
-        wav::SampleBuffer &current_samples,
-        wav::SampleBuffer &original_samples,
+void Noise::convert(
+        wav::SampleBuffer *current_samples,
+        wav::SampleBuffer *original_samples,
         int sec
 ) {
-    auto *buf = new wav::SampleBuffer();
     if (sec >= start && sec <= end) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            buf[sec][j] -= (int16_t) ((&current_samples)[sec][j] * percent);
+            current_samples[sec][j] -= (int16_t) (current_samples[sec][j] * percent);
         }
     }
-    return buf;
 }

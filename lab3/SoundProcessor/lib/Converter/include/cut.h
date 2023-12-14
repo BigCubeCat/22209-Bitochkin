@@ -8,9 +8,9 @@ namespace cut {
     public:
         explicit Cut(const std::vector<std::string> &parameters);
 
-        wav::SampleBuffer *convert(
-                wav::SampleBuffer &currentSamples,
-                wav::SampleBuffer &originalSamples,
+        void convert(
+                wav::SampleBuffer *currentSamples,
+                wav::SampleBuffer *originalSamples,
                 int sec = 0
         ) override;
 

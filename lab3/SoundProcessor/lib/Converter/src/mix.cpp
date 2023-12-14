@@ -13,14 +13,12 @@ Mix::Mix(const std::vector<std::string> parameters) {
     this->eh = ErrorHandler("mix");
 }
 
-wav::SampleBuffer *Mix::convert(
-        wav::SampleBuffer &current_samples,
-        wav::SampleBuffer &original_samples,
+void Mix::convert(
+        wav::SampleBuffer *currentSamples,
+        wav::SampleBuffer *originalSamples,
         int sec
 ) {
-    auto *buf = new wav::SampleBuffer();
     for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-        buf[sec][j] = ((&current_samples)[sec][j] / 2 + (&original_samples)[sec][j] / 2);
+        currentSamples[sec][j] = (currentSamples[sec][j] / 2 + (originalSamples)[sec][j] / 2);
     }
-    return buf;
 }

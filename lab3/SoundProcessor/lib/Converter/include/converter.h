@@ -11,10 +11,10 @@
 namespace converter {
     class Converter {
     public:
-        // Тут специально указатель, чтобы для crop и cut выводить nullptr
-        virtual wav::SampleBuffer *convert(
-                wav::SampleBuffer &current_samples,
-                wav::SampleBuffer &original_samples,
+        virtual // Тут специально указатель, чтобы для crop и cut выводить nullptr
+        void convert(
+                wav::SampleBuffer *current_samples,
+                wav::SampleBuffer *original_samples,
                 int sec = 0
         ) = 0;
 

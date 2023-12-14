@@ -10,9 +10,9 @@ namespace mix {
     public:
         Mix(const std::vector<std::string> parameters);
 
-        wav::SampleBuffer *convert(
-                wav::SampleBuffer &current_samples,
-                wav::SampleBuffer &original_samples,
+        void convert(
+                wav::SampleBuffer *current_samples,
+                wav::SampleBuffer *original_samples,
                 int sec
         ) override;
 
