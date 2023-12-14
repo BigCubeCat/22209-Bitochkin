@@ -22,25 +22,18 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
     converterFactory::ConverterFactory factory;
 
     writer::Writer writer(outFile);
-    std::cout << "create writer\n";
     reader::Reader reader;
-    std::cout << "create reader\n";
-    std::cout << inputFiles[0] << '\n';
     reader.load(inputFiles[0]); // Загружаем input file
-    std::cout << "loaded\n";
     wav::SampleVector currentSample;
 
-    while (true) {
-        wav::SampleBuffer buffer;
-        if (!reader.readSample(&buffer)) break;
+    wav::SampleBuffer buffer;
+    while (reader.readSample(&buffer)) {
         for (const auto &instruction: algorithm) {
             std::cout << "instruction: " << instruction.name << "\n";
-            converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
-            currentConverter->convert(&buffer, &buffer, sampleSize);
+            // converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
+            // currentConverter->convert(&buffer, &buffer, sampleSize);
         }
         writer.writeSample(&buffer);
-        sampleSize++;
     }
-
     writer.writeHeader();
 }

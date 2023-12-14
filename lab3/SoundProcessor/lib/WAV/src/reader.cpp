@@ -37,14 +37,13 @@ void Reader::load(const std::string &path) {
     try {
         inputFile.open(path, std::ios_base::binary);
 
-        inputFile.read( reinterpret_cast<char *>(&wav), sizeof(wav::Header));
+        inputFile.read((char *) &wav, sizeof(wav::Header));
 
         wav::Chunk headerChunk;
 
-        while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID && wav.dataHeader.ChunkId != 0) {
-//            std::cout << wav.dataHeader.ChunkId << " " << wav::DATA_CHUNK_ID << '\n';
+        while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) {
             inputFile.seekg(wav.dataHeader.ChunkSize, std::fstream::cur);
-            inputFile.read(reinterpret_cast<char *>(&headerChunk), sizeof(wav::Chunk));
+            inputFile.read((char *) &headerChunk, sizeof(wav::Chunk));
             wav.dataHeader.ChunkId = headerChunk.ChunkId;
             wav.dataHeader.ChunkSize = headerChunk.ChunkSize;
         }
