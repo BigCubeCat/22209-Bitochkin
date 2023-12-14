@@ -1,2 +1,2 @@
 # mix $2 1
-mute 0 5
+mute 0 1

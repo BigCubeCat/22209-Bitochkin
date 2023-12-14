@@ -29,9 +29,8 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
     wav::SampleBuffer buffer;
     while (reader.readSample(&buffer)) {
         for (const auto &instruction: algorithm) {
-            std::cout << "instruction: " << instruction.name << "\n";
-            // converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
-            // currentConverter->convert(&buffer, &buffer, sampleSize);
+            converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
+            currentConverter->convert(&buffer, &buffer, sampleSize);
         }
         writer.writeSample(&buffer);
     }

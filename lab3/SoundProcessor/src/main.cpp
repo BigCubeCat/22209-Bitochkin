@@ -28,7 +28,6 @@ namespace {
 int main(int argc, char *argv[]) {
     std::vector<std::string> arguments(argc);
 
-    /*
     if (argc < 2) {
         printHelp();
         return 1;
@@ -47,16 +46,10 @@ int main(int argc, char *argv[]) {
         std::cout << parser.getErrorMessage();
         return 1;
     }
-     */
-
-    std::vector<std::string> inputFiles = {
-            "~/Загрузки/mus/funkorama.wav",
-            "~/Загрузки/mus/district_four.wav",
-            };
     auto configurator = Configurator(
-            "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/examples/config.txt",
-            "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/out.wav",
-            inputFiles
+            parser.getConfigFile(),
+            parser.getOutputFile(),
+            parser.getInputFiles()
     );
     if (configurator.hasErrors()) {
         std::cout << configurator.errors() << std::endl;
@@ -65,8 +58,8 @@ int main(int argc, char *argv[]) {
     }
 
     auto proc = Processor(
-            inputFiles,
-            "/home/bigcubecat/Projects/NSU/second_sem/22209-Bitochkin/lab3/SoundProcessor/out.wav"
+            parser.getInputFiles(),
+            parser.getOutputFile()
     );
 
     proc.run(configurator.getAlgorithm());
