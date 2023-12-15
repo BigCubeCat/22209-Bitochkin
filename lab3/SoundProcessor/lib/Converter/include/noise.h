@@ -10,7 +10,7 @@ namespace noise {
     public:
         Noise(const std::vector<std::string> &parameters);
 
-        void convert(
+        bool convert(
                 wav::SampleBuffer *current_samples,
                 wav::SampleBuffer *original_samples,
                 int sec

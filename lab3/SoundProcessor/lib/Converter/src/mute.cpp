@@ -12,15 +12,15 @@ Mute::Mute(const std::vector<std::string> &parameters) {
     eh = ErrorHandler("mute");
 }
 
-void Mute::convert(
+bool Mute::convert(
         wav::SampleBuffer *currentSamples,
         wav::SampleBuffer *originalSamples,
         int sec
 ) {
-    if (sec >= start && sec <= end) {
-        std::cout << "change " << sec << '\n';
+    if (sec >= start && sec < end) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            currentSamples[sec][j] = 0;
+            (*currentSamples)[j] = 0;
         }
     }
+    return true;
 }

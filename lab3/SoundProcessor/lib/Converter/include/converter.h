@@ -11,8 +11,7 @@
 namespace converter {
     class Converter {
     public:
-        virtual // Тут специально указатель, чтобы для crop и cut выводить nullptr
-        void convert(
+        virtual bool convert(
                 wav::SampleBuffer *current_samples,
                 wav::SampleBuffer *original_samples,
                 int sec = 0

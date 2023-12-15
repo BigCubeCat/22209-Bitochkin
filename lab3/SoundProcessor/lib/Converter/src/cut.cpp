@@ -13,13 +13,10 @@ Cut::Cut(const std::vector<std::string> &parameters) {
     eh = ErrorHandler("cut");
 }
 
-void Cut::convert(
+bool Cut::convert(
         wav::SampleBuffer *currentSamples,
         wav::SampleBuffer *originalSamples,
         int sec
 ) {
-    if (sec >= begin && sec <= end) {
-        currentSamples = nullptr;
-    }
-    currentSamples = currentSamples;
+    return !(sec >= begin && sec < end);
 }

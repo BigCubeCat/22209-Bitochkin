@@ -11,9 +11,6 @@ Crop::Crop(const std::vector<std::string> &parameters) {
     eh = ErrorHandler("crop");
 }
 
-void Crop::convert(wav::SampleBuffer *currentSamples, wav::SampleBuffer *originalSamples, int sec) {
-    if (sec >= begin && sec <= end) {
-        return;
-    }
-    currentSamples = nullptr;
+bool Crop::convert(wav::SampleBuffer *currentSamples, wav::SampleBuffer *originalSamples, int sec) {
+    return (sec >= begin && sec <= end);
 }

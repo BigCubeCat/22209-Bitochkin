@@ -8,7 +8,7 @@ namespace crop {
     public:
         explicit Crop(const std::vector<std::string> &parameters);
 
-        void convert(
+        bool convert(
                 wav::SampleBuffer *current_samples,
                 wav::SampleBuffer *original_samples,
                 int sec = 0

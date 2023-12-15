@@ -8,7 +8,7 @@ namespace cut {
     public:
         explicit Cut(const std::vector<std::string> &parameters);
 
-        void convert(
+        bool convert(
                 wav::SampleBuffer *currentSamples,
                 wav::SampleBuffer *originalSamples,
                 int sec = 0

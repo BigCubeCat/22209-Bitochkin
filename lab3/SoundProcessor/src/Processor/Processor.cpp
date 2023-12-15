@@ -16,7 +16,6 @@ void Processor::initSamples() {
 }
 
 void Processor::run(const std::vector<ConverterConfig> &algorithm) {
-    std::cout << "processor run\n";
     int sampleSize = 0;
 
     converterFactory::ConverterFactory factory;
@@ -26,13 +25,21 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
     reader.load(inputFiles[0]); // Загружаем input file
     wav::SampleVector currentSample;
 
+    std::vector<converterFactory::ConverterPointer> algo(algorithm.size());
+    for (int i = 0; i < algorithm.size(); ++i) {
+        algo[i] = factory.createConverter(algorithm[i].args);
+    }
+
     wav::SampleBuffer buffer;
+    bool useNewSample = true;
     while (reader.readSample(&buffer)) {
-        for (const auto &instruction: algorithm) {
-            converterFactory::ConverterPointer currentConverter = factory.createConverter(instruction.args);
-            currentConverter->convert(&buffer, &buffer, sampleSize);
+        for (const auto & converter : algo) {
+             useNewSample = useNewSample && converter->convert(&buffer, &buffer, sampleSize);
         }
-        writer.writeSample(&buffer);
+        if (useNewSample) {
+            writer.writeSample(&buffer);
+        }
+        ++sampleSize;
     }
     writer.writeHeader();
 }
