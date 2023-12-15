@@ -56,7 +56,7 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
             } else {
                 secondBuffer = buffer;
             }
-            useNewSample = useNewSample && algo[i]->convert(&buffer, &buffer, sampleSize);
+            useNewSample = useNewSample && algo[i]->convert(&buffer, secondBuffer, sampleSize);
         }
         if (useNewSample) {
             writer.writeSample(&buffer);

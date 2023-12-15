@@ -14,7 +14,7 @@ Mute::Mute(const std::vector<std::string> &parameters) {
 
 bool Mute::convert(
         wav::SampleBuffer *currentSamples,
-        wav::SampleBuffer *originalSamples,
+        wav::SampleBuffer &originalSamples,
         int sec
 ) {
     if (sec >= start && sec < end) {

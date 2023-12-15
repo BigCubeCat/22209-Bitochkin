@@ -17,7 +17,7 @@ Noise::Noise(const std::vector<std::string> &parameters) {
 
 bool Noise::convert(
         wav::SampleBuffer *current_samples,
-        wav::SampleBuffer *original_samples,
+        wav::SampleBuffer &original_samples,
         int sec
 ) {
     if (sec >= start && sec < end) {

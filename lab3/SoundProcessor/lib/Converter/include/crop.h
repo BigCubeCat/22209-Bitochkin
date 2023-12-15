@@ -10,7 +10,7 @@ namespace crop {
 
         bool convert(
                 wav::SampleBuffer *current_samples,
-                wav::SampleBuffer *original_samples,
+                wav::SampleBuffer &original_samples,
                 int sec = 0
         ) override;
         int requiredFile() override;

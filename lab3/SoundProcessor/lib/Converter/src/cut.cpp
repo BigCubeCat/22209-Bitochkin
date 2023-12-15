@@ -15,7 +15,7 @@ Cut::Cut(const std::vector<std::string> &parameters) {
 
 bool Cut::convert(
         wav::SampleBuffer *currentSamples,
-        wav::SampleBuffer *originalSamples,
+        wav::SampleBuffer &originalSamples,
         int sec
 ) {
     return !(sec >= begin && sec < end);

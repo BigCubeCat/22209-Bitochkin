@@ -10,7 +10,7 @@ namespace cut {
 
         bool convert(
                 wav::SampleBuffer *currentSamples,
-                wav::SampleBuffer *originalSamples,
+                wav::SampleBuffer &originalSamples,
                 int sec = 0
         ) override;
 
