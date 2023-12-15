@@ -20,10 +20,8 @@ bool Mix::convert(
 ) {
 
     if (sec >= start) {
-        if (originalSamples) {
-            for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-                (*currentSamples)[j] = ((*currentSamples)[j] / 2 + (*originalSamples)[j] / 2);
-            }
+        for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
+            (*currentSamples)[j] = ((*currentSamples)[j] / 2 + (*originalSamples)[j] / 2);
         }
     }
     return true;

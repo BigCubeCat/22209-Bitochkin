@@ -36,20 +36,23 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
         requiredConverterFiles[i] = algo[i]->requiredFile();
         usedFiles[requiredConverterFiles[i]] = true;
     }
+    usedFiles[0] = true;
+
     for (int i = 0; i < inputFiles.size(); ++i) {
         if (usedFiles[i]) {
-            readers[requiredConverterFiles[i]].load(inputFiles[requiredConverterFiles[i]]);
+            readers[i].load(inputFiles[i]);
         }
     }
-
     wav::SampleBuffer buffer;
     wav::SampleBuffer secondBuffer;
-
     bool useNewSample = true;
     while (readers[0].readSample(&buffer)) {
         for (int i = 0; i < algo.size(); ++i) {
             if (requiredConverterFiles[i] != 0) {
-                readers[requiredConverterFiles[i]].readSample(&secondBuffer);
+                // Если нужен какой-то другой файл, мы читаем его кусочек, иначе берем кусочек старого
+                if (!readers[requiredConverterFiles[i]].readSample(&secondBuffer)) {
+                    secondBuffer = buffer;
+                }
             } else {
                 secondBuffer = buffer;
             }
