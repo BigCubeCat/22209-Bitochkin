@@ -22,19 +22,38 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
 
     writer::Writer writer(outFile);
     reader::Reader reader;
-    reader.load(inputFiles[0]); // Загружаем input file
     wav::SampleVector currentSample;
 
     std::vector<converterFactory::ConverterPointer> algo(algorithm.size());
+    std::vector<int> requiredConverterFiles(algorithm.size());
+
+    std::vector<bool> usedFiles(inputFiles.size());
+    std::fill (usedFiles.begin(), usedFiles.end(), false);
+    std::vector<reader::Reader> readers(inputFiles.size());
+
     for (int i = 0; i < algorithm.size(); ++i) {
         algo[i] = factory.createConverter(algorithm[i].args);
+        requiredConverterFiles[i] = algo[i]->requiredFile();
+        usedFiles[requiredConverterFiles[i]] = true;
+    }
+    for (int i = 0; i < inputFiles.size(); ++i) {
+        if (usedFiles[i]) {
+            readers[requiredConverterFiles[i]].load(inputFiles[requiredConverterFiles[i]]);
+        }
     }
 
     wav::SampleBuffer buffer;
+    wav::SampleBuffer secondBuffer;
+
     bool useNewSample = true;
-    while (reader.readSample(&buffer)) {
-        for (const auto & converter : algo) {
-             useNewSample = useNewSample && converter->convert(&buffer, &buffer, sampleSize);
+    while (readers[0].readSample(&buffer)) {
+        for (int i = 0; i < algo.size(); ++i) {
+            if (requiredConverterFiles[i] != 0) {
+                readers[requiredConverterFiles[i]].readSample(&secondBuffer);
+            } else {
+                secondBuffer = buffer;
+            }
+            useNewSample = useNewSample && algo[i]->convert(&buffer, &buffer, sampleSize);
         }
         if (useNewSample) {
             writer.writeSample(&buffer);

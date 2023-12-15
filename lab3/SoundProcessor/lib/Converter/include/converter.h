@@ -17,7 +17,11 @@ namespace converter {
                 int sec = 0
         ) = 0;
 
+        virtual int requiredFile() = 0;
+
         ErrorHandler eh = ErrorHandler("default");
+    private:
+        int inputFile;
     };
 }
 #endif

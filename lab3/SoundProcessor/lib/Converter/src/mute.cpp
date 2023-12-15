@@ -24,3 +24,7 @@ bool Mute::convert(
     }
     return true;
 }
+
+int Mute::requiredFile() {
+    return inputFile;
+}

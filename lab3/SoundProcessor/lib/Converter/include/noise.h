@@ -16,7 +16,10 @@ namespace noise {
                 int sec
         ) override;
 
+        int requiredFile() override;
+
     private:
+        int inputFile = 0;
         int start = 0;
         int end = 0;
         int percent = 50;

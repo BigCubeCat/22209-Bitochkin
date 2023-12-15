@@ -16,9 +16,11 @@ namespace mix {
                 int sec
         ) override;
 
+        int requiredFile() override;
+
     private:
+        int inputFile = 0;
         int start = 0;
-        int indexFile;
     };
 }
 

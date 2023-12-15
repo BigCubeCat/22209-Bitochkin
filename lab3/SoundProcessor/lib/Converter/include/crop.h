@@ -13,8 +13,10 @@ namespace crop {
                 wav::SampleBuffer *original_samples,
                 int sec = 0
         ) override;
+        int requiredFile() override;
 
     private:
+        int inputFile = 0;
         int begin = 0;
         int end = 0;
     };

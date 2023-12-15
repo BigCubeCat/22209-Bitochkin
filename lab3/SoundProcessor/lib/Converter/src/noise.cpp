@@ -27,3 +27,7 @@ bool Noise::convert(
     }
     return true;
 }
+
+int Noise::requiredFile() {
+    return inputFile;
+}

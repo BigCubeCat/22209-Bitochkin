@@ -20,3 +20,7 @@ bool Cut::convert(
 ) {
     return !(sec >= begin && sec < end);
 }
+
+int Cut::requiredFile() {
+    return inputFile;
+}

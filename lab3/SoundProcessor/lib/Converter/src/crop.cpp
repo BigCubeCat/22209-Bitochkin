@@ -14,3 +14,7 @@ Crop::Crop(const std::vector<std::string> &parameters) {
 bool Crop::convert(wav::SampleBuffer *currentSamples, wav::SampleBuffer *originalSamples, int sec) {
     return (sec >= begin && sec <= end);
 }
+
+int Crop::requiredFile() {
+    return inputFile;
+}

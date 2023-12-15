@@ -8,9 +8,9 @@ Mix::Mix(const std::vector<std::string> parameters) {
         throw std::runtime_error("invalid parameters count");
     }
     std::string strIndexFile = parameters[1];
-    this->indexFile = std::stoi(strIndexFile.erase(0, 1)) - 1;
-    this->start = std::stoi(parameters[2]);
-    this->eh = ErrorHandler("mix");
+    inputFile = std::stoi(strIndexFile.erase(0, 1)) - 1;
+    start = std::stoi(parameters[2]);
+    eh = ErrorHandler("mix");
 }
 
 bool Mix::convert(
@@ -18,8 +18,17 @@ bool Mix::convert(
         wav::SampleBuffer *originalSamples,
         int sec
 ) {
-    for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-        (*currentSamples)[j] = ((*currentSamples)[j] / 2 + (*originalSamples)[j] / 2);
+
+    if (sec >= start) {
+        if (originalSamples) {
+            for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
+                (*currentSamples)[j] = ((*currentSamples)[j] / 2 + (*originalSamples)[j] / 2);
+            }
+        }
     }
     return true;
+}
+
+int Mix::requiredFile() {
+    return inputFile;
 }
