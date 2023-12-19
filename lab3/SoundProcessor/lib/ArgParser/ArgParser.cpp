@@ -50,11 +50,7 @@ std::string ArgParser::getErrorMessage() {
 }
 
 std::vector<std::string> ArgParser::getInputFiles() {
-    std::vector<std::string> res(inputFiles.size());
-    for (int i = 0; i < inputFiles.size(); ++i) {
-        res[i] = inputFiles[i];
-    }
-    return res;
+    return inputFiles;
 }
 
 std::string ArgParser::getOutputFile() const {

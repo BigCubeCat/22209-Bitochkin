@@ -23,7 +23,6 @@ void Configurator::parse() {
     std::string line;
     int i = 1;
     while (std::getline(file, line)) {
-        std::cout << line << "\n";
         parseConfigLine(line, i);
         ++i;
     }
@@ -34,7 +33,7 @@ void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     if (cmd.empty()) {
         return;
     }
-    if (cmd[0][0] == '#') {
+    if (cmd[0][0] == '#' || cmd[0].empty()) {
         return;
     }
     if (!isConvertorName(cmd[0])) {

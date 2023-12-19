@@ -17,8 +17,6 @@ public:
 
 private:
 
-    void initSamples();
-
     std::vector<std::string> inputFiles;
     std::string outFile;
 

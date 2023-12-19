@@ -16,19 +16,6 @@ public:
 
     ~Configurator();
 
-    /*
-     * parse();
-     * Read line by line.
-     * Calls parseConfigLine(line)
-     */
-    void parse();
-
-    /*
-     * parseConfigLine(line);
-     * Reads line and create Converter
-     */
-    void parseConfigLine(const std::string &line, int lineNumber);
-
     bool hasErrors() const;
 
     std::string errors() const;
@@ -36,6 +23,20 @@ public:
     std::vector<ConverterConfig> getAlgorithm();
 
 private:
+    /*
+     * parseConfigLine(line);
+     * Reads line and create Converter
+     */
+    void parseConfigLine(const std::string &line, int lineNumber);
+
+    /*
+     * parse();
+     * Read line by line.
+     * Calls parseConfigLine(line)
+     */
+    void parse();
+
+
     std::vector<ConverterConfig> algorithm;
 
     std::string config;

@@ -8,11 +8,6 @@ Processor::Processor(
         const std::vector<std::string> &input,
         const std::string &output
 ) : inputFiles(input), outFile(output) {
-    initSamples();
-}
-
-void Processor::initSamples() {
-
 }
 
 void Processor::run(const std::vector<ConverterConfig> &algorithm) {
