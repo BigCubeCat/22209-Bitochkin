@@ -37,13 +37,13 @@ void Reader::loadHeader(const std::string &path) {
     try {
         inputFile.open(path, std::ios_base::binary);
 
-        inputFile.read((char *) &wav, sizeof(wav::Header));
+        inputFile.read(reinterpret_cast<char *>(&wav), sizeof(wav::Header));
 
         wav::Chunk headerChunk;
 
         while (wav.dataHeader.ChunkId != wav::DATA_CHUNK_ID) {
             inputFile.seekg(wav.dataHeader.ChunkSize, std::fstream::cur);
-            inputFile.read((char *) &headerChunk, sizeof(wav::Chunk));
+            inputFile.read(reinterpret_cast<char *>(&headerChunk), sizeof(wav::Chunk));
             wav.dataHeader.ChunkId = headerChunk.ChunkId;
             wav.dataHeader.ChunkSize = headerChunk.ChunkSize;
         }
@@ -56,7 +56,7 @@ void Reader::loadHeader(const std::string &path) {
 }
 
 bool Reader::readSample(wav::SampleBuffer *buffer) {
-    inputFile.read((char *) buffer, sizeof(wav::SampleBuffer));
+    inputFile.read(reinterpret_cast<char *>(buffer), sizeof(wav::SampleBuffer));
     if (inputFile.gcount() == 0) return false;
     return true;
 }

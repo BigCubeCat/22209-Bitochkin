@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
             parser.getOutputFile()
     );
 
-    proc.run(configurator.getAlgorithm());
+    proc.run(std::move(configurator).getAlgorithm());
 
     return 0;
 }

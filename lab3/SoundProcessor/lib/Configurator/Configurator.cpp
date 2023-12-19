@@ -89,8 +89,8 @@ bool Configurator::commandIsValid(const std::vector<std::string> &cmd) {
     return false;
 }
 
-std::vector<ConverterConfig> Configurator::getAlgorithm() {
-    return algorithm;
+std::vector<ConverterConfig> Configurator::getAlgorithm() && {
+    return std::move(algorithm);
 }
 
 bool Configurator::linkIsValid(const std::string &link) {

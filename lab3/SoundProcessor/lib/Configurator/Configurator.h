@@ -20,7 +20,7 @@ public:
 
     std::string errors() const;
 
-    std::vector<ConverterConfig> getAlgorithm();
+    std::vector<ConverterConfig> getAlgorithm() &&;
 
 private:
     /*
