@@ -35,7 +35,7 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
 
     for (int i = 0; i < inputFiles.size(); ++i) {
         if (usedFiles[i]) {
-            readers[i].load(inputFiles[i]);
+            readers[i].loadHeader(inputFiles[i]);
         }
     }
     wav::SampleBuffer buffer;

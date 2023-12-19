@@ -18,7 +18,6 @@ bool Mix::convert(
         wav::SampleBuffer &originalSamples,
         int sec
 ) {
-
     if (sec >= start) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
             (*currentSamples)[j] = ((*currentSamples)[j] / 2 + originalSamples[j] / 2);

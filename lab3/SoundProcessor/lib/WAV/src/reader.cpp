@@ -33,7 +33,7 @@ WrongBlockAlign::WrongBlockAlign(const uint16_t blockAlign) :
 WrongDataChunkId::WrongDataChunkId(const uint32_t dataChunkId) :
         std::invalid_argument(std::to_string(dataChunkId) + " is not data") {}
 
-void Reader::load(const std::string &path) {
+void Reader::loadHeader(const std::string &path) {
     try {
         inputFile.open(path, std::ios_base::binary);
 

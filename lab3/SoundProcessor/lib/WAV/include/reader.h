@@ -64,7 +64,7 @@ namespace reader {
 
         ~Reader() {};
 
-        void load(const std::string &path);
+        void loadHeader(const std::string &path);
 
         bool readSample(wav::SampleBuffer *buffer);
 
