@@ -8,7 +8,7 @@ namespace mute {
 
     class Mute : public converter::Converter {
     public:
-        Mute(const std::vector<std::string> &parameters);
+        Mute();
 
         bool convert(
                 wav::SampleBuffer *current_samples,
@@ -18,10 +18,15 @@ namespace mute {
 
         int requiredFile() override;
 
+        void initConverter(const std::vector<std::string> &params) override;
+
+        bool isWorkTime(int sec) const override;
+
     private:
         int inputFile = 0;
         int start = 0;
         int end = 0;
+
     };
 }
 #endif

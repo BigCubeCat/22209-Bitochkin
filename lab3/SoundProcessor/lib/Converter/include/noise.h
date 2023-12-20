@@ -8,7 +8,7 @@ namespace noise {
 
     class Noise : public converter::Converter {
     public:
-        Noise(const std::vector<std::string> &parameters);
+        Noise();
 
         bool convert(
                 wav::SampleBuffer *current_samples,
@@ -17,6 +17,10 @@ namespace noise {
         ) override;
 
         int requiredFile() override;
+
+        void initConverter(const std::vector<std::string> &params) override;
+
+        bool isWorkTime(int sec) const override;
 
     private:
         int inputFile = 0;

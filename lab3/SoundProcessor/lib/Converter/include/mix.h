@@ -8,7 +8,7 @@
 namespace mix {
     class Mix : public converter::Converter {
     public:
-        Mix(const std::vector<std::string> parameters);
+        Mix();
 
         bool convert(
                 wav::SampleBuffer *current_samples,
@@ -18,9 +18,14 @@ namespace mix {
 
         int requiredFile() override;
 
+        void initConverter(const std::vector<std::string> &params) override;
+
+        bool isWorkTime(int sec) const override;
+
     private:
         int inputFile = 0;
         int start = 0;
+
     };
 }
 

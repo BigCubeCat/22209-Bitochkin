@@ -6,14 +6,19 @@
 namespace crop {
     class Crop : public converter::Converter {
     public:
-        explicit Crop(const std::vector<std::string> &parameters);
+        explicit Crop();
 
         bool convert(
                 wav::SampleBuffer *current_samples,
                 wav::SampleBuffer &original_samples,
                 int sec = 0
         ) override;
+
         int requiredFile() override;
+
+        void initConverter(const std::vector<std::string> &params) override;
+
+        bool isWorkTime(int sec) const override;
 
     private:
         int inputFile = 0;

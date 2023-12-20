@@ -18,6 +18,9 @@ namespace converter {
         ) = 0;
 
         virtual int requiredFile() = 0;
+        virtual bool isWorkTime(int sec) const = 0;
+
+        virtual void initConverter(const std::vector<std::string>& params) = 0;
 
         ErrorHandler eh = ErrorHandler("default");
     private:

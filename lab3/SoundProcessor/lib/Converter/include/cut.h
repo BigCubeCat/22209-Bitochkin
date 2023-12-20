@@ -6,7 +6,7 @@
 namespace cut {
     class Cut : public converter::Converter {
     public:
-        explicit Cut(const std::vector<std::string> &parameters);
+        explicit Cut();
 
         bool convert(
                 wav::SampleBuffer *currentSamples,
@@ -16,10 +16,15 @@ namespace cut {
 
         int requiredFile() override;
 
+        void initConverter(const std::vector<std::string> &params) override;
+
+        bool isWorkTime(int sec) const override;
+
     private:
         int inputFile = 0;
         int begin = 0;
         int end = 0;
+
     };
 }
 #endif

@@ -18,18 +18,18 @@
 namespace converterFactory {
     using ConverterPointer = std::unique_ptr<converter::Converter>;
 
-    std::map<std::string, std::function<ConverterPointer (const std::vector<std::string>&)>> converterMap = {
-            {"mix", [](const std::vector<std::string> &params) {return std::make_unique<mix::Mix>(params);}},
-            {"mute", [](const std::vector<std::string> &params) {return std::make_unique<mute::Mute>(params);}},
-            {"crop", [](const std::vector<std::string> &params) {return std::make_unique<crop::Crop>(params);}},
-            {"cut", [](const std::vector<std::string> &params) {return std::make_unique<cut::Cut>(params);}},
-            {"noise", [](const std::vector<std::string> &params) {return std::make_unique<noise::Noise>(params);}}
+    std::map<std::string, std::function<ConverterPointer ()>> converterMap = {
+            {"mix", []() {return std::make_unique<mix::Mix>();}},
+            {"mute", []() {return std::make_unique<mute::Mute>();}},
+            {"crop", []() {return std::make_unique<crop::Crop>();}},
+            {"cut", []() {return std::make_unique<cut::Cut>();}},
+            {"noise", []() {return std::make_unique<noise::Noise>();}}
     };
 
     class ConverterFactory {
     public:
-        ConverterPointer createConverter(const std::vector<std::string> parameters) {
-            return converterMap[parameters[0]](parameters);
+        static ConverterPointer createConverter(const std::string& name) {
+            return converterMap[name]();
         };
     };
 }
