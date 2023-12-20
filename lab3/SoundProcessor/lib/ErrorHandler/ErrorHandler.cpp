@@ -11,9 +11,7 @@ void ErrorHandler::AddError(const std::string &message) {
     errorMessages.push_back(message);
 }
 
-bool ErrorHandler::hasErrors() const {
-    return errorsOccurred;
-}
+bool ErrorHandler::hasErrors() const { return errorsOccurred; }
 
 std::string ErrorHandler::getErrorText() {
     std::string result = "error occurred at module " + moduleName + "\n";

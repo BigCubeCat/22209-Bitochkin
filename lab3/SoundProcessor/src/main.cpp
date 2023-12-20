@@ -6,24 +6,25 @@
 #include "Processor/Processor.h"
 
 namespace {
-    void printHelp() {
-        std::cout << "Usage for SoundProcessor\n";
-        std::cout << "Flag --help (-h) : show this text\n";
-        std::cout << "Flag --config (-c) : set config.txt file\n";
-        std::cout << "Example: \n";
-        std::cout << " sound_processor [-h] [-c config.txt output.wav input1.wav [input2.wav …]]\n";
-    }
-
-    void printParserError() {
-        std::cout << "Invalid arguments.\n";
-        std::cout << "Use sound_processor -h for more information\n";
-    }
-
-    void printConfigError() {
-        std::cout << "Invalid config.\n";
-        std::cout << "Please, read README.md\n";
-    }
+void printHelp() {
+    std::cout << "Usage for SoundProcessor\n";
+    std::cout << "Flag --help (-h) : show this text\n";
+    std::cout << "Flag --config (-c) : set config.txt file\n";
+    std::cout << "Example: \n";
+    std::cout << " sound_processor [-h] [-c config.txt output.wav input1.wav "
+                 "[input2.wav …]]\n";
 }
+
+void printParserError() {
+    std::cout << "Invalid arguments.\n";
+    std::cout << "Use sound_processor -h for more information\n";
+}
+
+void printConfigError() {
+    std::cout << "Invalid config.\n";
+    std::cout << "Please, read README.md\n";
+}
+}  // namespace
 
 int main(int argc, char *argv[]) {
     std::vector<std::string> arguments(argc);
@@ -47,20 +48,14 @@ int main(int argc, char *argv[]) {
         return 1;
     }
     auto configurator = Configurator(
-            parser.getConfigFile(),
-            parser.getOutputFile(),
-            parser.getInputFiles()
-    );
+        parser.getConfigFile(), parser.getOutputFile(), parser.getInputFiles());
     if (configurator.hasErrors()) {
         std::cout << configurator.errors() << std::endl;
         printConfigError();
         return 1;
     }
 
-    auto proc = Processor(
-            parser.getInputFiles(),
-            parser.getOutputFile()
-    );
+    auto proc = Processor(parser.getInputFiles(), parser.getOutputFile());
 
     proc.run(std::move(configurator).getAlgorithm());
 

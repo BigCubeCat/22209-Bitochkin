@@ -5,7 +5,7 @@
 #include <vector>
 
 class ErrorHandler {
-public:
+   public:
     explicit ErrorHandler(const std::string &module);
 
     void AddError(const std::string &message);
@@ -16,11 +16,10 @@ public:
 
     void printErrorText();
 
-private:
+   private:
     std::string moduleName;
     std::vector<std::string> errorMessages;
     bool errorsOccurred = false;
 };
-
 
 #endif

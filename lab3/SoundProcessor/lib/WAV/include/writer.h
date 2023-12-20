@@ -1,25 +1,26 @@
 #ifndef WAV_WRITER_H
 #define WAV_WRITER_H
 
-#include "wav.h"
-#include <iostream>
-#include <fstream>
 #include <exception>
+#include <fstream>
+#include <iostream>
+
+#include "wav.h"
 
 namespace writer {
-    class Writer {
-    public:
-        Writer(const std::string path);
+class Writer {
+   public:
+    Writer(const std::string path);
 
-        ~Writer() {};
+    ~Writer(){};
 
-        void writeSample(const wav::SampleBuffer *buffer);
+    void writeSample(const wav::SampleBuffer *buffer);
 
-        void writeHeader();
+    void writeHeader();
 
-    private:
-        wav::Header wav;
-        std::ofstream outputFile;
-    };
-}
+   private:
+    wav::Header wav;
+    std::ofstream outputFile;
+};
+}  // namespace writer
 #endif

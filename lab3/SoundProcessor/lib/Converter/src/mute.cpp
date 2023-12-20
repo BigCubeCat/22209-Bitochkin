@@ -1,18 +1,13 @@
-#include <iostream>
 #include "mute.h"
+
+#include <iostream>
 
 using namespace mute;
 
-Mute::Mute() {
+Mute::Mute() { eh = ErrorHandler("mute"); }
 
-    eh = ErrorHandler("mute");
-}
-
-bool Mute::convert(
-        wav::SampleBuffer *currentSamples,
-        wav::SampleBuffer &originalSamples,
-        int sec
-) {
+bool Mute::convert(wav::SampleBuffer *currentSamples,
+                   wav::SampleBuffer &originalSamples, int sec) {
     if (isWorkTime(sec)) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
             (*currentSamples)[j] = 0;
@@ -21,9 +16,7 @@ bool Mute::convert(
     return true;
 }
 
-bool Mute::isWorkTime(int sec) const {
-    return (sec >= start && sec < end);
-}
+bool Mute::isWorkTime(int sec) const { return (sec >= start && sec < end); }
 
 void Mute::initConverter(const std::vector<std::string> &params) {
     if (params.size() < 2) {
@@ -33,6 +26,4 @@ void Mute::initConverter(const std::vector<std::string> &params) {
     end = std::stoi(params[2]);
 }
 
-int Mute::requiredFile() {
-    return inputFile;
-}
+int Mute::requiredFile() { return inputFile; }

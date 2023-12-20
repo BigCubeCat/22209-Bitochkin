@@ -1,18 +1,17 @@
 #ifndef SOUNDPROCESSOR_CONFIGURATOR_H
 #define SOUNDPROCESSOR_CONFIGURATOR_H
 
+#include <set>
 #include <string>
 #include <vector>
-#include <set>
+
 #include "ConverterConfig.h"
 
 class Configurator {
-public:
-    explicit Configurator(
-            const std::string &configFile,
-            const std::string &outFile,
-            const std::vector<std::string> &inputFiles
-    );
+   public:
+    explicit Configurator(const std::string &configFile,
+                          const std::string &outFile,
+                          const std::vector<std::string> &inputFiles);
 
     ~Configurator();
 
@@ -22,7 +21,7 @@ public:
 
     std::vector<ConverterConfig> getAlgorithm() &&;
 
-private:
+   private:
     /*
      * parseConfigLine(line);
      * Reads line and create Converter
@@ -35,7 +34,6 @@ private:
      * Calls parseConfigLine(line)
      */
     void parse();
-
 
     std::vector<ConverterConfig> algorithm;
 
@@ -57,7 +55,6 @@ private:
     static bool isNumber(const std::string &num);
 
     std::set<std::string> commandSet = {"mix", "mute", "noise", "cut", "crop"};
-
 };
 
 #endif

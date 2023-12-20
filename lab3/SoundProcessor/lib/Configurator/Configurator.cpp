@@ -1,21 +1,19 @@
 #include "Configurator.h"
 
 #include <fstream>
-#include <sstream>
 #include <iostream>
+#include <sstream>
 
 Configurator::~Configurator() = default;
 
-Configurator::Configurator(
-        const std::string &configFile, const std::string &outFile,
-        const std::vector<std::string> &inputFiles
-) : input(inputFiles), config(configFile), out(outFile) {
+Configurator::Configurator(const std::string &configFile,
+                           const std::string &outFile,
+                           const std::vector<std::string> &inputFiles)
+    : input(inputFiles), config(configFile), out(outFile) {
     parse();
 }
 
-bool Configurator::hasErrors() const {
-    return errorsOccurred;
-}
+bool Configurator::hasErrors() const { return errorsOccurred; }
 
 void Configurator::parse() {
     std::ifstream file;
@@ -38,13 +36,15 @@ void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     }
     if (!isConvertorName(cmd[0])) {
         errorsOccurred = true;
-        errorMessage += std::to_string(lineNumber) + ": Invalid command: " + line + "\n";
+        errorMessage +=
+            std::to_string(lineNumber) + ": Invalid command: " + line + "\n";
     } else if (commandIsValid(cmd)) {
         auto conf = ConverterConfig{cmd[0], cmd};
         algorithm.push_back(conf);
     } else {
         errorsOccurred = true;
-        errorMessage += std::to_string(lineNumber) + ": Invalid convertor arguments: " + line + "\n";
+        errorMessage += std::to_string(lineNumber) +
+                        ": Invalid convertor arguments: " + line + "\n";
     }
 }
 
@@ -96,7 +96,7 @@ std::vector<ConverterConfig> Configurator::getAlgorithm() && {
 bool Configurator::linkIsValid(const std::string &link) {
     if (link[0] == '$') {
         for (int i = 1; i < link.size(); ++i) {
-            if (link[i] < '0' | link[i] > '9') {
+            if (link[i]<'0' | link[i]> '9') {
                 return false;
             }
         }
@@ -107,14 +107,11 @@ bool Configurator::linkIsValid(const std::string &link) {
 
 bool Configurator::isNumber(const std::string &num) {
     for (int i = 1; i < num.size(); ++i) {
-        if (num[i] < '0' | num[i] > '9') {
+        if (num[i]<'0' | num[i]> '9') {
             return false;
         }
     }
     return true;
 }
 
-std::string Configurator::errors() const {
-    return errorMessage;
-}
-
+std::string Configurator::errors() const { return errorMessage; }

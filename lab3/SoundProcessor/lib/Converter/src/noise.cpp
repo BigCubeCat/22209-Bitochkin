@@ -2,26 +2,20 @@
 
 using namespace noise;
 
-Noise::Noise() {
-    eh = ErrorHandler("noise");
-}
+Noise::Noise() { eh = ErrorHandler("noise"); }
 
-bool Noise::convert(
-        wav::SampleBuffer *current_samples,
-        wav::SampleBuffer &original_samples,
-        int sec
-) {
+bool Noise::convert(wav::SampleBuffer *current_samples,
+                    wav::SampleBuffer &original_samples, int sec) {
     if (sec >= start && sec < end) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            (*current_samples)[j] -= (int16_t) (current_samples[sec][j] * percent);
+            (*current_samples)[j] -=
+                (int16_t)(current_samples[sec][j] * percent);
         }
     }
     return true;
 }
 
-bool Noise::isWorkTime(int sec) const {
-    return (sec >= start && sec < end);
-}
+bool Noise::isWorkTime(int sec) const { return (sec >= start && sec < end); }
 
 void Noise::initConverter(const std::vector<std::string> &params) {
     if (params.size() < 3) {
@@ -35,6 +29,4 @@ void Noise::initConverter(const std::vector<std::string> &params) {
     }
 }
 
-int Noise::requiredFile() {
-    return inputFile;
-}
+int Noise::requiredFile() { return inputFile; }

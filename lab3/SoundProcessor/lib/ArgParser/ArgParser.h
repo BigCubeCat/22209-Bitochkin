@@ -1,11 +1,11 @@
 #ifndef SOUNDPROCESSOR_ARGPARSER_H
 #define SOUNDPROCESSOR_ARGPARSER_H
 
-#include <vector>
 #include <string>
+#include <vector>
 
 class ArgParser {
-public:
+   public:
     ArgParser(const std::vector<std::string> &arguments);
 
     std::string getConfigFile() const;
@@ -20,7 +20,7 @@ public:
 
     ~ArgParser();
 
-private:
+   private:
     std::string configFile;
     std::vector<std::string> inputFiles;
     std::string outputFile;
@@ -28,6 +28,5 @@ private:
     std::string errorMessage;
     bool errorsOccurred = false;
 };
-
 
 #endif

@@ -4,8 +4,8 @@
 #include <vector>
 
 struct StepAlgo {
-    std::vector<int> usedConverters; // Индексы исполльзуемых конвертеров
-    std::vector<int> usedFile; // индекс используемого файла
+    std::vector<int> usedConverters;  // Индексы исполльзуемых конвертеров
+    std::vector<int> usedFile;  // индекс используемого файла
     int sec;
 };
 

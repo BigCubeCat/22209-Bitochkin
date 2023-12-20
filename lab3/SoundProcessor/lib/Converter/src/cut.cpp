@@ -4,21 +4,14 @@
 
 using namespace cut;
 
-Cut::Cut() {
-    eh = ErrorHandler("cut");
-}
+Cut::Cut() { eh = ErrorHandler("cut"); }
 
-bool Cut::convert(
-        wav::SampleBuffer *currentSamples,
-        wav::SampleBuffer &originalSamples,
-        int sec
-) {
+bool Cut::convert(wav::SampleBuffer *currentSamples,
+                  wav::SampleBuffer &originalSamples, int sec) {
     return isWorkTime(sec);
 }
 
-bool Cut::isWorkTime(int sec) const {
-    return !(sec >= begin && sec < end);
-}
+bool Cut::isWorkTime(int sec) const { return !(sec >= begin && sec < end); }
 
 void Cut::initConverter(const std::vector<std::string> &params) {
     if (params.size() < 2) {
@@ -28,6 +21,4 @@ void Cut::initConverter(const std::vector<std::string> &params) {
     end = std::stoi(params[2]);
 }
 
-int Cut::requiredFile() {
-    return inputFile;
-}
+int Cut::requiredFile() { return inputFile; }

@@ -5,7 +5,7 @@ ArgParser::ArgParser(const std::vector<std::string> &arguments) {
     bool configExists = false;
     bool outputExists = false;
     bool inputNotEmpty = false;
-    for (const auto &arg: arguments) {
+    for (const auto &arg : arguments) {
         if (arg == "-c" || arg == "--config") {
             exceptConfig = true;
             continue;
@@ -41,24 +41,14 @@ ArgParser::ArgParser(const std::vector<std::string> &arguments) {
     }
 }
 
-bool ArgParser::hasErrors() const {
-    return errorsOccurred;
-}
+bool ArgParser::hasErrors() const { return errorsOccurred; }
 
-std::string ArgParser::getErrorMessage() {
-    return errorMessage;
-}
+std::string ArgParser::getErrorMessage() { return errorMessage; }
 
-std::vector<std::string> ArgParser::getInputFiles() {
-    return inputFiles;
-}
+std::vector<std::string> ArgParser::getInputFiles() { return inputFiles; }
 
-std::string ArgParser::getOutputFile() const {
-    return outputFile;
-}
+std::string ArgParser::getOutputFile() const { return outputFile; }
 
-std::string ArgParser::getConfigFile() const {
-    return configFile;
-}
+std::string ArgParser::getConfigFile() const { return configFile; }
 
 ArgParser::~ArgParser() = default;

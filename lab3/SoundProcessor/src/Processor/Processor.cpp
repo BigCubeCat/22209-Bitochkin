@@ -1,14 +1,14 @@
 #include "Processor.h"
-#include "reader.h"
-#include "writer.h"
-#include "converterFactory.h"
+
 #include <stdexcept>
 
-Processor::Processor(
-        const std::vector<std::string> &input,
-        const std::string &output
-) : inputFiles(input), outFile(output) {
-}
+#include "converterFactory.h"
+#include "reader.h"
+#include "writer.h"
+
+Processor::Processor(const std::vector<std::string> &input,
+                     const std::string &output)
+    : inputFiles(input), outFile(output) {}
 
 void Processor::run(const std::vector<ConverterConfig> &algorithm) {
     int sampleSize = 0;
@@ -44,15 +44,19 @@ void Processor::run(const std::vector<ConverterConfig> &algorithm) {
     bool useNewSample = true;
     while (readers[0].readSample(&buffer)) {
         for (int i = 0; i < algo.size(); ++i) {
-            if (requiredConverterFiles[i] != 0 && algo[i]->isWorkTime(sampleSize)) {
-                // Если нужен какой-то другой файл, мы читаем его кусочек, иначе берем кусочек старого
-                if (!readers[requiredConverterFiles[i]].readSample(&secondBuffer)) {
+            if (requiredConverterFiles[i] != 0 &&
+                algo[i]->isWorkTime(sampleSize)) {
+                // Если нужен какой-то другой файл, мы читаем его кусочек, иначе
+                // берем кусочек старого
+                if (!readers[requiredConverterFiles[i]].readSample(
+                        &secondBuffer)) {
                     secondBuffer = buffer;
                 }
             } else {
                 secondBuffer = buffer;
             }
-            useNewSample = useNewSample && algo[i]->convert(&buffer, secondBuffer, sampleSize);
+            useNewSample = useNewSample &&
+                           algo[i]->convert(&buffer, secondBuffer, sampleSize);
         }
         if (useNewSample) {
             writer.writeSample(&buffer);

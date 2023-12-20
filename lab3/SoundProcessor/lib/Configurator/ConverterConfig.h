@@ -4,11 +4,9 @@
 #include <string>
 #include <vector>
 
-
 struct ConverterConfig {
     std::string name;
     std::vector<std::string> args;
 };
 
-
-#endif //SOUNDPROCESSOR_CONVERTERCONFIG_H
+#endif  // SOUNDPROCESSOR_CONVERTERCONFIG_H
