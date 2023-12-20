@@ -8,6 +8,9 @@ Mute::Mute() { eh = ErrorHandler("mute"); }
 
 bool Mute::convert(wav::SampleBuffer *currentSamples,
                    wav::SampleBuffer &originalSamples, int sec) {
+    if (currentSamples == nullptr) {
+        throw std::invalid_argument("invalid sample.");
+    }
     if (isWorkTime(sec)) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
             (*currentSamples)[j] = 0;

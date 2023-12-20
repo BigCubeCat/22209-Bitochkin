@@ -14,6 +14,9 @@ void Crop::initConverter(const std::vector<std::string> &params) {
 
 bool Crop::convert(wav::SampleBuffer *currentSamples,
                    wav::SampleBuffer &originalSamples, int sec) {
+    if (currentSamples == nullptr) {
+        throw std::invalid_argument("invalid sample.");
+    }
     return isWorkTime(sec);
 }
 

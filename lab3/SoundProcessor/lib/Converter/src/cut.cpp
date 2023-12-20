@@ -8,6 +8,9 @@ Cut::Cut() { eh = ErrorHandler("cut"); }
 
 bool Cut::convert(wav::SampleBuffer *currentSamples,
                   wav::SampleBuffer &originalSamples, int sec) {
+    if (currentSamples == nullptr) {
+        throw std::invalid_argument("invalid sample.");
+    }
     return isWorkTime(sec);
 }
 

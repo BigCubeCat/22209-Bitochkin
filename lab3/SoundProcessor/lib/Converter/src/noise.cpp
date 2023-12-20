@@ -4,12 +4,15 @@ using namespace noise;
 
 Noise::Noise() { eh = ErrorHandler("noise"); }
 
-bool Noise::convert(wav::SampleBuffer *current_samples,
-                    wav::SampleBuffer &original_samples, int sec) {
+bool Noise::convert(wav::SampleBuffer *currentSamples,
+                    wav::SampleBuffer &originalSamples, int sec) {
+    if (currentSamples == nullptr) {
+        throw std::invalid_argument("invalid sample.");
+    }
     if (sec >= start && sec < end) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            (*current_samples)[j] -=
-                (int16_t)(current_samples[sec][j] * percent);
+            (*currentSamples)[j] -=
+                    (int16_t) (currentSamples[sec][j] * percent);
         }
     }
     return true;

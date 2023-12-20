@@ -9,8 +9,8 @@ class Noise : public converter::Converter {
    public:
     Noise();
 
-    bool convert(wav::SampleBuffer *current_samples,
-                 wav::SampleBuffer &original_samples, int sec) override;
+    bool convert(wav::SampleBuffer *currentSamples,
+                 wav::SampleBuffer &originalSamples, int sec) override;
 
     int requiredFile() override;
 
