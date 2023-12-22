@@ -11,8 +11,8 @@
 namespace converter {
 class Converter {
    public:
-    virtual bool convert(wav::SampleBuffer *current_samples,
-                         wav::SampleBuffer &original_samples, int sec = 0) = 0;
+    virtual bool convert(wav::SampleBuffer &current_samples,
+                         const wav::SampleBuffer &original_samples, int sec = 0) = 0;
 
     virtual int requiredFile() = 0;
     virtual bool isWorkTime(int sec) const = 0;

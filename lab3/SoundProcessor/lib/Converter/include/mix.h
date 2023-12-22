@@ -10,8 +10,8 @@ class Mix : public converter::Converter {
    public:
     Mix();
 
-    bool convert(wav::SampleBuffer *current_samples,
-                 wav::SampleBuffer &original_samples, int sec) override;
+    bool convert(wav::SampleBuffer &current_samples,
+                const wav::SampleBuffer &original_samples, int sec) override;
 
     int requiredFile() override;
 

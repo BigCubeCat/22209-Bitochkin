@@ -9,8 +9,8 @@ class Mute : public converter::Converter {
    public:
     Mute();
 
-    bool convert(wav::SampleBuffer *current_samples,
-                 wav::SampleBuffer &original_samples, int sec) override;
+    bool convert(wav::SampleBuffer &current_samples,
+                const wav::SampleBuffer &original_samples, int sec) override;
 
     int requiredFile() override;
 

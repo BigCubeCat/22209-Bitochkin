@@ -6,14 +6,11 @@ using namespace mute;
 
 Mute::Mute() { eh = ErrorHandler("mute"); }
 
-bool Mute::convert(wav::SampleBuffer *currentSamples,
-                   wav::SampleBuffer &originalSamples, int sec) {
-    if (currentSamples == nullptr) {
-        throw std::invalid_argument("invalid sample.");
-    }
+bool Mute::convert(wav::SampleBuffer &currentSamples,
+         const          wav::SampleBuffer &originalSamples, int sec) {
     if (isWorkTime(sec)) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            (*currentSamples)[j] = 0;
+            currentSamples[j] = 0;
         }
     }
     return true;

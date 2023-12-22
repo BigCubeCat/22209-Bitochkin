@@ -6,15 +6,12 @@ using namespace mix;
 
 Mix::Mix() { eh = ErrorHandler("mix"); }
 
-bool Mix::convert(wav::SampleBuffer *currentSamples,
-                  wav::SampleBuffer &originalSamples, int sec) {
-    if (currentSamples == nullptr) {
-        throw std::invalid_argument("invalid sample.");
-    }
+bool Mix::convert(wav::SampleBuffer &currentSamples,
+                  const wav::SampleBuffer &originalSamples, int sec) {
     if (isWorkTime(sec)) {
         for (int j = 0; j < wav::SAMPLES_PER_SEC; j++) {
-            (*currentSamples)[j] =
-                ((*currentSamples)[j] / 2 + originalSamples[j] / 2);
+            currentSamples[j] =
+                    currentSamples[j] / 2 + originalSamples[j] / 2;
         }
     }
     return true;
