@@ -31,7 +31,10 @@ void Configurator::parseConfigLine(const std::string &line, int lineNumber) {
     if (cmd.empty()) {
         return;
     }
-    if (cmd[0][0] == '#' || cmd[0].empty()) {
+    if (cmd[0].empty()) {
+        return;
+    }
+    if (cmd[0][0] == '#') {
         return;
     }
     if (!isConvertorName(cmd[0])) {
