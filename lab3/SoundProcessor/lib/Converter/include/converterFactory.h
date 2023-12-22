@@ -27,7 +27,11 @@ std::map<std::string, std::function<ConverterPointer()>> converterMap = {
 class ConverterFactory {
    public:
     static ConverterPointer createConverter(const std::string &name) {
-        return converterMap[name]();
+        auto result = converterMap.find(name);
+        if (result != converterMap.end()) {
+            return result->second();
+        }
+        return nullptr;
     };
 };
 }  // namespace converterFactory
