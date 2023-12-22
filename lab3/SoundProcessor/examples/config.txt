@@ -1,0 +1,4 @@
+mix $2 10
+mute 2 4
+noise 0 2 70
+cut 100 200
