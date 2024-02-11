@@ -12,12 +12,11 @@ public class FileWorker {
 
     public String NextWord(InputStreamReader reader) throws IOException {
         String result = "";
-        int t;
-        while ((t = reader.read()) != -1) {
-            // convert the integer true to character
-            char r = (char) t;
-            if (Character.isAlphabetic(r) || Character.isDigit(r)) {
-                result += r;
+        int symbol;
+        while ((symbol = reader.read()) != -1) {
+            char ch = (char) symbol;
+            if (Character.isAlphabetic(ch) || Character.isDigit(ch)) {
+                result += ch;
             } else {
                 return result;
             }

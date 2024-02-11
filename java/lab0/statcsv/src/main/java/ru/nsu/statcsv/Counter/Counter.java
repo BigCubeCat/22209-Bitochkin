@@ -28,7 +28,7 @@ public class Counter {
             rows[index] = new Row(row.getKey(), value, (float) value / totalCount);
             index++;
         }
-        //Arrays.sort(rows, Comparator.comparing(p -> p.Count));
+        Arrays.sort(rows, Comparator.comparing(p -> p.Count));
     }
 
     public Map<String, Integer> getData() {

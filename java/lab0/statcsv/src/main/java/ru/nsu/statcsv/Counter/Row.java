@@ -11,7 +11,7 @@ public class Row {
         Percent = percent;
     }
 
-    public String toString() {
-        return Title + ',' + Count + ',' + Percent;
+    public String toString(String sep, String end) {
+        return Title + sep + Count + sep + Percent + end;
     }
 }
