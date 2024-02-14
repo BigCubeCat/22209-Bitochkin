@@ -10,10 +10,14 @@ public class PushOperator implements AbstractOperator {
     }
 
     @Override
-    public Double Exec(CalcContext ctx, String[] args) throws InvalidCountVariablesException, UnknowVariableException {
+    public void Exec(CalcContext ctx, String[] args) throws InvalidCountVariablesException, UnknowVariableException {
         if (args.length != CountVariables()) throw new InvalidCountVariablesException();
         var value = ctx.GetVariable(args[0]);
         ctx.Push(value);
-        return 0.0;
+    }
+
+    @Override
+    public boolean IsOutput() {
+        return false;
     }
 }

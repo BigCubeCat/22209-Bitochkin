@@ -4,12 +4,17 @@ import ru.nsu.CalcContext.CalcContext;
 
 public class PrintOperator implements AbstractOperator {
     @Override
-    public Double Exec(CalcContext ctx, String[] args) {
-        return ctx.Print();
+    public void Exec(CalcContext ctx, String[] args) {
+        ctx.SetOut(ctx.Print());
     }
 
     @Override
     public int CountVariables() {
         return 0;
+    }
+
+    @Override
+    public boolean IsOutput() {
+        return true;
     }
 }
