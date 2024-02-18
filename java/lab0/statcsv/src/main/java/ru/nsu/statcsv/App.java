@@ -30,8 +30,7 @@ public class App {
         Counter counter = new Counter();
         FileWorker fw = new FileWorker();
 
-        try {
-            FileInputStream fis = new FileInputStream(args[0]);
+        try (FileInputStream fis = new FileInputStream(args[0])) {
             InputStreamReader reader = new InputStreamReader(fis);
 
             while (!fw.isFileEnd()) {

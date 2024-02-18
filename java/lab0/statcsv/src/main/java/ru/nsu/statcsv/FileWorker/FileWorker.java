@@ -7,9 +7,6 @@ import java.io.OutputStreamWriter;
 public class FileWorker {
     private boolean endOfFile = false;
 
-    public FileWorker() {
-    }
-
     public String NextWord(InputStreamReader reader) throws IOException {
         String result = "";
         int symbol;
