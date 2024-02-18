@@ -18,6 +18,9 @@ public class StackCalc {
 
     public void RunCommand(String[] args) throws UnknowVariableException, InvalidCountVariablesException {
         var argsWithoutCommand = Arrays.copyOfRange(args, 1, args.length);
+        if (!factory.isCommand(args[0])) {
+            return;
+        }
         var operator = factory.getCommand(args[0], argsWithoutCommand);
         operator.Exec(ctx, argsWithoutCommand);
         if (operator.IsOutput()) {

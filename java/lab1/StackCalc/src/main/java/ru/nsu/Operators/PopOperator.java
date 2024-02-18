@@ -5,7 +5,12 @@ import ru.nsu.CalcContext.CalcContext;
 public class PopOperator implements AbstractOperator {
     @Override
     public void Exec(CalcContext ctx, String[] args) {
-        ctx.SetOut(ctx.Pop());
+        if (args.length == 0) {
+            ctx.SetOut(ctx.Pop());
+        } else if (args.length == 1) {
+            double result = ctx.Pop();
+            ctx.SetVariable(args[0], result);
+        }
     }
 
     @Override

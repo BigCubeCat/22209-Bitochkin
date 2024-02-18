@@ -22,6 +22,10 @@ public class OperatorFactory {
         map.put("SQRT", args -> new MathOperator(values -> Math.sqrt(values[0]), 1));
     }
 
+    public boolean isCommand(String cmd) {
+        return map.containsKey(cmd);
+    }
+
     public AbstractOperator getCommand(String cmd, String[] args) {
        return map.get(cmd).apply(args);
     }
