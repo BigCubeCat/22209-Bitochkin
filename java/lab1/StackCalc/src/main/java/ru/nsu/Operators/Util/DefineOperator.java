@@ -1,8 +1,9 @@
-package ru.nsu.Operators;
+package ru.nsu.Operators.Util;
 
 import ru.nsu.CalcContext.CalcContext;
+import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 
-public class DefineOperator implements AbstractOperator {
+public class DefineOperator implements IAbstractUtilOperator {
     @Override
     public void Exec(CalcContext ctx, String[] args) throws InvalidCountVariablesException {
         if (args.length != CountVariables()) {

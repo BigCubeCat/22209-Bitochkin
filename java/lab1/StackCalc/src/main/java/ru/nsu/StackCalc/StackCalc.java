@@ -2,7 +2,7 @@ package ru.nsu.StackCalc;
 
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
-import ru.nsu.Operators.InvalidCountVariablesException;
+import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 import ru.nsu.Operators.OperatorFactory;
 import ru.nsu.logging.CalcLoggerFinder;
 

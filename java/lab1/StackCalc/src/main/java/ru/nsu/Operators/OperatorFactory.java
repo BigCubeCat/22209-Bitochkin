@@ -1,11 +1,14 @@
 package ru.nsu.Operators;
 
+import ru.nsu.Operators.Math.*;
+import ru.nsu.Operators.Util.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
 public class OperatorFactory {
-    Map<String, Function<String[], AbstractOperator>> map;
+    Map<String, Function<String[], OperatorInterface>> map;
 
     public OperatorFactory() {
         map = new HashMap<>();
@@ -14,19 +17,19 @@ public class OperatorFactory {
         map.put("PUSH", args -> new PushOperator());
         map.put("DEFINE", args -> new DefineOperator());
 
-        map.put("+", args -> new MathOperator(values -> values[0] + values[1], 2));
-        map.put("-", args -> new MathOperator(values -> values[0] - values[1], 2));
-        map.put("*", args -> new MathOperator(values -> values[0] * values[1], 2));
-        map.put("/", args -> new MathOperator(values -> values[0] / values[1], 2));
+        map.put("+", args -> new PlusOperator());
+        map.put("-", args -> new MinusOperator());
+        map.put("*", args -> new MultOperator());
+        map.put("/", args -> new DivOperator());
 
-        map.put("SQRT", args -> new MathOperator(values -> Math.sqrt(values[0]), 1));
+        map.put("SQRT", args -> new SqrtOperator());
     }
 
     public boolean isCommand(String cmd) {
         return map.containsKey(cmd);
     }
 
-    public AbstractOperator getCommand(String cmd, String[] args) {
+    public OperatorInterface getCommand(String cmd, String[] args) {
        return map.get(cmd).apply(args);
     }
 }

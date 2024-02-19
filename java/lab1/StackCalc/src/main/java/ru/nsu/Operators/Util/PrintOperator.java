@@ -1,8 +1,8 @@
-package ru.nsu.Operators;
+package ru.nsu.Operators.Util;
 
 import ru.nsu.CalcContext.CalcContext;
 
-public class PrintOperator implements AbstractOperator {
+public class PrintOperator implements IAbstractUtilOperator {
     @Override
     public void Exec(CalcContext ctx, String[] args) {
         ctx.SetOut(ctx.Print());

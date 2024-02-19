@@ -1,8 +1,8 @@
-package ru.nsu.Operators;
+package ru.nsu.Operators.Util;
 
 import ru.nsu.CalcContext.CalcContext;
 
-public class PopOperator implements AbstractOperator {
+public class PopOperator implements IAbstractUtilOperator {
     @Override
     public void Exec(CalcContext ctx, String[] args) {
         if (args.length == 0) {

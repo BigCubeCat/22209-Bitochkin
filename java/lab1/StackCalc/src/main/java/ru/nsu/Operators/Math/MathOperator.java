@@ -1,17 +1,18 @@
-package ru.nsu.Operators;
+package ru.nsu.Operators.Math;
 
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
+import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 
-import java.util.function.Function;
-
-public class MathOperator implements AbstractOperator {
+public class MathOperator implements IMathAbstractOperator {
     int countVariables = 2;
-    Function<Double[], Double> mathOperation;
 
-    public MathOperator(Function<Double[], Double> cmd, int count) {
-        mathOperation = cmd;
+    public MathOperator(int count) {
         countVariables = count;
+    }
+
+    public Double doCalculation(Double[] nums) {
+        return 0.0;
     }
 
     @Override
@@ -20,7 +21,7 @@ public class MathOperator implements AbstractOperator {
         for (int i = CountVariables() - 1; i >= 0; --i) {
             nums[i] = ctx.Pop();
         }
-        ctx.Push(mathOperation.apply(nums));
+        ctx.Push(doCalculation(nums));
     }
 
     @Override

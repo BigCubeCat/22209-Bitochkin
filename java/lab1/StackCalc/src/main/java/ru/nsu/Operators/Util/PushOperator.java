@@ -1,9 +1,10 @@
-package ru.nsu.Operators;
+package ru.nsu.Operators.Util;
 
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
+import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 
-public class PushOperator implements AbstractOperator {
+public class PushOperator implements IAbstractUtilOperator {
     @Override
     public int CountVariables() {
         return 1;

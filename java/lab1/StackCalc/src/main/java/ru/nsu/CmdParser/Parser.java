@@ -1,8 +1,6 @@
 package ru.nsu.CmdParser;
 
 
-import ru.nsu.CalcContext.UnknowVariableException;
-import ru.nsu.Operators.InvalidCountVariablesException;
 import ru.nsu.StackCalc.StackCalc;
 import ru.nsu.logging.CalcLoggerFinder;
 
