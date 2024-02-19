@@ -4,9 +4,10 @@ import ru.nsu.CmdParser.InputReader;
 import ru.nsu.CmdParser.Parser;
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.InvocationTargetException;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         Parser view = new Parser();
         InputReader ir = null;
 

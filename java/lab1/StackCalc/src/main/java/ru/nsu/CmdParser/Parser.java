@@ -4,12 +4,14 @@ package ru.nsu.CmdParser;
 import ru.nsu.StackCalc.StackCalc;
 import ru.nsu.logging.CalcLoggerFinder;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class Parser {
     public StackCalc calc;
 
     private final System.Logger logger = CalcLoggerFinder.getLogger("parser", this.getClass().getModule());
 
-    public Parser() {
+    public Parser() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         calc = new StackCalc();
     }
 

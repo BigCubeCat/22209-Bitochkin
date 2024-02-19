@@ -6,6 +6,7 @@ import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 import ru.nsu.Operators.OperatorFactory;
 import ru.nsu.logging.CalcLoggerFinder;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 
@@ -15,7 +16,7 @@ public class StackCalc {
 
     private final System.Logger logger = CalcLoggerFinder.getLogger("stack_calc", this.getClass().getModule());
 
-    public StackCalc() {
+    public StackCalc() throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         factory = new OperatorFactory();
         ctx = new CalcContext();
     }
@@ -25,7 +26,7 @@ public class StackCalc {
         if (!factory.isCommand(args[0])) {
             return;
         }
-        var operator = factory.getCommand(args[0], argsWithoutCommand);
+        var operator = factory.getCommand(args[0]);
         try {
             operator.Exec(ctx, argsWithoutCommand);
         } catch (EmptyStackException e) {
