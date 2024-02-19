@@ -4,12 +4,11 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class CalcContext {
-    private HashMap<String, Double> map;
+    private HashMap<String, Double> map = new HashMap<>();
     private Stack<Double> values;
     private Double out;
 
     public CalcContext() {
-        map = new HashMap<>();
         values = new Stack<>();
     }
 

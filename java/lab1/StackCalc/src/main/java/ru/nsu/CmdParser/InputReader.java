@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class InputReader {
-    private Scanner scanner;
+    private final Scanner scanner;
     private boolean isEnd = false;
 
     public InputReader(String fileName) throws FileNotFoundException {
@@ -27,5 +27,9 @@ public class InputReader {
 
     public boolean IsEnd() {
         return isEnd;
+    }
+
+    protected void finalize() {
+        scanner.close();
     }
 }
