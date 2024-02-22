@@ -12,43 +12,43 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class OperatorFactory {
-    Map<String, IAbstractUtilOperator> map = new HashMap<>();
+    Map<String, OperatorInterface> map = new HashMap<>();
 
     public OperatorFactory() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        map.put("PRINT", (IAbstractUtilOperator) Class.forName(
+        map.put("PRINT", (OperatorInterface) Class.forName(
                 "ru.nsu.Operators.Util.PrintOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("POP", (IAbstractUtilOperator) Class.forName(
+        map.put("POP", (OperatorInterface) Class.forName(
                 "ru.nsu.Operators.Util.PopOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("PUSH", (IAbstractUtilOperator) Class.forName(
+        map.put("PUSH", (OperatorInterface) Class.forName(
                 "ru.nsu.Operators.Util.PushOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("DEFINE", (IAbstractUtilOperator) Class.forName(
+        map.put("DEFINE", (OperatorInterface) Class.forName(
                 "ru.nsu.Operators.Util.DefineOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("+", (IAbstractUtilOperator) Class.forName(
-                "ru.nsu.Operators.Util.PlusOperator"
+        map.put("+", (OperatorInterface) Class.forName(
+                "ru.nsu.Operators.Math.PlusOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("-", (IAbstractUtilOperator) Class.forName(
-                "ru.nsu.Operators.Util.MinusOperator"
+        map.put("-", (OperatorInterface) Class.forName(
+                "ru.nsu.Operators.Math.MinusOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("*", (IAbstractUtilOperator) Class.forName(
-                "ru.nsu.Operators.Util.MultOperator"
+        map.put("*", (OperatorInterface) Class.forName(
+                "ru.nsu.Operators.Math.MultOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("/", (IAbstractUtilOperator) Class.forName(
-                "ru.nsu.Operators.Util.DivOperator"
+        map.put("/", (OperatorInterface) Class.forName(
+                "ru.nsu.Operators.Math.DivOperator"
         ).getDeclaredConstructor().newInstance());
 
-        map.put("SQRT", (IAbstractUtilOperator) Class.forName(
-                "ru.nsu.Operators.Util.SqrtOperator"
+        map.put("SQRT", (OperatorInterface) Class.forName(
+                "ru.nsu.Operators.Math.SqrtOperator"
         ).getDeclaredConstructor().newInstance());
 
     }

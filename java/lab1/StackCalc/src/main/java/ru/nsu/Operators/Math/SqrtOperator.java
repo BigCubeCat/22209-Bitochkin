@@ -1,6 +1,4 @@
-package ru.nsu.Operators.Util;
-
-import ru.nsu.Operators.Math.MathOperator;
+package ru.nsu.Operators.Math;
 
 public class SqrtOperator extends MathOperator {
     public SqrtOperator() {
