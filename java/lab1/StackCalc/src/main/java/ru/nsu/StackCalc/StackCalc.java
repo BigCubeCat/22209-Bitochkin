@@ -2,12 +2,12 @@ package ru.nsu.StackCalc;
 
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
+import ru.nsu.CmdParser.CalcConfig;
 import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 import ru.nsu.Operators.OperatorFactory;
 import ru.nsu.logging.CalcLoggerFinder;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
 import java.util.EmptyStackException;
 
 public class StackCalc {
@@ -21,14 +21,15 @@ public class StackCalc {
         ctx = new CalcContext();
     }
 
-    public void RunCommand(String[] args) {
-        var argsWithoutCommand = Arrays.copyOfRange(args, 1, args.length);
-        if (!factory.isCommand(args[0])) {
+    public void RunCommand(CalcConfig config) {
+        if (config.pass) return;
+
+        if (!factory.isCommand(config.cmd)) {
             return;
         }
-        var operator = factory.getCommand(args[0]);
+        var operator = factory.getCommand(config.cmd);
         try {
-            operator.Exec(ctx, argsWithoutCommand);
+            operator.Exec(ctx, config.args);
         } catch (EmptyStackException e) {
             logger.log(System.Logger.Level.ERROR, "stack is empty");
         } catch (UnknowVariableException e) {
