@@ -16,7 +16,7 @@ abstract class MathOperator implements IMathAbstractOperator {
     }
 
     @Override
-    public void Exec(CalcContext ctx, String[] args) throws InvalidCountVariablesException, UnknowVariableException {
+    public void Exec(CalcContext ctx, String[] args) {
         Double[] nums = new Double[CountVariables()];
         for (int i = CountVariables() - 1; i >= 0; --i) {
             nums[i] = ctx.Pop();
