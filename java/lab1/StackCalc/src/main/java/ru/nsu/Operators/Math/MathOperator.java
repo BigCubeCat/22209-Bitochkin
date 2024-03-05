@@ -1,8 +1,6 @@
 package ru.nsu.Operators.Math;
 
 import ru.nsu.CalcContext.CalcContext;
-import ru.nsu.CalcContext.UnknowVariableException;
-import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 
 abstract class MathOperator implements IMathAbstractOperator {
     int countVariables = 2;
