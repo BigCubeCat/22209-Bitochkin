@@ -13,51 +13,35 @@ import java.util.function.Function;
 
 public class OperatorFactory {
     Map<String, OperatorInterface> map = new HashMap<>();
+    Map<String, String> names = new HashMap<>();
 
-    public OperatorFactory() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        map.put("PRINT", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Util.PrintOperator"
-        ).getDeclaredConstructor().newInstance());
 
-        map.put("POP", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Util.PopOperator"
-        ).getDeclaredConstructor().newInstance());
+    public OperatorFactory() {
+        names.put("PRINT", "ru.nsu.Operators.Util.PrintOperator");
+        names.put("POP", "ru.nsu.Operators.Util.PopOperator");
+        names.put("PUSH", "ru.nsu.Operators.Util.PushOperator");
+        names.put("DEFINE", "ru.nsu.Operators.Util.DefineOperator");
+        names.put("+", "ru.nsu.Operators.Math.PlusOperator");
+        names.put("-", "ru.nsu.Operators.Math.MinusOperator");
+        names.put("*", "ru.nsu.Operators.Math.MultOperator");
+        names.put("/", "ru.nsu.Operators.Math.DivOperator");
+        names.put("SQRT", "ru.nsu.Operators.Math.SqrtOperator");
+    }
 
-        map.put("PUSH", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Util.PushOperator"
-        ).getDeclaredConstructor().newInstance());
+    public OperatorInterface getCommand(String name) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        if (!isLoaded(name)) {
+            map.put(name, (OperatorInterface) Class.forName(
+                    names.get(name)
+            ).getDeclaredConstructor().newInstance());
+        }
+        return map.get(name);
+    }
 
-        map.put("DEFINE", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Util.DefineOperator"
-        ).getDeclaredConstructor().newInstance());
-
-        map.put("+", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Math.PlusOperator"
-        ).getDeclaredConstructor().newInstance());
-
-        map.put("-", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Math.MinusOperator"
-        ).getDeclaredConstructor().newInstance());
-
-        map.put("*", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Math.MultOperator"
-        ).getDeclaredConstructor().newInstance());
-
-        map.put("/", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Math.DivOperator"
-        ).getDeclaredConstructor().newInstance());
-
-        map.put("SQRT", (OperatorInterface) Class.forName(
-                "ru.nsu.Operators.Math.SqrtOperator"
-        ).getDeclaredConstructor().newInstance());
-
+    boolean isLoaded(String name) {
+        return map.containsKey(name);
     }
 
     public boolean isCommand(String cmd) {
-        return map.containsKey(cmd);
-    }
-
-    public OperatorInterface getCommand(String cmd) {
-        return map.get(cmd);
+        return names.containsKey(cmd);
     }
 }
