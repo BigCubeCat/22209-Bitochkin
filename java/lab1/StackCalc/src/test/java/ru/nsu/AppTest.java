@@ -5,10 +5,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
-import ru.nsu.CmdParser.InputReader;
 import ru.nsu.CmdParser.Parser;
 import ru.nsu.StackCalc.StackCalc;
-import ru.nsu.StackCalc.Translator;
 
 
 public class AppTest {
