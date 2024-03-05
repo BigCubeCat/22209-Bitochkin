@@ -28,16 +28,26 @@ public class CalcContext {
         values.push(value);
     }
 
+    Double ParseDouble(String variable) {
+        return Double.parseDouble(variable);
+    }
+
+    Double ParseVariable(String variable) {
+        if (map.containsKey(variable)) {
+            return map.get(variable);
+        }
+        return null;
+    }
+
     public Double GetVariable(String variable) throws UnknowVariableException {
         logger.log(System.Logger.Level.INFO, "reading variable: ", variable);
         try {
-            var result = Double.parseDouble(variable);
+            var result = ParseDouble(variable);
             logger.log(System.Logger.Level.INFO, "number: " + result);
             return result;
         } catch (NumberFormatException nfe) {
-            if (map.containsKey(variable)) {
-                var result = map.get(variable);
-                logger.log(System.Logger.Level.INFO, "loaded: " + result);
+            var result = ParseVariable(variable);
+            if (result != null) {
                 return result;
             } else {
                 throw new UnknowVariableException();
