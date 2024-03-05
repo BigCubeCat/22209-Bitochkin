@@ -1,15 +1,8 @@
 package ru.nsu.Operators;
 
-import ru.nsu.CalcContext.CalcContext;
-import ru.nsu.CalcContext.UnknowVariableException;
-import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
-import ru.nsu.Operators.Math.*;
-import ru.nsu.Operators.Util.*;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Function;
 
 public class OperatorFactory {
     Map<String, OperatorInterface> map = new HashMap<>();

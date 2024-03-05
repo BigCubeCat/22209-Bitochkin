@@ -4,7 +4,7 @@ import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
 import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
 
-public class MathOperator implements IMathAbstractOperator {
+abstract class MathOperator implements IMathAbstractOperator {
     int countVariables = 2;
 
     public MathOperator(int count) {
@@ -12,7 +12,7 @@ public class MathOperator implements IMathAbstractOperator {
     }
 
     public Double doCalculation(Double[] nums) {
-        return 0.0;
+        return null;
     }
 
     @Override
