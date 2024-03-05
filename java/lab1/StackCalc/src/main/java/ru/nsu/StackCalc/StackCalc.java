@@ -22,6 +22,10 @@ public class StackCalc {
         ctx = new CalcContext();
     }
 
+    public Double GetOut() {
+        return ctx.GetOut();
+    }
+
     public void RunCommand(CalcConfig config) {
         if (config.pass) return;
 

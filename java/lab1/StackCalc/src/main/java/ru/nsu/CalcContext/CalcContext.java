@@ -67,8 +67,6 @@ public class CalcContext {
 
     public Double GetOut() {
         logger.log(System.Logger.Level.INFO, "get output: " + out);
-        var result = out;
-        out = 0.0;
-        return result;
+        return out;
     }
 }
