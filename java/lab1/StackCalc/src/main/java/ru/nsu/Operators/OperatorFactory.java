@@ -1,24 +1,34 @@
 package ru.nsu.Operators;
 
+import ru.nsu.logging.CalcLoggerFinder;
+
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+
 
 public class OperatorFactory {
+
+    private final System.Logger logger = CalcLoggerFinder.getLogger("factory", this.getClass().getModule());
     Map<String, OperatorInterface> map = new HashMap<>();
     Map<String, String> names = new HashMap<>();
 
 
     public OperatorFactory() {
-        names.put("PRINT", "ru.nsu.Operators.Util.PrintOperator");
-        names.put("POP", "ru.nsu.Operators.Util.PopOperator");
-        names.put("PUSH", "ru.nsu.Operators.Util.PushOperator");
-        names.put("DEFINE", "ru.nsu.Operators.Util.DefineOperator");
-        names.put("+", "ru.nsu.Operators.Math.PlusOperator");
-        names.put("-", "ru.nsu.Operators.Math.MinusOperator");
-        names.put("*", "ru.nsu.Operators.Math.MultOperator");
-        names.put("/", "ru.nsu.Operators.Math.DivOperator");
-        names.put("SQRT", "ru.nsu.Operators.Math.SqrtOperator");
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(
+                Objects.requireNonNull(getClass().getResource("/factory.txt")).openStream())
+        )) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                logger.log(System.Logger.Level.DEBUG, line);
+                String[] words = line.split(" ");
+                names.put(words[0], words[1]);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public OperatorInterface getCommand(String name) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
