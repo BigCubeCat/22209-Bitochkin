@@ -1,8 +1,9 @@
 package ru.nsu.Operators.Math;
 
 import ru.nsu.CalcContext.CalcContext;
+import ru.nsu.Operators.OperatorInterface;
 
-abstract class MathOperator implements IMathAbstractOperator {
+abstract class MathOperator implements OperatorInterface {
     int countVariables = 2;
 
     public MathOperator(int count) {

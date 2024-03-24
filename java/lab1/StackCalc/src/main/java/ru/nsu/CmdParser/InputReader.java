@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class InputReader implements AutoCloseable {
+public class InputReader {
     private final Scanner scanner;
     private boolean isEnd = false;
     private final System.Logger logger = CalcLoggerFinder.getLogger("input", this.getClass().getModule());
@@ -37,8 +37,7 @@ public class InputReader implements AutoCloseable {
         return isEnd;
     }
 
-    @Override
-    public void close() throws Exception {
+    public void close() {
         scanner.close();
     }
 }
