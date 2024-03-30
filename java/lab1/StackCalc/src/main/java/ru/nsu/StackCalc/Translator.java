@@ -2,7 +2,6 @@ package ru.nsu.StackCalc;
 
 import ru.nsu.CmdParser.InputReader;
 import ru.nsu.CmdParser.Parser;
-import ru.nsu.Main;
 import ru.nsu.logging.CalcLoggerFinder;
 
 import java.lang.reflect.InvocationTargetException;
@@ -12,7 +11,7 @@ public class Translator {
     Parser parser;
 
     StackCalc calc;
-    private static final System.Logger logger = CalcLoggerFinder.getLogger("translator", Main.class.getModule());
+    private static final System.Logger logger = CalcLoggerFinder.getLogger("translator", Translator.class.getModule());
     public Translator(InputReader r) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         reader = r;
         parser = new Parser();

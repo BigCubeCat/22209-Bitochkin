@@ -30,6 +30,7 @@ public class StackCalc {
         if (config.pass) return;
 
         if (!factory.isCommand(config.cmd)) {
+            System.out.println("unknown command");
             return;
         }
         OperatorInterface operator;
