@@ -5,9 +5,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
+import ru.nsu.CmdParser.CalcConfig;
 import ru.nsu.CmdParser.Parser;
+import ru.nsu.Operators.Util.PrintOperator;
 import ru.nsu.StackCalc.StackCalc;
-
+import ru.nsu.StackCalc.Translator;
 
 public class AppTest {
     @Tag("context")
@@ -23,6 +25,20 @@ public class AppTest {
         } catch (UnknowVariableException e) {
             Assertions.fail();
         }
+        try {
+            ctx.GetVariable("error");
+            Assertions.fail();
+        } catch (UnknowVariableException ignored) {
+        }
+    }
+
+    @Tag("stupid_test_for_coverage")
+    @Test
+    public void testWhat() {
+        PrintOperator operator = new PrintOperator();
+        Assertions.assertEquals(0, operator.CountVariables());
+        CalcConfig cfg = new CalcConfig();
+        Assertions.assertTrue(cfg.pass);
     }
 
     @Tag("calc")
@@ -38,8 +54,25 @@ public class AppTest {
             calc.RunCommand(parser.ParseCommand("PUSH 3"));
             calc.RunCommand(parser.ParseCommand("PUSH b"));
             calc.RunCommand(parser.ParseCommand("/"));
-            calc.RunCommand(parser.ParseCommand("POP"));
+            calc.RunCommand(parser.ParseCommand("PRINT"));
             Assertions.assertEquals(0.3, calc.GetOut());
+        } catch (Exception e) {
+            Assertions.fail();
+        }
+    }
+
+    @Tag("error")
+    @Test
+    public void testExceptions() {
+        StackCalc calc = new StackCalc();
+        Parser parser = new Parser();
+        calc.RunCommand(parser.ParseCommand("PUSH a"));
+        Assertions.assertNull(calc.GetOut());
+        try {
+            Translator tr = new Translator(null);
+            tr.Run();
+            Assertions.fail();
+        } catch (NullPointerException ignored) {
         } catch (Exception e) {
             Assertions.fail();
         }
