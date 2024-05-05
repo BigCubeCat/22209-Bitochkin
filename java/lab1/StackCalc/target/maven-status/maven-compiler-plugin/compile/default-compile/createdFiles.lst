@@ -1,0 +1,6 @@
+ru/nsu/Operators/Math/MinusOperator.class
+ru/nsu/Operators/Math/MultOperator.class
+ru/nsu/Operators/Math/DivOperator.class
+ru/nsu/Operators/OperatorInterface.class
+ru/nsu/StackCalc/Translator.class
+ru/nsu/CmdParser/CalcConfig.class
