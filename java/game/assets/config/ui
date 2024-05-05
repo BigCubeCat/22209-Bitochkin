@@ -1,0 +1,17 @@
+aim sprites/ui/png/aim.png
+hp sprites/ui/png/hp.png
+welcome sprites/ui/png/welcomeStage.png
+pause sprites/ui/png/welcomeStage.png
+loose sprites/ui/png/looseStage.png
+win sprites/ui/png/winStage.png
+timer_border sprites/digits/border.png
+0 sprites/digits/0.png
+1 sprites/digits/1.png
+2 sprites/digits/2.png
+3 sprites/digits/3.png
+4 sprites/digits/4.png
+5 sprites/digits/5.png
+6 sprites/digits/6.png
+7 sprites/digits/7.png
+8 sprites/digits/8.png
+9 sprites/digits/9.png
