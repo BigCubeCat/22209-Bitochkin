@@ -14,7 +14,7 @@ public class Parser {
         CalcConfig config = new CalcConfig();
         config.pass = true;
         String[] args = command.split(" ");
-        if (args.length == 0) {
+        if (args.length == 1 && Objects.equals(args[0], "")) {
             logger.log(System.Logger.Level.INFO, "empty string");
             return config;
         } else if (Objects.equals(args[0], "#")) {

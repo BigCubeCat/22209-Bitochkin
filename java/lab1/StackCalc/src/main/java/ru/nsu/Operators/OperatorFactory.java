@@ -26,8 +26,7 @@ public class OperatorFactory {
                 String[] words = line.split(" ");
                 names.setProperty(words[0], words[1]);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ignored) {
         }
     }
 

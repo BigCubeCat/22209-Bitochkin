@@ -11,16 +11,8 @@ public class InputReader {
     private boolean isEnd = false;
     private final System.Logger logger = CalcLoggerFinder.getLogger("input", this.getClass().getModule());
 
-    public InputReader(String fileName) throws FileNotFoundException {
-        logger.log(System.Logger.Level.INFO, "setup scanner");
-        scanner = new Scanner(new File(fileName));
-        logger.log(System.Logger.Level.INFO, "ok");
-    }
-
-    public InputReader() {
-        logger.log(System.Logger.Level.INFO, "setup stdin");
-        scanner = new Scanner(System.in);
-        logger.log(System.Logger.Level.INFO, "ok");
+    public InputReader(Scanner sc) {
+        scanner = sc;
     }
 
     public String ReadCmd() {

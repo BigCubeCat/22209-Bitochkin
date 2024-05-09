@@ -10,9 +10,7 @@ abstract class MathOperator implements OperatorInterface {
         countVariables = count;
     }
 
-    public Double doCalculation(Double[] nums) {
-        return null;
-    }
+    public abstract Double doCalculation(Double[] nums);
 
     @Override
     public void Exec(CalcContext ctx, String[] args) {

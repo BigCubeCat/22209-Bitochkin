@@ -7,3 +7,4 @@ DEFINE ru.nsu.Operators.Util.DefineOperator
 * ru.nsu.Operators.Math.MultOperator
 / ru.nsu.Operators.Math.DivOperator
 SQRT ru.nsu.Operators.Math.SqrtOperator
+TEST ru.nsu

@@ -6,12 +6,39 @@ import org.junit.jupiter.api.Test;
 import ru.nsu.CalcContext.CalcContext;
 import ru.nsu.CalcContext.UnknowVariableException;
 import ru.nsu.CmdParser.CalcConfig;
+import ru.nsu.CmdParser.InputReader;
 import ru.nsu.CmdParser.Parser;
+import ru.nsu.Operators.Exceptions.InvalidCountVariablesException;
+import ru.nsu.Operators.Util.DefineOperator;
+import ru.nsu.Operators.Util.PopOperator;
 import ru.nsu.Operators.Util.PrintOperator;
 import ru.nsu.StackCalc.StackCalc;
 import ru.nsu.StackCalc.Translator;
+import ru.nsu.logging.CalcLoggerFinder;
+
+import java.util.Scanner;
 
 public class AppTest {
+    @Tag("calc")
+    @Test
+    public void StackCalcCov() {
+        StackCalc calc = new StackCalc();
+        CalcConfig cfg = new CalcConfig();
+        cfg.cmd = "abracadabra";
+        cfg.pass = false;
+        try {
+            calc.RunCommand(cfg);
+        } catch (Exception ignored) {
+            Assertions.fail();
+        }
+
+        Parser parser = new Parser();
+        calc.RunCommand(parser.ParseCommand("SQRT"));
+        calc.RunCommand(parser.ParseCommand("PUSH invalid"));
+        calc.RunCommand(parser.ParseCommand("DEFINE a 1 1"));
+        calc.RunCommand(parser.ParseCommand("TEST"));
+    }
+
     @Tag("context")
     @Test
     public void testCalcContextOut() {
@@ -48,6 +75,8 @@ public class AppTest {
             StackCalc calc = new StackCalc();
             Parser parser = new Parser();
             calc.RunCommand(parser.ParseCommand("DEFINE a 100"));
+            calc.RunCommand(parser.ParseCommand(""));
+            calc.RunCommand(parser.ParseCommand("# comment"));
             calc.RunCommand(parser.ParseCommand("PUSH a"));
             calc.RunCommand(parser.ParseCommand("SQRT"));
             calc.RunCommand(parser.ParseCommand("POP b"));
@@ -138,5 +167,45 @@ public class AppTest {
             Assertions.fail();
         }
     }
+
+    @Tag("utils_")
+    @Test
+    public void UtilsCov() {
+        PopOperator pop = new PopOperator();
+        Assertions.assertEquals(1, pop.CountVariables());
+        String[] args = {"1", "2", "3"};
+        DefineOperator dop = new DefineOperator();
+        try {
+            dop.Exec(null, args);
+            Assertions.fail();
+        } catch (InvalidCountVariablesException ignored) {
+        }
+    }
+
+    @Tag("utils_")
+    @Test
+    public void LoggerCov() {
+        System.Logger logger = CalcLoggerFinder.getLogger("factory", this.getClass().getModule());
+        Assertions.assertTrue(logger.isLoggable(System.Logger.Level.ERROR));
+        logger.log(System.Logger.Level.ERROR, "tst", new Throwable("a"));
+        logger.log(System.Logger.Level.ERROR, "tst");
+    }
+
+    @Tag("cmd_parser")
+    @Test
+    public void CmdParserTest() {
+        CalcConfig _cfg = new CalcConfig();
+        try {
+            Scanner scanner = new Scanner("# test\nDEFINE variable 10\n");
+            InputReader ir = new InputReader(scanner);
+            Translator translator = new Translator(ir);
+            translator.Run();
+            ir.close();
+        } catch (Exception e) {
+            System.out.println(e);
+            Assertions.fail();
+        }
+    }
+
 }
 
