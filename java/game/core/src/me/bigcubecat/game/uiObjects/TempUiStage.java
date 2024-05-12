@@ -9,6 +9,7 @@ import me.bigcubecat.game.GameControl.InputController;
 
 public class TempUiStage implements IStageUI {
     private InputController ic;
+    private int toggleIndex = 1;
     private Stage nextStage;
     Sprite sprite;
     BitmapFont font = new BitmapFont();
@@ -31,9 +32,13 @@ public class TempUiStage implements IStageUI {
     public void render(SpriteBatch batch) {
         sprite.draw(batch);
         font.draw(batch, help, xPos, yPos);
-        if (ic.checkChangeStage()) {
+        if (ic.toggleScene(toggleIndex)) {
             leave = true;
         }
+    }
+
+    public void setToggleIndex(int index) {
+        toggleIndex = index;
     }
 
     public Stage getNextStage() {

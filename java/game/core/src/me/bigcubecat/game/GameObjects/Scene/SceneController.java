@@ -76,7 +76,7 @@ public class SceneController {
     }
 
     public void Update() {
-        if (inputController.checkChangeStage()) {
+        if (inputController.toggleScene(0)) {
             result = PlayResult.PAUSE;
             return;
         }

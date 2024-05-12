@@ -22,6 +22,5 @@ public class MyGdxGame extends ApplicationAdapter {
 
     @Override
     public void resize(int width, int height) {
-        gameController.resize(width, height);
     }
 }

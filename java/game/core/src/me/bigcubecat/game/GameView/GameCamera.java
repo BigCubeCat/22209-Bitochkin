@@ -18,13 +18,13 @@ public class GameCamera extends OrthographicCamera {
 
     Vector3 tmpVector = new Vector3();
     Vector2 mousePosition = new Vector2(0, 0);
-    Vector2 uiCorner = new Vector2();
 
 
     public GameCamera() {
         super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         worldWidth = Gdx.graphics.getWidth();
         worldHeight = Gdx.graphics.getHeight();
+        System.out.println("camera = " + worldWidth + " " + worldHeight);
 
         effectiveViewportWidth = viewportWidth * zoom;
         effectiveViewportHeight = viewportHeight * zoom;
@@ -76,8 +76,8 @@ public class GameCamera extends OrthographicCamera {
     }
 
     public void resize(int width, int height) {
-        //viewportWidth = worldWidth * ((float) width / worldWidth);
-        //viewportHeight = worldHeight * ((float) height / worldHeight);
+        viewportWidth = worldWidth * ((float) width / worldWidth);
+        viewportHeight = worldHeight * ((float) height / worldHeight);
         update();
     }
 

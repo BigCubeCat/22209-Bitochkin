@@ -20,9 +20,8 @@ public class Constants {
     public static float MINIMUM_ATTACK = 0.1f;
     public static float ENEMY_HP = 15f;
     public static float ENEMY_POWER = 4f;
-    public static float HEAL_SPEED = 2f;
+    public static float HEAL_SPEED = 3f;
     public static float TOWER_HP = 500f;
-    public static float TOWER_POWER = 10f;
     public static float PLAYER_HP = 100;
     public static float PLAYER_POWER = 10;
 
@@ -30,7 +29,6 @@ public class Constants {
     public static String FIREBALL_NAME = "pfireball";
     public static String POWER_NAME = "power";
     public static String PLAYER_OBJECT_NAME = "player";
-    public static String TOWER_OBJECT_NAME = "tower";
     public static String[] ENEMY_TYPES = {"enemy1"};
 
     // Camera

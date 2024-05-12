@@ -20,7 +20,6 @@ public class RenderController {
     private final GameCamera camera;
     private final TiledMapRenderer tiledMapRenderer;
     private final TiledMap tiledMap;
-    private MapObjects mapObjects = new MapObjects();
     private Array<Vector2> spawners = new Array<>();
     private SpriteBatch batch = new SpriteBatch();
 

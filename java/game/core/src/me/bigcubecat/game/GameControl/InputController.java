@@ -14,7 +14,7 @@ public class InputController {
     public Vector2 direction = new Vector2(0, 0);
     public boolean shoot = false;
     public boolean power = false;
-    public boolean changeStage = false;
+    public boolean[] changeStage = new boolean[]{false, false};
 
     private InputController() {
         CheckController();
@@ -39,7 +39,8 @@ public class InputController {
     public void reset() {
         shoot = false;
         power = false;
-        changeStage = false;
+        changeStage[0] = false;
+        changeStage[1] = false;
         speed.x = 0;
         speed.y = 0;
     }
@@ -77,7 +78,7 @@ public class InputController {
 
     private void handleWASD() {
         if (Gdx.input.isKeyPressed(Input.Keys.SPACE)) {
-            changeStage = true;
+            changeStage[0] = true;
         }
         if (Gdx.input.isKeyPressed(Input.Keys.W)) {
             speed.y = 1;
@@ -93,15 +94,16 @@ public class InputController {
         }
         if (Gdx.input.isButtonPressed(Input.Buttons.LEFT)) {
             shoot = true;
+            changeStage[1] = true;
         }
         if (Gdx.input.isButtonPressed(Input.Buttons.RIGHT)) {
             power = true;
         }
     }
 
-    public boolean checkChangeStage() {
-        if (changeStage) {
-            changeStage = false;
+    public boolean toggleScene(int index) {
+        if (changeStage[index]) {
+            changeStage[index] = false;
             return true;
         }
         return false;
