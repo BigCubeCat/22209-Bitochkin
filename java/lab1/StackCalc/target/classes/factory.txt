@@ -1,0 +1,10 @@
+PRINT ru.nsu.Operators.Util.PrintOperator
+POP ru.nsu.Operators.Util.PopOperator
+PUSH ru.nsu.Operators.Util.PushOperator
+DEFINE ru.nsu.Operators.Util.DefineOperator
++ ru.nsu.Operators.Math.PlusOperator
+- ru.nsu.Operators.Math.MinusOperator
+* ru.nsu.Operators.Math.MultOperator
+/ ru.nsu.Operators.Math.DivOperator
+SQRT ru.nsu.Operators.Math.SqrtOperator
+ 

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60b2d343-fc71-4b2c-ae30-36543784dbd6" name="Changes" comment="fix: увеличил покрытие">
+      <change beforePath="$PROJECT_DIR$/StackCalc/src/main/java/ru/nsu/CmdParser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/StackCalc/src/main/java/ru/nsu/CmdParser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StackCalc/src/test/java/ru/nsu/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/StackCalc/src/test/java/ru/nsu/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ru/nsu/CmdParser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ru/nsu/CmdParser/Parser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/main/ru/nsu/Operators/OperatorFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/main/ru/nsu/Operators/OperatorFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/test/ru/nsu/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/test/ru/nsu/AppTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2dCk2YEczljxHgb63d1g2z0tV6E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.AppTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.AppTest.testExceptions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testParabola.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testStackCalc.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AppTest.testWhat.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;java__lab1&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/bigcubecat/Projects/test/Platformer&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testExceptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.AppTest" />
+      <option name="METHOD_NAME" value="testExceptions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testParabola" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.AppTest" />
+      <option name="METHOD_NAME" value="testParabola" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testStackCalc" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.AppTest" />
+      <option name="METHOD_NAME" value="testStackCalc" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testWhat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nsu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nsu" />
+      <option name="MAIN_CLASS_NAME" value="ru.nsu.AppTest" />
+      <option name="METHOD_NAME" value="testWhat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testExceptions" />
+        <item itemvalue="JUnit.AppTest.testWhat" />
+        <item itemvalue="JUnit.AppTest.testStackCalc" />
+        <item itemvalue="JUnit.AppTest.testParabola" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60b2d343-fc71-4b2c-ae30-36543784dbd6" name="Changes" comment="" />
+      <created>1709519240368</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709519240368</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fix(InputReader): fix try catch">
+      <option name="closed" value="true" />
+      <created>1709523612420</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709523612420</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(Translator): move while in other object">
+      <option name="closed" value="true" />
+      <created>1709568455775</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709568455775</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix(CalcContext): change value parsing">
+      <option name="closed" value="true" />
+      <created>1709615551591</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709615551591</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix(factory): change factory">
+      <option name="closed" value="true" />
+      <created>1709616709447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709616709447</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix(MathOperator): make it abstract">
+      <option name="closed" value="true" />
+      <created>1709617009122</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709617009122</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test(AppTest.java): MORE TESTS!">
+      <option name="closed" value="true" />
+      <created>1709618361741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709618361741</updated>
+    </task>
+    <task id="LOCAL-00007" summary="test(AppTest.java): MORE TESTS!">
+      <option name="closed" value="true" />
+      <created>1709618375536</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709618375536</updated>
+    </task>
+    <task id="LOCAL-00008" summary="test(AppTest.java): MORE TESTS!">
+      <option name="closed" value="true" />
+      <created>1709618402794</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709618402794</updated>
+    </task>
+    <task id="LOCAL-00009" summary="test(AppTest.java): MORE TESTS!">
+      <option name="closed" value="true" />
+      <created>1709618421586</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709618421586</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix(something): fix some tiny things">
+      <option name="closed" value="true" />
+      <created>1711264601223</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711264601223</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix(factory): rework factory">
+      <option name="closed" value="true" />
+      <created>1711279414013</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711279414013</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: some fixes">
+      <option name="closed" value="true" />
+      <created>1711786149012</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711786149012</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix: Properties">
+      <option name="closed" value="true" />
+      <created>1711786852721</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711786852721</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: я не представляю, как еще поднять покрытие кода(">
+      <option name="closed" value="true" />
+      <created>1711788847229</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711788847229</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix: увеличил покрытие">
+      <option name="closed" value="true" />
+      <created>1714231079060</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714231079061</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix(InputReader): fix try catch" />
+    <MESSAGE value="feat(Translator): move while in other object" />
+    <MESSAGE value="fix(CalcContext): change value parsing" />
+    <MESSAGE value="fix(factory): change factory" />
+    <MESSAGE value="fix(MathOperator): make it abstract" />
+    <MESSAGE value="test(AppTest.java): MORE TESTS!" />
+    <MESSAGE value="fix(something): fix some tiny things" />
+    <MESSAGE value="fix(factory): rework factory" />
+    <MESSAGE value="fix: some fixes" />
+    <MESSAGE value="fix: Properties" />
+    <MESSAGE value="fix: я не представляю, как еще поднять покрытие кода(" />
+    <MESSAGE value="fix: увеличил покрытие" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: увеличил покрытие" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lab1$AppTest_testExceptions.ic" NAME="AppTest.testExceptions Coverage Results" MODIFIED="1711787521015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.nsu.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/lab1$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1714232074445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.nsu.*</FILTER>
+    </SUITE>
+  </component>
+</project>

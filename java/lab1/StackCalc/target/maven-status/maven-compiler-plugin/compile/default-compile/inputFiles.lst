@@ -1,0 +1,16 @@
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/PrintOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/AbstractOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/DefineOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/OperatorFactory.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/InvalidCountVariablesException.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/PushOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/CalcContext/UnknowVariableException.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/CmdParser/InputReader.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/CmdParser/Parser.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/PopOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/StackCalc/StackCalc.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/CalcContext/CalcContext.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Main.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/logging/CalcLoggerFinder.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/Operators/MathOperator.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/lab1/StackCalc/src/main/java/ru/nsu/logging/CalcLogger.java

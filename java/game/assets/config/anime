@@ -1,0 +1,13 @@
+enemy1
+@ idle sprites/enemy/enemy.png 0.25 6 1
+@ die sprites/enemy/die.png 0.9 1 6
+player
+@ left sprites/player/png/left.png 0.25 1 4
+@ right sprites/player/png/right.png 0.25 1 4
+@ up sprites/player/png/up.png 0.25 1 4
+@ down sprites/player/png/down.png 0.25 1 4
+@ die sprites/player/png/die.png 0.25 4 1
+pfireball
+@ idle sprites/items/bullet.png 0.25 1 4
+power
+@ idle sprites/items/power.png 0.25 4 1
