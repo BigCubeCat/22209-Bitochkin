@@ -2,6 +2,8 @@ package org.nsu.gogledoc.Server;
 
 import org.nsu.gogledoc.FileWorker.EditSession;
 
+import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
 public class Conn {
@@ -10,10 +12,13 @@ public class Conn {
 
     public Conn(SocketChannel chan) {
         channel = chan;
-        session = new EditSession();
+//        session = new EditSession();
     }
 
-    public void readFromChannel() {
-        // TODO
+    public void writeToChan(ByteBuffer buffer) {
+        try {
+            channel.write(buffer);
+        } catch (IOException ignored) {
+        }
     }
 }

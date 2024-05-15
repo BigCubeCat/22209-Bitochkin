@@ -2,16 +2,15 @@ package org.nsu.gogledoc.Server;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Random;
 import java.util.Set;
 
 public class Server {
@@ -22,7 +21,7 @@ public class Server {
     private Selector selector;
     ByteBuffer buffer;
 
-    private ArrayList<Conn> clients;
+    private HashMap<SocketChannel, Conn> connHashMap = new HashMap<>();
 
     public Server(int port, int bufferSize) {
         this.port = port;
@@ -65,33 +64,16 @@ public class Server {
                 channelCount = selector.select();
                 if (channelCount > 0) {
                     Set<SelectionKey> keys = selector.selectedKeys();
+                    System.out.println("count keys = " + keys.size());
                     Iterator<SelectionKey> iterator = keys.iterator();
                     while (iterator.hasNext()) {
                         SelectionKey key = iterator.next();
                         iterator.remove();
 
                         if (key.isAcceptable()) {
-                            SocketChannel client = server.accept();
-                            client.configureBlocking(false);
-                            client.register(
-                                    selector,
-                                    SelectionKey.OP_READ,
-                                    client.socket().getPort()
-                            );
+                            registerNewConn();
                         } else if (key.isReadable()) {
-                            SocketChannel client = (SocketChannel) key.channel();
-                            if (client.read(buffer) < 0) {
-                                key.cancel();
-                                client.close();
-                            } else {
-                                buffer.flip();
-
-                                String request = stringFromBuffer(buffer);
-                                System.out.println(request);
-                                client.write(bufferFromString(request));
-
-                                buffer.clear();
-                            }
+                            readConn(key);
                         }
                     }
                 }
@@ -101,10 +83,31 @@ public class Server {
         }
     }
 
-    private void connectClient() throws IOException {
+    private void readConn(SelectionKey key) throws IOException {
+        SocketChannel client = (SocketChannel) key.channel();
+        Conn conn = (Conn) connHashMap.get(client);
+        if (client.read(buffer) < 0) {
+            key.cancel();
+            client.close();
+        } else {
+            buffer.flip();
+
+            String request = stringFromBuffer(buffer);
+            System.out.println(request);
+            conn.writeToChan(bufferFromString(request));
+
+            buffer.clear();
+        }
+    }
+
+    private void registerNewConn() throws IOException {
         SocketChannel client = server.accept();
         client.configureBlocking(false);
-        Conn conn = new Conn(client);
-        clients.add(conn);
+        client.register(
+                selector,
+                SelectionKey.OP_READ,
+                client.socket().getPort()
+        );
+        connHashMap.put(client, new Conn(client));
     }
 }
