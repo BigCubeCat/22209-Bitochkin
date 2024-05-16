@@ -28,6 +28,7 @@ public class EditSession {
 
     public EditSession(UserFile userFile) {
         this.userFile = userFile;
+        createFile(userFile.getFilePath());
         try {
             fileChannel = FileChannel.open(
                     this.userFile.getFilePath(),
