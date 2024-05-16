@@ -10,7 +10,6 @@ import java.nio.channels.SocketChannel;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Random;
 import java.util.Set;
 
 public class Server {
@@ -64,7 +63,6 @@ public class Server {
                 channelCount = selector.select();
                 if (channelCount > 0) {
                     Set<SelectionKey> keys = selector.selectedKeys();
-                    System.out.println("count keys = " + keys.size());
                     Iterator<SelectionKey> iterator = keys.iterator();
                     while (iterator.hasNext()) {
                         SelectionKey key = iterator.next();

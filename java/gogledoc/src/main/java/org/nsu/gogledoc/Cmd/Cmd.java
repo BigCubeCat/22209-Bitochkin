@@ -1,6 +1,8 @@
 package org.nsu.gogledoc.Cmd;
 
 public class Cmd {
-    private String user;
-    private CmdType eType;
+    public String user;
+    public CmdType eType;
+    public int cursor;
+    public int unixtime;
 }
