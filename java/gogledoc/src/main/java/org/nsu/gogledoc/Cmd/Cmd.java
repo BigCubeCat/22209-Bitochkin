@@ -7,4 +7,11 @@ public class Cmd {
     public int end;
     public String content;
     public int unixtime;
+
+    @Override
+    public String toString() {
+        return ("user=" + user + ";eType=" + eType.toString() +
+                ";cursor=" + cursor + ";end=" + end + ";content=" +
+                content + ";unixtime=" + unixtime);
+    }
 }

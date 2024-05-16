@@ -5,7 +5,7 @@ import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdParser;
 import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.FileWorker.EditSession;
-import org.nsu.gogledoc.FileWorker.UserFile;
+import org.nsu.gogledoc.Logger.ServerLoggerFinder;
 import org.nsu.gogledoc.Utils.CodeUtil;
 
 import java.io.IOException;
@@ -20,6 +20,8 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Server {
+    private final System.Logger logger = ServerLoggerFinder.getLogger("server", this.getClass().getModule());
+
     private int port;
     private int bufferSize;
 
@@ -39,6 +41,8 @@ public class Server {
     }
 
     public Server(EditSession session, int port, int bufferSize) {
+        logger.log(System.Logger.Level.DEBUG, port);
+        logger.log(System.Logger.Level.DEBUG, bufferSize);
         editSession = session;
         this.port = port;
         this.bufferSize = bufferSize;
@@ -100,20 +104,19 @@ public class Server {
             buffer.flip();
 
             String request = CodeUtil.stringFromBuffer(buffer);
-            System.out.println(request);
             Cmd cmd = new Cmd();
             try {
                 cmd = cmdParser.parseCmd(request);
             } catch (IOException e) {
-                System.out.println(e);
+                logger.log(System.Logger.Level.ERROR, e.toString());
             }
+            logger.log(System.Logger.Level.DEBUG, cmd.toString());
             if (cmd.eType == CmdType.MESSAGE && chat != null) {
                 chat.sendMessage(cmd.user, cmd.content);
             } else {
                 editSession.ExecuteCmd(cmd);
             }
 
-            System.out.println(request);
             conn.writeToChan(CodeUtil.bufferFromString(request));
 
             buffer.clear();

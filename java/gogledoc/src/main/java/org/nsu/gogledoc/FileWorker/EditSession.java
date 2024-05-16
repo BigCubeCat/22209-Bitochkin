@@ -2,6 +2,7 @@ package org.nsu.gogledoc.FileWorker;
 
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdType;
+import org.nsu.gogledoc.Logger.ServerLoggerFinder;
 import org.nsu.gogledoc.Utils.CodeUtil;
 
 import java.io.IOException;
@@ -14,11 +15,12 @@ import java.util.Queue;
 import java.nio.file.Files;
 
 public class EditSession {
+    private final System.Logger logger = ServerLoggerFinder.getLogger("session", this.getClass().getModule());
     private UserFile userFile;
     private Queue<String> users;
     private FileChannel fileChannel;
 
-    private void createFile(Path path) {
+    private void createFile() {
         try {
             Files.createFile(this.userFile.getFilePath());
         } catch (IOException e) {
@@ -28,7 +30,7 @@ public class EditSession {
 
     public EditSession(UserFile userFile) {
         this.userFile = userFile;
-        createFile(userFile.getFilePath());
+        createFile();
         try {
             fileChannel = FileChannel.open(
                     this.userFile.getFilePath(),
@@ -39,8 +41,7 @@ public class EditSession {
                     )
             );
         } catch (IOException ioException) {
-            System.out.println(ioException);
-            // TODO: logger
+            logger.log(System.Logger.Level.ERROR, ioException.toString());
         }
     }
 
@@ -49,7 +50,7 @@ public class EditSession {
             case CmdType.INSERT -> insert(cmd.content, cmd.cursor);
             case CmdType.DELETE -> delete(cmd.cursor);
             case CmdType.REPLACE -> replace(cmd.content, cmd.cursor, cmd.end);
-            default -> System.out.println("invalid");
+            default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
     }
 
