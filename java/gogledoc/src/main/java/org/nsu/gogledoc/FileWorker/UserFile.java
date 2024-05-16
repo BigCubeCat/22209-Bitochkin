@@ -8,6 +8,10 @@ public class UserFile {
     private String filePath;
     private String fileContent;
 
+    public UserFile(String filePath) {
+        this.filePath = filePath;
+    }
+
     public Path getFilePath() {
         return Paths.get(filePath);
     }

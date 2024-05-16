@@ -1,5 +1,11 @@
 package org.nsu.gogledoc.Server;
 
+import org.nsu.gogledoc.Cmd.Cmd;
+import org.nsu.gogledoc.Cmd.CmdParser;
+import org.nsu.gogledoc.FileWorker.EditSession;
+import org.nsu.gogledoc.FileWorker.UserFile;
+import org.nsu.gogledoc.Utils.CodeUtil;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -7,7 +13,6 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
@@ -16,13 +21,17 @@ public class Server {
     private int port;
     private int bufferSize;
 
+    private CmdParser cmdParser = new CmdParser();
+    private EditSession editSession;
+
     private ServerSocketChannel server;
     private Selector selector;
     ByteBuffer buffer;
 
     private HashMap<SocketChannel, Conn> connHashMap = new HashMap<>();
 
-    public Server(int port, int bufferSize) {
+    public Server(EditSession session, int port, int bufferSize) {
+        editSession = session;
         this.port = port;
         this.bufferSize = bufferSize;
         try {
@@ -40,20 +49,12 @@ public class Server {
         }
     }
 
-    public Server(int port) {
-        this(port, 256);
+    public Server(EditSession session, int port) {
+        this(session, port, 256);
     }
 
-    public Server() {
-        this(8080);
-    }
-
-    public static String stringFromBuffer(ByteBuffer buffer) {
-        return StandardCharsets.UTF_8.decode(buffer).toString();
-    }
-
-    public static ByteBuffer bufferFromString(String string) {
-        return StandardCharsets.UTF_8.encode(string);
+    public Server(EditSession session) {
+        this(session, 8080);
     }
 
     public void RunServer() {
@@ -90,9 +91,18 @@ public class Server {
         } else {
             buffer.flip();
 
-            String request = stringFromBuffer(buffer);
+            String request = CodeUtil.stringFromBuffer(buffer);
             System.out.println(request);
-            conn.writeToChan(bufferFromString(request));
+            Cmd cmd = new Cmd();
+            try {
+                cmd = cmdParser.parseCmd(request);
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+            editSession.ExecuteCmd(cmd);
+
+            System.out.println(request);
+            conn.writeToChan(CodeUtil.bufferFromString(request));
 
             buffer.clear();
         }

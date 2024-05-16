@@ -38,7 +38,9 @@ public class CmdParser {
         if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.INSERT) {
             cmd.cursor = jsonNode.get("position").asInt();
         }
+        cmd.content = jsonNode.get("content").asText();
         cmd.unixtime = currentUnixTime();
+        System.out.println(cmd.content + " " + cmd.eType + " " + cmd.user);
 
         return cmd;
     }
