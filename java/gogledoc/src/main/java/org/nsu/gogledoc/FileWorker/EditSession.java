@@ -62,7 +62,7 @@ public class EditSession {
         return position;
     }
 
-    private void insertEnd(String text) throws IOException {
+    public void insertEnd(String text) throws IOException {
         fileChannel.write(CodeUtil.bufferFromString(text), fileChannel.size());
     }
 

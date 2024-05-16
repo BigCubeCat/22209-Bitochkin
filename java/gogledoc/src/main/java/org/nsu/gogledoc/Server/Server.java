@@ -1,7 +1,9 @@
 package org.nsu.gogledoc.Server;
 
+import org.nsu.gogledoc.Chat.Chat;
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdParser;
+import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.FileWorker.EditSession;
 import org.nsu.gogledoc.FileWorker.UserFile;
 import org.nsu.gogledoc.Utils.CodeUtil;
@@ -24,11 +26,17 @@ public class Server {
     private CmdParser cmdParser = new CmdParser();
     private EditSession editSession;
 
+    private Chat chat;
+
     private ServerSocketChannel server;
     private Selector selector;
     ByteBuffer buffer;
 
     private HashMap<SocketChannel, Conn> connHashMap = new HashMap<>();
+
+    public void setChat(Chat chat) {
+        this.chat = chat;
+    }
 
     public Server(EditSession session, int port, int bufferSize) {
         editSession = session;
@@ -99,7 +107,11 @@ public class Server {
             } catch (IOException e) {
                 System.out.println(e);
             }
-            editSession.ExecuteCmd(cmd);
+            if (cmd.eType == CmdType.MESSAGE && chat != null) {
+                chat.sendMessage(cmd.user, cmd.content);
+            } else {
+                editSession.ExecuteCmd(cmd);
+            }
 
             System.out.println(request);
             conn.writeToChan(CodeUtil.bufferFromString(request));

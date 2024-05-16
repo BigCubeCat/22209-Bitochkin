@@ -6,5 +6,6 @@ public enum CmdType {
     DELETE, // Удаляем выделенную строку
     CREATE, // Создать файл
     UPDATE,
+    MESSAGE,
     INVALID
 }

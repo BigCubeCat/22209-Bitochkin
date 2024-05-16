@@ -18,6 +18,7 @@ public class CmdParser {
             case "d" -> CmdType.DELETE;
             case "c" -> CmdType.CREATE;
             case "u" -> CmdType.UPDATE;
+            case "m" -> CmdType.MESSAGE;
             default -> CmdType.INVALID;
         };
     }
