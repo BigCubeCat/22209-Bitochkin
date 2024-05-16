@@ -47,10 +47,16 @@ public class EditSession {
         if (cmd.eType == CmdType.INSERT) {
             // TODO: log and history
             insert(cmd.content, cmd.cursor);
+        } else if (cmd.eType == CmdType.DELETE) {
+            delete(cmd.cursor);
         }
     }
 
     public void insert(String text, int position) throws IOException {
         fileChannel.write(CodeUtil.bufferFromString(text), position);
+    }
+
+    public void delete(int position) throws IOException {
+        fileChannel.truncate(position);
     }
 }
