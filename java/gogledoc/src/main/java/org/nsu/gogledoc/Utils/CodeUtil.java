@@ -8,6 +8,14 @@ public class CodeUtil {
         return StandardCharsets.UTF_8.decode(buffer).toString();
     }
 
+    public static String stringFromHeapByteBuffer(ByteBuffer buffer) {
+        try {
+            return new String(buffer.array(), "UTF-8");
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
     public static ByteBuffer bufferFromString(String string) {
         return StandardCharsets.UTF_8.encode(string);
     }

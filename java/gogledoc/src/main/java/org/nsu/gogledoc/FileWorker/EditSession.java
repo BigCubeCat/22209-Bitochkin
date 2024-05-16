@@ -5,6 +5,7 @@ import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.Utils.CodeUtil;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -18,11 +19,11 @@ public class EditSession {
     private FileChannel fileChannel;
 
     private void createFile(Path path) {
-       try {
-           Files.createFile(this.userFile.getFilePath());
-       } catch (IOException e) {
-           System.out.println(e);
-       }
+        try {
+            Files.createFile(this.userFile.getFilePath());
+        } catch (IOException e) {
+            System.out.println(e);
+        }
     }
 
     public EditSession(UserFile userFile) {
@@ -32,8 +33,8 @@ public class EditSession {
                     this.userFile.getFilePath(),
                     EnumSet.of(
                             StandardOpenOption.CREATE,
-                            StandardOpenOption.TRUNCATE_EXISTING,
-                            StandardOpenOption.WRITE
+                            StandardOpenOption.WRITE,
+                            StandardOpenOption.READ
                     )
             );
         } catch (IOException ioException) {
@@ -52,8 +53,24 @@ public class EditSession {
         }
     }
 
+    private void insertEnd(String text) throws IOException {
+        fileChannel.write(CodeUtil.bufferFromString(text), fileChannel.size());
+    }
+
     public void insert(String text, int position) throws IOException {
-        fileChannel.write(CodeUtil.bufferFromString(text), position);
+        if (position > fileChannel.size()) {
+            position = (int) fileChannel.size();
+        }
+        fileChannel.position(position);
+        int endSize = (int) (fileChannel.size() - position);
+        System.out.println("endSize = " + endSize);
+        ByteBuffer end = (ByteBuffer) ByteBuffer.allocate((int)(fileChannel.size() - position));
+        System.out.println(fileChannel.read(end));
+        System.out.println("end = " + end);
+        System.out.println("end = " + CodeUtil.stringFromHeapByteBuffer(end));
+        fileChannel.truncate(position);
+        insertEnd(text);
+        insertEnd(CodeUtil.stringFromHeapByteBuffer(end));
     }
 
     public void delete(int position) throws IOException {
