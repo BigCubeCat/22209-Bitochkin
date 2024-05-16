@@ -12,17 +12,14 @@ public class CmdParser {
     }
 
     CmdType chooseType(String stringType) {
-        switch (stringType) {
-            case "i":
-                return CmdType.INSERT;
-            case "d":
-                return CmdType.DELETE;
-            case "c":
-                return CmdType.CREATE;
-            case "u":
-                return CmdType.UPDATE;
-        }
-        return CmdType.INVALID;
+        return switch (stringType) {
+            case "i" -> CmdType.INSERT;
+            case "r" -> CmdType.REPLACE;
+            case "d" -> CmdType.DELETE;
+            case "c" -> CmdType.CREATE;
+            case "u" -> CmdType.UPDATE;
+            default -> CmdType.INVALID;
+        };
     }
 
     static int currentUnixTime() {
@@ -35,12 +32,14 @@ public class CmdParser {
 
         cmd.user = jsonNode.get("user").asText();
         cmd.eType = chooseType(jsonNode.get("type").asText());
-        if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.INSERT) {
+        if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.INSERT || cmd.eType == CmdType.REPLACE) {
             cmd.cursor = jsonNode.get("position").asInt();
+        }
+        if (cmd.eType == CmdType.REPLACE) {
+            cmd.end = jsonNode.get("cursor_end").asInt();
         }
         cmd.content = jsonNode.get("content").asText();
         cmd.unixtime = currentUnixTime();
-        System.out.println(cmd.content + " " + cmd.eType + " " + cmd.user);
 
         return cmd;
     }

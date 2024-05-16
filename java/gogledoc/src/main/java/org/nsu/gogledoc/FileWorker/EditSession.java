@@ -44,13 +44,21 @@ public class EditSession {
     }
 
     public void ExecuteCmd(Cmd cmd) throws IOException {
-        System.out.println(cmd.eType);
-        if (cmd.eType == CmdType.INSERT) {
-            // TODO: log and history
-            insert(cmd.content, cmd.cursor);
-        } else if (cmd.eType == CmdType.DELETE) {
-            delete(cmd.cursor);
+        switch (cmd.eType) {
+            case CmdType.INSERT -> insert(cmd.content, cmd.cursor);
+            case CmdType.DELETE -> delete(cmd.cursor);
+            case CmdType.REPLACE -> replace(cmd.content, cmd.cursor, cmd.end);
+            default -> System.out.println("invalid");
         }
+    }
+
+    private int normalizePosition(int position) throws IOException {
+        if (position > fileChannel.size()) {
+            return (int) fileChannel.size();
+        } else if (position < 0) {
+            return 0;
+        }
+        return position;
     }
 
     private void insertEnd(String text) throws IOException {
@@ -58,19 +66,25 @@ public class EditSession {
     }
 
     public void insert(String text, int position) throws IOException {
-        if (position > fileChannel.size()) {
-            position = (int) fileChannel.size();
-        }
+        position = normalizePosition(position);
         fileChannel.position(position);
-        int endSize = (int) (fileChannel.size() - position);
-        System.out.println("endSize = " + endSize);
-        ByteBuffer end = (ByteBuffer) ByteBuffer.allocate((int)(fileChannel.size() - position));
-        System.out.println(fileChannel.read(end));
-        System.out.println("end = " + end);
-        System.out.println("end = " + CodeUtil.stringFromHeapByteBuffer(end));
+        ByteBuffer endBuff = ByteBuffer.allocate((int) (fileChannel.size() - position));
+        fileChannel.read(endBuff);
         fileChannel.truncate(position);
         insertEnd(text);
-        insertEnd(CodeUtil.stringFromHeapByteBuffer(end));
+        insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
+    }
+
+    public void replace(String text, int position, int end) throws IOException {
+        position = normalizePosition(position);
+        fileChannel.position(end);
+        ByteBuffer endBuff = ByteBuffer.allocate((int) (fileChannel.size() - end));
+        fileChannel.read(endBuff);
+        fileChannel.position(position);
+        fileChannel.truncate(position);
+        insertEnd(text);
+        insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
+
     }
 
     public void delete(int position) throws IOException {
