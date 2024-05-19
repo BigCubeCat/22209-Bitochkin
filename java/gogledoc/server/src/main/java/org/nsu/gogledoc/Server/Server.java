@@ -11,10 +11,7 @@ import org.nsu.gogledoc.Utils.CodeUtil;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.channels.*;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
@@ -74,17 +71,33 @@ public class Server {
         while (true) {
             try {
                 channelCount = selector.select();
+                logger.log(System.Logger.Level.DEBUG, "channelCount = " + channelCount);
                 if (channelCount > 0) {
                     Set<SelectionKey> keys = selector.selectedKeys();
                     Iterator<SelectionKey> iterator = keys.iterator();
                     while (iterator.hasNext()) {
-                        SelectionKey key = iterator.next();
-                        iterator.remove();
-
-                        if (key.isAcceptable()) {
-                            registerNewConn();
-                        } else if (key.isReadable()) {
-                            readConn(key);
+                        System.out.println("here");
+                        try {
+                            SelectionKey key = iterator.next();
+                            iterator.remove();
+                            logger.log(System.Logger.Level.DEBUG, "key = " + key);
+                            if (key.isAcceptable()) {
+                                logger.log(System.Logger.Level.DEBUG, "key is acceptable");
+                                registerNewConn();
+                            } else {
+                                if (key.isReadable()) {
+                                    logger.log(System.Logger.Level.DEBUG, "key is readable");
+                                    readConn(key);
+                                    logger.log(System.Logger.Level.DEBUG, "key has been read");
+                                }
+                                if (key.isWritable()) {
+                                    logger.log(System.Logger.Level.DEBUG, "key is writable");
+                                    writeConn(key);
+                                    logger.log(System.Logger.Level.DEBUG, "key has been written");
+                                }
+                            }
+                        } catch (CancelledKeyException e) {
+                            logger.log(System.Logger.Level.WARNING, e);
                         }
                     }
                 }
@@ -94,10 +107,19 @@ public class Server {
         }
     }
 
+    private void writeConn(SelectionKey key) throws IOException {
+        logger.log(System.Logger.Level.DEBUG, "write");
+        SocketChannel client = (SocketChannel) key.channel();
+        Conn conn = (Conn) connHashMap.get(client);
+        conn.writeToChan(CodeUtil.bufferFromString("hi\n"));
+    }
+
     private void readConn(SelectionKey key) throws IOException {
+        logger.log(System.Logger.Level.DEBUG, "read conn");
         SocketChannel client = (SocketChannel) key.channel();
         Conn conn = (Conn) connHashMap.get(client);
         if (client.read(buffer) < 0) {
+            logger.log(System.Logger.Level.DEBUG, "no msg");
             key.cancel();
             client.close();
         } else {
@@ -107,24 +129,29 @@ public class Server {
             Cmd cmd = new Cmd();
             try {
                 cmd = cmdParser.parseCmd(request);
+                logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
             } catch (IOException e) {
                 logger.log(System.Logger.Level.ERROR, e.toString());
             }
             logger.log(System.Logger.Level.DEBUG, cmd.toString());
             if (cmd.eType == CmdType.MESSAGE && chat != null) {
                 chat.sendMessage(cmd.user, cmd.content);
+                logger.log(System.Logger.Level.DEBUG, "chat command");
             } else {
+                logger.log(System.Logger.Level.DEBUG, "editor command");
                 editSession.ExecuteCmd(cmd);
             }
-
+            logger.log(System.Logger.Level.DEBUG, "writing to connection");
             conn.writeToChan(CodeUtil.bufferFromString(request));
-
+            logger.log(System.Logger.Level.DEBUG, "written to connection");
             buffer.clear();
         }
     }
 
     private void registerNewConn() throws IOException {
+        logger.log(System.Logger.Level.INFO, "new connection request");
         SocketChannel client = server.accept();
+        logger.log(System.Logger.Level.INFO, "new client accepted");
         client.configureBlocking(false);
         client.register(
                 selector,

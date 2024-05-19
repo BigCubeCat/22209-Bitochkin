@@ -11,7 +11,7 @@ public class App {
         UserFile chatFile = new UserFile("chat.txt");
         EditSession session = new EditSession(file);
         Chat chat = new Chat(chatFile);
-        Server server = new Server(session);
+        Server server = new Server(session, 8888);
         server.setChat(chat);
         server.RunServer();
     }
