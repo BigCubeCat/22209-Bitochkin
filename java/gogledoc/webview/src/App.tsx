@@ -1,19 +1,14 @@
 import './App.css'
 import {Route, Switch} from "wouter";
 import LoginPage from "./pages/LoginPage.tsx";
+import MainPage from "./pages/MainPage.tsx";
 
 function App() {
-
   return (
     <>
       <Switch>
-        <Route path="/login" component={LoginPage} />
-
-        <Route path="/users/:name">
-          {(params) => <>Hello, {params.name}!</>}
-        </Route>
-
-        {/* Default route in a switch */}
+        <Route path="/login" component={LoginPage}/>
+        <Route path="/" component={MainPage}/>
         <Route>404: No such page!</Route>
       </Switch>
     </>
