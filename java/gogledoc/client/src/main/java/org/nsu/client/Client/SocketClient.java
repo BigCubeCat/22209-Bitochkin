@@ -31,23 +31,30 @@ public class SocketClient {
     }
 
     public void Run() {
-        String msg = "{\"user\": \"root\", \"type\": \"i\", \"position\": 2, \"cursor_end\": 4, \"content\": \"ab\"}";
-        try {
-            server.write(CodeUtil.bufferFromString(msg));
-            logger.log(System.Logger.Level.DEBUG, "wrote");
-            while (server.read(buffer) > 0) {
-                logger.log(System.Logger.Level.DEBUG, "begin");
+
+        String msg1 = "{\"user\": \"root\", \"type\": \"i\", \"position\": 0, \"cursor_end\": 4, \"content\": \"01\"}";
+        String msg2 = "{\"user\": \"user\", \"type\": \"d\", \"position\": 0, \"cursor_end\": 1, \"content\": \"ab\"}";
+        while (true) {
+            try {
+                Thread.sleep(1000);
+                if (Math.random() < 0.8)
+                    server.write(CodeUtil.bufferFromString(msg1));
+                else
+                    server.write(CodeUtil.bufferFromString(msg2));
+                logger.log(System.Logger.Level.DEBUG, "wrote");
+                int n;
+                n = server.read(buffer);
+                logger.log(System.Logger.Level.DEBUG, "r " + n);
                 buffer.flip();
                 String s = CodeUtil.stringFromBuffer(buffer);
                 System.out.println(s);
                 buffer.clear();
                 logger.log(System.Logger.Level.DEBUG, "end");
+            } catch (IOException ioException) {
+                logger.log(System.Logger.Level.ERROR, ioException);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
-            logger.log(System.Logger.Level.DEBUG, "exit");
-            server.close();
-            logger.log(System.Logger.Level.INFO, "sent");
-        } catch (IOException ioException) {
-            logger.log(System.Logger.Level.ERROR, ioException);
         }
     }
 }

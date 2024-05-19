@@ -12,9 +12,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 public class Server {
     private final System.Logger logger = ServerLoggerFinder.getLogger("server", this.getClass().getModule());
@@ -43,6 +41,7 @@ public class Server {
         editSession = session;
         this.port = port;
         this.bufferSize = bufferSize;
+
         try {
             server = ServerSocketChannel.open();
             server.socket().bind(new InetSocketAddress(this.port));
@@ -112,6 +111,7 @@ public class Server {
         SocketChannel client = (SocketChannel) key.channel();
         Conn conn = (Conn) connHashMap.get(client);
         conn.writeToChan(CodeUtil.bufferFromString("hi\n"));
+        key.interestOps(SelectionKey.OP_READ);
     }
 
     private void readConn(SelectionKey key) throws IOException {
@@ -146,6 +146,7 @@ public class Server {
             logger.log(System.Logger.Level.DEBUG, "written to connection");
             buffer.clear();
         }
+        key.interestOps(SelectionKey.OP_WRITE);
     }
 
     private void registerNewConn() throws IOException {
