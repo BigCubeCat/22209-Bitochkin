@@ -17,6 +17,7 @@ public class CmdParser {
             case "r" -> CmdType.REPLACE;
             case "d" -> CmdType.DELETE;
             case "c" -> CmdType.CREATE;
+            case "j" -> CmdType.JUMP;
             case "u" -> CmdType.UPDATE;
             case "m" -> CmdType.MESSAGE;
             default -> CmdType.INVALID;
@@ -33,15 +34,16 @@ public class CmdParser {
 
         cmd.user = jsonNode.get("user").asText();
         cmd.eType = chooseType(jsonNode.get("type").asText());
-        if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.INSERT || cmd.eType == CmdType.REPLACE) {
-            cmd.cursor = jsonNode.get("position").asInt();
+        if (cmd.eType == CmdType.UPDATE) {
+            return cmd;
         }
-        if (cmd.eType == CmdType.REPLACE) {
-            cmd.end = jsonNode.get("cursor_end").asInt();
+        if (cmd.eType == CmdType.JUMP || cmd.eType == CmdType.REPLACE) {
+            cmd.position = jsonNode.get("position").asInt();
         }
-        cmd.content = jsonNode.get("content").asText();
+        if (cmd.eType != CmdType.JUMP && cmd.eType != CmdType.DELETE) {
+            cmd.content = jsonNode.get("content").asText();
+        }
         cmd.unixtime = currentUnixTime();
-
         return cmd;
     }
 

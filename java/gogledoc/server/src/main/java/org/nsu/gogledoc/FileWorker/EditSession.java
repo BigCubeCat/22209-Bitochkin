@@ -14,7 +14,12 @@ import java.util.Queue;
 import java.nio.file.Files;
 
 public class EditSession {
-    private final System.Logger logger = ServerLoggerFinder.getLogger("session", this.getClass().getModule());
+    private final System.Logger logger = ServerLoggerFinder.getLogger(
+            "session",
+            this.getClass().getModule()
+    );
+
+    private CursorController cursorController = new CursorController();
     private UserFile userFile;
     private Queue<String> users;
     private FileChannel fileChannel;
@@ -46,9 +51,10 @@ public class EditSession {
 
     public void ExecuteCmd(Cmd cmd) throws IOException {
         switch (cmd.eType) {
-            case CmdType.INSERT -> insert(cmd.content, cmd.cursor);
-            case CmdType.DELETE -> delete(cmd.cursor);
-            case CmdType.REPLACE -> replace(cmd.content, cmd.cursor, cmd.end);
+            case CmdType.JUMP -> jumpCursor(cmd);
+            case CmdType.INSERT -> insert(cmd);
+            case CmdType.DELETE -> delete(cmd);
+            case CmdType.REPLACE -> replace(cmd);
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
     }
@@ -62,33 +68,42 @@ public class EditSession {
         return position;
     }
 
+    public void jumpCursor(Cmd cmd) throws IOException {
+        cursorController.setUserPos(cmd.user, normalizePosition(cmd.position));
+    }
+
     public void insertEnd(String text) throws IOException {
         fileChannel.write(CodeUtil.bufferFromString(text), fileChannel.size());
     }
 
-    public void insert(String text, int position) throws IOException {
-        position = normalizePosition(position);
+    public void insert(Cmd cmd) throws IOException {
+        int position = normalizePosition(cursorController.getUserPos(cmd.user));
         fileChannel.position(position);
         ByteBuffer endBuff = ByteBuffer.allocate((int) (fileChannel.size() - position));
         fileChannel.read(endBuff);
         fileChannel.truncate(position);
-        insertEnd(text);
+        insertEnd(cmd.content);
         insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
     }
 
-    public void replace(String text, int position, int end) throws IOException {
-        position = normalizePosition(position);
-        fileChannel.position(end);
-        ByteBuffer endBuff = ByteBuffer.allocate((int) (fileChannel.size() - end));
+    public void replace(Cmd cmd) throws IOException {
+        int position = normalizePosition(cursorController.getUserPos(cmd.user));
+        fileChannel.position(cmd.position);
+        ByteBuffer endBuff = ByteBuffer.allocate((int) (fileChannel.size() - cmd.position));
         fileChannel.read(endBuff);
         fileChannel.position(position);
         fileChannel.truncate(position);
-        insertEnd(text);
+        insertEnd(cmd.content);
         insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
-
     }
 
-    public void delete(int position) throws IOException {
-        fileChannel.truncate(position);
+    public void delete(Cmd cmd) throws IOException {
+        int position = cursorController.getUserPos(cmd.user);
+        if (position > 0) {
+            fileChannel.truncate(position);
+            logger.log(System.Logger.Level.INFO, "truncate");
+        } else {
+            logger.log(System.Logger.Level.ERROR, "no cursor in delete");
+        }
     }
 }

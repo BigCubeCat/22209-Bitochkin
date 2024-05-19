@@ -75,7 +75,6 @@ public class Server {
                     Set<SelectionKey> keys = selector.selectedKeys();
                     Iterator<SelectionKey> iterator = keys.iterator();
                     while (iterator.hasNext()) {
-                        System.out.println("here");
                         try {
                             SelectionKey key = iterator.next();
                             iterator.remove();

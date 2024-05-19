@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
-import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
 public class SocketClient {
@@ -31,9 +30,8 @@ public class SocketClient {
     }
 
     public void Run() {
-
-        String msg1 = "{\"user\": \"root\", \"type\": \"i\", \"position\": 0, \"cursor_end\": 4, \"content\": \"01\"}";
-        String msg2 = "{\"user\": \"user\", \"type\": \"d\", \"position\": 0, \"cursor_end\": 1, \"content\": \"ab\"}";
+        String msg1 = "{\"user\": \"root\", \"type\": \"j\", \"position\": 1}";
+        String msg2 = "{\"user\": \"root\", \"type\": \"d\", \"cursor_end\": 4}";
         while (true) {
             try {
                 Thread.sleep(1000);

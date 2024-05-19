@@ -5,6 +5,7 @@ public enum CmdType {
     INSERT, // Заменяем выделенную строку
     DELETE, // Удаляем выделенную строку
     CREATE, // Создать файл
+    JUMP, // Переместить курсор
     UPDATE,
     MESSAGE,
     INVALID
