@@ -1,0 +1,5 @@
+.Paper {
+    width: min(1000px, 80vw);
+    min-height: 1000px;
+    padding: 20px;
+}
