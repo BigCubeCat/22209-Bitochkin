@@ -37,11 +37,14 @@ public class CmdParser {
         if (cmd.eType == CmdType.UPDATE) {
             return cmd;
         }
-        if (cmd.eType == CmdType.JUMP || cmd.eType == CmdType.REPLACE) {
+        if (cmd.eType == CmdType.JUMP) {
             cmd.position = jsonNode.get("position").asInt();
         }
         if (cmd.eType != CmdType.JUMP && cmd.eType != CmdType.DELETE) {
             cmd.content = jsonNode.get("content").asText();
+        }
+        if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.REPLACE) {
+            cmd.size = jsonNode.get("size").asInt();
         }
         cmd.unixtime = currentUnixTime();
         return cmd;

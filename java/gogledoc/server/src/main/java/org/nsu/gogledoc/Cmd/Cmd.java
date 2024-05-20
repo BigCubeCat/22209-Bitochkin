@@ -4,6 +4,7 @@ public class Cmd {
     public String user;
     public CmdType eType;
     public int position;
+    public int size;
     public String content;
     public int unixtime;
 

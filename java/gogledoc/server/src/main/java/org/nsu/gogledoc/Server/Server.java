@@ -138,7 +138,7 @@ public class Server {
                 logger.log(System.Logger.Level.DEBUG, "chat command");
             } else {
                 logger.log(System.Logger.Level.DEBUG, "editor command");
-                editSession.ExecuteCmd(cmd);
+                var response = editSession.ExecuteCmd(cmd);
             }
             logger.log(System.Logger.Level.DEBUG, "writing to connection");
             conn.writeToChan(CodeUtil.bufferFromString(request));

@@ -1,6 +1,7 @@
 package org.nsu.gogledoc.FileWorker;
 
 import org.nsu.gogledoc.Cmd.Cmd;
+import org.nsu.gogledoc.Cmd.CmdResponse;
 import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.Logger.ServerLoggerFinder;
 import org.nsu.gogledoc.Utils.CodeUtil;
@@ -49,7 +50,7 @@ public class EditSession {
         }
     }
 
-    public void ExecuteCmd(Cmd cmd) throws IOException {
+    public CmdResponse ExecuteCmd(Cmd cmd) throws IOException {
         switch (cmd.eType) {
             case CmdType.JUMP -> jumpCursor(cmd);
             case CmdType.INSERT -> insert(cmd);
@@ -57,6 +58,11 @@ public class EditSession {
             case CmdType.REPLACE -> replace(cmd);
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
+        // Создаем Response
+        CmdResponse response = new CmdResponse();
+        response.state = cursorController.toResponseString();
+        logger.log(System.Logger.Level.DEBUG, response.state);
+        return response;
     }
 
     private int normalizePosition(int position) throws IOException {

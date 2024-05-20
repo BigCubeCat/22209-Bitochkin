@@ -31,7 +31,7 @@ public class SocketClient {
 
     public void Run() {
         String msg1 = "{\"user\": \"root\", \"type\": \"j\", \"position\": 1}";
-        String msg2 = "{\"user\": \"root\", \"type\": \"d\", \"cursor_end\": 4}";
+        String msg2 = "{\"user\": \"user\", \"type\": \"j\", \"position\": 0}";
         while (true) {
             try {
                 Thread.sleep(1000);
