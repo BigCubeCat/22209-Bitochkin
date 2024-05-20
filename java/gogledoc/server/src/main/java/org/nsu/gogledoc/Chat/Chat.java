@@ -11,6 +11,6 @@ public class Chat extends EditSession {
     }
 
     public void sendMessage(String username, String message) throws IOException {
-        insertEnd(username + " : " + message + "\n");
+
     }
 }
