@@ -40,10 +40,12 @@ public class SocketClient {
         String msg1 = "{\"user\": \"root\", \"type\": \"j\", \"position\": 1}";
         String msg2 = "{\"user\": \"user\", \"type\": \"j\", \"position\": 0}";
         String msg3 = "{\"user\": \"user\", \"type\": \"i\", \"position\": 0, \"content\": \"a\"}";
-        String[] messages = {msg1, msg2, msg3};
+        String msg4 = "{\"user\": \"u\", \"type\": \"u\", \"unixtime\": 0}";
+        String[] messages = {msg1, msg2, msg3, msg4};
         while (true) {
             try {
                 String msg = getRandom(messages);
+                System.out.println(msg);
                 Thread.sleep(1000);
                 server.write(CodeUtil.bufferFromString(msg));
                 logger.log(System.Logger.Level.DEBUG, "wrote");

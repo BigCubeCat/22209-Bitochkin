@@ -1,5 +1,7 @@
 package org.nsu.gogledoc.Server;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.nsu.gogledoc.Chat.Chat;
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdParser;
@@ -139,9 +141,12 @@ public class Server {
             } else {
                 logger.log(System.Logger.Level.DEBUG, "editor command");
                 var response = editSession.ExecuteCmd(cmd);
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode node = mapper.valueToTree(response);
+                String nodeString = node.toString();
+                System.out.println(nodeString);
+                conn.writeToChan(CodeUtil.bufferFromString(nodeString));
             }
-            logger.log(System.Logger.Level.DEBUG, "writing to connection");
-            conn.writeToChan(CodeUtil.bufferFromString(request));
             logger.log(System.Logger.Level.DEBUG, "written to connection");
             buffer.clear();
         }

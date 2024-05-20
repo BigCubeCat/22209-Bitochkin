@@ -10,4 +10,6 @@ public class CmdResponse {
     public ArrayList<String> state;
     @JsonProperty("res")
     public CmpRes cmpRes;
+    @JsonProperty("update")
+    public boolean update = true;
 }

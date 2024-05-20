@@ -4,6 +4,10 @@ public class EditHistory {
     int historySize;
     private UserFileMem mem = new UserFileMem();
 
+    public int lastVersion() {
+        return mem.unixtime;
+    }
+
     public EditHistory(int size) {
         historySize = size;
     }

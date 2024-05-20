@@ -35,6 +35,7 @@ public class CmdParser {
         cmd.user = jsonNode.get("user").asText();
         cmd.eType = chooseType(jsonNode.get("type").asText());
         if (cmd.eType == CmdType.UPDATE) {
+            cmd.unixtime = jsonNode.get("unixtime").asInt();
             return cmd;
         }
         if (cmd.eType == CmdType.JUMP) {

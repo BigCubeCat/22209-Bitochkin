@@ -42,6 +42,7 @@ public class EditSession {
     }
 
     public CmdResponse ExecuteCmd(Cmd cmd) throws IOException {
+        boolean isInfo = (cmd.eType == CmdType.JUMP || cmd.eType == CmdType.UPDATE);
         switch (cmd.eType) {
             case CmdType.JUMP -> jumpCursor(cmd);
             case CmdType.INSERT -> userFile.insert(cmd, cursorController.getUserPos(cmd.user));
@@ -49,16 +50,20 @@ public class EditSession {
             case CmdType.REPLACE -> userFile.replace(cmd, cursorController.getUserPos(cmd.user));
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
-        UserFileMem mem = userFile.dump(cmd);
-        logger.log(System.Logger.Level.DEBUG, "mem = " + mem.content + " : " + mem.unixtime);
-        var cmpRes = history.cmpCurrentFileContent(mem.content);
-        logger.log(System.Logger.Level.DEBUG, cmpRes);
-        history.setValue(mem);
-        // Создаем Response
         CmdResponse response = new CmdResponse();
+        if (isInfo && history.lastVersion() == cmd.unixtime) {
+            // ничегошеньки не изменилось
+            response.update = false;
+            logger.log(System.Logger.Level.INFO, "no changes");
+        } else {
+            UserFileMem mem = userFile.dump(cmd);
+            logger.log(System.Logger.Level.DEBUG, "mem = " + mem.content + " : " + mem.unixtime);
+            var cmpRes = history.cmpCurrentFileContent(mem.content);
+            logger.log(System.Logger.Level.DEBUG, cmpRes);
+            history.setValue(mem);
+            response.cmpRes = cmpRes;
+        }
         response.state = cursorController.toResponseString();
-        response.cmpRes = cmpRes;
-        logger.log(System.Logger.Level.DEBUG, response.state + "\t" + response.cmpRes.content);
         return response;
     }
 
