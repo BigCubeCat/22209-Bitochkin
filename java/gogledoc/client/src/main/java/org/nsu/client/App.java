@@ -1,14 +1,15 @@
 package org.nsu.client;
 
-import org.nsu.client.webview.WebSocketServer;
+import org.nsu.client.Config.Config;
+import org.nsu.client.Controller.MessageController;
 
 public class App {
     public static void main(String[] args) {
-        /*
-        SocketClient client = new SocketClient(8888);
-        client.Run();
-         */
-        WebSocketServer server = new WebSocketServer(8080);
-        server.RunServer();
+        Config config = new Config();
+        config.webSocketPort = 8080;
+        config.serverPort = 8888;
+
+        MessageController controller = new MessageController(config);
+        controller.startThreads();
     }
 }

@@ -1,5 +1,6 @@
 package org.nsu.client.Client;
 
+import org.nsu.client.Controller.Data;
 import org.nsu.client.Logger.ClientLoggerFinder;
 import org.nsu.client.Utils.CodeUtil;
 
@@ -10,16 +11,19 @@ import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.util.Random;
 
-public class SocketClient {
+public class SocketClient implements Runnable {
     private final System.Logger logger = ClientLoggerFinder.getLogger("server", this.getClass().getModule());
 
     int port;
+    Data data;
+
     SocketChannel server = null;
     SocketAddress socketAddress = null;
 
     ByteBuffer buffer = ByteBuffer.allocate(1024);
 
-    public SocketClient(int port) {
+    public SocketClient(Data data, int port) {
+        this.data = data;
         this.port = port;
         try {
             server = SocketChannel.open();
@@ -35,7 +39,8 @@ public class SocketClient {
         return array[rnd];
     }
 
-    public void Run() {
+    @Override
+    public void run() {
         String msg1 = "{\"user\": \"root\", \"type\": \"j\", \"position\": 1}";
         String msg2 = "{\"user\": \"user\", \"type\": \"j\", \"position\": 0}";
         String msg3 = "{\"user\": \"user\", \"type\": \"i\", \"position\": 0, \"content\": \"a\"}";

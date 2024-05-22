@@ -5,18 +5,21 @@ import io.javalin.websocket.WsCloseContext;
 import io.javalin.websocket.WsConnectContext;
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsMessageContext;
+import org.nsu.client.Controller.Data;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class WebSocketServer {
+public class WebSocketServer implements Runnable {
     private static final Map<WsContext, String> userUsernameMap = new ConcurrentHashMap<>();
     private static int nextUserNumber = 1; // Assign to username for next connecting user
 
     private final int port;
+    Data data;
 
-    public WebSocketServer(int port) {
+    public WebSocketServer(Data data, int port) {
         this.port = port;
+        this.data = data;
     }
 
     private void onUserConnect(WsConnectContext ctx) {
@@ -36,7 +39,8 @@ public class WebSocketServer {
         broadcastMessage(userUsernameMap.get(ctx), ctx.message());
     }
 
-    public void RunServer() {
+    @Override
+    public void run() {
         Javalin app = Javalin.create(config -> {
             config.router.mount(router -> {
                 router.ws("/", ws -> {
