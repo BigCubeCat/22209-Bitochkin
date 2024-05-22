@@ -3,7 +3,6 @@ package org.nsu.client.Client;
 import org.nsu.client.Logger.ClientLoggerFinder;
 import org.nsu.client.Utils.CodeUtil;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
