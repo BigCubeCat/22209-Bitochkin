@@ -6,20 +6,28 @@ import io.javalin.websocket.WsConnectContext;
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsMessageContext;
 import org.nsu.client.Controller.Data;
+import org.nsu.client.Logger.ClientLoggerFinder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class WebSocketServer implements Runnable {
+    private static final Logger log = LoggerFactory.getLogger(WebSocketServer.class);
+    private final System.Logger logger = ClientLoggerFinder.getLogger("ws", this.getClass().getModule());
+
     private static final Map<WsContext, String> userUsernameMap = new ConcurrentHashMap<>();
     private static int nextUserNumber = 1; // Assign to username for next connecting user
 
     private final int port;
-    Data data;
+    Data clientToServer;
+    Data serverToClient;
 
-    public WebSocketServer(Data data, int port) {
+    public WebSocketServer(Data data1, Data data2, int port) {
         this.port = port;
-        this.data = data;
+        serverToClient = data1;
+        clientToServer = data2;
     }
 
     private void onUserConnect(WsConnectContext ctx) {
@@ -36,7 +44,10 @@ public class WebSocketServer implements Runnable {
 
     private void onMessage(WsMessageContext ctx) {
         // TODO: отправка на TCP-сервер
-        broadcastMessage(userUsernameMap.get(ctx), ctx.message());
+        String request = ctx.message();
+        clientToServer.produce(request);
+        String response = serverToClient.consume();
+        broadcastMessage(userUsernameMap.get(ctx), response);
     }
 
     @Override

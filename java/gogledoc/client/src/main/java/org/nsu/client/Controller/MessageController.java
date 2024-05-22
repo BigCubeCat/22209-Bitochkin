@@ -9,10 +9,11 @@ public class MessageController {
     Thread wsThread;
 
     public MessageController(Config conf) {
-        Data data = new Data();
+        Data clientToServer = new Data();
+        Data serverToClient = new Data();
 
-        clientThread = new Thread(new SocketClient(data, conf.serverPort));
-        wsThread = new Thread(new WebSocketServer(data, conf.webSocketPort));
+        clientThread = new Thread(new SocketClient(serverToClient, clientToServer, conf.serverPort));
+        wsThread = new Thread(new WebSocketServer(serverToClient, clientToServer, conf.webSocketPort));
     }
 
     public void startThreads() {

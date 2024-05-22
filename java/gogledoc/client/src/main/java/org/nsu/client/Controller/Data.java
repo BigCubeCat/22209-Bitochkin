@@ -2,7 +2,7 @@ package org.nsu.client.Controller;
 
 public class Data {
     private String message;
-    private boolean hasData = false;
+    public boolean hasData = false;
 
     public synchronized void produce(String message) {
         while (hasData) {
@@ -12,6 +12,7 @@ public class Data {
                 Thread.currentThread().interrupt();
             }
         }
+        System.out.println("in produce");
         this.message = message;
         hasData = true;
         notify();
@@ -25,6 +26,7 @@ public class Data {
                 Thread.currentThread().interrupt();
             }
         }
+        System.out.println("consumed " + message);
         hasData = false;
         notify();
         return message;
