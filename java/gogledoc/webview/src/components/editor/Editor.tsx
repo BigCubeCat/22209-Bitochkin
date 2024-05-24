@@ -7,7 +7,7 @@ import "./Editor.css";
 export default function Editor() {
   const editorHook = useEditor();
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
-  return <Paper className="Paper">
+  return <Paper className="Paper" sx={{margin: 1}}>
     <textarea
       className={"Editor"}
       ref={textAreaRef}

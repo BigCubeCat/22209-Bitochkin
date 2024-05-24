@@ -23,10 +23,13 @@ export const userSlice = createSlice({
       state.username = action.payload;
       state.color = getRandomColor();
     },
+    logout: (state) => {
+      state.username = "";
+    }
   },
 });
 
-export const {login} = userSlice.actions;
+export const {login, logout} = userSlice.actions;
 
 export const selectUser = (state: RootState) => {
   return state.user.username;
