@@ -28,26 +28,30 @@ public class CmdParser {
         return (int) (System.currentTimeMillis() / 1000);
     }
 
-    public Cmd parseCmd(String json) throws IOException {
+    public Cmd parseCmd(String json) {
         Cmd cmd = new Cmd();
-        var jsonNode = getJson(json);
-
-        cmd.user = jsonNode.get("user").asText();
-        cmd.eType = chooseType(jsonNode.get("type").asText());
-        if (cmd.eType == CmdType.UPDATE) {
-            cmd.unixtime = jsonNode.get("unixtime").asInt();
-            return cmd;
+        try {
+            var jsonNode = getJson(json);
+            cmd.user = jsonNode.get("user").asText();
+            cmd.eType = chooseType(jsonNode.get("type").asText());
+            if (cmd.eType == CmdType.UPDATE) {
+                cmd.unixtime = jsonNode.get("unixtime").asInt();
+                return cmd;
+            }
+            if (cmd.eType == CmdType.JUMP) {
+                cmd.position = jsonNode.get("position").asInt();
+            }
+            if (cmd.eType != CmdType.JUMP && cmd.eType != CmdType.DELETE) {
+                cmd.content = jsonNode.get("content").asText();
+            }
+            if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.REPLACE) {
+                cmd.size = jsonNode.get("size").asInt();
+            }
+            cmd.unixtime = currentUnixTime();
+        } catch (Exception e) {
+            System.out.println(e);
+            cmd.invalid = true;
         }
-        if (cmd.eType == CmdType.JUMP) {
-            cmd.position = jsonNode.get("position").asInt();
-        }
-        if (cmd.eType != CmdType.JUMP && cmd.eType != CmdType.DELETE) {
-            cmd.content = jsonNode.get("content").asText();
-        }
-        if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.REPLACE) {
-            cmd.size = jsonNode.get("size").asInt();
-        }
-        cmd.unixtime = currentUnixTime();
         return cmd;
     }
 

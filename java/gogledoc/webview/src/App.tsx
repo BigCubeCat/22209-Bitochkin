@@ -1,4 +1,3 @@
-import './App.css'
 import {Route, Switch} from "wouter";
 import LoginPage from "./pages/LoginPage.tsx";
 import MainPage from "./pages/MainPage.tsx";

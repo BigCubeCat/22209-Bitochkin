@@ -44,10 +44,10 @@ public class EditSession {
     public CmdResponse ExecuteCmd(Cmd cmd) throws IOException {
         boolean isInfo = (cmd.eType == CmdType.JUMP || cmd.eType == CmdType.UPDATE);
         switch (cmd.eType) {
-            case CmdType.JUMP -> jumpCursor(cmd);
-            case CmdType.INSERT -> userFile.insert(cmd, cursorController.getUserPos(cmd.user));
-            case CmdType.DELETE -> userFile.delete(cmd, cursorController.getUserPos(cmd.user));
-            case CmdType.REPLACE -> userFile.replace(cmd, cursorController.getUserPos(cmd.user));
+            case JUMP -> jumpCursor(cmd);
+            case INSERT -> userFile.insert(cmd, cursorController.getUserPos(cmd.user));
+            case DELETE -> userFile.delete(cmd, cursorController.getUserPos(cmd.user));
+            case REPLACE -> userFile.replace(cmd, cursorController.getUserPos(cmd.user));
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
         CmdResponse response = new CmdResponse();

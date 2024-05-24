@@ -13,6 +13,7 @@ import java.nio.channels.SocketChannel;
 public class SocketClient implements Runnable {
     private final System.Logger logger = ClientLoggerFinder.getLogger("server", this.getClass().getModule());
 
+    String host;
     int port;
     Data clientToServer;
     Data serverToClient;
@@ -22,14 +23,15 @@ public class SocketClient implements Runnable {
 
     ByteBuffer buffer = ByteBuffer.allocate(1024);
 
-    public SocketClient(Data data1, Data data2, int port) {
+    public SocketClient(Data data1, Data data2, String host, int port) {
         serverToClient = data1;
         clientToServer = data2;
         this.port = port;
+        this.host = host;
 
         try {
             server = SocketChannel.open();
-            socketAddress = new InetSocketAddress("localhost", this.port);
+            socketAddress = new InetSocketAddress(host, this.port);
             server.connect(socketAddress);
         } catch (IOException e) {
             logger.log(System.Logger.Level.ERROR, e);

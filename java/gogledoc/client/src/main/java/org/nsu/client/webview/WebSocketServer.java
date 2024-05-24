@@ -43,8 +43,12 @@ public class WebSocketServer implements Runnable {
     }
 
     private void onMessage(WsMessageContext ctx) {
-        // TODO: отправка на TCP-сервер
         String request = ctx.message();
+        if (request.charAt(0) == 'm') {
+            // it is chat message
+            broadcastMessage(userUsernameMap.get(ctx), request);
+            return;
+        }
         clientToServer.produce(request);
         String response = serverToClient.consume();
         broadcastMessage(userUsernameMap.get(ctx), response);

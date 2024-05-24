@@ -12,7 +12,7 @@ public class MessageController {
         Data clientToServer = new Data();
         Data serverToClient = new Data();
 
-        clientThread = new Thread(new SocketClient(serverToClient, clientToServer, conf.serverPort));
+        clientThread = new Thread(new SocketClient(serverToClient, clientToServer, conf.serverHost, conf.serverPort));
         wsThread = new Thread(new WebSocketServer(serverToClient, clientToServer, conf.webSocketPort));
     }
 

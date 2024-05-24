@@ -5,9 +5,7 @@ import org.nsu.client.Controller.MessageController;
 
 public class App {
     public static void main(String[] args) {
-        Config config = new Config();
-        config.webSocketPort = 8080;
-        config.serverPort = 8888;
+        Config config = new Config(true);
 
         MessageController controller = new MessageController(config);
         controller.startThreads();

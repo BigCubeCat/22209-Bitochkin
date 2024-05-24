@@ -1,6 +1,7 @@
 package org.nsu.gogledoc.Cmd;
 
 public class Cmd {
+    public boolean invalid = false;
     public String user;
     public CmdType eType;
     public int position;

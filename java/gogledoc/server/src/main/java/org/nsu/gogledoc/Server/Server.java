@@ -127,13 +127,8 @@ public class Server {
             buffer.flip();
 
             String request = CodeUtil.stringFromBuffer(buffer);
-            Cmd cmd = new Cmd();
-            try {
-                cmd = cmdParser.parseCmd(request);
-                logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
-            } catch (IOException e) {
-                logger.log(System.Logger.Level.ERROR, e.toString());
-            }
+            Cmd cmd = cmdParser.parseCmd(request);
+            logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
             logger.log(System.Logger.Level.DEBUG, cmd.toString());
             if (cmd.eType == CmdType.MESSAGE && chat != null) {
                 chat.sendMessage(cmd.user, cmd.content);
