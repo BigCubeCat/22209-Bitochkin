@@ -1,4 +1,4 @@
-package org.nsu.client.Config;
+package org.nsu.gogledoc.Config;
 
 public class Config {
     public int webSocketPort;

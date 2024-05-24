@@ -1,8 +1,8 @@
-package org.nsu.client.Controller;
+package org.nsu.gogledoc.Controller;
 
-import org.nsu.client.Client.SocketClient;
-import org.nsu.client.Config.Config;
-import org.nsu.client.webview.WebSocketServer;
+import org.nsu.gogledoc.Client.SocketClient;
+import org.nsu.gogledoc.Config.Config;
+import org.nsu.gogledoc.webview.WebSocketServer;
 
 public class MessageController {
     Thread clientThread;

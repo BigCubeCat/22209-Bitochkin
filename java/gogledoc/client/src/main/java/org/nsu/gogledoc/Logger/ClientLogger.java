@@ -1,4 +1,4 @@
-package org.nsu.client.Logger;
+package org.nsu.gogledoc.Logger;
 
 import java.text.MessageFormat;
 import java.util.ResourceBundle;

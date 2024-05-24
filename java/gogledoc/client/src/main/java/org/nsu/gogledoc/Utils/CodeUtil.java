@@ -1,4 +1,4 @@
-package org.nsu.client.Utils;
+package org.nsu.gogledoc.Utils;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;

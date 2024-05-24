@@ -12,7 +12,7 @@ const initialState: EditorState = {
 };
 
 export const editorSlice = createSlice({
-  name: 'user',
+  name: 'editor',
   initialState,
   reducers: {
     setContent: (state, action: PayloadAction<string>) => {

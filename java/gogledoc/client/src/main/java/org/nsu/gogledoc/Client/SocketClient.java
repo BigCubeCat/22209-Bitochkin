@@ -1,8 +1,8 @@
-package org.nsu.client.Client;
+package org.nsu.gogledoc.Client;
 
-import org.nsu.client.Controller.Data;
-import org.nsu.client.Logger.ClientLoggerFinder;
-import org.nsu.client.Utils.CodeUtil;
+import org.nsu.gogledoc.Controller.Data;
+import org.nsu.gogledoc.Logger.ClientLoggerFinder;
+import org.nsu.gogledoc.Utils.CodeUtil;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

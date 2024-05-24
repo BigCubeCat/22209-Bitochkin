@@ -2,20 +2,25 @@ import {Box, Button, Paper, TextField, Typography} from "@mui/material";
 
 import "./main.css";
 import {ChangeEvent, useState} from "react";
+import {useDispatch} from "react-redux";
+import {login} from "../../app/userSlice.ts";
 import {Redirect} from "wouter";
 
 export default function LoginForm(props: { filename: string }) {
+  const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [loggined, setLoggined] = useState(false);
 
   const handleClick = () => {
+    console.log("username = " + username);
     if (username !== "") {
-      // TODO: check username
+      dispatch(login(username));
       setLoggined(true);
     }
   };
-
-  if (loggined) return <Redirect to="/"/>;
+  if (loggined) {
+    return <Redirect to="/" />;
+  }
 
   return <Paper sx={{width: 300, padding: 5}}>
     <Box sx={{display: "flex", justifyContent: "space-between", flexDirection: "row"}}>
@@ -39,7 +44,7 @@ export default function LoginForm(props: { filename: string }) {
     <Button
       sx={{width: "100%", marginTop: 4}}
       variant="contained"
-      onClick={handleClick}
+      onClick={() => handleClick()}
     >
       connect
     </Button>

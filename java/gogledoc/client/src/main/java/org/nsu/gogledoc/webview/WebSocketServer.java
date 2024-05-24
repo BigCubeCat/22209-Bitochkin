@@ -1,12 +1,12 @@
-package org.nsu.client.webview;
+package org.nsu.gogledoc.webview;
 
 import io.javalin.Javalin;
 import io.javalin.websocket.WsCloseContext;
 import io.javalin.websocket.WsConnectContext;
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsMessageContext;
-import org.nsu.client.Controller.Data;
-import org.nsu.client.Logger.ClientLoggerFinder;
+import org.nsu.gogledoc.Controller.Data;
+import org.nsu.gogledoc.Logger.ClientLoggerFinder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

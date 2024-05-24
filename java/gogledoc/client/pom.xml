@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.javalin.samples.javalin6</groupId>
-    <artifactId>javalin-websocket-example</artifactId>
+    <groupId>org.nsu.client</groupId>
+    <artifactId>App</artifactId>
     <version>1.0</version>
 
-    <name>Javalin 6 ${project.artifactId}</name>
+   <name>App</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,8 +60,26 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                <archive>
+                    <manifest>
+                    <addClasspath>true</addClasspath>
+                    <mainClass>org.nsu.gogledoc.App</mainClass>
+                    </manifest>
+                </archive>
+                <source>14</source>
+                <target>14</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                <archive>
+                    <manifest>
+                    <addClasspath>true</addClasspath>
+                    <mainClass>org.nsu.gogledoc.App</mainClass>
+                    </manifest>
+                </archive>
                 </configuration>
             </plugin>
         </plugins>

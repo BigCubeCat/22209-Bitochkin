@@ -1,4 +1,4 @@
-package org.nsu.client.Controller;
+package org.nsu.gogledoc.Controller;
 
 public class Data {
     private String message;

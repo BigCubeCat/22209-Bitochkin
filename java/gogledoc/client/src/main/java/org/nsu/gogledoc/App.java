@@ -1,7 +1,7 @@
-package org.nsu.client;
+package org.nsu.gogledoc;
 
-import org.nsu.client.Config.Config;
-import org.nsu.client.Controller.MessageController;
+import org.nsu.gogledoc.Config.Config;
+import org.nsu.gogledoc.Controller.MessageController;
 
 public class App {
     public static void main(String[] args) {

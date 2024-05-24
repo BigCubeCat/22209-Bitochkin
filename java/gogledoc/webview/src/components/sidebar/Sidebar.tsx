@@ -1,5 +1,5 @@
 import {Paper} from "@mui/material";
-import AvaGroup from "./AvaGroup.tsx";
+import AvaGroup from "../head/AvaGroup.tsx";
 import ChatComponent from "./chat/ChatComponent.tsx";
 
 export default function Sidebar() {

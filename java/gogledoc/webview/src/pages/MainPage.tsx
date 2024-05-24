@@ -1,10 +1,19 @@
 import {Box} from "@mui/material";
 import Editor from "../components/editor/Editor.tsx";
-import Sidebar from "../components/sidebar/Sidebar.tsx";
+import Head from "../components/head/Head.tsx";
+import {useAppSelector} from "../app/hooks.ts";
+import {selectUser} from "../app/userSlice.ts";
+import {Redirect} from "wouter";
 
 export default function MainPage() {
-  return <Box sx={{width: "100%", height: "100%", display: "flex"}}>
+  const username = useAppSelector(selectUser);
+  if (!username) {
+    return <Redirect to="/login" />;
+  }
+  return <Box sx={{
+    width: "99vw", height: "95vh", alignItem: "center",
+  }}>
+    <Head/>
     <Editor/>
-    <Sidebar />
   </Box>
 }
