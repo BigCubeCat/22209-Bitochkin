@@ -2,6 +2,8 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from "./store.ts";
 import IEditorReq from "../customTypes/IEditorReq.ts";
 import IEditorRes from "../customTypes/IEditorRes.ts";
+import IUserCursor from "../customTypes/IUserCursor.ts";
+import getRandomColor from "../utils/colorGenerator.ts";
 
 /*
 По сути этот Slice нужен для коммуникации между useEditor и useConn
@@ -12,6 +14,7 @@ export interface EditorState {
   content: string;
   request: IEditorReq | null;
   response: IEditorRes | null;
+  userList: IUserCursor[];
   status: 'idle' | 'loading' | 'failed';
 }
 
@@ -20,6 +23,7 @@ const initialState: EditorState = {
   content: "",
   request: null,
   response: null,
+  userList: [],
   status: 'idle',
 };
 
@@ -49,7 +53,7 @@ export const editorSlice = createSlice({
         if (res.unixtime != state.unixtime) {
           console.log("ut", res.unixtime, state.unixtime);
           if (res.data) {
-            console.log("content = " + state.content + "\t" +  res.data.content);
+            console.log("content = " + state.content + "\t" + res.data.content);
             if (res.data.begin == -1) {
               state.content = state.content + res.data.content
             } else if (res.data.begin == 0) {
@@ -61,8 +65,18 @@ export const editorSlice = createSlice({
           }
         }
       }
-    },
-  },
+      const list = state.userList;
+      for (let i = 0; i < res.state.length; ++i) {
+        const item = res.state[i].split(":");
+        if (list.filter((element) => (element.username == item[0])).length == 0) {
+          list.push({
+            username: item[0], color: getRandomColor(), position: Number(item[1])
+          });
+        }
+      }
+      state.userList = list;
+    }
+  }
 });
 
 export const {
@@ -88,6 +102,10 @@ export const selectVersion = (state: RootState) => {
 
 export const selectContent = (state: RootState) => {
   return state.editor.content;
+}
+
+export const selectUserList = (state: RootState) => {
+  return state.editor.userList;
 }
 
 export default editorSlice.reducer;

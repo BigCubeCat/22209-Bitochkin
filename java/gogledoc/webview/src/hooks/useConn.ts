@@ -6,22 +6,22 @@ import {emptyRequest, loadContent, selectRequest, setRequest} from "../app/edito
 import {useEffect} from "react";
 import {useAppSelector} from "../app/hooks.ts";
 import IEditorReq from "../customTypes/IEditorReq.ts";
-import {setUserList} from "../app/userSlice.ts";
+import {selectUser} from "../app/userSlice.ts";
 
 export default function useConn() {
   const editorReq = useAppSelector(selectRequest);
+  const username = useAppSelector(selectUser);
 
   const dispatch = useDispatch();
   const {sendJsonMessage} = useWebSocket(SERVER_ADDRESS, {
     onOpen: () => {
       console.log('WebSocket connection established.');
-      const helloMsg = {begin: 0, end: 0, unixtime: 0, type: "R", content: "", user: ""} as IEditorReq;
+      const helloMsg = {begin: 0, end: 0, unixtime: -1, type: "C", content: "", user: username} as IEditorReq;
       dispatch(setRequest(helloMsg));
     },
     onMessage: (event: MessageEvent<string>) => {
       const resp: IEditorRes = JSON.parse(event.data);
       dispatch(loadContent(resp));
-      dispatch(setUserList(resp.state))
     },
     shouldReconnect: () => true,
   });

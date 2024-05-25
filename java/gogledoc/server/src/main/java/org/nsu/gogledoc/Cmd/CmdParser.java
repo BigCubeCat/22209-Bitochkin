@@ -15,6 +15,7 @@ public class CmdParser {
         return switch (stringType) {
             case "R" -> CmdType.REPLACE;
             case "J" -> CmdType.JUMP;
+            case "C" -> CmdType.CONNECT;
             default -> CmdType.INVALID;
         };
     }
@@ -22,7 +23,6 @@ public class CmdParser {
     public Cmd parseCmd(String json) {
         Cmd cmd = new Cmd();
         try {
-            System.out.println("json = " + json);
             var jsonNode = getJson(json);
             cmd.user = jsonNode.get("user").asText();
             cmd.begin = jsonNode.get("begin").asInt();

@@ -29,11 +29,11 @@ public class EditHistory {
     }
 
     public CmpRes cmpCurrentFileContent(String fileContent) {
-        // Алгоритм очень наивен, так как горят сроки
+       // Алгоритм очень наивен, так как горят сроки
         CmpRes res = new CmpRes();
         if (fileContent.equals(mem.content)) {
             res.hasChanges = false;
-            mem.unixtime = currentUnixTime();
+            mem.unixtime = 0;
             return res;
         }
         mem.unixtime = currentUnixTime();

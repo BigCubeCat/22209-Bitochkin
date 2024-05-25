@@ -4,6 +4,7 @@ import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdResponse;
 import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.Logger.ServerLoggerFinder;
+import org.nsu.gogledoc.Utils.CodeUtil;
 
 import java.io.IOException;
 import java.nio.file.StandardOpenOption;
@@ -46,12 +47,21 @@ public class EditSession {
         switch (cmd.eType) {
             case JUMP -> jumpCursor(cmd);
             case REPLACE -> userFile.replace(cmd, cursorController.getUserPos(cmd.user));
+            case CONNECT -> logger.log(System.Logger.Level.DEBUG, "CONNECT");
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
+        cursorController.setUserPos(cmd.user, cmd.begin);
         CmdResponse response = new CmdResponse();
         response.unixtime = history.lastVersion();
-        if (isInfo && (history.lastVersion() == cmd.unixtime)) {
-            // ничегошеньки не изменилось
+        if (cmd.eType == CmdType.CONNECT) {
+            response.update = true;
+            response.cmpRes = new CmpRes();
+            response.cmpRes.hasChanges = true;
+            response.cmpRes.replaceAll = true;
+            response.cmpRes.begin = 1;
+            response.cmpRes.content = userFile.getFileContent();
+        } else if (isInfo && (history.lastVersion() == cmd.unixtime)) {
+            // ничегошеньки не изменилось или это первый запрос
             response.update = false;
             logger.log(System.Logger.Level.INFO, "no changes");
         } else {

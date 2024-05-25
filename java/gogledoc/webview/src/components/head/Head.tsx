@@ -2,7 +2,8 @@ import {Paper} from "@mui/material";
 import AvaGroup from "./AvaGroup.tsx";
 import {useAppSelector} from "../../app/hooks.ts";
 import AccountChip from "./AccountChip.tsx";
-import {selectUser, selectUserList} from "../../app/userSlice.ts";
+import {selectUser} from "../../app/userSlice.ts";
+import {selectUserList} from "../../app/editorSlice.ts";
 
 export default function Head() {
   const username = useAppSelector(selectUser);

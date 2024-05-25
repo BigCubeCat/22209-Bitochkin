@@ -1,5 +1,6 @@
 package org.nsu.gogledoc.FileWorker;
 
+import org.eclipse.jetty.http.HttpStatus;
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Logger.ServerLoggerFinder;
 import org.nsu.gogledoc.Utils.CodeUtil;
@@ -47,11 +48,13 @@ public class UserFile {
     }
 
     public void replace(Cmd cmd, int serverPosition) throws IOException {
+        /*
         serverPosition = normalizePosition(serverPosition);
         if (serverPosition != cmd.begin) {
             cmd.begin -= serverPosition;
             cmd.end -= serverPosition;
         }
+         */
         cmd.begin = normalizePosition(cmd.begin);
         cmd.end = normalizePosition(cmd.end);
         logger.log(System.Logger.Level.WARNING, "repplacing: " + cmd.begin + "-" + cmd.end + ": " + cmd.content);
@@ -78,5 +81,9 @@ public class UserFile {
         mem.unixtime = cmd.unixtime;
         mem.content = CodeUtil.stringFromHeapByteBuffer(dumpFileContent());
         return mem;
+    }
+
+    public String getFileContent() throws IOException {
+        return CodeUtil.stringFromHeapByteBuffer(dumpFileContent());
     }
 }

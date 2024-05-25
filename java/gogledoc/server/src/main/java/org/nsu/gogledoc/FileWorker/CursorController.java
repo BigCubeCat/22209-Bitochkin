@@ -5,6 +5,7 @@ import org.nsu.gogledoc.Logger.ServerLoggerFinder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CursorController {
     private final System.Logger logger = ServerLoggerFinder.getLogger(
@@ -15,7 +16,6 @@ public class CursorController {
     private HashMap<String, Integer> map = new HashMap<String, Integer>();
 
     public CursorController() {
-
     }
 
     public ArrayList<String> toResponseString() {
@@ -33,6 +33,7 @@ public class CursorController {
     }
 
     public void setUserPos(String user, Integer pos) {
+        if (Objects.equals(user, "")) return;
         map.put(user, pos);
     }
 
