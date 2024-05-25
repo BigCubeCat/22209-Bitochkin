@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.nsu.gogledoc.Chat.Chat;
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdParser;
+import org.nsu.gogledoc.Cmd.CmdResponse;
 import org.nsu.gogledoc.Cmd.CmdType;
 import org.nsu.gogledoc.FileWorker.EditSession;
 import org.nsu.gogledoc.Logger.ServerLoggerFinder;

@@ -2,7 +2,6 @@ package org.nsu.gogledoc.webview;
 
 import io.javalin.Javalin;
 import io.javalin.websocket.WsCloseContext;
-import io.javalin.config.JavalinConfig;
 import io.javalin.websocket.WsConnectContext;
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsMessageContext;
@@ -31,25 +30,17 @@ public class WebSocketServer implements Runnable {
     private void onUserConnect(WsConnectContext ctx) {
         String username = "u" + nextUserNumber++;
         userUsernameMap.put(ctx, username);
-        broadcastMessage("server", "user joined the chat");
     }
 
     private void onUserClose(WsCloseContext ctx) {
-        String username = userUsernameMap.get(ctx);
         userUsernameMap.remove(ctx);
-        broadcastMessage("server", (username + " left the chat"));
     }
 
     private void onMessage(WsMessageContext ctx) {
         String request = ctx.message();
-        if (request.charAt(0) == 'm') {
-            // it is chat message
-            broadcastMessage(userUsernameMap.get(ctx), request);
-            return;
-        }
         clientToServer.produce(request);
         String response = serverToClient.consume();
-        broadcastMessage(userUsernameMap.get(ctx), response);
+        broadcastMessage(response);
     }
 
     @Override
@@ -68,19 +59,9 @@ public class WebSocketServer implements Runnable {
         }).start(this.port);
     }
 
-    // Sends a message from one user to all users, along with a list of current usernames
-    private static void broadcastMessage(String sender, String message) {
+    private static void broadcastMessage(String message) {
         userUsernameMap.keySet().stream().filter(ctx -> ctx.session.isOpen()).forEach(session -> {
-            session.send(
-                    Map.of(
-                            "message", createMessage(message),
-                            "users", userUsernameMap.values()
-                    )
-            );
+            session.send(message);
         });
-    }
-
-    private static String createMessage(String message) {
-        return message;
     }
 }
