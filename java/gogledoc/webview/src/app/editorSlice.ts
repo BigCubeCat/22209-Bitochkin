@@ -24,7 +24,6 @@ export const editorSlice = createSlice({
   reducers: {
     setRequest: (state, action: PayloadAction<IEditorReq>) => {
       state.request = action.payload;
-      console.log("resuest = ", state.request);
     },
     setResponse: (state, action: PayloadAction<object>) => {
       state.response = action.payload;
