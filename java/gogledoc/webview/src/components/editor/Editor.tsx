@@ -3,9 +3,9 @@ import React, {useRef} from "react";
 import useEditor from "../../hooks/useEditor.ts";
 
 import "./Editor.css";
-import {TIMEOUT} from "../../../CONST.ts";
 import {useAppSelector} from "../../app/hooks.ts";
 import {selectRequest} from "../../app/editorSlice.ts";
+import {TIMEOUT} from "../../CONST.ts";
 
 export default function Editor() {
   const editorReq = useAppSelector(selectRequest);

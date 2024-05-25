@@ -15,3 +15,10 @@ services:
       - SERVER_HOST=backend
     ports:
       - ${WS_PORT}:${WS_PORT}
+  web:
+    depends_on:
+      - client
+    build: ./webview
+    restart: always
+    ports:
+      - 3000:3000

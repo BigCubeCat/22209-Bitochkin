@@ -2,7 +2,7 @@ import {useDispatch} from "react-redux";
 import {selectContent, setRequest} from "../app/editorSlice.ts";
 import {selectUser} from "../app/userSlice.ts";
 import {useAppSelector} from "../app/hooks.ts";
-import {JUMP_TYPE} from "../../CONST.ts";
+import {JUMP_TYPE} from "../CONST.ts";
 import diffContent from "../utils/diff.ts";
 import getUnixtime from "../utils/getUnixtime.ts";
 

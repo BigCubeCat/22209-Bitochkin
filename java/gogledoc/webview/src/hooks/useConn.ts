@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
 import useWebSocket from "react-use-websocket";
-import {SERVER_ADDRESS} from "../../CONST.ts";
+import {SERVER_ADDRESS} from "../CONST.ts";
 import IEditorRes from "../customTypes/IEditorRes.ts";
 import {emptyRequest, loadContent, selectRequest, setRequest} from "../app/editorSlice.ts";
 import {useEffect} from "react";
