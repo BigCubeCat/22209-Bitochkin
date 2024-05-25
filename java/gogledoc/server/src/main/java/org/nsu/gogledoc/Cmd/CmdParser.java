@@ -13,18 +13,10 @@ public class CmdParser {
 
     CmdType chooseType(String stringType) {
         return switch (stringType) {
-            case "i" -> CmdType.INSERT;
-            case "r" -> CmdType.REPLACE;
-            case "d" -> CmdType.DELETE;
-            case "c" -> CmdType.CREATE;
-            case "j" -> CmdType.JUMP;
-            case "u" -> CmdType.UPDATE;
+            case "R" -> CmdType.REPLACE;
+            case "J" -> CmdType.JUMP;
             default -> CmdType.INVALID;
         };
-    }
-
-    static int currentUnixTime() {
-        return (int) (System.currentTimeMillis() / 1000);
     }
 
     public Cmd parseCmd(String json) {
@@ -32,25 +24,15 @@ public class CmdParser {
         try {
             System.out.println("json = " + json);
             var jsonNode = getJson(json);
-            System.out.println("here");
-            System.out.println(jsonNode.get("type").asText());
             cmd.user = jsonNode.get("user").asText();
-            System.out.println(jsonNode.get("type").asText());
+            cmd.begin = jsonNode.get("begin").asInt();
+            cmd.end = jsonNode.get("end").asInt();
+            cmd.content = jsonNode.get("content").asText();
             cmd.eType = chooseType(jsonNode.get("type").asText());
-            if (cmd.eType == CmdType.UPDATE) {
+
+            if (jsonNode.has("unixtime")) {
                 cmd.unixtime = jsonNode.get("unixtime").asInt();
-                return cmd;
             }
-            if (cmd.eType == CmdType.JUMP) {
-                cmd.position = jsonNode.get("position").asInt();
-            }
-            if (cmd.eType != CmdType.JUMP && cmd.eType != CmdType.DELETE) {
-                cmd.content = jsonNode.get("content").asText();
-            }
-            if (cmd.eType == CmdType.DELETE || cmd.eType == CmdType.REPLACE) {
-                cmd.size = jsonNode.get("size").asInt();
-            }
-            cmd.unixtime = currentUnixTime();
         } catch (Exception e) {
             System.out.println(e);
             cmd.eType = CmdType.INVALID;

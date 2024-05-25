@@ -2,6 +2,7 @@ package org.nsu.gogledoc.Server;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.nsu.gogledoc.Chat.Chat;
 import org.nsu.gogledoc.Cmd.Cmd;
 import org.nsu.gogledoc.Cmd.CmdParser;
@@ -72,7 +73,6 @@ public class Server {
         while (true) {
             try {
                 channelCount = selector.select();
-                logger.log(System.Logger.Level.DEBUG, "channelCount = " + channelCount);
                 if (channelCount > 0) {
                     Set<SelectionKey> keys = selector.selectedKeys();
                     Iterator<SelectionKey> iterator = keys.iterator();
@@ -80,7 +80,6 @@ public class Server {
                         try {
                             SelectionKey key = iterator.next();
                             iterator.remove();
-                            logger.log(System.Logger.Level.DEBUG, "key = " + key);
                             if (key.isAcceptable()) {
                                 logger.log(System.Logger.Level.DEBUG, "key is acceptable");
                                 registerNewConn();
@@ -111,7 +110,7 @@ public class Server {
         logger.log(System.Logger.Level.DEBUG, "write");
         SocketChannel client = (SocketChannel) key.channel();
         Conn conn = (Conn) connHashMap.get(client);
-        conn.writeToChan(CodeUtil.bufferFromString("response"));
+        conn.writeToChan(CodeUtil.bufferFromString(""));
         key.interestOps(SelectionKey.OP_READ);
     }
 
@@ -125,12 +124,9 @@ public class Server {
             client.close();
         } else {
             buffer.flip();
-
             String request = CodeUtil.stringFromBuffer(buffer);
             Cmd cmd = cmdParser.parseCmd(request);
             logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
-            logger.log(System.Logger.Level.DEBUG, cmd.toString());
-            logger.log(System.Logger.Level.DEBUG, "editor command");
             var response = editSession.ExecuteCmd(cmd);
             ObjectMapper mapper = new ObjectMapper();
             JsonNode node = mapper.valueToTree(response);

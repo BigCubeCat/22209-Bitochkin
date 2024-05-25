@@ -33,10 +33,6 @@ public class UserFile {
         return Paths.get(filePath);
     }
 
-    public FileChannel fileChannel() {
-        return chan;
-    }
-
     public int normalizePosition(int position) throws IOException {
         if (position > chan.size()) {
             return (int) chan.size();
@@ -50,38 +46,20 @@ public class UserFile {
         chan.write(CodeUtil.bufferFromString(text), chan.size());
     }
 
-    /*
-    insert(cmd, position)
-     */
-    public void insert(Cmd cmd, int position) throws IOException {
-        position = normalizePosition(position);
-        chan.position(position);
-        ByteBuffer endBuff = ByteBuffer.allocate((int) (chan.size() - position));
-        chan.read(endBuff);
-        chan.truncate(position);
-        insertEnd(cmd.content);
-        insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
-    }
-
-    public void replace(Cmd cmd, int position) throws IOException {
-        position = normalizePosition(position);
-        chan.position(position);
-        ByteBuffer endBuff = ByteBuffer.allocate((int) (chan.size() - cmd.position));
-        chan.read(endBuff);
-        chan.position(position);
-        chan.truncate(position);
-        insertEnd(cmd.content);
-        insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
-    }
-
-    public void delete(Cmd cmd, int position) throws IOException {
-        position = normalizePosition(position);
-        if (position > 0) {
-            chan.truncate(position);
-            logger.log(System.Logger.Level.INFO, "truncate");
-        } else {
-            logger.log(System.Logger.Level.ERROR, "no cursor in delete");
+    public void replace(Cmd cmd, int serverPosition) throws IOException {
+        serverPosition = normalizePosition(serverPosition);
+        if (serverPosition != cmd.begin) {
+            cmd.begin -= serverPosition;
+            cmd.end -= serverPosition;
         }
+        cmd.end = normalizePosition(cmd.begin);
+        cmd.end = normalizePosition(cmd.end);
+        chan.position(cmd.end);
+        ByteBuffer endBuff = ByteBuffer.allocate((int) (chan.size() - cmd.end));
+        chan.read(endBuff);
+        chan.truncate(cmd.begin);
+        insertEnd(cmd.content);
+        insertEnd(CodeUtil.stringFromHeapByteBuffer(endBuff));
     }
 
     private ByteBuffer dumpFileContent() throws IOException {

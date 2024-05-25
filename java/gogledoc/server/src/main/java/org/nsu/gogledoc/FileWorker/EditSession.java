@@ -16,9 +16,9 @@ public class EditSession {
             this.getClass().getModule()
     );
 
-    private CursorController cursorController = new CursorController();
-    private UserFile userFile;
-    private EditHistory history = new EditHistory(10); // TODO specify size
+    private final CursorController cursorController = new CursorController();
+    private final UserFile userFile;
+    private final EditHistory history = new EditHistory(); // TODO specify size
 
     private void createFile() {
         try {
@@ -42,11 +42,9 @@ public class EditSession {
     }
 
     public CmdResponse ExecuteCmd(Cmd cmd) throws IOException {
-        boolean isInfo = (cmd.eType == CmdType.JUMP || cmd.eType == CmdType.UPDATE);
+        boolean isInfo = (cmd.eType == CmdType.JUMP);
         switch (cmd.eType) {
             case JUMP -> jumpCursor(cmd);
-            case INSERT -> userFile.insert(cmd, cursorController.getUserPos(cmd.user));
-            case DELETE -> userFile.delete(cmd, cursorController.getUserPos(cmd.user));
             case REPLACE -> userFile.replace(cmd, cursorController.getUserPos(cmd.user));
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
@@ -68,6 +66,6 @@ public class EditSession {
     }
 
     public void jumpCursor(Cmd cmd) throws IOException {
-        cursorController.setUserPos(cmd.user, userFile.normalizePosition(cmd.position));
+        cursorController.setUserPos(cmd.user, userFile.normalizePosition(cmd.begin));
     }
 }

@@ -1,16 +1,13 @@
 package org.nsu.gogledoc.FileWorker;
 
 public class EditHistory {
-    int historySize;
     private UserFileMem mem = new UserFileMem();
 
     public int lastVersion() {
         return mem.unixtime;
     }
 
-    public EditHistory(int size) {
-        historySize = size;
-    }
+    public EditHistory() {}
 
     public void setValue(UserFileMem mem) {
         this.mem = mem;
@@ -27,13 +24,19 @@ public class EditHistory {
         return new String(dst);
     }
 
+    public static int currentUnixTime() {
+        return (int) (System.currentTimeMillis() / 1000);
+    }
+
     public CmpRes cmpCurrentFileContent(String fileContent) {
         // Алгоритм очень наивен, так как горят сроки
         CmpRes res = new CmpRes();
         if (fileContent.equals(mem.content)) {
             res.hasChanges = false;
+            mem.unixtime = currentUnixTime();
             return res;
         }
+        mem.unixtime = currentUnixTime();
         res.hasChanges = true;
         // Нужно добавить немного
         if (fileContent.startsWith(mem.content)) {
