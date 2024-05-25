@@ -86,14 +86,10 @@ public class Server {
                                 registerNewConn();
                             } else {
                                 if (key.isReadable()) {
-                                    logger.log(System.Logger.Level.DEBUG, "key is readable");
                                     readConn(key);
-                                    logger.log(System.Logger.Level.DEBUG, "key has been read");
                                 }
                                 if (key.isWritable()) {
-                                    logger.log(System.Logger.Level.DEBUG, "key is writable");
                                     writeConn(key);
-                                    logger.log(System.Logger.Level.DEBUG, "key has been written");
                                 }
                             }
                         } catch (CancelledKeyException e) {
@@ -116,25 +112,24 @@ public class Server {
     }
 
     private void readConn(SelectionKey key) throws IOException {
-        logger.log(System.Logger.Level.DEBUG, "read conn");
         SocketChannel client = (SocketChannel) key.channel();
         Conn conn = (Conn) connHashMap.get(client);
         if (client.read(buffer) < 0) {
-            logger.log(System.Logger.Level.DEBUG, "no msg");
+            //   logger.log(System.Logger.Level.DEBUG, "no msg");
             key.cancel();
             client.close();
         } else {
             buffer.flip();
             String request = CodeUtil.stringFromBuffer(buffer);
             Cmd cmd = cmdParser.parseCmd(request);
-            logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
+            // logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
             var response = editSession.ExecuteCmd(cmd);
             ObjectMapper mapper = new ObjectMapper();
             JsonNode node = mapper.valueToTree(response);
             String nodeString = node.toString();
             System.out.println(nodeString);
             conn.writeToChan(CodeUtil.bufferFromString(nodeString));
-            logger.log(System.Logger.Level.DEBUG, "written to connection");
+            //logger.log(System.Logger.Level.DEBUG, "written to connection");
             buffer.clear();
         }
         key.interestOps(SelectionKey.OP_WRITE);

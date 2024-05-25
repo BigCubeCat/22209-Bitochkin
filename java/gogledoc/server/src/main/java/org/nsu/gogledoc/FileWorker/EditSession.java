@@ -49,6 +49,7 @@ public class EditSession {
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
         CmdResponse response = new CmdResponse();
+        response.unixtime = history.lastVersion();
         if (isInfo && (history.lastVersion() == cmd.unixtime)) {
             // ничегошеньки не изменилось
             response.update = false;

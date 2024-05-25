@@ -29,6 +29,7 @@ export const editorSlice = createSlice({
   reducers: {
     setRequest: (state, action: PayloadAction<IEditorReq>) => {
       state.request = action.payload;
+      console.log("request to send: ", state.request);
     },
     setResponse: (state, action: PayloadAction<IEditorRes>) => {
       state.response = action.payload;
@@ -46,12 +47,13 @@ export const editorSlice = createSlice({
       const res = action.payload;
       if (res.update) {
         if (res.unixtime != state.unixtime) {
+          console.log("ut", res.unixtime, state.unixtime);
           if (res.data) {
-            console.log(res.data);
+            console.log("content = " + state.content + "\t" +  res.data.content);
             if (res.data.begin == -1) {
-              state.content += res.data?.content
+              state.content = state.content + res.data.content
             } else if (res.data.begin == 0) {
-              state.content = res.data?.content + state.content;
+              state.content = res.data.content + state.content;
             } else {
               state.content = res.data.content;
             }
