@@ -62,7 +62,7 @@ public class Server {
     }
 
     public Server(EditSession session, int port) {
-        this(session, port, 256);
+        this(session, port, 100000);
     }
 
     public Server(EditSession session) {

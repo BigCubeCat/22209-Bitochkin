@@ -10,7 +10,7 @@ export default function diffContent(prev: string, next: string) : IDiff {
   if (next.startsWith(prev)) {
     res.begin = prev.length + 1;
     res.end = prev.length + 2;
-    res.content = next.substring(prev.length - 1, next.length);
+    res.content = next.substring(prev.length, next.length);
   } else if (next.endsWith(prev)) {
     res.begin = 0;
     res.end = 0;

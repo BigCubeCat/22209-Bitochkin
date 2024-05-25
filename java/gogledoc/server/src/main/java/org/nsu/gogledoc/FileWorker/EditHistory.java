@@ -54,7 +54,7 @@ public class EditHistory {
         }
         // Удаление происходит реже при редактировании документа, да и сроки горят
         res.replaceAll = true;
-        res.begin = 0;
+        res.begin = 1;
         res.content = fileContent;
         return res;
     }

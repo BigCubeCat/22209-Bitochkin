@@ -49,11 +49,12 @@ public class EditSession {
             default -> logger.log(System.Logger.Level.ERROR, "invalid cmd type: " + cmd.toString());
         }
         CmdResponse response = new CmdResponse();
-        if (isInfo && history.lastVersion() == cmd.unixtime) {
+        if (isInfo && (history.lastVersion() == cmd.unixtime)) {
             // ничегошеньки не изменилось
             response.update = false;
             logger.log(System.Logger.Level.INFO, "no changes");
         } else {
+            response.update = true;
             UserFileMem mem = userFile.dump(cmd);
             logger.log(System.Logger.Level.DEBUG, "mem = " + mem.content + " : " + mem.unixtime);
             var cmpRes = history.cmpCurrentFileContent(mem.content);

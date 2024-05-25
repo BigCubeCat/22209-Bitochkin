@@ -52,8 +52,9 @@ public class UserFile {
             cmd.begin -= serverPosition;
             cmd.end -= serverPosition;
         }
-        cmd.end = normalizePosition(cmd.begin);
+        cmd.begin = normalizePosition(cmd.begin);
         cmd.end = normalizePosition(cmd.end);
+        logger.log(System.Logger.Level.WARNING, "repplacing: " + cmd.begin + "-" + cmd.end + ": " + cmd.content);
         chan.position(cmd.end);
         ByteBuffer endBuff = ByteBuffer.allocate((int) (chan.size() - cmd.end));
         chan.read(endBuff);

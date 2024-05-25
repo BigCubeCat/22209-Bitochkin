@@ -5,6 +5,7 @@ interface IEditorReq {
   content: string;
   begin: number;
   end: number;
+  unixtime: number;
 }
 
 export default IEditorReq;

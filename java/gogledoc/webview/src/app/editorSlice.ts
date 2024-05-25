@@ -8,12 +8,16 @@ import IEditorRes from "../customTypes/IEditorRes.ts";
  */
 
 export interface EditorState {
+  unixtime: number; // Last version
+  content: string;
   request: IEditorReq | null;
   response: IEditorRes | null;
   status: 'idle' | 'loading' | 'failed';
 }
 
 const initialState: EditorState = {
+  unixtime: 0,
+  content: "",
   request: null,
   response: null,
   status: 'idle',
@@ -34,12 +38,38 @@ export const editorSlice = createSlice({
     },
     emptyResponse: (state) => {
       state.response = null;
-    }
+    },
+    setContent: (state, action: PayloadAction<string>) => {
+      state.content = action.payload;
+    },
+    loadContent: (state, action: PayloadAction<IEditorRes>) => {
+      const res = action.payload;
+      if (res.update) {
+        if (res.unixtime != state.unixtime) {
+          if (res.data) {
+            console.log(res.data);
+            if (res.data.begin == -1) {
+              state.content += res.data?.content
+            } else if (res.data.begin == 0) {
+              state.content = res.data?.content + state.content;
+            } else {
+              state.content = res.data.content;
+            }
+            state.unixtime = res.unixtime; // Маркируем версию
+          }
+        }
+      }
+    },
   },
 });
 
 export const {
-  setRequest, setResponse, emptyResponse, emptyRequest
+  setRequest,
+  setResponse,
+  emptyResponse,
+  emptyRequest,
+  setContent,
+  loadContent,
 } = editorSlice.actions;
 
 export const selectRequest = (state: RootState) => {
@@ -49,5 +79,13 @@ export const selectRequest = (state: RootState) => {
 export const selectResponse = (state: RootState) => {
   return state.editor.response;
 };
+
+export const selectVersion = (state: RootState) => {
+  return state.editor.unixtime;
+}
+
+export const selectContent = (state: RootState) => {
+  return state.editor.content;
+}
 
 export default editorSlice.reducer;

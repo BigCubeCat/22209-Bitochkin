@@ -10,6 +10,7 @@ import {selectRequest} from "../../app/editorSlice.ts";
 export default function Editor() {
   const editorReq = useAppSelector(selectRequest);
   const editorHook = useEditor();
+
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   setInterval(() => {
@@ -28,7 +29,7 @@ export default function Editor() {
       value={editorHook.content}
       onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
         editorHook.editContent({
-          prevContent: event.target.textContent || "",
+          prevContent: editorHook.content,
           nextContent: event.target.value || "",
         });
       }}
