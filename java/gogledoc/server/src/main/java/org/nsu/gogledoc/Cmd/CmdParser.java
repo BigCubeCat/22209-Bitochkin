@@ -19,7 +19,6 @@ public class CmdParser {
             case "c" -> CmdType.CREATE;
             case "j" -> CmdType.JUMP;
             case "u" -> CmdType.UPDATE;
-            case "m" -> CmdType.MESSAGE;
             default -> CmdType.INVALID;
         };
     }
@@ -31,8 +30,12 @@ public class CmdParser {
     public Cmd parseCmd(String json) {
         Cmd cmd = new Cmd();
         try {
+            System.out.println("json = " + json);
             var jsonNode = getJson(json);
+            System.out.println("here");
+            System.out.println(jsonNode.get("type").asText());
             cmd.user = jsonNode.get("user").asText();
+            System.out.println(jsonNode.get("type").asText());
             cmd.eType = chooseType(jsonNode.get("type").asText());
             if (cmd.eType == CmdType.UPDATE) {
                 cmd.unixtime = jsonNode.get("unixtime").asInt();
@@ -50,12 +53,8 @@ public class CmdParser {
             cmd.unixtime = currentUnixTime();
         } catch (Exception e) {
             System.out.println(e);
-            cmd.invalid = true;
+            cmd.eType = CmdType.INVALID;
         }
         return cmd;
-    }
-
-    public String marshalCmdResponse(CmdResponse response) throws IOException {
-        return "";
     }
 }

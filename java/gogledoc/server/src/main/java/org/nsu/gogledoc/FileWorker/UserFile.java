@@ -50,6 +50,9 @@ public class UserFile {
         chan.write(CodeUtil.bufferFromString(text), chan.size());
     }
 
+    /*
+    insert(cmd, position)
+     */
     public void insert(Cmd cmd, int position) throws IOException {
         position = normalizePosition(position);
         chan.position(position);
@@ -62,7 +65,7 @@ public class UserFile {
 
     public void replace(Cmd cmd, int position) throws IOException {
         position = normalizePosition(position);
-        chan.position(cmd.position);
+        chan.position(position);
         ByteBuffer endBuff = ByteBuffer.allocate((int) (chan.size() - cmd.position));
         chan.read(endBuff);
         chan.position(position);

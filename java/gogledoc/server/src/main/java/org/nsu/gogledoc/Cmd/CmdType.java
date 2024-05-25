@@ -7,6 +7,5 @@ public enum CmdType {
     CREATE, // Создать файл
     JUMP, // Переместить курсор
     UPDATE,
-    MESSAGE,
     INVALID
 }

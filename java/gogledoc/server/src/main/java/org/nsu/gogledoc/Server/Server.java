@@ -111,7 +111,7 @@ public class Server {
         logger.log(System.Logger.Level.DEBUG, "write");
         SocketChannel client = (SocketChannel) key.channel();
         Conn conn = (Conn) connHashMap.get(client);
-        conn.writeToChan(CodeUtil.bufferFromString("hi\n"));
+        conn.writeToChan(CodeUtil.bufferFromString("response"));
         key.interestOps(SelectionKey.OP_READ);
     }
 
@@ -130,18 +130,13 @@ public class Server {
             Cmd cmd = cmdParser.parseCmd(request);
             logger.log(System.Logger.Level.DEBUG, "parse cmd from client");
             logger.log(System.Logger.Level.DEBUG, cmd.toString());
-            if (cmd.eType == CmdType.MESSAGE && chat != null) {
-                chat.sendMessage(cmd.user, cmd.content);
-                logger.log(System.Logger.Level.DEBUG, "chat command");
-            } else {
-                logger.log(System.Logger.Level.DEBUG, "editor command");
-                var response = editSession.ExecuteCmd(cmd);
-                ObjectMapper mapper = new ObjectMapper();
-                JsonNode node = mapper.valueToTree(response);
-                String nodeString = node.toString();
-                System.out.println(nodeString);
-                conn.writeToChan(CodeUtil.bufferFromString(nodeString));
-            }
+            logger.log(System.Logger.Level.DEBUG, "editor command");
+            var response = editSession.ExecuteCmd(cmd);
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode node = mapper.valueToTree(response);
+            String nodeString = node.toString();
+            System.out.println(nodeString);
+            conn.writeToChan(CodeUtil.bufferFromString(nodeString));
             logger.log(System.Logger.Level.DEBUG, "written to connection");
             buffer.clear();
         }

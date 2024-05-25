@@ -1,18 +1,20 @@
 package org.nsu.gogledoc.Cmd;
 
 public class Cmd {
-    public boolean invalid = false;
-    public String user;
-    public CmdType eType;
-    public int position;
-    public int size;
+    public CmdType eType = CmdType.INVALID; // Тип команды
+    public String user;  // Ник пользователя
+    public int position; // Позиция курсора
+    public int size; // Размер выделенной области
     public String content;
     public int unixtime;
 
     @Override
     public String toString() {
-        return ("user=" + user + ";eType=" + eType.toString() +
-                ";position=" + position + ";content=" +
-                content + ";unixtime=" + unixtime);
+        if (eType != CmdType.INVALID) {
+            return ("user=" + user + ";eType=" + eType.toString() +
+                    ";position=" + position + ";content=" +
+                    content + ";unixtime=" + unixtime);
+        }
+        return "INVALID";
     }
 }

@@ -22,7 +22,7 @@ public class EditHistory {
         if (isStart) {
             str.getChars(0, size, dst, 0);
         } else {
-            str.getChars(mem.content.length(), size, dst, 0);
+            str.getChars(mem.content.length(), mem.content.length() + size, dst, 0);
         }
         return new String(dst);
     }

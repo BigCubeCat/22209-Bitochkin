@@ -2,19 +2,17 @@ package org.nsu.gogledoc.webview;
 
 import io.javalin.Javalin;
 import io.javalin.websocket.WsCloseContext;
+import io.javalin.config.JavalinConfig;
 import io.javalin.websocket.WsConnectContext;
 import io.javalin.websocket.WsContext;
 import io.javalin.websocket.WsMessageContext;
 import org.nsu.gogledoc.Controller.Data;
 import org.nsu.gogledoc.Logger.ClientLoggerFinder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class WebSocketServer implements Runnable {
-    private static final Logger log = LoggerFactory.getLogger(WebSocketServer.class);
     private final System.Logger logger = ClientLoggerFinder.getLogger("ws", this.getClass().getModule());
 
     private static final Map<WsContext, String> userUsernameMap = new ConcurrentHashMap<>();

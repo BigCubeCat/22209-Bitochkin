@@ -10,6 +10,10 @@ public class Config {
             serverHost = System.getenv("SERVER_HOST");
             serverPort = Integer.parseInt(System.getenv("SERVER_PORT"));
             webSocketPort = Integer.parseInt(System.getenv("WS_PORT"));
+        } else {
+            serverHost = "127.0.0.1";
+            serverPort = 9999;
+            webSocketPort = 8080;
         }
     }
 }

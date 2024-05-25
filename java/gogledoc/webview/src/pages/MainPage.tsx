@@ -11,7 +11,7 @@ export default function MainPage() {
     return <Redirect to="/login" />;
   }
   return <Box sx={{
-    width: "99vw", height: "95vh", alignItem: "center",
+    width: "97vw", height: "95vh", alignItem: "center",
   }}>
     <Head/>
     <Editor/>
