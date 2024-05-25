@@ -1,14 +1,15 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from "./store.ts";
 import IEditorReq from "../customTypes/IEditorReq.ts";
+import IEditorRes from "../customTypes/IEditorRes.ts";
 
 /*
-По сути этот Slice нужен для коммуникации между useEditor и useWebSocket
+По сути этот Slice нужен для коммуникации между useEditor и useConn
  */
 
 export interface EditorState {
   request: IEditorReq | null;
-  response: object | null;
+  response: IEditorRes | null;
   status: 'idle' | 'loading' | 'failed';
 }
 
@@ -25,7 +26,7 @@ export const editorSlice = createSlice({
     setRequest: (state, action: PayloadAction<IEditorReq>) => {
       state.request = action.payload;
     },
-    setResponse: (state, action: PayloadAction<object>) => {
+    setResponse: (state, action: PayloadAction<IEditorRes>) => {
       state.response = action.payload;
     },
     emptyRequest: (state) => {

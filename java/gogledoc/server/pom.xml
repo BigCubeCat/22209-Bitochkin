@@ -41,12 +41,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                        <addClasspath>true</addClasspath>
-                        <mainClass>org.nsu.gogledoc.App</mainClass>
-                        </manifest>
-                    </archive>
                     <source>17</source>
                     <target>17</target>
                 </configuration>

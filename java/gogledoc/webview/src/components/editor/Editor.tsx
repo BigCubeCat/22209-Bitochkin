@@ -4,15 +4,20 @@ import useEditor from "../../hooks/useEditor.ts";
 
 import "./Editor.css";
 import {TIMEOUT} from "../../../CONST.ts";
+import {useAppSelector} from "../../app/hooks.ts";
+import {selectRequest} from "../../app/editorSlice.ts";
 
 export default function Editor() {
+  const editorReq = useAppSelector(selectRequest);
   const editorHook = useEditor();
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   setInterval(() => {
-    const cursorPos = textAreaRef.current?.selectionStart;
-    if (cursorPos !== undefined) {
-      editorHook.jumpCursor(cursorPos);
+    if (!editorReq) {
+      const cursorPos = textAreaRef.current?.selectionStart;
+      if (cursorPos !== undefined) {
+        editorHook.jumpCursor(cursorPos);
+      }
     }
   }, TIMEOUT);
 

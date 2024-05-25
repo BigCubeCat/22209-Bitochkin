@@ -1,5 +1,5 @@
 import {useState} from "react";
-import TUserCursor from "../customTypes/TUserCursor.ts";
+import TUserCursor from "../customTypes/IUserCursor.ts";
 
 export default function useCursorsHook() {
   const [cursorList, setCursorList] = useState<TUserCursor[]>([]);

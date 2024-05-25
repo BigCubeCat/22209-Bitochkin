@@ -1,0 +1,946 @@
+java.nio.file.FileAlreadyExistsException: data.txt
+server	: log [DEBUG] :	9999
+server	: log [DEBUG] :	256
+server	: log [DEBUG] :	key is acceptable
+server	: log [INFO] :	new connection request
+server	: log [INFO] :	new client accepted
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+json = {"user":"egor","begin":0,"end":0,"content":"","type":"J"}
+server	: log [DEBUG] :	parse cmd from client
+session	: log [INFO] :	no changes
+cursor	: log [DEBUG] :	cursor value = egor:0
+{"state":["egor:0"],"data":null,"update":false,"unixtime":0}
+server	: log [DEBUG] :	written to connection
+server	: log [DEBUG] :	key has been read
+server	: log [DEBUG] :	key is writable
+server	: log [DEBUG] :	write
+server	: log [DEBUG] :	key has been written
+server	: log [DEBUG] :	key is readable
+server	: log [DEBUG] :	read conn
+server	: log [DEBUG] :	no msg
+server	: log [WARNING] :	java.nio.channels.CancelledKeyException
