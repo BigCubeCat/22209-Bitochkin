@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: ./server
+    restart: always
+    ports:
+      - 9999:${SERVER_PORT}
+  client:
+    depends_on:
+      - backend
+    build: ./client
+    restart: always
+    environment:
+      - WS_PORT=${WS_PORT}
+      - SERVER_PORT=${SERVER_PORT}
+      - SERVER_HOST=backend
+    ports:
+      - ${WS_PORT}:${WS_PORT}
+  web:
+    depends_on:
+      - client
+    build: ./webview
+    restart: always
+    ports:
+      - 3000:3000

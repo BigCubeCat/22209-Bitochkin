@@ -1,0 +1,17 @@
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Cmd/Cmd.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Logger/ServerLoggerFinder.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/EditHistory.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/App.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Utils/CodeUtil.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Chat/Chat.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/UserFileMem.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Cmd/CmdParser.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Cmd/CmdResponse.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/CmpRes.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Server/Server.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Server/Conn.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Logger/ServerLogger.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/EditSession.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/Cmd/CmdType.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/CursorController.java
+/home/bigcubecat/Projects/NSU/sem4/prog/22209-Bitochkin/java/gogledoc/server/src/main/java/org/nsu/gogledoc/FileWorker/UserFile.java
